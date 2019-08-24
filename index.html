@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>СВС | компания</title>
+	<title>Перчатки на каждый день | Компания СВС</title>
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
@@ -35,11 +35,7 @@
 				<!--Logo-->
 				<div class="header-nav__logo">
 					<a class="header-nav__link" href="index.html" target="_self">
-						<picture class="header-nav__logo-frame">
-							<source media="(min-width: 1150px)" srcset="img/logo-desktop.svg" />
-							<source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
-							<img class="header-nav__logo-image" src="img/logo-mobile.svg" width="74" height="28" alt="СВС - перчатки на каждый день" title="СВС - перчатки на каждый день" />
-						</picture>
+						<img class="header-nav__logo-image" src="img/logo.svg" width="74" height="28" alt="СВС - перчатки на каждый день" title="СВС - перчатки на каждый день" />
 					</a>
 				</div>
 				<!--Mobile contacts-->
@@ -107,7 +103,7 @@
 					<!--Menu list-->
 					<ul class="nav-menu__list nav-list">
 						<li class="nav-list__item">
-							<a class="nav-list__link" href="#" target="_self">Продукция</a>
+							<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
 						</li>
 						<li class="nav-list__item">
 							<a class="nav-list__link" href="#" target="_self">Акции</a>
@@ -450,7 +446,8 @@
 		<section class="main__latest latest">
 			<h2 class="latest__title">Новинки</h2>
 			<div class="latest__container">
-				<article class="latest__item latest-item">
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item latest-item">
 					<a class="latest-item__link" href="#" target="_self" title="Название перчатки, модель">
 						<!--Планка акции или новинки-->
 						<span class="latest-item__sign latest-item__sign--latest">Новинка
@@ -466,10 +463,187 @@
 							<source media="(min-width: 768px)" srcset="img/photo-1-tb.webp" type="image/webp">
 							<source media="(min-width: 768px)" srcset="img/photo-1-tb.jpg">
 							<source srcset="img/photo-1-sm.webp" type="image/webp">
-							<img class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
-						<p class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+						<p itemprop="description" class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+					</a>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item latest-item">
+					<a class="latest-item__link" href="#" target="_self" title="Название перчатки, модель">
+						<!--Планка акции или новинки-->
+						<span class="latest-item__sign latest-item__sign--latest">Новинка
+							<svg class="latest-item__pic" width="12" height="12">
+								<use xlink:href="#icon-star-white"></use>
+							</svg>
+						</span>
+						<span class="latest-item__sign latest-item__sign--sale">Акция %</span>
+						<!--Item photo-->
+						<picture class="latest-item__frame">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.webp" type="image/webp">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.jpg">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.webp" type="image/webp">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.jpg">
+							<source srcset="img/photo-1-sm.webp" type="image/webp">
+							<img itemprop="image" class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+						<p itemprop="description" class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+					</a>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item latest-item">
+					<a class="latest-item__link" href="#" target="_self" title="Название перчатки, модель">
+						<!--Планка акции или новинки-->
+						<span class="latest-item__sign latest-item__sign--latest">Новинка
+							<svg class="latest-item__pic" width="12" height="12">
+								<use xlink:href="#icon-star-white"></use>
+							</svg>
+						</span>
+						<span class="latest-item__sign latest-item__sign--sale">Акция %</span>
+						<!--Item photo-->
+						<picture class="latest-item__frame">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.webp" type="image/webp">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.jpg">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.webp" type="image/webp">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.jpg">
+							<source srcset="img/photo-1-sm.webp" type="image/webp">
+							<img itemprop="image" class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+						<p itemprop="description" class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+					</a>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item latest-item">
+					<a class="latest-item__link" href="#" target="_self" title="Название перчатки, модель">
+						<!--Планка акции или новинки-->
+						<span class="latest-item__sign latest-item__sign--latest">Новинка
+							<svg class="latest-item__pic" width="12" height="12">
+								<use xlink:href="#icon-star-white"></use>
+							</svg>
+						</span>
+						<span class="latest-item__sign latest-item__sign--sale">Акция %</span>
+						<!--Item photo-->
+						<picture class="latest-item__frame">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.webp" type="image/webp">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.jpg">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.webp" type="image/webp">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.jpg">
+							<source srcset="img/photo-1-sm.webp" type="image/webp">
+							<img itemprop="image" class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+						<p itemprop="description" class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+					</a>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item latest-item">
+					<a class="latest-item__link" href="#" target="_self" title="Название перчатки, модель">
+						<!--Планка акции или новинки-->
+						<span class="latest-item__sign latest-item__sign--latest">Новинка
+							<svg class="latest-item__pic" width="12" height="12">
+								<use xlink:href="#icon-star-white"></use>
+							</svg>
+						</span>
+						<span class="latest-item__sign latest-item__sign--sale">Акция %</span>
+						<!--Item photo-->
+						<picture class="latest-item__frame">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.webp" type="image/webp">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.jpg">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.webp" type="image/webp">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.jpg">
+							<source srcset="img/photo-1-sm.webp" type="image/webp">
+							<img itemprop="image" class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+						<p itemprop="description" class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+					</a>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item latest-item">
+					<a class="latest-item__link" href="#" target="_self" title="Название перчатки, модель">
+						<!--Планка акции или новинки-->
+						<span class="latest-item__sign latest-item__sign--latest">Новинка
+							<svg class="latest-item__pic" width="12" height="12">
+								<use xlink:href="#icon-star-white"></use>
+							</svg>
+						</span>
+						<span class="latest-item__sign latest-item__sign--sale">Акция %</span>
+						<!--Item photo-->
+						<picture class="latest-item__frame">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.webp" type="image/webp">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.jpg">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.webp" type="image/webp">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.jpg">
+							<source srcset="img/photo-1-sm.webp" type="image/webp">
+							<img itemprop="image" class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+						<p itemprop="description" class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+					</a>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item latest-item">
+					<a class="latest-item__link" href="#" target="_self" title="Название перчатки, модель">
+						<!--Планка акции или новинки-->
+						<span class="latest-item__sign latest-item__sign--latest">Новинка
+							<svg class="latest-item__pic" width="12" height="12">
+								<use xlink:href="#icon-star-white"></use>
+							</svg>
+						</span>
+						<span class="latest-item__sign latest-item__sign--sale">Акция %</span>
+						<!--Item photo-->
+						<picture class="latest-item__frame">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.webp" type="image/webp">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.jpg">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.webp" type="image/webp">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.jpg">
+							<source srcset="img/photo-1-sm.webp" type="image/webp">
+							<img itemprop="image" class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+						<p itemprop="description" class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+					</a>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item latest-item">
+					<a class="latest-item__link" href="#" target="_self" title="Название перчатки, модель">
+						<!--Планка акции или новинки-->
+						<span class="latest-item__sign latest-item__sign--latest">Новинка
+							<svg class="latest-item__pic" width="12" height="12">
+								<use xlink:href="#icon-star-white"></use>
+							</svg>
+						</span>
+						<span class="latest-item__sign latest-item__sign--sale">Акция %</span>
+						<!--Item photo-->
+						<picture class="latest-item__frame">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.webp" type="image/webp">
+							<source media="(min-width: 1200px)" srcset="img/photo-1-dt.jpg">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.webp" type="image/webp">
+							<source media="(min-width: 768px)" srcset="img/photo-1-tb.jpg">
+							<source srcset="img/photo-1-sm.webp" type="image/webp">
+							<img itemprop="image" class="catalog-item__image" src="../img/photo-1-sm.jpg" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+						<p itemprop="description" class="latest-item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
 					</a>
 				</article>
 			</div>
