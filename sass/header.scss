@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+
+  position: relative;
+
+  &--active {
+    background-color: $menu-bg;
+    backdrop-filter: blur(20px);
+  }
+
+  &__wrap {
+    @include container;
+  }
+}

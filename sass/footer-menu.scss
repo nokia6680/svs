@@ -1,0 +1,34 @@
+.footer-menu {
+  @include flex-setting(column, flex-start, flex-start);
+
+  background-color: #FAF9F7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  flex-wrap: wrap;
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  max-height: 157px;
+  padding-bottom: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+
+  &__item {
+    width: 50%;
+    margin-bottom: 3px;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+
+    @include flex-setting(column, center, flex-start);
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+
+    text-decoration: none;
+  }
+}

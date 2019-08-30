@@ -10,24 +10,26 @@ $widebook-hd: 1600px;
 $hd: 1920px;
 
 $text-primary: #000000;
+$placeholder-text: #a0a0a0;
 $text-secondary: #ffffff;
 $text-form: #8edce0;
 $text-error: #f44336;
 
+$link-hover: #84AA32;
 $social-hover: #ff6700;
 
 $bg-body: #cacaca;
 $bg-header: #ff6700;
 $bg-footer: #19181c;
 
-$primary-font: "Rubik-Black", sans-serif;
-$secondary-font: "Rubik-Medium", sans-serif;
-$alternate-font: "Rubik-Light", sans-serif;
-$primary-font-italic: "Rubik-Black Italic", sans-serif;
+$menu-bg: #483F3A;
+
+$title-font: "Rubik Medium", sans-serif;
+$primary-font: "Open Sans", sans-serif;
 
 $base-font-color: #000;
 $base-font-size: 16px;
 $base-font-weight: normal;
 
-$baseFontColor: $text-primary;
+$baseFontColor: $placeholder-text;
 $baseFontFamily: $primary-font;

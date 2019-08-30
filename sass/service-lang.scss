@@ -1,0 +1,9 @@
+.service-lang {
+  @include flex-setting(row, flex-start, center);
+
+  width: auto;
+
+  &__pic {
+    min-width: 14px;
+  }
+}

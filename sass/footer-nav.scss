@@ -1,0 +1,5 @@
+.footer-nav {
+  @include flex-setting(column, flex-start, center);  
+  @include container;
+  padding: 0 10px;
+}

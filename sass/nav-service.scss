@@ -1,0 +1,24 @@
+.nav-service {
+  width: 100%;
+
+  @include flex-setting(row, space-between, center);
+
+
+  &__call {
+    @include flex-setting(row, space-between, center);
+    text-decoration: none;
+    @include font-setting($primary-font, 0.75rem, 1, 700, $text-secondary);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      transition: 0.1s ease-in;
+    }
+  }
+
+  &__pic--phone {
+    margin-right: 5px;
+    min-width: 15px;
+  }
+}

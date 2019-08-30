@@ -1,0 +1,88 @@
+.callback-form {
+  @include flex-setting(column, flex-start, flex-start);
+
+  width: 100%;
+  margin-bottom: 38px;
+
+  &__list {
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    margin-bottom: 38px;
+  }
+
+  &__item {
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+    margin-bottom: 18px;
+
+    position: relative;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__error {
+    @include font-setting($primary-font, 0.75rem, 1rem, 400, #FF756A);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__optional {
+    @include font-setting($primary-font, 0.75rem, 1rem, 400, #C1CAD5);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__label {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 700, $text-primary);
+    margin-bottom: 4px;
+  }
+
+  &__input {
+    width: 100%;
+
+    padding: 16px 11px 16px 11px;
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 700, $text-primary);
+
+    border: 1px solid #E4D9C6;
+    border-radius: 5px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 126px;
+
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 700, $text-primary);
+
+    padding: 13px 22px 13px 11px;
+
+    border: 1px solid #E4D9C6;
+    border-radius: 5px;
+  }
+
+  &__submit {
+    align-self: center;
+
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+
+    background-color: #84AA32;
+
+    border: none;
+
+    width: 204px;
+    height: 60px;
+  }
+}
