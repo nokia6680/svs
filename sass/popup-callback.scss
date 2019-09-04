@@ -103,10 +103,6 @@
 
     cursor: pointer;
     outline: none;
-
-    &:hover {
-      opacity: 0.9;
-    }
   }
 
   &__close-pic {
@@ -185,8 +181,16 @@
     background-color: #84AA32;
 
     border: none;
+    border-radius: 5px;
 
     width: 150px;
     height: 40px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #754440;
+      transition: 0.2s ease-in;
+    }
   }
 }

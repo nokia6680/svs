@@ -10,7 +10,7 @@
   border: 1px solid #574C45;
   border-radius: 5px;
 
-  margin-bottom: 19px;
+  margin-bottom: 1.188rem;
 
   &__item {
     width: 100%;
@@ -30,11 +30,11 @@
 
     @include font-setting($primary-font, 1rem, 1rem, 600, $text-secondary);
 
-    padding-left: 14px;
+    padding-left: 0.875rem;
     text-decoration: none;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
 
     &:hover,
     &:active,

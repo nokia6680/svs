@@ -1,0 +1,17 @@
+.filter-choice {
+  @include flex-setting(column, flex-start, flex-start);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  border: 1px solid #C1CAD5;
+  border-radius: 5px;
+
+  width: 100%;
+
+  margin-bottom: 1.875rem;
+
+  &__heading {
+    @include font-setting($title-font, 0.875rem, 1.063rem, 500, $text-primary);
+  }
+}

@@ -1,0 +1,16 @@
+.choice-list {
+  @include flex-setting(column, flex-start, flex-start);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  width: 100%;
+
+  &__label {
+    @include font-setting($primary-font, 0.875rem, 1.063rem, 500, $text-primary);
+  }
+
+  &__counter {
+    @include font-setting($primary-font, 0.875rem, 1.063rem, 500, $text-secondary);
+  }
+}

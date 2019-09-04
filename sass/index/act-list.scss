@@ -1,0 +1,26 @@
+.act-list {
+  @include flex-setting(column, flex-start, flex-start);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  width: 100%;
+
+  &__item {
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+    margin-bottom: 2.25rem;
+  }
+
+  &__item-title {
+    @include font-setting($title-font, 1.125rem, 1.313rem, 500, $text-primary);
+    margin: 0;
+    margin-bottom: 0.625rem;
+  }
+
+  &__item-description {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    margin: 0;
+  }
+}

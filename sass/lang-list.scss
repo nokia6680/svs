@@ -6,13 +6,13 @@
   margin: 0;
   list-style: none;
 
-  margin-left: 9px;
+  margin-left: 0.563rem;
 
   &__item {
     position: relative;
 
     &:first-of-type {
-      margin-right: 10px;
+      margin-right: 0.625rem;
 
       &::after {
         position: absolute;
@@ -20,8 +20,8 @@
 
         @include font-setting($primary-font, 0.75rem, 1, 700, $text-secondary);
 
-        right: -8px;
-        top: 50%;
+        right: -0.5rem;
+        top: 60%;
         transform: translateY(-50%);
       }
     }

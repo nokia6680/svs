@@ -1,0 +1,82 @@
+.result-list {
+  @include flex-setting(column, flex-start, flex-start);
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  margin-bottom: 1.25rem;
+
+  &__item {
+    border: 1px solid #E4D9C6;
+    border-radius: 5px;
+
+    @include flex-setting(row, flex-start, center);
+
+    width: 100%;
+
+    margin-bottom: 0.625rem;
+    padding-right: 1.688rem;
+
+    overflow: hidden;
+    max-height: 94px;
+
+    &:hover {
+      border-color: $link-hover;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__item-info {
+    @include flex-setting(column, flex-start, flex-start);
+    padding-bottom: 0.625rem;
+    padding-top: 0.625rem;
+  }
+
+  &__item-title {
+    @include font-setting($primary-font, 0.688rem, 0.938rem, 600, $text-primary);
+    max-width: 153px;
+    margin-bottom: 0.625rem;
+  }
+
+  &__item-sign {
+    @include font-setting($primary-font, 0.688rem, 0.938rem, 600, $text-primary);
+    @include flex-setting(row, center, center);
+
+    text-align: center;
+
+    &--latest {
+      color: $text-secondary;
+      background-color: $red-sign;
+      border-radius: 3px;
+
+      width: 88px;
+      height: 22px;
+    }
+
+    &--sale {
+      background-color: $yellow-sign;
+      border-radius: 3px;
+
+      width: 72px;
+      height: 22px;
+    }
+  }
+
+  &__frame {
+    margin-right: 0.313rem;
+    width: 91px;
+    height: 96px;
+    max-height: 96px;
+
+    overflow: hidden;
+  }
+
+  &__frame-pic {
+    height: 96px;
+    width: 100%;
+    object-fit: contain;
+  }
+}

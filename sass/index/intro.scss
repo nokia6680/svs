@@ -1,0 +1,12 @@
+.intro {
+  width: 100%;
+
+  @include flex-setting(column, flex-start, center);
+
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+
+  &__search {
+    display: none;
+  }
+}

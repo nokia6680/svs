@@ -1,0 +1,19 @@
+.about {
+  @include flex-setting(column, flex-start, flex-start);
+
+  width: 100%;
+
+  margin-bottom: 5.188rem;
+
+  &__title {
+    @include font-setting($title-font, 1.5rem, 1.75rem, 500, $text-primary);
+    margin: 0;
+
+    margin-bottom: 1.25rem;
+  }
+
+  &__description {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    margin: 0;
+  }
+}

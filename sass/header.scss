@@ -6,6 +6,8 @@
   &--active {
     background-color: $menu-bg;
     backdrop-filter: blur(20px);
+
+    z-index: 9999;
   }
 
   &__wrap {

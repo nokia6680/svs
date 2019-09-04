@@ -9,11 +9,13 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap&subset=cyrillic" rel="stylesheet">
 	<meta property="og:title" content="" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="" />
@@ -95,10 +97,14 @@
 					<input class="nav-menu__search-input" type="search" name="search" id="search-1" placeholder="Поиск" />
 					<label class="nav-menu__search-input-btn" for="search-1"></label>
 					<!--Search results-->
-					<div class="nav-menu__search-result search-result" id="search-result-1">
+					<div class="nav-menu__search-result search-result" style="display: none;" id="search-result-1">
 						<div class="search-result__upper">
 							<h3 class="search-result__title">Сферы</h3>
-							<b class="search-result__type">Автомобильные работы</b>
+							<b class="search-result__type">
+								<svg class="search-result__type-pic" width="5" height="11">
+									<use xlink:href="#icon-angle"></use>
+								</svg>
+								Автомобильные работы</b>
 						</div>
 						<div class="search-result__lower">
 							<h3 class="search-result__title">Средства защиты</h3>
@@ -106,31 +112,41 @@
 								<!--Single item-->
 								<li class="result-list__item">
 									<picture class="result-list__frame">
-										<source media="(min-width: 1200px)" src="img/result-1-big.webp" type="image/webp" />
-										<source media="(min-width: 1200px)" src="img/result-1-big.png" />
-										<source media="(min-width: 768px)" src="img/result-1-med.webp" type="image/webp" />
-										<source media="(min-width: 768px)" src="img/result-1-med.png" />
-										<source src="img/result-1-small.webp" type="image/webp" />
-										<img src="img/result-1-small.png" />
+										<source media="(min-width: 1200px)" srcset="img/search-result-2.webp" type="image/webp" />
+										<source media="(min-width: 1200px)" srcset="img/search-result-2.png" />
+										<source media="(min-width: 768px)" srcset="img/search-result-2.webp" type="image/webp" />
+										<source media="(min-width: 768px)" srcset="img/search-result-2.png" />
+										<source srcset="img/search-result-2.webp" type="image/webp" />
+										<img class="result-list__frame-pic" src="img/search-result-2.png" />
 									</picture>
 									<div class="result-list__item-info">
-										<b class="result-list__item-title"></b>
-										<span class="result-list__item-type"></span>
+										<b class="result-list__item-title">Перчатки утепленные с ПВХ покрытием (осень эконом)</b>
+										<span class="result-list__item-sign result-list__item-sign--latest" style="display: none;">Новинка
+											<svg class="result-list__pic" width="12" height="12">
+												<use xlink:href="#icon-star-white"></use>
+											</svg>
+										</span>
+										<span class="result-list__item-sign result-list__item-sign--sale">Акция %</span>
 									</div>
 								</li>
 								<!--Single item-->
 								<li class="result-list__item">
 									<picture class="result-list__frame">
-										<source media="(min-width: 1200px)" src="img/result-1-big.webp" type="image/webp" />
-										<source media="(min-width: 1200px)" src="img/result-1-big.png" />
-										<source media="(min-width: 768px)" src="img/result-1-med.webp" type="image/webp" />
-										<source media="(min-width: 768px)" src="img/result-1-med.png" />
-										<source src="img/result-1-small.webp" type="image/webp" />
-										<img src="img/result-1-small.png" />
+										<source media="(min-width: 1200px)" srcset="img/search-result-1.webp" type="image/webp" />
+										<source media="(min-width: 1200px)" srcset="img/search-result-1.png" />
+										<source media="(min-width: 768px)" srcset="img/search-result-1.webp" type="image/webp" />
+										<source media="(min-width: 768px)" srcset="img/search-result-1.png" />
+										<source srcset="img/search-result-1.webp" type="image/webp" />
+										<img src="img/search-result-1.png" />
 									</picture>
 									<div class="result-list__item-info">
-										<b class="result-list__item-title"></b>
-										<span class="result-list__item-type"></span>
+										<b class="result-list__item-title">Перчатки нейлоновые с рельефным натуральным латексом</b>
+										<span class="result-list__item-sign result-list__item-sign--latest">Новинка
+											<svg class="result-list__pic" width="12" height="12">
+												<use xlink:href="#icon-star-white"></use>
+											</svg>
+										</span>
+										<span class="result-list__item-sign result-list__item-sign--sale" style="display: none;">Акция %</span>
 									</div>
 								</li>
 							</ul>
@@ -315,7 +331,7 @@
 			<ul class="choice__filter filter-choice">
 				<!--Base material checkboxes-->
 				<li class="filter-choice__select filter-choice__select--base">
-					<input class="filter-choice__checkbox" type="checkbox" id="base-block">
+					<input class="filter-choice__checkbox visually-hidden" type="checkbox" id="base-block">
 					<i class="filter-choice__arrow"></i>
 					<b class="filter-choice__heading">Основа</b>
 					<!--checkbox list - BASE-->
@@ -344,7 +360,7 @@
 				</li>
 				<!--Cover material checkboxes-->
 				<li class="filter-choice__select filter-choice__select--cover">
-					<input class="filter-choice__checkbox" type="checkbox" id="cover-block">
+					<input class="filter-choice__checkbox visually-hidden" type="checkbox" id="cover-block">
 					<i class="filter-choice__arrow"></i>
 					<b class="filter-choice__heading">Покрытие</b>
 					<!--checkbox list - COVER-->
@@ -373,7 +389,7 @@
 				</li>
 				<!--Class checkboxes-->
 				<li class="filter-choice__select filter-choice__select--class">
-					<input class="filter-choice__checkbox" type="checkbox" id="class-block">
+					<input class="filter-choice__checkbox visually-hidden" type="checkbox" id="class-block">
 					<i class="filter-choice__arrow"></i>
 					<b class="filter-choice__heading">Класс вязки</b>
 					<!--checkbox list - CLASS-->
@@ -392,7 +408,7 @@
 				</li>
 				<!--Main features checkboxes-->
 				<li class="filter-choice__select filter-choice__select--feature">
-					<input class="filter-choice__checkbox" type="checkbox" id="feature-block">
+					<input class="filter-choice__checkbox visually-hidden" type="checkbox" id="feature-block">
 					<i class="filter-choice__arrow"></i>
 					<b class="filter-choice__heading">Защитные свойства</b>
 					<!--checkbox list - FEATURE-->
@@ -421,7 +437,7 @@
 				</li>
 				<!--Usage areas checkboxes-->
 				<li class="filter-choice__select filter-choice__select--usage">
-					<input class="filter-choice__checkbox" type="checkbox" id="usage-block">
+					<input class="filter-choice__checkbox visually-hidden" type="checkbox" id="usage-block">
 					<i class="filter-choice__arrow"></i>
 					<b class="filter-choice__heading">Защитные свойства</b>
 					<!--checkbox list - USAGE AREAS-->
@@ -684,6 +700,7 @@
 					</a>
 				</article>
 			</div>
+			<a class="latest__link" href="catalog.html" target="_self" title="Весь каталог">Весь каталог</a>
 		</section>
 		<!--About us section-->
 		<section class="main__about about">
@@ -758,9 +775,9 @@
 		</nav>
 	</footer>
 	<!--Callback popup-->
-	<div class="popup-callback">
+	<div class="popup-callback" style="display: none;">
 		<div class="popup-callback__wrapper">
-			<div class="popup-callback__header popup-callback__header--reaction">
+			<div class="popup-callback__header">
 				<h3 class="popup-callback__title">Мы вам перезвоним</h3>
 				<button class="popup-callback__close" type="button">
 					<svg class="popup-callback__close-pic popup-callback__close-pic--white" width="18" height="18">
@@ -772,7 +789,7 @@
 				</button>
 			</div>
 			<!--Callback order div-->
-			<div class="popup-callback__action popup-callback__action--inactive">
+			<div class="popup-callback__action">
 				<form class="popup-callback__form callback-form" method="get" action="#" name="Форма заказа обратного звонка">
 					<ul class="callback-form__list">
 						<li class="callback-form__item">
@@ -793,7 +810,7 @@
 				</p>
 			</div>
 			<!--Callback reaction div-->
-			<div class="popup-callback__reaction">
+			<div class="popup-callback__reaction popup-callback__reaction--inactive">
 				<picture class="popup-callback__frame">
 					<source media="(min-width: 1200px)" srcset="img/reaction-dt.webp" type="image/webp">
 					<source media="(min-width: 1200px)" srcset="img/reaction-dt.png">
@@ -810,6 +827,7 @@
 		</div>
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

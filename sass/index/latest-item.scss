@@ -1,0 +1,36 @@
+.latest-item {
+  @include flex-setting(column, flex-start, center);
+  width: 100%;
+
+  border: 1px solid #E4D9C6;
+  border-radius: 5px;
+
+  margin-bottom: 2.625rem;
+
+  padding: 1.125rem 0.688rem;
+
+  &__link {
+    @include flex-setting(column, flex-start, flex-start);
+    width: 100%;
+
+    text-decoration: none;
+  }
+
+  &__sign {
+    @include font-setting($primary-font, 0.75rem, 1rem, 600, $text-primary);
+
+    &--latest {
+      color: $text-secondary;
+    }
+  }
+
+  &__frame {
+    @include flex-setting(column, center, center);
+    margin-bottom: 1.25rem;
+  }
+
+  &__description {
+    @include font-setting($primary-font, 1rem, 1.375rem, 600, $text-primary);
+
+  }
+}

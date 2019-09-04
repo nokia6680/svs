@@ -1,0 +1,23 @@
+.choice {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+  margin-bottom: 3.75rem;
+
+  &__title {
+    @include font-setting($title-font, 1.5rem, 1.75rem, 500, $text-primary);
+    margin: 0;
+    margin-bottom: 2.25rem;
+  }
+
+  &__submit {
+    @include flex-setting(column, center, center);
+    text-decoration: none;
+  }
+
+  &__submit-empty,
+  &__submit-filtered,
+  &__submit-count {
+    @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+  }
+}

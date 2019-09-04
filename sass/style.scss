@@ -16,6 +16,7 @@
 @import "lang-list.scss";
 @import "service-list.scss";
 @import "service-contacts.scss";
+@import "main.scss";
 @import "footer.scss";
 @import "footer-nav.scss";
 @import "footer-menu.scss";
@@ -23,3 +24,14 @@
 @import "footer-legal.scss";
 @import "popup-callback.scss";
 @import "callback-form.scss";
+/*Index styles*/
+@import "sass/index/intro.scss";
+@import "sass/index/intro-slider.scss";
+@import "sass/index/activity.scss";
+@import "sass/index/act-list.scss";
+@import "sass/index/choice.scss";
+@import "sass/index/filter-choice.scss";
+@import "sass/index/choice-list.scss";
+@import "sass/index/latest.scss";
+@import "sass/index/latest-item.scss";
+@import "sass/index/about.scss";

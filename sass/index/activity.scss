@@ -1,0 +1,14 @@
+.activity {
+  @include flex-setting(column, flex-start, flex-start);
+
+  width: 100%;
+
+  padding-top: 1.763rem;
+  padding-bottom: 2.25rem;
+
+  &__title {
+    @include font-setting($title-font, 1.816rem, 1.938rem, 500, $text-primary);
+    margin: 0;
+    margin-bottom: 1.451rem;
+  }
+}
