@@ -1,0 +1,7 @@
+.catalog-list {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  margin-bottom: 2.5rem;
+}

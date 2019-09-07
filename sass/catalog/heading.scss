@@ -1,0 +1,25 @@
+.heading {
+  width: 100%;
+
+  @include flex-setting(column, flex-start, flex-start);
+
+  padding: 0 0.625rem;
+  margin-bottom: 1.688rem;
+
+  &__title {
+    @include font-setting($title-font, 2rem, 2.375rem, 500, $text-primary);
+    margin: 0;
+    margin-bottom: 1.875rem;
+  }
+
+  &__catalog {
+    @include font-setting($primary-font, 1rem, 1.375rem, 400, $text-primary);
+    @include flex-setting(row, flex-start, center);
+
+    text-decoration: none;
+  }
+
+  &__catalog-pic {
+    margin-left: 5px;
+  }
+}

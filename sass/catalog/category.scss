@@ -1,0 +1,37 @@
+.category {
+  @include flex-setting(row, flex-start, center);
+  @include ul-nostyle;
+
+  width: 100%;
+
+  margin-bottom: 2.5rem;
+
+  &__item {
+    width: auto;
+
+    @include flex-setting(row, flex-start, center);
+
+    margin-right: 3.125rem;
+  }
+
+  &__checkbox + label {
+    @include checkbox-default;
+  }
+
+  &__checkbox + label::before {
+    @include custom-checkbox;
+  }
+
+  &__checkbox:checked + label::after {
+    @include checkbox-checked;
+    animation: showAnimation .2s ease-in-out;
+  }
+
+  &__checkbox:hover + label::before {
+    @include hover-checkbox;
+  }
+
+  &__checkbox:disabled + label::after {
+    @include checkbox-disabled;
+  }
+}

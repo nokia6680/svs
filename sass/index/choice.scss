@@ -2,6 +2,7 @@
   @include flex-setting(column, flex-start, center);
 
   width: 100%;
+  padding: 0 0.625rem;
   margin-bottom: 3.75rem;
 
   &__title {
@@ -9,15 +10,81 @@
     margin: 0;
     margin-bottom: 2.25rem;
   }
-
+  /*Пустая кнопка*/
   &__submit {
     @include flex-setting(column, center, center);
     text-decoration: none;
-  }
+    background-color: $btn-color;
 
+    width: 220px;
+    height: 60px;
+
+    border-radius: 5px;
+
+    margin-bottom: 1.25rem;
+  }
+  /*Кнопка с показом количества выбранных вариантов*/
+  &__submit-filtered {
+    @include flex-setting(row, space-between, center);
+
+    width: 100%;
+  }
+  &__submit-count {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 1px;
+      height: 40px;
+
+      top: 50%;
+      right: 0;
+
+      background-color: #E4D9C6;
+
+      transform: translateY(-50%);
+    }
+  }
+  &__submit-text {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+  }
+  /*Общие текстовые стили*/
   &__submit-empty,
   &__submit-filtered,
   &__submit-count {
     @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+  }
+  /*Кнопка сброса фильтра*/
+  &__reset {
+    @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+    letter-spacing: 0.01em;
+
+    background-color: transparent;
+    border: none;
+
+    border-bottom: 1px dashed #828C98;
+
+    padding: 0;
+
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      border-color: $link-hover;
+      transition: 0.1s ease-in-out;
+    }
   }
 }

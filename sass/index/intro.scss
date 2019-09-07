@@ -3,10 +3,6 @@
 
   @include flex-setting(column, flex-start, center);
 
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-
-  &__search {
-    display: none;
-  }
+  margin-top: 0;
+  margin-bottom: 0.625rem;
 }

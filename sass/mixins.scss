@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0.625rem;
 
   @media only screen and (min-width: $smt) {
     max-width: 100%;
@@ -35,6 +35,34 @@
   }
 }
 
+@mixin ul-nostyle {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+@mixin double-shadow($color) {
+	@include box-shadow(0 1px 0 lighten($color, 10%) inset, 0 -1px 0 darken($color, 10%) inset);
+}
+
+@mixin hover-style($color) {
+	&:hover {
+		background: lighten($color, 3%);
+	}
+}
+
+@mixin animation($content) {
+  animation: $content;
+  -moz-animation: $content;
+  -webkit-animation: $content;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+}
+
 @mixin checkbox-default {
   display: inline-block;
   vertical-align: middle;
@@ -61,15 +89,43 @@
   content: "";
   display: block;
 
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
 
-  top: -6px;
+  top: -2px;
   left: 0;
 
-  border: 1px solid #a1afb4;
-  border-radius: 8px;
-  background-color: transparent;
+  background-color: #C1CAD5;
+  border-radius: 4px;
+
+  @media only screen and (min-width: $mobile) {
+
+  }
+
+  @media only screen and (min-width: $laptop) {
+
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+
+  }
+}
+
+@mixin hover-checkbox {
+  position: absolute;
+  content: "";
+  display: block;
+
+  width: 21px;
+  height: 21px;
+
+  top: -2px;
+  left: 0;
+
+  background-color: #C1CAD5;
+  border-radius: 4px;
+  border: 1px solid #84AA32;
+  transition: 0.1s ease-in;
 
   @media only screen and (min-width: $mobile) {
 
@@ -89,14 +145,46 @@
   content: "";
   display: block;
 
-  width: 16px;
-  height: 16px;
+  width: 21px;
+  height: 21px;
 
-  top: -3px;
-  left: 3px;
+  top: -2px;
+  left: 0px;
 
-  background-color: #a1afb4;
-  border-radius: 5px;
+  background-color: #84AA32;
+  border-radius: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5L6 10L13 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+
+  @media only screen and (min-width: $mobile) {
+
+  }
+
+  @media only screen and (min-width: $laptop) {
+
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+
+  }
+}
+
+@mixin checkbox-disabled {
+  position: absolute;
+  content: "";
+  display: block;
+
+  width: 21px;
+  height: 21px;
+
+  top: -2px;
+  left: 0px;
+
+  background-color: #D7D8DA;
+  border-radius: 4px;
 
   @media only screen and (min-width: $mobile) {
 

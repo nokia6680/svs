@@ -30,5 +30,12 @@
     @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
 
     text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      transition: 0.1s ease-in out;
+    }
   }
 }

@@ -1,0 +1,8 @@
+.pagination {
+  @include flex-setting(row, space-between, center);
+  @include ul-nostyle;
+
+  width: 100%;
+
+  margin-bottom: 3.75rem;
+}

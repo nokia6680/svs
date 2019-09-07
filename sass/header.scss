@@ -3,6 +3,11 @@
 
   position: relative;
 
+  margin-bottom: 0.625rem;
+  padding: 0 0.625rem;
+
+  background-color: #FAF9F7;
+
   &--active {
     background-color: $menu-bg;
     backdrop-filter: blur(20px);
@@ -12,5 +17,10 @@
 
   &__wrap {
     @include container;
+  }
+
+  /*Header on catalog page*/
+  &--catalog {
+    margin-bottom: 1.375rem;
   }
 }
