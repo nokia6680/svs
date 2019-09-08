@@ -41,13 +41,13 @@
     @include hover-checkbox;
   }
 
+  &__checkbox:disabled + label::after {
+    @include checkbox-disabled;
+  }
+
   &__checkbox:checked + label::after {
     @include checkbox-checked;
     animation: showAnimation .2s ease-in-out;
-  }
-
-  &__checkbox:disabled + label::after {
-    @include checkbox-disabled;
   }
 
   &__checkbox:disabled + label {

@@ -1,0 +1,154 @@
+.popup-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+
+  transition: 0.3s ease-in;
+
+  &__wrapper {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    position: relative;
+  }
+
+  &__header {
+    @include flex-setting(row, space-between, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: #FAF9F7;
+
+    padding: 1.125rem 1.25rem;
+
+    z-index: 5;
+  }
+
+  &__title {
+    @include font-setting($title-font, 1.25rem, 1.5rem, 500, $text-primary);
+    margin: 0;
+  }
+
+  &__close {
+    @include flex-setting(column, center, center);
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+    outline: none;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 1px;
+      height: 40px;
+
+      background-color: #C1CAD5;
+
+      top: 50%;
+      left: -25px;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__main {
+    padding-top: 4.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1.5rem;
+
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+
+    position: relative;
+
+    @include flex-setting(column, flex-start, flex-start);
+  }
+
+  &__reset {
+    @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dotted #828C98;
+
+    width: auto;
+
+    margin-bottom: 1.125rem;
+    padding: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      border-color: $link-hover;
+      transition: 0.1s ease-in;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    margin-bottom: 0;
+
+    width: 100%;
+
+    @include flex-setting(column, center, center);
+    background-color: #84AA32;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 100%;
+      height: 37px;
+
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.489583) 44.79%, rgba(255, 255, 255, 0) 100%);
+      transform: rotate(-180deg);
+
+      top: -37px;
+      left: 0;
+    }
+  }
+
+  &__link {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 700, $text-secondary);
+    width: 100%;
+    height: 100%;
+
+    padding: 0.938rem 0;
+    text-decoration: none;
+    text-align: center;
+
+    outline: none;
+    cursor: pointer;
+  }
+}

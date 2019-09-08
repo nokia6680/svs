@@ -55,6 +55,9 @@
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-close-black">
 			<path d="M1 1l16 16m0-16L1 17" stroke="#000" stroke-width="2"></path>
 		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-close-gray">
+			<path d="M1 1l16 16m0-16L1 17" stroke="#A0A0A0" stroke-width="2"></path>
+		</symbol>
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-angle-down">
 			<path d="M1 1l8 8 8-8" stroke="#C1CAD5"></path>
 		</symbol>
@@ -88,6 +91,9 @@
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-filter-book">
 			<path d="M25.406.5c.438-.031.813.094 1.125.375.313.281.469.64.469 1.078v15.844c0 .375-.14.703-.422.984-.25.282-.578.422-.984.422-4.375.25-7.797.985-10.266 2.203a.736.736 0 0 1-.515.094.726.726 0 0 1-.422-.281.686.686 0 0 1-.141-.422V3.734c0-.28.11-.484.328-.609C16.984 1.656 20.594.781 25.406.5zM12.422 3.125c.219.125.328.328.328.61v17.062c0 .25-.125.437-.375.562-.219.157-.453.172-.703.047-2.469-1.218-5.89-1.953-10.266-2.203a1.4 1.4 0 0 1-1.031-.422A1.435 1.435 0 0 1 0 17.797V1.953c0-.437.156-.797.469-1.078A1.458 1.458 0 0 1 1.594.5c4.812.281 8.422 1.156 10.828 2.625z"
 				fill="#84AA32"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-arrow-left">
+			<path d="M9 1L2 8l7 7" stroke="#C1CAD5" stroke-width="2" stroke-linecap="round" /></path>
 		</symbol>
 	</svg>
 	<!--End of SVG sprite-->
@@ -272,13 +278,13 @@
 			<div class="catalog__filter catalog-filter">
 				<div class="catalog-filter__heading">
 					<a class="catalog-filter__btn" href="#" target="_self" title="Настроить фильтр">
-						<span class="catalog-filter__btn-text catalog-filter__btn-text-all">Фильтр</span>
-						<span class="catalog-filter__btn-filtered hidden">
-							<span class="catalog-filter__btn-text">Фильтры</span>
+						<span class="catalog-filter__btn-text catalog-filter__btn-text-all hidden">Фильтр</span>
+						<span class="catalog-filter__btn-filtered">
+							<span class="catalog-filter__btn-text catalog-filter__btn-text-filtered">Фильтры</span>
 							<span class="catalog-filter__btn-count">2</span>
 							<button class="catalog-filter__btn-reset" type="reset">
-								<svg class="catalog-filter__reset-pic" width="12" height="12">
-									<use xlink:href="#icon-cross"></use>
+								<svg class="catalog-filter__reset-pic" width="18" height="18">
+									<use xlink:href="#icon-close-gray"></use>
 								</svg>
 							</button>
 						</span>
@@ -631,20 +637,37 @@
 				</div>
 				<a class="catalog__more" href="#" target="_self" title="Показать ещё">Показать ещё</a>
 				<!--Pagination-->
-				<ul class="catalog__pagination pagination">
-					<li class="pagination__item">
-						<a class="pagination__link" href="#" target="_self">1</a>
-					</li>
-					<li class="pagination__item">
-						<a class="pagination__link" href="#" target="_self">2</a>
-					</li>
-					<li class="pagination__item">
-						<a class="pagination__link" href="#" target="_self">3</a>
-					</li>
-					<li class="pagination__item">
-						<a class="pagination__link" href="#" target="_self">4</a>
-					</li>
-				</ul>
+				<div class="catalog__pagination pagination">
+					<!--Navigation button-->
+					<button class="pagination__control pagination__control--left" type="button">
+						<svg class="pagination__control-pic" width="10" height="16">
+							<use xlink:href="#icon-arrow-left"></use>
+						</svg>
+					</button>
+					<ul class="pagination__list">
+						<li class="pagination__item pagination__item--active">
+							<a class="pagination__link" href="#" target="_self">1</a>
+						</li>
+						<li class="pagination__item">
+							<a class="pagination__link" href="#" target="_self">2</a>
+						</li>
+						<li class="pagination__item">
+							<a class="pagination__link" href="#" target="_self">3</a>
+						</li>
+						<li class="pagination__item">
+							<a class="pagination__link" href="#" target="_self">4</a>
+						</li>
+						<li class="pagination__item pagination__item--more">
+							<a class="pagination__link" href="#" target="_self">...</a>
+						</li>
+					</ul>
+					<!--Navigation button-->
+					<button class="pagination__control pagination__control--right" type="button">
+						<svg class="pagination__control-pic" width="7" height="14">
+							<use xlink:href="#icon-arrow-right"></use>
+						</svg>
+					</button>
+				</div>
 			</div>
 		</section>
 		<!--Seoblock-->
@@ -763,9 +786,207 @@
 		</div>
 	</div>
 	<!--Filter popup-->
-	<div class="popup-filter">
+	<div class="popup-filter" style="display: none;">
 		<div class="popup-filter__wrapper">
-
+			<!--Mobile filter popup header-->
+			<header class="popup-filter__header">
+				<h2 class="popup-filter__title">Фильтр</h2>
+				<button class="popup-filter__close" type="button">
+					<svg class="popup-filter__close-pic" width="18" height="18">
+						<use xlink:href="#icon-close-black"></use>
+					</svg>
+				</button>
+			</header>
+			<!--Mobile filter popup content part-->
+			<div class="popup-filter__main">
+				<button class="popup-filter__reset" type="reset">Сбросить</button>
+				<ul class="popup-filter__list filter-choice">
+					<!--Base material checkboxes-->
+					<li class="filter-choice__select filter-choice__select--base dropdown">
+						<input class="filter-choice__checkbox" type="checkbox" id="base-block">
+						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+							Основа
+							<svg class="filter-choice__heading-pic" width="18" height="10">
+								<use xlink:href="#icon-angle-down"></use>
+							</svg>
+						</a>
+						<!--checkbox list - BASE-->
+						<ul class="filter-choice__list choice-list choice-list--base" id="base-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="cotton" id="base-1" disabled />
+								<label class="choice-list__label" for="base-1" >100% хлопок</label>
+								<span class="choice-list__counter">3</span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="acril" id="base-2" />
+								<label class="choice-list__label" for="base-2">Акрил</label>
+								<span class="choice-list__counter">3</span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="mixed" id="base-3" />
+								<label class="choice-list__label" for="base-3">Смесевая пряжа</label>
+								<span class="choice-list__counter">3</span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="nylon" id="base-4" />
+								<label class="choice-list__label" for="base-4">Нейлон</label>
+								<span class="choice-list__counter">3</span>
+							</li>
+						</ul>
+					</li>
+					<!--Cover material checkboxes-->
+					<li class="filter-choice__select filter-choice__select--cover">
+						<input class="filter-choice__checkbox" type="checkbox" id="cover-block">
+						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+							Покрытие
+							<svg class="filter-choice__heading-pic" width="18" height="10">
+								<use xlink:href="#icon-angle-down"></use>
+							</svg>
+						</a>
+						<!--checkbox list - COVER-->
+						<ul class="filter-choice__list choice-list choice-list--cover" id="cover-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="without" id="cover-1" />
+								<label class="choice-list__label" for="cover-1">Без покрытия</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="polyvinyl" id="cover-2" />
+								<label class="choice-list__label" for="cover-2">ПВХ</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="latex" id="cover-3" />
+								<label class="choice-list__label" for="cover-3">Латекс</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="nitril" id="cover-4" />
+								<label class="choice-list__label" for="cover-4">Нитрил</label>
+								<span class="choice-list__counter"></span>
+							</li>
+						</ul>
+					</li>
+					<!--Class checkboxes-->
+					<li class="filter-choice__select filter-choice__select--class">
+						<input class="filter-choice__checkbox" type="checkbox" id="class-block">
+						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+							Класс вязки
+							<svg class="filter-choice__heading-pic" width="18" height="10">
+								<use xlink:href="#icon-angle-down"></use>
+							</svg>
+						</a>
+						<!--checkbox list - CLASS-->
+						<ul class="filter-choice__list choice-list choice-list--class" id="class-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="10 class" id="class-1" />
+								<label class="choice-list__label" for="class-1">10 класс</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="13 class" id="class-2" />
+								<label class="choice-list__label" for="class-2">13 класс</label>
+								<span class="choice-list__counter"></span>
+							</li>
+						</ul>
+					</li>
+					<!--Main features checkboxes-->
+					<li class="filter-choice__select filter-choice__select--feature">
+						<input class="filter-choice__checkbox" type="checkbox" id="feature-block">
+						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+							Защитные свойства
+							<svg class="filter-choice__heading-pic" width="18" height="10">
+								<use xlink:href="#icon-angle-down"></use>
+							</svg>
+						</a>
+						<!--checkbox list - FEATURE-->
+						<ul class="filter-choice__list choice-list choice-list--feature" id="feature-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-oil" id="feature-1" />
+								<label class="choice-list__label" for="feature-1">Стойкие к маслу и бензину</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-lowtemp" id="feature-2" />
+								<label class="choice-list__label" for="feature-2">Стойкие к пониженным температурам</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-puncture" id="feature-3" />
+								<label class="choice-list__label" for="feature-3">Стойкие к проколам и порезам</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-dust" id="feature-4" />
+								<label class="choice-list__label" for="feature-4">Стойкие к пыли и грязи</label>
+								<span class="choice-list__counter"></span>
+							</li>
+						</ul>
+					</li>
+					<!--Usage areas checkboxes-->
+					<li class="filter-choice__select filter-choice__select--usage">
+						<input class="filter-choice__checkbox" type="checkbox" id="usage-block">
+						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+							Сферы применения
+							<svg class="filter-choice__heading-pic" width="18" height="10">
+								<use xlink:href="#icon-angle-down"></use>
+							</svg>
+						</a>
+						<!--checkbox list - USAGE AREAS-->
+						<ul class="filter-choice__list choice-list choice-list--usage" id="usage-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="cars-work" id="usage-1" />
+								<label class="choice-list__label" for="usage-1">Автомобильные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="garden-work" id="usage-2" />
+								<label class="choice-list__label" for="usage-2">С/Х и садовые работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="load-unload" id="usage-3" />
+								<label class="choice-list__label" for="usage-3">Погрузочно-разгрузочные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="building-work" id="usage-4" />
+								<label class="choice-list__label" for="usage-4">Строительные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="warehouse-work" id="usage-5" />
+								<label class="choice-list__label" for="usage-5">Складские работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="utilities" id="usage-6" />
+								<label class="choice-list__label" for="usage-6">Коммунальные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="repair-work" id="usage-7" />
+								<label class="choice-list__label" for="usage-7">Ремонтные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="color-work" id="usage-8" />
+								<label class="choice-list__label" for="usage-8">Малярные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="precision-work" id="usage-9" />
+								<label class="choice-list__label" for="usage-9">Сборочные операции и работа с мелкими деталями</label>
+								<span class="choice-list__counter"></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--Mobile filter popup footer-->
+			<footer class="popup-filter__footer">
+				<a class="popup-filter__link" href="#" target="_self" title="Показать предложения">Посмотреть&nbsp;<span class="popup-filter__link-count">4</span>&nbsp;предложения</a>
+			</footer>
 		</div>
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
