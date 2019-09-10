@@ -1,4 +1,4 @@
-.callback-form {
+.preorder-form {
   @include flex-setting(column, flex-start, flex-start);
 
   width: 100%;
@@ -109,7 +109,8 @@
     &:hover,
     &:active,
     &:focus {
-      @include btn-hover;
+      background-color: #754440;
+      transition: 0.2s ease-in;
     }
   }
 }

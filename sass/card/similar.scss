@@ -1,0 +1,17 @@
+.similar {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  padding: 0 0.625rem;
+  margin-bottom: 3.625rem;
+
+  &__title {
+    @include font-setting($title-font, 1.125rem, 1.313rem, 500, $text-primary);
+    margin: 0;
+    margin-bottom: 2.5rem;
+
+    max-width: 240px;
+    align-self: flex-start;
+  }
+}

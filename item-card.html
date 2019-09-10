@@ -9,10 +9,14 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+
 	<meta property="og:title" content="" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="" />
@@ -94,6 +98,50 @@
 		</symbol>
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-arrow-left">
 			<path d="M9 1L2 8l7 7" stroke="#C1CAD5" stroke-width="2" stroke-linecap="round" /></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-back">
+			<path d="M9 1L2 8l7 7M4 8h16" stroke="#84AA32" stroke-width="2" stroke-linecap="round"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="flag-rus">
+			<mask id="a" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+				<circle cx="10" cy="10" r="10" fill="#C4C4C4"></circle>
+			</mask>
+			<g mask="url(#a)">
+				<path fill="#fff" d="M0 0h20v7H0z"></path>
+				<path fill="#004EB6" d="M0 7h20v6H0z"></path>
+				<path fill="#EC0000" d="M0 13h20v7H0z"></path>
+			</g>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-adv-1">
+			<path d="M9.583 29.783c.14.136.278.136.556.136.139 0 .417-.136.555-.136l4.445-4.357c.139-.136.139-.273.139-.545 0-.136-.14-.408-.14-.545l-2.221-2.178a.68.68 0 0 0-.973 0L7.5 26.515a.65.65 0 0 0 0 .953l2.083 2.315zm2.084-5.447l.694-.68 1.25 1.225-.694.68-1.25-1.225zM8.889 27.06l1.805-1.77 1.25 1.225-1.805 1.77-1.25-1.225z"
+				fill="#fff"></path>
+			<path d="M35 13.034c0-2.723-1.111-5.446-3.056-7.353-1.25-1.225-2.638-2.042-4.305-2.587l.555-1.906c0-.136 0-.409-.138-.545-.14-.136-.278-.272-.417-.272C23.056-.719 18.333.643 15 3.775c-2.222 2.179-3.472 4.902-3.889 7.762L7.917 8.269c-.973-.817-2.64-.817-3.611 0-.417.544-.695 1.089-.695 1.77 0 .68.278 1.225.695 1.77l6.805 6.672-9.583 9.396C.556 28.967 0 30.327 0 31.69c0 1.361.556 2.723 1.528 3.812C2.5 36.455 3.888 37 5.417 37c1.389 0 2.777-.545 3.889-1.498L19.722 25.29c.695.272 1.25.408 1.945.544 2.36.545 5 .409 7.222-.408.139 0 .278-.136.417-.409a.408.408 0 0 0 0-.544l-.695-1.907c1.25-.544 2.361-1.225 3.333-2.178C33.89 18.48 35 15.894 35 13.034zm-22.361 6.128c.278.545.555 1.09.972 1.634.139.272.417.545.695.817.138.136.277.272.277.409.14.136.278.272.278.408l.417.409.139.136.277.272.417.272.972.681c.14 0 .14.136.278.136 0 0 .139 0 .139.137.278.136.417.272.694.408l-10 9.804c-1.527 1.498-4.166 1.498-5.694 0-1.528-1.498-1.528-4.085 0-5.583l10.139-9.94zm3.333 2.179a802.435 802.435 0 0 1-1.25-1.226 8.642 8.642 0 0 1-1.11-1.906c-.14-.136-.14-.272-.279-.409-.416-1.361-.833-2.723-.833-4.085v-.68a11.63 11.63 0 0 1 3.472-8.307c2.222-2.178 5.278-3.404 8.472-3.404.695 0 1.528 0 2.223.136l-.278 1.226a10.493 10.493 0 0 0-8.472 2.178c-.14.137-.278.273-.417.273-.139.136-.278.272-.417.272-1.944 1.906-3.055 4.63-3.055 7.353s1.11 5.447 3.055 7.353c.14.136.278.273.278.273l.139.136c.139 0 .139.136.278.136l.278.272.138.136c1.806 1.362 3.89 2.043 6.25 2.043h1.25c.556 0 1.25-.136 1.806-.272l.417 1.225c-3.75 1.09-8.056.136-10.973-2.315l-.138-.136-.556.136c0-.136-.139-.272-.278-.408zm8.89.817h-.696v.272l-.14-.272c-2.083 0-4.166-.817-5.694-2.043l-.139-.136-.138-.136-.278-.272c-.972-.954-1.667-2.043-2.084-3.269v-.136c-.416-.953-.555-2.042-.555-2.995 0-2.451.972-4.63 2.639-6.4l.416-.409c1.806-1.498 3.89-2.315 6.25-2.315 2.5 0 4.723.954 6.528 2.588 1.806 1.77 2.64 3.949 2.64 6.4 0 2.45-.973 4.63-2.64 6.4-1.666 1.633-3.75 2.587-6.11 2.723zM5.277 10.856a1.054 1.054 0 0 1 0-1.498c.278-.272.555-.409.833-.409.278 0 .556.137.833.273l4.167 4.085v1.089c.139.817.278 1.77.556 2.587l-6.39-6.127z"
+				fill="#fff"></path>
+			<path d="M24.445 9.222c-.973 0-1.945.408-2.778 1.09-.834.68-1.111 1.633-1.111 2.723 0 1.089.416 1.906 1.11 2.723.695.68 1.667 1.09 2.779 1.09.972 0 1.944-.41 2.777-1.09.695-.68 1.111-1.634 1.111-2.723 0-1.09-.416-1.907-1.11-2.724-.695-.817-1.806-1.09-2.778-1.09zm1.666 5.583c-.416.408-1.111.68-1.805.68-.695 0-1.25-.272-1.806-.68-.417-.409-.694-1.09-.694-1.77 0-.681.277-1.226.694-1.77.417-.41 1.111-.681 1.806-.681.694 0 1.25.272 1.805.68.972 1.09.972 2.588 0 3.54z"
+				fill="#fff"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-adv-2">
+			<path d="M40.41 12.48h-5.89c-.353 0-.589.231-.589.578 0 .346.236.578.59.578h5.89c.353 0 .589-.232.589-.578 0-.347-.236-.578-.59-.578zm-5.772-3.582c.118 0 .236 0 .353-.116L39.468 5.2c.236-.231.236-.578.118-.809-.235-.231-.589-.231-.825-.115l-4.477 3.582c-.353.23-.353.578-.117.809.117.115.235.23.47.23zm.353 8.435c-.235-.23-.589-.115-.824.116-.236.231-.118.578.117.809l4.477 3.582c.118.116.236.116.354.116s.353-.116.471-.232c.236-.23.118-.577-.118-.808l-4.477-3.583zM6.48 12.48H.59c-.354 0-.59.231-.59.578 0 .346.236.578.59.578h5.89c.353 0 .589-.232.589-.578 0-.347-.236-.578-.59-.578zm-.354-3.698c.118.116.236.116.354.116s.353-.116.471-.231c.118-.231.118-.578-.118-.81l-4.477-3.58c-.235-.232-.589-.116-.824.115-.236.231-.236.578.117.809l4.477 3.582zm0 8.551L1.65 20.916c-.235.23-.235.577-.117.808.117.116.235.232.47.232.119 0 .237 0 .354-.116l4.477-3.582c.236-.231.236-.578.118-.81-.235-.23-.589-.346-.825-.115zM26.98 3.698c-.354 0-.707.115-1.06.23V3.12A2.215 2.215 0 0 0 23.68.924c-.471 0-.943.116-1.296.347C22.032.462 21.207 0 20.382 0c-1.06 0-2.003.809-2.238 1.849-.354-.231-.707-.231-1.06-.231-1.179 0-2.24.924-2.24 2.195v9.245c-.353-.347-.706-.925-1.295-1.502-.471-.81-1.178-1.156-2.003-1.156a1.89 1.89 0 0 0-1.65.924c-.47.694-.353 1.618.236 2.543.236.462.59 1.155.943 1.733l.118.116c1.649 3.12 3.063 5.546 4.24 6.355v3.351c0 .347.236.578.59.578h11.546c.353 0 .589-.231.589-.578v-3.466c1.06-1.618 1.06-5.316 1.06-8.898v-7.28c0-1.156-1.06-2.08-2.238-2.08zm.118 17.68c0 .115 0 .115 0 0-.118.23-.236.346-.236.578v3.004h-1.178v-1.502c0-.347-.236-.578-.59-.578-.353 0-.588.231-.588.578v1.502h-1.178v-1.502c0-.347-.236-.578-.59-.578-.353 0-.589.231-.589.578v1.502h-1.178v-1.502c0-.347-.235-.578-.589-.578-.353 0-.353.231-.353.578v1.502H18.85v-1.502c0-.347-.236-.578-.59-.578-.353 0-.589.231-.589.578v1.502h-1.178v-3.12a.634.634 0 0 0-.353-.578c-.118-.115-.59-.346-1.767-2.08-.707-1.155-1.532-2.658-2.239-3.929-.353-.693-.707-1.386-1.06-1.964-.354-.578-.354-1.04-.236-1.387.236-.23.471-.346.707-.346.353 0 .825.23 1.178.693.825 1.04 1.65 1.964 2.239 2.658.118.23.47.23.707.115a.634.634 0 0 0 .353-.578V3.698c0-.578.471-1.04 1.06-1.04.59 0 1.06.462 1.06 1.04V10.4c0 .347.236.578.59.578.353 0 .589-.231.589-.578V2.196c0-.578.471-1.04 1.06-1.04.59 0 1.06.462 1.06 1.04v8.32c0 .346.236.577.59.577.353 0 .589-.23.589-.577V3.12c0-.578.471-1.04 1.06-1.04.59 0 1.06.462 1.06 1.04v7.396c0 .346.236.577.59.577.353 0 .588-.346.588-.577V5.778c0-.578.472-1.04 1.06-1.04.59 0 1.061.462 1.061 1.04v7.28c0 2.426 0 6.933-.942 8.32z"
+				fill="#fff"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-adv-3">
+			<path d="M31.683 3.833c-2.368 0-4.178 1.917-4.178 4.107 0 .411.278.685.696.685.418 0 .697-.274.697-.685 0-1.505 1.253-2.875 2.924-2.875s2.925 1.233 2.925 2.875c0 1.643-1.254 2.875-2.925 2.875H11.211c-.418 0-.697.274-.697.685 0 .41.279.684.697.684h20.611c2.228 0 4.178-1.916 4.178-4.107-.14-2.327-1.95-4.244-4.317-4.244z"
+				fill="#fff"></path>
+			<path d="M11.21 8.625h10.028c2.228 0 4.178-1.917 4.178-4.107 0-2.328-1.95-4.107-4.178-4.107-2.368 0-4.178 1.916-4.178 4.107 0 .41.279.684.696.684.418 0 .697-.273.697-.684 0-1.506 1.253-2.875 2.924-2.875s2.925 1.232 2.925 2.875-1.254 2.875-2.925 2.875H11.211c-.418 0-.697.274-.697.684 0 .274.279.548.697.548zm16.156 5.75H11.21c-.418 0-.697.274-.697.684 0 .411.279.685.697.685h16.155c1.532 0 2.924 1.232 2.924 2.875s-1.253 2.875-2.924 2.875c-1.672 0-2.925-1.232-2.925-2.875 0-.41-.278-.684-.696-.684-.418 0-.697.273-.697.684 0 2.327 1.95 4.107 4.178 4.107 2.368 0 4.178-1.916 4.178-4.107.279-2.327-1.67-4.244-4.038-4.244zM7.172 0c-.278 0-.696.274-.696.685v21.22c0 .41.278.684.696.684.418 0 .696-.273.696-.684V.685C7.868.274 7.59 0 7.172 0zM2.855.548L.209 3.012c-.14.274-.14.684 0 .958.14.137.418.274.557.274.14 0 .418 0 .557-.137L3.83 1.643a.654.654 0 0 0 0-.958C3.55.41 3.133.274 2.855.548zm0 3.833L.209 6.845c-.14.274-.14.685 0 .959.14.136.278.136.557.136.278 0 .418 0 .557-.136L3.83 5.339a.654.654 0 0 0 0-.958.681.681 0 0 0-.975 0zm0 3.696L.209 10.542c-.14.274-.14.821 0 1.095.14.137.278.137.557.137.278 0 .418 0 .557-.137L3.83 9.173a.654.654 0 0 0 0-.959c-.279-.274-.697-.41-.975-.137zm0 3.833L.348 14.376c-.278.274-.278.684-.14.958.14.137.28.137.558.137s.418 0 .557-.137L3.83 12.87a.654.654 0 0 0 0-.958.681.681 0 0 0-.975 0zm0 3.697L.348 18.071c-.278.411-.278.822-.14 1.096.14.137.28.137.558.137s.418 0 .557-.137l2.507-2.465a.654.654 0 0 0 0-.958c-.279-.274-.697-.41-.975-.137zm0 3.833L.209 21.905a.654.654 0 0 0 0 .958c.14.137.278.137.557.137.278 0 .418 0 .557-.137L3.83 20.4a.654.654 0 0 0 0-.959.681.681 0 0 0-.975 0z"
+				fill="#fff"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-adv-4">
+			<path d="M29.22 29.578H1.04c-.39 0-.65.262-.65.657 0 .394.26.656.65.656h28.312c.39 0 .649-.262.649-.656 0-.395-.39-.657-.78-.657zM1.818 33.387a.623.623 0 0 0-.909 0 .64.64 0 0 0 0 .92l2.338 2.496c.26.263.65.263.909 0 .13-.131.13-.263.13-.525 0-.263 0-.395-.13-.526l-2.338-2.365zm3.637 0a.623.623 0 0 0-.91 0 .64.64 0 0 0 0 .92l2.338 2.496c.26.263.65.263.91 0 .13-.131.13-.263.13-.525 0-.263 0-.395-.13-.526l-2.338-2.365zm3.506 0a.623.623 0 0 0-.91 0 .64.64 0 0 0 0 .92l2.339 2.496c.26.263.649.263.909 0 .13-.131.13-.263.13-.525 0-.263 0-.395-.13-.526L8.96 33.387zm3.636 0a.623.623 0 0 0-.909 0 .64.64 0 0 0 0 .92l2.338 2.365c.26.262.65.262.91 0 .129-.132.129-.263.129-.526s0-.394-.13-.525l-2.338-2.234zm3.507 0a.623.623 0 0 0-.91 0 .64.64 0 0 0 0 .92l2.338 2.365c.26.262.65.262.91 0 .13-.132.13-.263.13-.526s0-.394-.13-.525l-2.338-2.234zm3.636 0a.623.623 0 0 0-.909 0 .64.64 0 0 0 0 .92l2.338 2.365c.26.262.65.262.909 0 .13-.132.13-.263.13-.526s0-.394-.13-.525l-2.338-2.234zm3.637 0a.623.623 0 0 0-.91 0 .64.64 0 0 0 0 .92l2.338 2.365c.26.262.65.262.91 0 .13-.132.13-.263.13-.526s0-.394-.13-.525l-2.338-2.234zm3.636 0a.623.623 0 0 0-.91 0 .64.64 0 0 0 0 .92l2.339 2.365c.26.262.649.262.909 0 .13-.132.13-.263.13-.526s0-.394-.13-.525l-2.338-2.234zM1.688 26.294h.13c.13 0 .39-.132.52-.132l4.675-4.729.39.131c.779.263 1.688 0 2.337-.525l9.74-10.115c.39-.394.91-.526 1.43-.526 1.817.132 3.506-.657 4.674-2.102.65-.92 1.04-1.97 1.04-3.153 0-1.182-.39-2.233-1.04-3.152C24.675.808 23.377.15 21.948.02c-1.428-.132-2.727.393-3.766 1.181 0 0-.13 0-.13.132L4.156 15.39c-.65.657-.78 1.576-.52 2.365l.13.394L.26 21.696c-.26.131-.26.394-.26.657l1.169 3.546c.13.132.26.263.52.395zm17.013-23.91c.91-.787 1.948-1.182 2.987-1.05 1.04.131 2.078.657 2.728 1.445.52.657.779 1.445.779 2.364 0 .789-.26 1.708-.78 2.365-.26.263-.389.526-.649.788L18.312 2.78l.39-.394zM3.377 23.142l-1.3 1.313-.648-2.101 1.298-1.314.65 2.102zm1.818-2.365l.39.131-1.17 1.183-.649-2.102.39-.394.13.394c.13.263.52.657.909.788zm-.13-4.466L17.532 3.698l5.195 5.255c-.52.131-1.039.263-1.688.263-.91-.132-1.688.263-2.468.92l-9.87 9.983c-.26.263-.65.394-1.039.263l-2.078-.657s-.13 0-.13-.131l-.649-2.102c-.13-.526 0-.92.26-1.182z"
+				fill="#fff"></path>
+			<path d="M23.506 6.588h.26c.26 0 .39-.262.39-.394.13-.656.13-1.313 0-1.839 0-.131-.13-.263-.26-.394s-.26-.131-.52-.131c-.389.131-.519.394-.519.788.13.394.13.788 0 1.182.13.394.26.788.65.788zm-7.272 3.416c.13.131.26.131.52.131.259 0 .389 0 .519-.131a.64.64 0 0 0 0-.92L15.844 7.64a.623.623 0 0 0-.909 0 .64.64 0 0 0 0 .92l1.299 1.445zm-2.208 2.365c.13.131.26.131.52.131s.39 0 .519-.131a.64.64 0 0 0 0-.92l-1.429-1.445a.623.623 0 0 0-.909 0c-.39.131-.39.526-.13.788l1.429 1.577zm-2.208 2.233c.13.131.26.131.52.131s.39 0 .52-.131a.64.64 0 0 0 0-.92l-1.56-1.576a.623.623 0 0 0-.908 0 .64.64 0 0 0 0 .92l1.428 1.576zM9.61 16.835c.13.131.26.131.52.131s.39 0 .52-.13a.64.64 0 0 0 0-.92l-1.56-1.577a.623.623 0 0 0-.908 0 .64.64 0 0 0 0 .92l1.428 1.576z"
+				fill="#fff"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-fingerprint">
+			<path d="M33.61 35.58c.657-.657 1.453-.985 2.391-.985.937 0 1.734.328 2.39.984.657.656.985 1.453.985 2.39a108.498 108.498 0 0 1-4.078 31.5C34.829 71.156 33.75 72 32.064 72c-1.407 0-2.391-.516-2.954-1.547-.468-.937-.609-1.828-.421-2.672 2.812-9.843 4.125-19.78 3.937-29.811 0-.938.328-1.735.984-2.39zm2.25-12.516c4.032.093 7.5 1.547 10.406 4.359 2.907 2.813 4.36 6.187 4.36 10.125a124.785 124.785 0 0 1-1.547 21.374 9.96 9.96 0 0 1-.422 1.266c-.188.375-.61.75-1.266 1.125s-1.406.515-2.25.422c-.843-.188-1.547-.657-2.109-1.407s-.75-1.593-.562-2.53a120.214 120.214 0 0 0 1.406-20.11c0-2.156-.797-3.984-2.39-5.484-1.594-1.5-3.47-2.297-5.626-2.39-2.343 0-4.218.75-5.625 2.25-1.406 1.5-2.109 3.234-2.109 5.203.094 7.218-.562 14.39-1.969 21.515-.187.843-.703 1.546-1.546 2.109-.75.469-1.594.61-2.532.422-.843-.188-1.546-.656-2.109-1.406-.469-.75-.61-1.594-.422-2.532 1.313-6.562 1.922-13.265 1.828-20.108-.093-3.844 1.22-7.172 3.938-9.985 2.812-2.812 6.328-4.218 10.546-4.218zm-18-3.516c.938-.093 1.735.188 2.391.844.75.563 1.172 1.312 1.266 2.25.094.844-.14 1.64-.703 2.39-2.719 3.282-4.031 7.078-3.938 11.39A87.118 87.118 0 0 1 15.47 53.58c0 .28-.14.656-.422 1.125-.187.375-.609.75-1.265 1.125-.656.374-1.406.515-2.25.421-.844-.187-1.547-.656-2.11-1.406-.562-.75-.75-1.593-.562-2.531a79.99 79.99 0 0 0 1.266-15.75c-.094-5.906 1.734-11.156 5.484-15.75.562-.75 1.312-1.171 2.25-1.265zm17.86-8.015c7.124.094 13.218 2.672 18.28 7.734 5.157 4.969 7.782 10.922 7.875 17.859v1.969c0 4.968-.281 9.937-.843 14.906-.094.75-.47 1.453-1.125 2.109-.657.656-1.5.937-2.532.843-.937-.093-1.734-.515-2.39-1.265-.563-.75-.75-1.594-.563-2.531.563-5.25.797-10.547.704-15.89-.094-5.157-2.063-9.563-5.907-13.219-3.75-3.75-8.296-5.672-13.64-5.765-1.687 0-3.281.187-4.781.562-.844.188-1.688.047-2.531-.422-.75-.468-1.266-1.172-1.547-2.109-.188-.938-.047-1.781.422-2.531.562-.844 1.265-1.36 2.11-1.547 2.25-.469 4.405-.703 6.468-.703zm35.436 17.156c.563 2.625.844 6 .844 10.124 0 .938-.328 1.735-.984 2.39-.657.657-1.453.985-2.39.985-.938 0-1.735-.328-2.392-.984-.656-.75-.984-1.547-.984-2.39 0-3.657-.234-6.563-.703-8.72-.187-.937-.047-1.78.422-2.53.562-.844 1.312-1.36 2.25-1.547.375-.094.797-.094 1.266 0 .468.094.843.281 1.124.562.375.188.704.469.985.844s.469.797.562 1.266zm-5.625-12.797c.563.75.75 1.594.563 2.531-.188.938-.656 1.688-1.406 2.25-.75.469-1.594.656-2.532.563-.937-.188-1.64-.703-2.109-1.547a28.153 28.153 0 0 0-3.797-4.36 32.3 32.3 0 0 0-4.5-3.515 32.538 32.538 0 0 0-5.062-2.672 28.507 28.507 0 0 0-5.484-1.687 23.682 23.682 0 0 0-5.766-.703c-8.25-.094-15.187 2.672-20.811 8.296-5.344 5.344-7.969 11.86-7.875 19.547v3.375c0 .562-.188 1.125-.563 1.687-.281.469-.703.844-1.265 1.125a2.95 2.95 0 0 1-1.547.422h-.14c-.938 0-1.735-.328-2.391-.984a4.113 4.113 0 0 1-.844-2.532v-2.953c-.094-9.562 3.187-17.718 9.843-24.468C16.876 3.33 25.455-.092 35.58.002c2.906 0 5.813.375 8.719 1.125a34.431 34.431 0 0 1 8.156 3.234 36.185 36.185 0 0 1 7.171 4.922 35.923 35.923 0 0 1 5.906 6.61z"
+				fill="#CFC6B8"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-popup-arrowawwo">
+			<path d="M8 1l8 8-8 8" stroke="#84AA32" stroke-width="2"></path>
 		</symbol>
 	</svg>
 	<!--End of SVG sprite-->
@@ -194,7 +242,7 @@
 				<!--Menu list-->
 				<ul class="nav-menu__list nav-list">
 					<li class="nav-list__item">
-						<a class="nav-list__link" href="similar.html" target="_self">Продукция</a>
+						<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
 					</li>
 					<li class="nav-list__item">
 						<a class="nav-list__link" href="#" target="_self">Акции</a>
@@ -234,7 +282,7 @@
 						</ul>
 					</div>
 					<!--Callback link-->
-					<a class="nav-service__call" href="#" target="_self">
+					<a class="nav-service__call callback" href="#" target="_self" onclick="openbox('popup-callback');return false;">
 						<svg class="nav-service__pic nav-service__pic--phone" width="15" height="15">
 							<use xlink:href="#icon-phone-white"></use>
 						</svg>
@@ -264,7 +312,7 @@
 		<!--Link to similar-->
 		<div class="main__return return return--upper">
 			<a class="return__link" href="similar.html" target="_self" title="Назад в каталог">
-				<svg class="return__link-pic" width="27" height="22">
+				<svg class="return__link-pic" width="22" height="16">
 					<use xlink:href="#icon-back"></use>
 				</svg>
 				Вернуться в каталог
@@ -294,8 +342,8 @@
 			</ul>
 			<!--Itemcard made in information-->
 			<div class="itemcard__national">
-				<svg class="itemcard__national-pic" width="27" height="27">
-					<use xlink:href="#icon-rus"></use>
+				<svg class="itemcard__national-pic" width="20" height="20">
+					<use xlink:href="#flag-rus"></use>
 				</svg>
 				<b class="itemcard__national-description">Сделано в России</b>
 			</div>
@@ -303,145 +351,360 @@
 			<p class="itemcard__description">Перчатка эталонного качества российского производства из натурального хлопка с двойным латексным покрытием. Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению влаги внутрь, обеспечивает высокую износостойкость, защищает руки от механических воздействий. Более эффективная и долговечная альтернатива обычным ХБ перчаткам с ПВХ нанесением.</p>
 			<!--Itemcard photo slider-->
 			<div class="itemcard__slider card-slider">
-				<!--Single item photo-->
-				<div class="card-slider__item card-item">
-					<picture class="card-item__frame">
-						<source srcset="img/itemcard-photo-1.webp" type="image/webp" />
-						<img class="card-item__photo" src="img/itemcard-photo-1.png" />
-					</picture>
+				<div class="card-slider__wrapper">
+					<!--Single item photo-->
+					<div class="card-slider__item card-item">
+						<button class="card-item__expand" type="button">+</button>
+						<picture class="card-item__frame">
+							<source srcset="img/latest-1.webp" type="image/webp" />
+							<img class="card-item__photo" src="img/latest-1.png" />
+						</picture>
+					</div>
+					<!--Single item photo-->
+					<div class="card-slider__item card-item">
+						<button class="card-item__expand" type="button">+</button>
+						<picture class="card-item__frame">
+							<source srcset="img/latest-1.webp" type="image/webp" />
+							<img class="card-item__photo" src="img/latest-1.png" />
+						</picture>
+					</div>
+					<!--Single item photo-->
+					<div class="card-slider__item card-item">
+						<button class="card-item__expand" type="button">+</button>
+						<picture class="card-item__frame">
+							<source srcset="img/latest-1.webp" type="image/webp" />
+							<img class="card-item__photo" src="img/latest-1.png" />
+						</picture>
+					</div>
+					<!--Single item photo-->
+					<div class="card-slider__item card-item">
+						<button class="card-item__expand" type="button">+</button>
+						<picture class="card-item__frame">
+							<source srcset="img/latest-1.webp" type="image/webp" />
+							<img class="card-item__photo" src="img/latest-1.png" />
+						</picture>
+					</div>
 				</div>
-				<!--Single item photo-->
-				<div class="card-slider__item card-item">
-					<picture class="card-item__frame">
-						<source srcset="img/itemcard-photo-1.webp" type="image/webp" />
-						<img class="card-item__photo" src="img/itemcard-photo-1.png" />
-					</picture>
-				</div>
-
-
+				<div class="prev-1"></div>
+				<div class="next-1"></div>
 			</div>
 			<!--Itemcard pre-order-->
-			<a class="itemcard__preorder" href="#" target="_self" title="Оформить предзаказ">Оформить предзаказ</a>
+			<a class="itemcard__preorder" href="#" target="_self" title="Оформить предзаказ" onclick="openorder('popup-preorder');return false;">Оформить предзаказ</a>
 		</section>
-		<!--Advantages section-->
+		<!--advantagesantages section-->
 		<section class="main__advantages advantages">
 			<h2 class="advantages__title">Особенности</h2>
-			<ul class="advantages__list adv-list">
-				<!--Advantage 1-->
-				<li class="adv-list__item">
-					<img class="adv-list__item-pic" src="img/adv-1.png" alt="Универсальность" />
-					<p class="adv-list__item-description">Универсальная перчатка для разных задач</p>
+			<ul class="advantages__list advantages-list">
+				<!--advantagesantage 1-->
+				<li class="advantages-list__item">
+					<div class="advantages-list__icon">
+						<svg class="advantages-list__icon-pic" width="35" height="37">
+							<use xlink:href="#icon-adv-1"></use>
+						</svg>
+					</div>
+					<p class="advantages-list__description">Универсальная перчатка для разных задач</p>
 				</li>
-				<!--Advantage 2-->
-				<li class="adv-list__item">
-					<img class="adv-list__item-pic" src="img/adv-2.png" alt="Большой выбор рисунков" />
-					<p class="adv-list__item-description">Большой выбор рисунков для нанесения</p>
+				<!--advantagesantage 2-->
+				<li class="advantages-list__item">
+					<div class="advantages-list__icon">
+						<svg class="advantages-list__icon-pic" width="41" height="26">
+							<use xlink:href="#icon-adv-2"></use>
+						</svg>
+					</div>
+					<p class="advantages-list__description">Большой выбор рисунков для нанесения</p>
 				</li>
-				<!--Advantage 3-->
-				<li class="adv-list__item">
-					<img class="adv-list__item-pic" src="img/adv-3.png" alt="Дышащее покрытие" />
-					<p class="adv-list__item-description">«Дышащее» покрытие, воздухопроницаемость</p>
+				<!--advantagesantage 3-->
+				<li class="advantages-list__item">
+					<div class="advantages-list__icon">
+						<svg class="advantages-list__icon-pic" width="36" height="23">
+							<use xlink:href="#icon-adv-3"></use>
+						</svg>
+					</div>
+					<p class="advantages-list__description">«Дышащее» покрытие, воздухопроницаемость</p>
 				</li>
-				<!--Advantage 4-->
-				<li class="adv-list__item">
-					<img class="adv-list__item-pic" src="img/adv-4.png" alt="Высокая стойкость" />
-					<p class="adv-list__item-description">Высокая стойкость к проколам и порезам</p>
+				<!--advantagesantage 4-->
+				<li class="advantages-list__item">
+					<div class="advantages-list__icon">
+						<svg class="advantages-list__icon-pic" width="30" height="37">
+							<use xlink:href="#icon-adv-4"></use>
+						</svg>
+					</div>
+					<p class="advantages-list__description">Высокая стойкость к проколам и порезам</p>
 				</li>
 			</ul>
 		</section>
 		<!--Itemcard details-->
 		<section class="main__details details">
 			<div class="details__description">
-				<ul class="details__list filter-choice">
-					<!--Main usage spheres-->
-					<li class="filter-choice__select dropdown">
-						<input class="filter-choice__checkbox" type="checkbox" id="details-usage">
-						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
-							Основные отрасли применения
+				<div class="details__list filter-choice filter-choice--card">
+					<!--Single item-->
+					<div class="filter-choice__select">
+						<input class="filter-choice__checkbox" type="checkbox" id="characteristics" name="characteristics" />
+						<label class="filter-choice__heading" for="characteristics">
+							Характеристики
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
 							</svg>
-						</a>
-						<!--List of info-->
-						<ul class="filter-choice__list choice-list" id="details-usage-list">
-							<li class="choice-list__item">
-
-							</li>
-						</ul>
-					</li>
-					<!--Product package-->
-					<li class="filter-choice__select dropdown">
-						<input class="filter-choice__checkbox" type="checkbox" id="details-package">
-						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
-							Упаковка
+						</label>
+						<div class="filter-choice__content">
+							<ul class="filter-choice__list content-list contest-list--lines">
+								<li class="content-list__item">
+									<b class="content-list__item-title">Длина</b>
+									<span class="content-list__item-info">22,5-23,5 см</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Вес одной пары</b>
+									<span class="content-list__item-info">9р.41-42 гр 10р.43-44гр</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Доступные размеры</b>
+									<span class="content-list__item-info">9/10 размер</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Класс вязки</b>
+									<span class="content-list__item-info">13</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Состав основы</b>
+									<span class="content-list__item-info">100% хлопок</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Покрытие</b>
+									<span class="content-list__item-info">100% натуральный латекс</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Вид покрытия</b>
+									<span class="content-list__item-info">2 слоя латекса, ладонь и кончики пальцев</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Минимальная партия</b>
+									<span class="content-list__item-info">1000 пар</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Цвет основы</b>
+									<span class="content-list__item-info">белый, натуральный хлопковый</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Цвет оверлока</b>
+									<span class="content-list__item-info">белый</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Цвета покрытия</b>
+									<span class="content-list__item-info">желто-красный, желто-зеленый</span>
+								</li>
+								<li class="content-list__item">
+									<b class="content-list__item-title">Оверлок</b>
+									<span class="content-list__item-info">машинный</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--Single item-->
+					<div class="filter-choice__select">
+						<input class="filter-choice__checkbox" type="checkbox" id="branch" name="branch" />
+						<label class="filter-choice__heading" for="branch">
+							Отрасли применения
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
 							</svg>
-						</a>
-						<!--List of info-->
-						<ul class="filter-choice__list choice-list" id="details-package-list">
-							<li class="choice-list__item">
-
-							</li>
-						</ul>
-					</li>
-					<!--Standards and sertification-->
-					<li class="filter-choice__select dropdown">
-						<input class="filter-choice__checkbox" type="checkbox" id="details-serts">
-						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
-							Стандарты и сертификаты
+						</label>
+						<div class="filter-choice__content">
+							<ul class="filter-choice__list content-list">
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Автомобильная</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Строительная</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Легкое машиностроение</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Сельское хозяйство</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--Single item-->
+					<div class="filter-choice__select">
+						<input class="filter-choice__checkbox" type="checkbox" id="purpose" name="purpose" />
+						<label class="filter-choice__heading" for="purpose">
+							Для чего используется
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
 							</svg>
-						</a>
-						<!--List of info-->
-						<ul class="filter-choice__list choice-list" id="details-serts-list">
-							<li class="choice-list__item">
-
-							</li>
-						</ul>
-					</li>
-					<!--Reccomendation block-->
-					<li class="filter-choice__select dropdown">
-						<input class="filter-choice__checkbox" type="checkbox" id="details-recommend">
-						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
-							Для чего рекомендуется
+						</label>
+						<div class="filter-choice__content">
+							<ul class="filter-choice__list content-list">
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Сбор урожая и работа в саду</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Погрузочно-разгрузочные работы</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Установка и наладка оборудования</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Погрузка грузовиков и транспортных средств</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Обработка входящих товаров</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--Single item-->
+					<div class="filter-choice__select">
+						<input class="filter-choice__checkbox" type="checkbox" id="features" name="features" />
+						<label class="filter-choice__heading" for="features">
+							Особенности
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
 							</svg>
-						</a>
-						<!--List of info-->
-						<ul class="filter-choice__list choice-list" id="details-recommend-list">
-							<li class="choice-list__item">
-
-							</li>
-						</ul>
-					</li>
-					<!--Product passport-->
-					<li class="filter-choice__select">
-						<input class="filter-choice__checkbox" type="checkbox" id="details-passport">
-						<a class="filter-choice__heading" href="#" data-toggle="dropdown">
-							Паспорт продукта
+						</label>
+						<div class="filter-choice__content">
+							<ul class="filter-choice__list content-list">
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description"><b class="content-list__item-subtitle">Воздухопроницаемость</b>&nbsp;&mdash; способны пропускать воздух, обеспечивая высокие гигиенические свойства, не позволяют ладоням потеть летом и сохраняют тепло в холодное время года</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description"><b class="content-list__item-subtitle">Полимерное покрытие</b> гарантирует повышенную цепкость кончиков пальцев и ладони, независимо от качества поверхности предметов и материалов</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description"><b class="content-list__item-subtitle">Удобство</b>&nbsp;&mdash; они отлично держатся на руках, великолепно растягиваются, принимаюn  форму руки и совершенно не мешают движениям</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description"><b class="content-list__item-subtitle">Легкие водоотталкивающие свойства</b> на ладонной части, незаменима при строительных, садовых, ремонтных работах. Хорошо подойдет при работе с красками и землей</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description"><b class="content-list__item-subtitle">Универсальность</b>&nbsp;&mdash; подходят под разные виды бытовых работ</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--Single item-->
+					<div class="filter-choice__select">
+						<input class="filter-choice__checkbox" type="checkbox" id="contents" name="contents" />
+						<label class="filter-choice__heading" for="contents">
+							Состав
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
 							</svg>
-						</a>
-						<!--List of info-->
-						<ul class="filter-choice__list choice-list" id="etails-passport-list">
-							<li class="choice-list__item">
-
-							</li>
-						</ul>
-					</li>
-				</ul>
+						</label>
+						<div class="filter-choice__content">
+							<ul class="filter-choice__list content-list">
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">100 % натуральный первичный хлопок, который позволяет рукам дышать даже в самых жарких погодных условиях эксплуатации</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">100 % натуральный латекс, создающий высокую степень защиты рук и износостойкости</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--Single item-->
+					<div class="filter-choice__select">
+						<input class="filter-choice__checkbox" type="checkbox" id="packaging" name="packaging" />
+						<label class="filter-choice__heading" for="packaging">
+							Маркировка и упаковка
+							<svg class="filter-choice__heading-pic" width="18" height="10">
+								<use xlink:href="#icon-angle-down"></use>
+							</svg>
+						</label>
+						<div class="filter-choice__content">
+							<ul class="filter-choice__list content-list">
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description"><b class="content-list__item-subtitle">Маркировка</b> в соответствии с ТР ТС 019 / 2011</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description"><b class="content-list__item-subtitle">Упаковка</b>&nbsp; Каждая пара в индивидуальной герметичной упаковке</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Блок из 100 пар стянут фирменной стрепинг-лентой</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="14" height="8">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Объём упаковки ≈0,017 м3</span>
+								</li>
+								<li class="content-list__item">
+									<svg class="content-list__item-pic" width="10" height="10">
+										<use xlink:href="#icon-popup-angle"></use>
+									</svg>
+									<span class="content-list__item-description">Вес упаковки≈4,4 кг</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="details__documents documents">
-				<h3 class="documents__title">
-					Паспорт продукта
-					<svg class="documents__title-pic" width="18" height="10">
+				<div class="documents__header">
+					<h3 class="documents__title">Паспорт продукта</h3>
+					<svg class="documents__pic" width="72" height="72">
 						<use xlink:href="#icon-fingerprint"></use>
 					</svg>
-				</h3>
+				</div>
+
 				<ul class="documents__list">
 					<li class="documents__item">
 						<a class="documents__item-link" href="#" target="_blank" title="Паспорт">Паспорт</a>
@@ -462,7 +725,7 @@
 		</section>
 		<!--Similar items-->
 		<section class="main__similar similar">
-			<h2 class="similar__title"></h2>
+			<h2 class="similar__title">Похожие перчатки, подходящие для малярных работ</h2>
 			<div class="similar__list similar-list">
 				<!--Single item-->
 				<article class="similar-list__item similar-item">
@@ -476,8 +739,8 @@
 						<span class="similar-item__sign similar-item__sign--sale">Акция %</span>
 						<!--Item photo-->
 						<picture class="similar-item__frame">
-							<source srcset="img/photo-1.webp" type="image/webp">
-							<img itemprop="image" class="similar-item__image" src="../img/photo-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<source srcset="img/latest-1.webp" type="image/webp">
+							<img itemprop="image" class="similar-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -497,8 +760,8 @@
 						<span class="similar-item__sign similar-item__sign--sale">Акция %</span>
 						<!--Item photo-->
 						<picture class="similar-item__frame">
-							<source srcset="img/photo-1.webp" type="image/webp">
-							<img itemprop="image" class="similar-item__image" src="../img/photo-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<source srcset="img/latest-1.webp" type="image/webp">
+							<img itemprop="image" class="similar-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -518,8 +781,8 @@
 						<span class="similar-item__sign similar-item__sign--sale">Акция %</span>
 						<!--Item photo-->
 						<picture class="similar-item__frame">
-							<source srcset="img/photo-1.webp" type="image/webp">
-							<img itemprop="image" class="similar-item__image" src="../img/photo-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<source srcset="img/latest-1.webp" type="image/webp">
+							<img itemprop="image" class="similar-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -532,7 +795,7 @@
 		<!--Link to similar-->
 		<div class="main__return return return--lower">
 			<a class="return__link" href="similar.html" target="_self" title="Назад в каталог">
-				<svg class="return__link-pic" width="27" height="22">
+				<svg class="return__link-pic" width="22" height="16">
 					<use xlink:href="#icon-back"></use>
 				</svg>
 				Вернуться в каталог
@@ -545,7 +808,7 @@
 			<!--Footer navi-->
 			<ul class="footer-nav__menu footer-menu">
 				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="similar.html" title="" target="_self">Продукция</a>
+					<a class="footer-menu__link" href="catalog.html" title="" target="_self">Продукция</a>
 				</li>
 				<li class="footer-menu__item">
 					<a class="footer-menu__link" href="#" title="" target="_self">Акции</a>
@@ -584,12 +847,12 @@
 						<svg class="footer-contacts__pic footer-contacts__pic--time" width="14" height="16">
 							<use xlink:href="#icon-clock"></use>
 						</svg>
-						Пн&mdash;Пт с 9 до 18
+						Пн&mdash;Пт&nbsp;с&nbsp;9&nbsp;до&nbsp;18
 					</b>
 				</div>
 				<!--Callback button-link-->
 				<div class="footer-contacts__callback">
-					<a class="footer-contacts__callback-link" href="#" target="_self" title="Заказать обратный звонок">
+					<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
 						<svg class="footer-contacts__pic footer-contacts__pic--call" width="14" height="16">
 							<use xlink:href="#icon-сallback"></use>
 						</svg>
@@ -608,8 +871,14 @@
 	<!--Callback popup-->
 	<div class="popup-callback" style="display: none;">
 		<div class="popup-callback__wrapper">
-			<button class="popup-callback__close" type="button"></button>
-			<h3 class="popup-callback__title">Мы вам перезвоним</h3>
+			<div class="popup-callback__header">
+				<h2 class="popup-callback__title">Мы вам перезвоним</h2>
+				<button class="popup-callback__close" type="button">
+					<svg class="popup-callback__close-pic" width="18" height="18">
+						<use xlink:href="#icon-close-white"></use>
+					</svg>
+				</button>
+			</div>
 			<!--Callback order div-->
 			<div class="popup-callback__action">
 				<form class="popup-callback__form callback-form" method="get" action="#" name="Форма заказа обратного звонка">
@@ -632,14 +901,14 @@
 				</p>
 			</div>
 			<!--Callback reaction div-->
-			<div class="popup-callback__reaction">
+			<div class="popup-callback__reaction popup-callback__reaction--inactive">
 				<picture class="popup-callback__frame">
-					<source media="(min-width: 1200px)" srcset="img/reaction-dt.webp" type="image/webp">
-					<source media="(min-width: 1200px)" srcset="img/reaction-dt.jpg">
-					<source media="(min-width: 768px)" srcset="img/reaction-tb.webp" type="image/webp">
-					<source media="(min-width: 768px)" srcset="img/reaction-tb.jpg">
-					<source srcset="img/reaction-sm.webp" type="image/webp">
-					<img class="popup-callback__image" src="../img/reaction-sm.jpg" alt="Спасибо! Мы вам перезвоним!" title="Спасибо! Мы вам перезвоним!">
+					<source media="(min-width: 1200px)" srcset="img/thumb-up.webp" type="image/webp">
+					<source media="(min-width: 1200px)" srcset="img/thumb-up.png">
+					<source media="(min-width: 768px)" srcset="img/thumb-up.webp" type="image/webp">
+					<source media="(min-width: 768px)" srcset="img/thumb-up.png">
+					<source srcset="img/thumb-up.webp" type="image/webp">
+					<img class="popup-callback__image" src="img/thumb-up.png" alt="Спасибо! Мы вам перезвоним!" title="Спасибо! Мы вам перезвоним!">
 				</picture>
 				<p class="popup-callback__answer">
 					Спасибо, что обратились к нам. Менеджер перезвонит по номеру <span class="popup-callback__answer-phone" id="client-number">+7 999 133 15 96</span> в течение 10 минут
@@ -649,11 +918,63 @@
 		</div>
 	</div>
 	<!--Preorder popup-->
-	<div class="popup-preorder">
-		
+	<div class="popup-preorder" style="display: none;"id="popup-preorder">
+		<div class="popup-preorder__wrapper">
+			<div class="popup-preorder__header">
+				<h2 class="popup-preorder__title">Предзаказ</h2>
+				<button class="popup-preorder__close" type="button" onclick="openorder('popup-preorder')" id="popup-preorder-close">
+					<svg class="popup-preorder__close-pic" width="18" height="18">
+						<use xlink:href="#icon-close-white"></use>
+					</svg>
+				</button>
+			</div>
+			<!--Preorder order div-->
+			<div class="popup-preorder__action">
+				<form class="popup-preorder__form preorder-form" method="get" action="#" name="Форма заказа обратного звонка">
+					<ul class="preorder-form__list">
+						<li class="preorder-form__item">
+							<span class="preorder-form__error">Ошибка</span>
+							<label class="preorder-form__label" for="tel1">Телефон</label>
+							<input class="preorder-form__input" type="tel" name="tel" id="tel1" placeholder="+7 999 123-45-67" required />
+						</li>
+						<li class="preorder-form__item">
+							<span class="preorder-form__error">Ошибка</span>
+							<label class="preorder-form__label" for="email">Телефон</label>
+							<input class="preorder-form__input" type="email" name="email" id="email" placeholder="mail@mail.ru" required />
+						</li>
+						<li class="preorder-form__item">
+							<span class="preorder-form__optional">не обязательно</span>
+							<label class="preorder-form__label" for="textarea-2">Комментарий</label>
+							<textarea class="preorder-form__textarea" name="Поле для комментария или вопроса" placeholder="Комментарий или вопрос" id="textarea-2"></textarea>
+						</li>
+					</ul>
+					<button class="preorder-form__submit" type="submit">Отправить запрос</button>
+				</form>
+				<p class="popup-preorder__warn">
+					Отправляя запрос, вы даёте согласие на обработку персональных данных в соответствии с <a class="popup-preorder__warn-link" href="#" target="_blank" title="Политика обработки персональных данных">политикой обработки персональных данных</a>
+				</p>
+			</div>
+			<!--Callback reaction div-->
+			<div class="popup-preorder__reaction" style="display: none">
+				<picture class="popup-preorder__frame">
+					<source media="(min-width: 1200px)" srcset="img/thumb-up.webp" type="image/webp">
+					<source media="(min-width: 1200px)" srcset="img/thumb-up.png">
+					<source media="(min-width: 768px)" srcset="img/thumb-up.webp" type="image/webp">
+					<source media="(min-width: 768px)" srcset="img/thumb-up.png">
+					<source srcset="img/thumb-up.webp" type="image/webp">
+					<img class="popup-preorder__image" src="img/thumb-up.png" alt="Спасибо! Мы вам перезвоним!" title="Спасибо! Мы вам перезвоним!">
+				</picture>
+				<p class="popup-preorder__answer">
+					Спасибо, что обратились к нам. Менеджер перезвонит по номеру <span class="popup-preorder__answer-phone" id="client-number">+7 999 133 15 96</span> в течение 10 минут
+				</p>
+				<button class="popup-preorder__final btn" type="button">Закрыть окно</button>
+			</div>
+		</div>
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/slider.js"></script>
 </body>
 
 </html>

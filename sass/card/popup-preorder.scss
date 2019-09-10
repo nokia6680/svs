@@ -1,4 +1,4 @@
-.popup-callback {
+.popup-preorder {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,6 +112,10 @@
     @include flex-setting(column, flex-start, center);
 
     padding: 1.563rem 1.25rem 2.5rem 1.25rem;
+
+    &--inactive {
+      display: none;
+    }
   }
 
   &__warn {
@@ -140,6 +144,10 @@
     background-color: #84AA32;
     width: 100%;
     padding-bottom: 41px;
+
+    &--inactive {
+      display: none;
+    }
   }
 
   &__frame {
@@ -176,8 +184,7 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: #754440;
-      transition: 0.2s ease-in;
+      @include btn-hover;
     }
   }
 }

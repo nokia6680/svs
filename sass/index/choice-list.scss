@@ -5,10 +5,19 @@
   list-style: none;
 
   width: 100%;
+  height: auto;
+
   padding-top: 0;
   padding-left: 20px;
   padding-bottom: 17px;
   padding-right: 20px;
+
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
   &__item {
     @include flex-setting(row, flex-start, center);
@@ -47,7 +56,6 @@
 
   &__checkbox:checked + label::after {
     @include checkbox-checked;
-    animation: showAnimation .2s ease-in-out;
   }
 
   &__checkbox:disabled + label {

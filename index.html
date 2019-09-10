@@ -216,7 +216,7 @@
 						</ul>
 					</div>
 					<!--Callback link-->
-					<a class="nav-service__call" href="#" target="_self">
+					<a class="nav-service__call callback" href="#" target="_self" onclick="openbox('popup-callback');return false;">
 						<svg class="nav-service__pic nav-service__pic--phone" width="15" height="15">
 							<use xlink:href="#icon-phone-white"></use>
 						</svg>
@@ -300,188 +300,194 @@
 		<!--Choice section-->
 		<section class="main__choice choice">
 			<h2 class="choice__title">Подберите защитные перчатки</h2>
-			<ul class="choice__filter filter-choice">
-				<!--Base material checkboxes-->
-				<li class="filter-choice__select filter-choice__select--base dropdown">
-					<input class="filter-choice__checkbox" type="checkbox" id="base-block">
-					<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+			<div class="choice__filter filter-choice">
+				<!--Single item-->
+				<div class="filter-choice__select">
+					<input class="filter-choice__checkbox" type="checkbox" id="base-block" name="checkbox-1" />
+					<label class="filter-choice__heading" for="base-block">
 						Основа
 						<svg class="filter-choice__heading-pic" width="18" height="10">
 							<use xlink:href="#icon-angle-down"></use>
 						</svg>
-					</a>
-					<!--checkbox list - BASE-->
-					<ul class="filter-choice__list choice-list choice-list--base" id="base-list">
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="cotton" id="base-1" disabled />
-							<label class="choice-list__label" for="base-1" >100% хлопок</label>
-							<span class="choice-list__counter">3</span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="acril" id="base-2" />
-							<label class="choice-list__label" for="base-2">Акрил</label>
-							<span class="choice-list__counter">3</span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="mixed" id="base-3" />
-							<label class="choice-list__label" for="base-3">Смесевая пряжа</label>
-							<span class="choice-list__counter">3</span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="nylon" id="base-4" />
-							<label class="choice-list__label" for="base-4">Нейлон</label>
-							<span class="choice-list__counter">3</span>
-						</li>
-					</ul>
-				</li>
-				<!--Cover material checkboxes-->
-				<li class="filter-choice__select filter-choice__select--cover">
-					<input class="filter-choice__checkbox" type="checkbox" id="cover-block">
-					<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+					</label>
+					<div class="filter-choice__content">
+						<ul class="filter-choice__list choice-list" id="base-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="cotton" id="base-1-1" disabled />
+								<label class="choice-list__label" for="base-1-1" >100% хлопок</label>
+								<span class="choice-list__counter">3</span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="acril" id="base-2-1" />
+								<label class="choice-list__label" for="base-2-1">Акрил</label>
+								<span class="choice-list__counter">3</span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="mixed" id="base-3-1" />
+								<label class="choice-list__label" for="base-3-1">Смесевая пряжа</label>
+								<span class="choice-list__counter">3</span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="nylon" id="base-4-1" />
+								<label class="choice-list__label" for="base-4-1">Нейлон</label>
+								<span class="choice-list__counter">3</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--Single item-->
+				<div class="filter-choice__select">
+					<input class="filter-choice__checkbox" type="checkbox" id="cover-block" name="checkbox-2" />
+					<label class="filter-choice__heading" for="cover-block">
 						Покрытие
 						<svg class="filter-choice__heading-pic" width="18" height="10">
 							<use xlink:href="#icon-angle-down"></use>
 						</svg>
-					</a>
-					<!--checkbox list - COVER-->
-					<ul class="filter-choice__list choice-list choice-list--cover" id="cover-list">
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="without" id="cover-1" />
-							<label class="choice-list__label" for="cover-1">Без покрытия</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="polyvinyl" id="cover-2" />
-							<label class="choice-list__label" for="cover-2">ПВХ</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="latex" id="cover-3" />
-							<label class="choice-list__label" for="cover-3">Латекс</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="nitril" id="cover-4" />
-							<label class="choice-list__label" for="cover-4">Нитрил</label>
-							<span class="choice-list__counter"></span>
-						</li>
-					</ul>
-				</li>
-				<!--Class checkboxes-->
-				<li class="filter-choice__select filter-choice__select--class">
-					<input class="filter-choice__checkbox" type="checkbox" id="class-block">
-					<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+					</label>
+					<div class="filter-choice__content">
+						<ul class="filter-choice__list choice-list" id="cover-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="without" id="cover-1-1" />
+								<label class="choice-list__label" for="cover-1-1">Без покрытия</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="polyvinyl" id="cover-2-1" />
+								<label class="choice-list__label" for="cover-2-1">ПВХ</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="latex" id="cover-3-1" />
+								<label class="choice-list__label" for="cover-3-1">Латекс</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="nitril" id="cover-4-1" />
+								<label class="choice-list__label" for="cover-4-1">Нитрил</label>
+								<span class="choice-list__counter"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--Single item-->
+				<div class="filter-choice__select">
+					<input class="filter-choice__checkbox" type="checkbox" id="class-block" name="checkbox-3" />
+					<label class="filter-choice__heading" for="class-block">
 						Класс вязки
 						<svg class="filter-choice__heading-pic" width="18" height="10">
 							<use xlink:href="#icon-angle-down"></use>
 						</svg>
-					</a>
-					<!--checkbox list - CLASS-->
-					<ul class="filter-choice__list choice-list choice-list--class" id="class-list">
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="10 class" id="class-1" />
-							<label class="choice-list__label" for="class-1">10 класс</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="13 class" id="class-2" />
-							<label class="choice-list__label" for="class-2">13 класс</label>
-							<span class="choice-list__counter"></span>
-						</li>
-					</ul>
-				</li>
-				<!--Main features checkboxes-->
-				<li class="filter-choice__select filter-choice__select--feature">
-					<input class="filter-choice__checkbox" type="checkbox" id="feature-block">
-					<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+					</label>
+					<div class="filter-choice__content">
+						<ul class="filter-choice__list choice-list" id="class-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="10 class" id="class-1-1" />
+								<label class="choice-list__label" for="class-1-1">10 класс</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="13 class" id="class-2-1" />
+								<label class="choice-list__label" for="class-2-1">13 класс</label>
+								<span class="choice-list__counter"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--Single item-->
+				<div class="filter-choice__select">
+					<input class="filter-choice__checkbox" type="checkbox" id="feature-block" name="checkbox-3" />
+					<label class="filter-choice__heading" for="feature-block">
 						Защитные свойства
 						<svg class="filter-choice__heading-pic" width="18" height="10">
 							<use xlink:href="#icon-angle-down"></use>
 						</svg>
-					</a>
-					<!--checkbox list - FEATURE-->
-					<ul class="filter-choice__list choice-list choice-list--feature" id="feature-list">
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-oil" id="feature-1" />
-							<label class="choice-list__label" for="feature-1">Стойкие к маслу и бензину</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-lowtemp" id="feature-2" />
-							<label class="choice-list__label" for="feature-2">Стойкие к пониженным температурам</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-puncture" id="feature-3" />
-							<label class="choice-list__label" for="feature-3">Стойкие к проколам и порезам</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-dust" id="feature-4" />
-							<label class="choice-list__label" for="feature-4">Стойкие к пыли и грязи</label>
-							<span class="choice-list__counter"></span>
-						</li>
-					</ul>
-				</li>
-				<!--Usage areas checkboxes-->
-				<li class="filter-choice__select filter-choice__select--usage">
-					<input class="filter-choice__checkbox" type="checkbox" id="usage-block">
-					<a class="filter-choice__heading" href="#" data-toggle="dropdown">
+					</label>
+					<div class="filter-choice__content">
+						<ul class="filter-choice__list choice-list" id="feature-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-oil" id="feature-1-1" />
+								<label class="choice-list__label" for="feature-1-1">Стойкие к маслу и бензину</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-lowtemp" id="feature-2-1" />
+								<label class="choice-list__label" for="feature-2-1">Стойкие к пониженным температурам</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-puncture" id="feature-3-1" />
+								<label class="choice-list__label" for="feature-3-1">Стойкие к проколам и порезам</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-dust" id="feature-4-1" />
+								<label class="choice-list__label" for="feature-4-1">Стойкие к пыли и грязи</label>
+								<span class="choice-list__counter"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--Single item-->
+				<div class="filter-choice__select">
+					<input class="filter-choice__checkbox" type="checkbox" id="usage-block" name="checkbox-3" />
+					<label class="filter-choice__heading" for="usage-block">
 						Сферы применения
 						<svg class="filter-choice__heading-pic" width="18" height="10">
 							<use xlink:href="#icon-angle-down"></use>
 						</svg>
-					</a>
-					<!--checkbox list - USAGE AREAS-->
-					<ul class="filter-choice__list choice-list choice-list--usage" id="usage-list">
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="cars-work" id="usage-1" />
-							<label class="choice-list__label" for="usage-1">Автомобильные работы</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="garden-work" id="usage-2" />
-							<label class="choice-list__label" for="usage-2">С/Х и садовые работы</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="load-unload" id="usage-3" />
-							<label class="choice-list__label" for="usage-3">Погрузочно-разгрузочные работы</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="building-work" id="usage-4" />
-							<label class="choice-list__label" for="usage-4">Строительные работы</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="warehouse-work" id="usage-5" />
-							<label class="choice-list__label" for="usage-5">Складские работы</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="utilities" id="usage-6" />
-							<label class="choice-list__label" for="usage-6">Коммунальные работы</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="repair-work" id="usage-7" />
-							<label class="choice-list__label" for="usage-7">Ремонтные работы</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="color-work" id="usage-8" />
-							<label class="choice-list__label" for="usage-8">Малярные работы</label>
-							<span class="choice-list__counter"></span>
-						</li>
-						<li class="choice-list__item">
-							<input class="choice-list__checkbox visually-hidden" type="checkbox" name="precision-work" id="usage-9" />
-							<label class="choice-list__label" for="usage-9">Сборочные операции и работа с мелкими деталями</label>
-							<span class="choice-list__counter"></span>
-						</li>
-					</ul>
-				</li>
-			</ul>
+					</label>
+					<div class="filter-choice__content">
+						<ul class="filter-choice__list choice-list" id="usage-list">
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="cars-work" id="usage-1-1" />
+								<label class="choice-list__label" for="usage-1-1">Автомобильные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="garden-work" id="usage-2-1" />
+								<label class="choice-list__label" for="usage-2-1">С/Х и садовые работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="load-unload" id="usage-3-1" />
+								<label class="choice-list__label" for="usage-3-1">Погрузочно-разгрузочные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="building-work" id="usage-4-1" />
+								<label class="choice-list__label" for="usage-4-1">Строительные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="warehouse-work" id="usage-5-1" />
+								<label class="choice-list__label" for="usage-5-1">Складские работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="utilities" id="usage-6-1" />
+								<label class="choice-list__label" for="usage-6-1">Коммунальные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="repair-work" id="usage-7-1" />
+								<label class="choice-list__label" for="usage-7-1">Ремонтные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="color-work" id="usage-8-1" />
+								<label class="choice-list__label" for="usage-8-1">Малярные работы</label>
+								<span class="choice-list__counter"></span>
+							</li>
+							<li class="choice-list__item">
+								<input class="choice-list__checkbox visually-hidden" type="checkbox" name="precision-work" id="usage-9-1" />
+								<label class="choice-list__label" for="usage-9-1">Сборочные операции и работа с мелкими деталями</label>
+								<span class="choice-list__counter"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--Link to submit-->
 			<a class="choice__submit" target="_self" href="catalog.html">
 				<span class="choice__submit-empty hidden">Показать все</span>
 				<span class="choice__submit-filtered">
@@ -509,7 +515,7 @@
 						<!--Item photo-->
 						<picture class="latest-item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="latest-item__image" src="../img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="latest-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -530,7 +536,7 @@
 						<!--Item photo-->
 						<picture class="latest-item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="latest-item__image" src="../img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="latest-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -551,7 +557,7 @@
 						<!--Item photo-->
 						<picture class="latest-item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="latest-item__image" src="../img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="latest-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -572,7 +578,7 @@
 						<!--Item photo-->
 						<picture class="latest-item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="latest-item__image" src="../img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="latest-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -593,7 +599,7 @@
 						<!--Item photo-->
 						<picture class="latest-item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="latest-item__image" src="../img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="latest-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -614,7 +620,7 @@
 						<!--Item photo-->
 						<picture class="latest-item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="latest-item__image" src="../img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="latest-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -635,7 +641,7 @@
 						<!--Item photo-->
 						<picture class="latest-item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="latest-item__image" src="../img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="latest-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -656,7 +662,7 @@
 						<!--Item photo-->
 						<picture class="latest-item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="latest-item__image" src="../img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							<img itemprop="image" class="latest-item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
 						</picture>
 						<!--Item description-->
 						<meta itemprop="brand" content="СВС" />
@@ -723,7 +729,7 @@
 				</div>
 				<!--Callback button-link-->
 				<div class="footer-contacts__callback">
-					<a class="footer-contacts__callback-link" href="#" target="_self" title="Заказать обратный звонок">
+					<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
 						<svg class="footer-contacts__pic footer-contacts__pic--call" width="14" height="16">
 							<use xlink:href="#icon-сallback"></use>
 						</svg>
@@ -740,16 +746,13 @@
 		</nav>
 	</footer>
 	<!--Callback popup-->
-	<div class="popup-callback" style="display: none;">
+	<div class="popup-callback" id="popup-callback" style="display: none;">
 		<div class="popup-callback__wrapper">
 			<div class="popup-callback__header">
-				<h3 class="popup-callback__title">Мы вам перезвоним</h3>
-				<button class="popup-callback__close" type="button">
-					<svg class="popup-callback__close-pic popup-callback__close-pic--white" width="18" height="18">
+				<h2 class="popup-callback__title">Мы вам перезвоним</h2>
+				<button class="popup-callback__close callback-close" type="button" id="popup-callback-close" onclick="openbox('popup-callback')">
+					<svg class="popup-callback__close-pic" width="18" height="18">
 						<use xlink:href="#icon-close-white"></use>
-					</svg>
-					<svg class="popup-callback__close-pic popup-callback__close-pic--black" width="18" height="18">
-						<use xlink:href="#icon-close-black"></use>
 					</svg>
 				</button>
 			</div>
@@ -768,32 +771,33 @@
 							<textarea class="callback-form__textarea" name="Поле для комментария или вопроса" placeholder="Комментарий или вопрос" id="textarea-1"></textarea>
 						</li>
 					</ul>
-					<button class="callback-form__submit btn" type="submit">Отправить запрос</button>
+					<button class="callback-form__submit" type="submit">Отправить запрос</button>
 				</form>
 				<p class="popup-callback__warn">
 					Отправляя запрос, вы даёте согласие на обработку персональных данных в соответствии с <a class="popup-callback__warn-link" href="#" target="_blank" title="Политика обработки персональных данных">политикой обработки персональных данных</a>
 				</p>
 			</div>
 			<!--Callback reaction div-->
-			<div class="popup-callback__reaction popup-callback__reaction--inactive">
+			<div class="popup-callback__reaction" style="display: none;">
 				<picture class="popup-callback__frame">
-					<source media="(min-width: 1200px)" srcset="img/reaction-dt.webp" type="image/webp">
-					<source media="(min-width: 1200px)" srcset="img/reaction-dt.png">
-					<source media="(min-width: 768px)" srcset="img/reaction-tb.webp" type="image/webp">
-					<source media="(min-width: 768px)" srcset="img/reaction-tb.png">
-					<source srcset="img/reaction-sm.webp" type="image/webp">
-					<img class="popup-callback__image" src="../img/reaction-sm.png" alt="Спасибо! Мы вам перезвоним!" title="Спасибо! Мы вам перезвоним!">
+					<source media="(min-width: 1200px)" srcset="img/thumb-up.webp" type="image/webp">
+					<source media="(min-width: 1200px)" srcset="img/thumb-up.png">
+					<source media="(min-width: 768px)" srcset="img/thumb-up.webp" type="image/webp">
+					<source media="(min-width: 768px)" srcset="img/thumb-up.png">
+					<source srcset="img/thumb-up.webp" type="image/webp">
+					<img class="popup-callback__image" src="img/thumb-up.png" alt="Спасибо! Мы вам перезвоним!" title="Спасибо! Мы вам перезвоним!">
 				</picture>
 				<p class="popup-callback__answer">
 					Спасибо, что обратились к нам. Менеджер перезвонит по номеру <span class="popup-callback__answer-phone" id="client-number">+7 999 133 15 96</span> в течение 10 минут
 				</p>
-				<button class="popup-callback__final btn" type="button">Закрыть окно</button>
+				<button class="popup-callback__final" type="button">Закрыть окно</button>
 			</div>
 		</div>
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/slider.js"></script>
 </body>
 
 </html>

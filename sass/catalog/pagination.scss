@@ -18,7 +18,7 @@
     &:hover,
     &:active,
     &:hover {
-      border: 1px solid #c1cad5;
+      border: 1px solid #84AA32;
       border-radius: 4px;
       transition: 0.1s ease-in;
     }
@@ -41,7 +41,7 @@
     height: 38px;
 
     &--active {
-      background-color: #C1CAD5;
+      background-color: #84AA32;
       border-radius: 4px;
 
       .pagination__link {
@@ -63,7 +63,7 @@
     &:hover,
     &:active,
     &:hover {
-      border: 1px solid #c1cad5;
+      border: 1px solid #84AA32;
       transition: 0.1s ease-in;
     }
   }

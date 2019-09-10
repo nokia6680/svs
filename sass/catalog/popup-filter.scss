@@ -1,25 +1,19 @@
 .popup-filter {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   position: fixed;
-  width: 100%;
-  height: 100vh;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
-
+  background-color: #ffffff;
   transition: 0.3s ease-in;
 
   &__wrapper {
-    width: 100vw;
-    height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -28,6 +22,8 @@
     background-color: #ffffff;
 
     position: relative;
+
+    overflow-y: auto;
   }
 
   &__header {
@@ -81,13 +77,7 @@
     padding-top: 4.5rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    padding-bottom: 1.5rem;
-
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-
-    position: relative;
+    padding-bottom: 2.5rem;
 
     @include flex-setting(column, flex-start, flex-start);
   }
@@ -114,15 +104,14 @@
   }
 
   &__footer {
-    margin-top: auto;
-    margin-bottom: 0;
+    bottom: 0;
+    left: 0;
 
     width: 100%;
 
     @include flex-setting(column, center, center);
-    background-color: #84AA32;
 
-    position: relative;
+    position: fixed;
 
     &::before {
       position: absolute;
@@ -145,10 +134,16 @@
     height: 100%;
 
     padding: 0.938rem 0;
+    background-color: #84AA32;
     text-decoration: none;
     text-align: center;
 
     outline: none;
     cursor: pointer;
+
+    &:hover,
+    &:active {
+      @include btn-hover;
+    }
   }
 }

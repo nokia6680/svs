@@ -271,28 +271,6 @@
   }
 }
 
-@mixin soft-animation {
-  transition-property: initial;
-  transition-duration: 0.2s;
-  transition-timing-function: initial;
-  transition-delay: initial;
-}
-
-@mixin animation {
-  @-moz-keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1 }
-  }
-  @-webkit-keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1 }
-  }
-  @keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1 }
-  }
-}
-
 @mixin font-setting($family, $size, $line-height, $font-width, $color) {
   font-family: $family;
   font-size: $size;
@@ -306,4 +284,9 @@
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin btn-hover {
+  background-color: $btn-hover;
+  transition: 0.1s ease-in;
 }

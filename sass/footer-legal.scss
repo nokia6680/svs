@@ -1,5 +1,9 @@
 .footer-legal {
+  align-self: flex-start;
+  width: 100%;
+
   @include flex-setting(column, flex-start, flex-start);
+  padding: 0 0.625rem;
   padding-bottom: 1.25rem;
 
   &__copyright,

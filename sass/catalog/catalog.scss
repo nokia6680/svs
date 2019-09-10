@@ -1,7 +1,14 @@
 .catalog {
   padding: 0 0.625rem;
 
+  &__wrapper {
+    width: 100%;
+    @include flex-setting(column, flex-start, center);
+  }
+
   &__more {
+    align-self: center;
+
     @include flex-setting(column, center, center);
     @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
 
@@ -14,5 +21,10 @@
     text-decoration: none;
 
     margin-bottom: 1.875rem;
+
+    &:hover,
+    &:active {
+      @include btn-hover;
+    }
   }
 }

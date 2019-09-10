@@ -1,0 +1,15 @@
+.advantages {
+  @include flex-setting(column, flex-start, flex-start);
+
+  width: 100%;
+
+  padding: 0 0.625rem;
+  margin-bottom: 3.063rem;
+
+  &__title {
+    @include font-setting($title-font, 1.125rem, 1.313rem, 500, $text-primary);
+
+    margin: 0;
+    margin-bottom: 1.313rem;
+  }
+}

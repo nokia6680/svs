@@ -1,0 +1,29 @@
+.return {
+  width: 100%;
+
+  align-self: flex-start;
+
+  padding: 0 0.625rem;
+
+  &--upper {
+    margin-bottom: 1.875rem;
+  }
+
+  &--lower {
+    margin-bottom: 3.75rem;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+
+    @include flex-setting(row, flex-start, center);
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+
+    text-decoration: none;
+  }
+
+  &__link-pic {
+    margin-right: 0.625rem;
+  }
+}

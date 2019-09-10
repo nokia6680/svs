@@ -35,5 +35,10 @@
     height: 60px;
 
     border-radius: 5px;
+
+    &:hover,
+    &:active {
+      @include btn-hover;
+    }
   }
 }

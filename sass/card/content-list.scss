@@ -1,0 +1,57 @@
+.content-list {
+  @include flex-setting(column, flex-start, flex-start);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  width: 100%;
+  padding-top: 0;
+  padding-left: 20px;
+  padding-bottom: 17px;
+  padding-right: 20px;
+
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__item {
+    @include flex-setting(row, flex-start, flex-start);
+
+    width: 100%;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-bottom: 3px;
+  }
+
+  &__item-title {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 600, $text-primary);
+  }
+
+  &__item-info {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+  }
+
+  &--lines {
+    .content-list__item {
+      border-bottom: 1px solid #DFDFDF;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__item-description {
+    @include font-setting($primary-font, 0.875rem, 1.125rem, 400, $text-primary);
+    width: 100%;
+    text-align: left;
+  }
+}

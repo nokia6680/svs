@@ -8,11 +8,11 @@
 
   background-color: #FAF9F7;
 
-  &--active {
+  &.active {
     background-color: $menu-bg;
     backdrop-filter: blur(20px);
 
-    z-index: 9999;
+    z-index: 999;
   }
 
   &__wrap {
@@ -22,5 +22,9 @@
   /*Header on catalog page*/
   &--catalog {
     margin-bottom: 1.375rem;
+  }
+
+  &--card {
+    margin-bottom: 1.75rem;
   }
 }

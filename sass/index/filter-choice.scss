@@ -10,6 +10,11 @@
   width: 100%;
 
   margin-bottom: 1.875rem;
+  position: relative;
+
+  &--card {
+    margin-bottom: 0;
+  }
 
   &__select {
     @include flex-setting(column, flex-start, flex-start);
@@ -18,95 +23,69 @@
 
     position: relative;
 
-    &:last-of-type {
-      border-bottom: none;
-    }
-
-    & > .choice-list {
-      max-height: 0;
-      overflow: hidden;
+    .filter-choice__checkbox {
       display: none;
-      transform: scaleY(0);
-      transform-origin: 50%, 0%;
-      transition: .6s ease-out;
-      animation: hideAnimation .4s ease-out;
-    }
 
-    & > input[type="checkbox"] {
-      opacity: 0;
-      display: block;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-
-      &:checked ~ .choice-list {
-        max-height: 9999px;
-  			display: block;
-  			transform: scaleY(1);
-  			animation: showAnimation .5s ease-in-out;
-  			transition: 2s ease-in-out;
+      & + label {
+        .filter-choice__heading-pic {
+          transform: rotate(0);
+          transition: 0.4s ease-in-out;
+        }
       }
 
-      &:checked + a[data-toggle="dropdown"] {
+      &:checked + label {
+        background-color: transparent;
+
         .filter-choice__heading-pic {
-          transform: rotate(-180deg);
-          transitiont: .6s;
+          transform: rotate(180deg);
+          transition: 0.4s ease-in-out;
         }
       }
     }
-  }
 
-  &__heading {
-    @include font-setting($title-font, 0.875rem, 1.063rem, 500, $text-primary);
-    @include flex-setting(row, space-between, center);
-    width: 100%;
+    .filter-choice__heading {
+      @include font-setting($title-font, 0.875rem, 1.063rem, 500, $text-primary);
+      @include flex-setting(row, space-between, center);
+      width: 100%;
 
-    text-decoration: none;
+      text-decoration: none;
+      position: relative;
 
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 17px;
-    padding-bottom: 17px;
-  }
-}
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-top: 1.063rem;
+      padding-bottom: 1.063rem;
+      /*Сдвиг стрелки для карточки товара*/
+      &--card {
+        padding-right: 0.688rem;
+      }
+    }
 
-@include keyframes(showAnimation) {
-	0% {
-		transform: scaleY(0.1);
-	}
-	40% {
-		transform: scaleY(1.04);
-	}
-	60% {
-		transform: scaleY(0.98);
-	}
-	80% {
-		transform: scaleY(1.04);
-	}
-	100% {
-		transform: scaleY(0.98);
-	}
-	80% {
-		transform: scaleY(1.02);
-	}
-	100% {
-		transform: scaleY(1);
-	}
-}
+    .filter-choice__content {
+      width: 100%;
+      position: relative;
+      max-height: 0;
+      padding: 0;
+      overflow-y: scroll;
+      background-color: transparent;
+      transition: max-height 400ms ease-in-out;
 
-@include keyframes(hideAnimation) {
-  0% {
-  	transform: scaleY(1);
-  }
-  60% {
-  	transform: scaleY(0.98);
-  }
-  80% {
-  	transform: scaleY(1.02);
-  }
-  100% {
-  	transform: scaleY(0);
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+    .filter-choice__checkbox:checked ~ .filter-choice__content {
+    	max-height: 800px;
+    	transition: max-height 400ms ease-in-out;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
   }
 }

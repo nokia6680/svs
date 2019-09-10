@@ -1,0 +1,36 @@
+.advantages-list {
+  @include flex-setting(column, flex-start, flex-start);
+  @include ul-nostyle;
+
+  width: 100%;
+
+  &__item {
+    @include flex-setting(row, flex-start, center);
+
+    width: 100%;
+    margin-bottom: 0.938rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    @include flex-setting(column, center, center);
+
+    border-radius: 5px;
+
+    min-width: 54px;
+    width: 54px;
+    height: 54px;
+
+    margin-right: 0.75rem;
+
+    background: linear-gradient(166.69deg, #79B7FF 2.56%, #D1D1D2 99.57%);
+  }
+
+  &__description {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 600, $text-primary);
+    margin: 0;
+  }
+}
