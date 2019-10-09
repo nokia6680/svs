@@ -7,7 +7,7 @@
   padding: 0;
   list-style: none;
 
-  border: 1px solid #574C45;
+  border: 1px solid #fff;
   border-radius: 5px;
 
   margin-bottom: 1.188rem;
@@ -17,7 +17,7 @@
 
     @include flex-setting(column, center, flex-start);
 
-    border-bottom: 1px solid #574c45;
+    border-bottom: 1px solid #fff;
 
     &:last-of-type {
       border-bottom: none;

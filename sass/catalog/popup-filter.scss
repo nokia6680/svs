@@ -5,10 +5,12 @@
   align-items: center;
 
   position: fixed;
+
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+
   z-index: 1000;
   background-color: #ffffff;
   transition: 0.3s ease-in;
@@ -19,11 +21,9 @@
     justify-content: flex-start;
     align-items: center;
 
-    background-color: #ffffff;
-
     position: relative;
 
-    overflow-y: auto;
+    overflow-y: scroll;
   }
 
   &__header {

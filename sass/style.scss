@@ -8,8 +8,9 @@
 @import "header-nav.scss";
 @import "nav-contacts.scss";
 @import "nav-menu.scss";
+@import "nav-search.scss";
 @import "search-result.scss";
-@import "result-list.scss";
+@import "result-preview.scss";
 @import "nav-list.scss";
 @import "nav-service.scss";
 @import "service-lang.scss";
@@ -17,6 +18,8 @@
 @import "service-list.scss";
 @import "service-contacts.scss";
 @import "main.scss";
+@import "item.scss";
+@import "item-color.scss";
 @import "footer.scss";
 @import "footer-nav.scss";
 @import "footer-menu.scss";
@@ -33,7 +36,6 @@
 @import "sass/index/filter-choice.scss";
 @import "sass/index/choice-list.scss";
 @import "sass/index/latest.scss";
-@import "sass/index/latest-item.scss";
 @import "sass/index/about.scss";
 /*Catalog styles*/
 @import "sass/catalog/heading.scss";
@@ -42,7 +44,6 @@
 @import "sass/catalog/catalog-filter.scss";
 @import "sass/catalog/filter-options.scss";
 @import "sass/catalog/catalog-list.scss";
-@import "sass/catalog/catalog-item.scss";
 @import "sass/catalog/pagination.scss";
 @import "sass/catalog/seoblock.scss";
 @import "sass/catalog/popup-filter.scss";
@@ -57,6 +58,16 @@
 @import "sass/card/advantages-list.scss";
 @import "sass/card/details.scss";
 @import "sass/card/similar.scss";
-@import "sass/card/similar-item.scss";
 @import "sass/card/popup-preorder.scss";
 @import "sass/card/preorder-form.scss";
+/*Contacts styles*/
+@import "sass/contacts/contacts.scss";
+@import "sass/contacts/map.scss";
+@import "sass/contacts/contacts-card.scss";
+/*search styles*/
+@import "sass/search/header-search.scss";
+@import "sass/search/search-text.scss";
+@import "sass/search/result.scss";
+@import "sass/search/sphere.scss";
+@import "sass/search/result-wrap.scss";
+@import "sass/search/result-list.scss";

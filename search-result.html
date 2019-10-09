@@ -249,7 +249,7 @@
 			<input class="header-search__input" type="search" name="search" id="search-1" placeholder="Поиск" />
 			<label class="header-search__input-btn" for="search-1"></label>
 			<!--Search results-->
-			<div class="header-search__result search-result" id="search-result-1">
+			<div class="header-search__result search-result" id="search-result-3" style="display: none;">
 				<div class="search-result__upper">
 					<h3 class="search-result__title">Сферы</h3>
 					<b class="search-result__type">
@@ -260,7 +260,7 @@
 				</div>
 				<div class="search-result__lower">
 					<h3 class="search-result__title">Средства защиты</h3>
-					<ul class="search-result__list result-preview">
+					<ul class="search-result__preview result-preview">
 						<!--Single item-->
 						<li class="result-preview__item">
 							<picture class="result-preview__frame">
@@ -309,9 +309,134 @@
 	</header>
 	<!---->
 	<main class="main main--search">
-		<section class="main__search search-text">
-			<h2 class="search-text__title">Заголовок второго уровня</h2>
-			<p class="search-text__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<section class="main__result result">
+			<h1 class="result__title">Результаты поиска</h1>
+			<span class="result__description">Найдено&nbsp;&mdash;&nbsp;<span class="result__description-count">2</span> материала</span>
+			<!--Sphere block-->
+			<div class="result__sphere sphere">
+				<h3 class="sphere__title">Сферы</h3>
+				<b class="sphere__type">
+					<svg class="sphere__type-pic" width="8" height="13">
+						<use xlink:href="#icon-angle"></use>
+					</svg>
+					Автомобильные работы</b>
+			</div>
+			<!--List of results-->
+			<div class="result__wrap result-wrap">
+				<h2 class="result-wrap__title">Средства защиты</h2>
+				<div class="result-wrap__list result-list">
+					<!--Single item-->
+					<article itemscope itemtype="http://schema.org/Product" class="result-list__item item" id="result-1">
+						<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
+							<picture class="item__frame">
+								<source srcset="img/latest-1.webp" type="image/webp">
+								<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							</picture>
+							<!--Item description-->
+							<meta itemprop="brand" content="СВС" />
+							<meta itemprop="name" content="Перчатки СВС" />
+						</a>
+						<div class="item__details">
+							<!--Описание-->
+							<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+							<!--Планки скидок, акций, выбора цвета-->
+							<div class="item__controls">
+								<!--Новинка-->
+								<span class="item__sign item__sign--latest hidden">Новинка
+									<svg class="item__pic" width="12" height="12">
+										<use xlink:href="#icon-star-white"></use>
+									</svg>
+								</span>
+								<!--Распродажа-->
+								<span class="item__sign item__sign--sale">Акция %</span>
+								<div class="item__color item-color">
+									<button class="item-color__toggle" type="button">
+										<span class="item-color__toggle-count">2</span>&nbsp;цвета
+										<svg class="item-color__icon" width="13" height="13">
+											<use xlink:href="#icon-color"></use>
+										</svg>
+									</button>
+									<ul class="item-color__list">
+										<li class="item-color__item">
+											<picture class="item-color__frame">
+												<source srcset="img/color-1.webp" type="image/webp" />
+												<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
+											</picture>
+										</li>
+										<li class="item-color__item">
+											<picture class="item-color__frame">
+												<source srcset="img/color-2.webp" type="image/webp" />
+												<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
+											</picture>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--Hidden details block-->
+						<div class="item__overlay">
+							<p class="item__overlay-text">
+								Сплошное одинарное латексное покрытие всей ладони. Перчатки предназначены для выполнения работ со средними значениями механических нагрузок. Лучше подходит для выполнения работы с мелкими деталями. Наше легендарное первое на рынке сплошное латексное покрытие обеспечивает лучшую воздухопроницаемость и износостойкость, что повышает комфорт работников.
+							</p>
+						</div>
+					</article>
+					<!--Single item-->
+					<article itemscope itemtype="http://schema.org/Product" class="result-list__item item" id="result-2">
+						<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
+							<picture class="item__frame">
+								<source srcset="img/latest-1.webp" type="image/webp">
+								<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+							</picture>
+							<!--Item description-->
+							<meta itemprop="brand" content="СВС" />
+							<meta itemprop="name" content="Перчатки СВС" />
+						</a>
+						<div class="item__details">
+							<!--Описание-->
+							<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+							<!--Планки скидок, акций, выбора цвета-->
+							<div class="item__controls">
+								<!--Новинка-->
+								<span class="item__sign item__sign--latest hidden">Новинка
+									<svg class="item__pic" width="12" height="12">
+										<use xlink:href="#icon-star-white"></use>
+									</svg>
+								</span>
+								<!--Распродажа-->
+								<span class="item__sign item__sign--sale">Акция %</span>
+								<div class="item__color item-color">
+									<button class="item-color__toggle" type="button">
+										<span class="item-color__toggle-count">2</span>&nbsp;цвета
+										<svg class="item-color__icon" width="13" height="13">
+											<use xlink:href="#icon-color"></use>
+										</svg>
+									</button>
+									<ul class="item-color__list">
+										<li class="item-color__item">
+											<picture class="item-color__frame">
+												<source srcset="img/color-1.webp" type="image/webp" />
+												<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
+											</picture>
+										</li>
+										<li class="item-color__item">
+											<picture class="item-color__frame">
+												<source srcset="img/color-2.webp" type="image/webp" />
+												<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
+											</picture>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--Hidden details block-->
+						<div class="item__overlay">
+							<p class="item__overlay-text">
+								Сплошное одинарное латексное покрытие всей ладони. Перчатки предназначены для выполнения работ со средними значениями механических нагрузок. Лучше подходит для выполнения работы с мелкими деталями. Наше легендарное первое на рынке сплошное латексное покрытие обеспечивает лучшую воздухопроницаемость и износостойкость, что повышает комфорт работников.
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
 		</section>
 	</main>
 	<!--Footer-->

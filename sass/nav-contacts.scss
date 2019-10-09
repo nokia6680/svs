@@ -1,3 +1,24 @@
 .nav-contacts {
   display: none;
 }
+
+@media only screen and (min-width: $mobile) {
+  .nav-contacts {
+    @include flex-setting(column, flex-start, flex-end);
+
+    width: auto;
+    margin-right: 1.438rem;
+    margin-left: auto;
+
+    &__link {
+      @include font-setting($primary-font, 0.75rem, 1rem, 700, $text-primary);
+      text-decoration: none;
+    }
+
+    &.active {
+      .nav-contacts__link {
+        color: $text-secondary;
+      }
+    }
+  }
+}

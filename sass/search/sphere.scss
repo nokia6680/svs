@@ -1,0 +1,28 @@
+.sphere {
+  width: 100%;
+
+  @include flex-setting(column, flex-start, flex-start);
+
+  background-color: #FAF9F7;
+  border-radius: 5px;
+
+  padding: 1.25rem 0.938rem;
+  margin-bottom: 2.5rem;
+
+  &__title {
+    @include font-setting($primary-font, 1.125rem, 1.563rem, 700, $text-primary);
+    margin: 0;
+    margin-bottom: 0.75rem;
+    text-align: left;
+  }
+
+  &__type {
+    @include flex-setting(row, flex-start, center);
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    margin: 0;
+
+    &-pic {
+      margin-right: 0.25rem;
+    }
+  }
+}

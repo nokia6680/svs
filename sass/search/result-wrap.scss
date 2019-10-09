@@ -1,0 +1,16 @@
+.result-wrap {
+  width: 100%;
+
+  @include extra-padding;
+  @include flex-setting(column, flex-start, center);
+
+  &__title {
+    width: 100%;
+
+    @include font-setting($title-font, 1.5rem, 2.063rem, 700, $text-primary);
+    text-align: left;
+
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+}

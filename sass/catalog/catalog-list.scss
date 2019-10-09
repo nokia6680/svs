@@ -4,12 +4,12 @@
   width: 100%;
 
   margin-bottom: 2.5rem;
-
+  /*Переключение на раскалдку гридами*/
   &.grid {
     @include flex-setting(row, space-between, flex-start);
     flex-wrap: wrap;
 
-    .catalog-item {
+    .item {
       width: 46.4%;
       height: 362px;
 
@@ -31,6 +31,16 @@
         margin-bottom: 0.688rem;
       }
 
+      &__controls {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      &__sign {
+        margin-bottom: 0.25rem;
+      }
+
       &__image {
         width: 100%;
         max-height: 150px;
@@ -40,6 +50,8 @@
         font-size: 0.688rem;
         line-height: 0.938rem;
         font-weight: 700;
+
+        padding-bottom: 2.5rem;
       }
     }
   }

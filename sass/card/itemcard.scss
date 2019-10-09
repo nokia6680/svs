@@ -27,7 +27,51 @@
   }
   /*Блок ссылок на скачиваемые документы*/
   &__files {
-    display: none;
+    order: 4;
+    @include flex-setting(column, flex-start, center);
+
+    width: 100%;
+    border: 1px solid #C1CAD5;
+    border-radius: 5px;
+
+    max-width: 280px;
+
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    margin-bottom: 2rem;
+    padding: 0 0.688rem;
+
+    &-item {
+      width: 100%;
+
+      @include flex-setting(row, center, center);
+
+      border-bottom: 1px solid #C1CAD5;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    &-link {
+      @include font-setting($primary-font, 0.75rem, 1rem, 600, $text-primary);
+
+      padding-top: 1.063rem;
+      padding-bottom: 1.063rem;
+
+      text-decoration: none;
+
+      &:hover {
+        color: $btn-color;
+        transition: 0.1s ease-in;
+      }
+    }
+
+    &-pic {
+      margin-right: 0.875rem;
+    }
   }
   /*Слайдер фотографий*/
   &__slider {
@@ -75,7 +119,7 @@
   }
   /*Описание продукта*/
   &__description {
-    order: 4;
+    order: 5;
 
     @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
 
@@ -85,7 +129,7 @@
   }
   /*Кнопка предзаказа*/
   &__preorder {
-    order: 5;
+    order: 6;
 
     align-self: center;
 

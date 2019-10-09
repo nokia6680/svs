@@ -1,0 +1,71 @@
+.contacts {
+  @include flex-setting(column, flex-start, center);
+
+  width: 100%;
+
+  padding: 0 0.625rem;
+
+  &__title {
+    @include font-setting($title-font, 2rem, 2.375rem, 500, $text-primary);
+    margin: 0;
+    margin-bottom: 2.5rem;
+
+    align-self: flex-start;
+  }
+
+  &__details {
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+
+    margin-bottom: 2.313rem;
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include font-setting($primary-font, 1.125rem, 1.563rem, 400, $text-primary);
+    text-decoration: none;
+
+    &--noicon {
+      padding-left: 1.5rem;
+      margin-bottom: 2.313rem;
+    }
+
+    &--blocked {
+      line-height: 1.5rem;
+    }
+  }
+
+  &__link-pic {
+    margin-right: 0.625rem;
+  }
+
+  &__recall {
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+    background-color: $btn-color;
+    border-radius: 5px;
+
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+
+    width: 280px;
+    height: 60px;
+
+    margin-bottom: 0.438rem;
+
+    &:hover,
+    &:active {
+      @include btn-hover;
+    }
+  }
+
+  &__recall-note {
+    @include font-setting($primary-font, 0.75rem, 1rem, 700, #c4c4c4);
+    text-align: center;
+    align-self: center;
+  }
+}

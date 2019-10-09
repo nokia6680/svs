@@ -1,4 +1,4 @@
-.result-list {
+.result-preview {
   @include flex-setting(column, flex-start, flex-start);
 
   width: 100%;
@@ -26,6 +26,7 @@
     &:hover {
       border-color: $link-hover;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+      transition: 0.1s ease-in;
     }
   }
 
@@ -72,10 +73,13 @@
     max-height: 96px;
 
     overflow: hidden;
+
+    @include flex-setting(column, flex-end, center);
   }
 
   &__frame-pic {
-    height: 96px;
+    height: 90px;
+    max-height: 90px;
     width: 100%;
     object-fit: contain;
   }

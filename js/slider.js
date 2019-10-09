@@ -16,9 +16,22 @@ $(".card-slider__wrapper").slick({
   initialSlide: 0,
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: false,
+  arrows: true,
   dots: false,
 	autoplay: true,
   prevArrow: '<div class="prev-1"></div>',
-  nextArrow: '<div class="next-1"></div>'
+  nextArrow: '<div class="next-1"></div>',
+  slideCount: '<span class="card-slider__counter-overall"></span>',
+  slickCurrentSlide: '<span class="card-slider__counter-current"></span>'
+});
+
+// Элемент, куда вы хотите записать страницы
+let pages = $('.card-slider__counter');
+// Элемент слайдера
+let slider = $('.card-slider__wrapper');
+
+slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+
+   let i = (currentSlide ? currentSlide : 0) + 1;
+    pages.text(i + '/' + slick.slideCount);
 });

@@ -4,16 +4,10 @@
   margin: 0 auto;
   padding: 0 0.625rem;
 
-  @media only screen and (min-width: $smt) {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
   @media only screen and (min-width: $tablet) {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 1.25px;
   }
 
   @media only screen and (min-width: $laptop-hd) {
@@ -32,6 +26,16 @@
     width: 100%;
     margin: 0 auto;
     padding: 0;
+  }
+}
+
+@mixin extra-padding {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+
+  @media only screen and (min-width: $tablet) {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
@@ -289,4 +293,15 @@
 @mixin btn-hover {
   background-color: $btn-hover;
   transition: 0.1s ease-in;
+}
+
+@mixin retina($density: 2) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $density),
+  only screen and (min--moz-device-pixel-ratio: $density),
+  only screen and (-o-min-device-pixel-ratio: #{$density}/1),
+  only screen and (min-device-pixel-ratio: $density),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: $density dppx) {
+    @content;
+  }
 }

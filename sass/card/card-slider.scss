@@ -3,11 +3,37 @@
   @include flex-setting(column, center, center);
 
   margin-bottom: 1.25rem;
+  background-color: #FAF9F7;
 
-  background-image: url('../img/water-sign.png');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
+  position: relative;
+
+  &__expand {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 1.5rem, 1, 700, $text-secondary);
+    width: 24px;
+    height: 24px;
+
+    border-radius: 100%;
+    border: none;
+
+    background-color: $btn-color;
+
+    padding: 0;
+
+    cursor: pointer;
+    outline: none;
+
+    z-index: 10;
+
+    &:hover,
+    &:active {
+      @include btn-hover;
+    }
+  }
 
   &__wrapper {
     position: relative;
@@ -17,7 +43,7 @@
     .prev-1,
     .next-1 {
       width: 18px;
-      height: 12px;
+      height: 30px;
       position: absolute;
 
       z-index: 4;
@@ -30,6 +56,8 @@
 
       top: 50%;
       right: 20px;
+
+      z-index: 5;
     }
 
     .prev-1 {
@@ -39,6 +67,17 @@
 
       top: 50%;
       left: 20px;
+
+      z-index: 5;
     }
+  }
+
+  &__counter {
+    position: absolute;
+
+    bottom: 10px;
+    right: 10px;
+
+    @include font-setting($primary-font, 0.75rem, 1rem, 700, $btn-color);
   }
 }
