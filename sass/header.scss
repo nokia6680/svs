@@ -4,7 +4,9 @@
   position: relative;
 
   margin-bottom: 0.625rem;
-  padding: 0 0.625rem;
+  padding: 0;
+
+  @include extra-padding;
 
   background-color: #FAF9F7;
 
@@ -41,6 +43,36 @@
 
     .header__wrap {
       margin-bottom: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .header {
+    margin-bottom: 0;
+
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    /*Header on catalog page*/
+    &--catalog {
+      margin-bottom: 3.125rem;
+    }
+
+    &--card {
+      margin-bottom: 1.75rem;
+    }
+
+    &--contacts {
+      margin-bottom: 1.5rem;
+    }
+
+    &--search {
+      @include flex-setting(column, flex-start, center);
+
+      .header__wrap {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

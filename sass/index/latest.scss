@@ -42,3 +42,31 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .latest {
+    padding: 0;
+
+    margin-bottom: 5.125rem;
+    max-width: 688px;
+
+    &__title {
+      margin-bottom: 2rem;
+    }
+
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      width: 100%;
+
+      margin-bottom: 3.75rem;
+    }
+
+    &__link {
+      align-self: flex-start;
+    }
+  }
+}

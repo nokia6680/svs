@@ -112,3 +112,18 @@
     background-repeat: no-repeat;
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .catalog-filter {
+    width: auto;
+
+    @include flex-setting(column, center, center);
+
+    margin-bottom: 0;
+    margin-right: 1.25rem;
+
+    &__heading {
+      display: none;
+    }
+  }
+}

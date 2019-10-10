@@ -34,3 +34,55 @@
     margin-left: 0.375rem;
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .act-list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__item {
+      @include flex-setting(column, flex-start, flex-start);
+
+      width: 30%;
+      margin-bottom: 0;
+    }
+
+    &__item-title {
+      justify-content: flex-start;
+      width: 60%;
+      font-size: 1.375rem;
+      line-height: 1.625rem;
+
+      position: relative;
+    }
+
+    &__item-description {
+      @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+      margin: 0;
+      max-width: 216px;
+    }
+
+    &__pic {
+      position: absolute;
+      margin-left: 0;
+
+      bottom: 0;
+
+      &--star {
+        right: -5px;
+        bottom: 2px;
+      }
+
+      &--scale {
+        right: -50px;
+        bottom: 4px;
+      }
+
+      &--chat {
+        right: -60px;
+        bottom: 4px;
+      }
+    }
+  }
+}

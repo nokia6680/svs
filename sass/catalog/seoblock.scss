@@ -17,3 +17,10 @@
     margin: 0;
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .seoblock {
+    padding: 0 2.5rem;
+    padding-top: 1.25rem;
+  }
+}

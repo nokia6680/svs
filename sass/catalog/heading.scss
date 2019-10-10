@@ -23,3 +23,18 @@
     margin-left: 5px;
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .heading {
+    padding: 0 2.5rem;
+    margin-bottom: 2.688rem;
+
+    &__title {
+      margin-bottom: 2.375rem;
+    }
+
+    &__catalog-pic {
+      margin-left: 5px;
+    }
+  }
+}

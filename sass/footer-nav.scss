@@ -3,3 +3,10 @@
   @include container;
   padding: 0 0.625rem;
 }
+
+
+@media only screen and (min-width: $tablet) {
+  .footer-nav {
+    padding: 0 1.25rem;
+  }
+}

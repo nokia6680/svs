@@ -3,15 +3,23 @@
 
   width: 100%;
 
-  padding-top: 1.763rem;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  padding-bottom: 2.063rem;
-
   margin-bottom: 2.25rem;
 
-  border: 1px solid #D0DAE5;
-  border-radius: 5px;
+  @include extra-padding;
+
+  &__wrapper {
+    border: 1px solid #D0DAE5;
+    border-radius: 5px;
+
+    padding-top: 1.763rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-bottom: 2.063rem;
+
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+  }
 
   &__title {
     @include font-setting($title-font, 1.816rem, 1.938rem, 500, $text-primary);
@@ -19,5 +27,27 @@
     margin-bottom: 1.451rem;
 
     text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .activity {
+    margin-bottom: 5rem;
+
+    &__wrapper {
+      padding-top: 1.625rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-bottom: 2.625rem;
+    }
+
+    &__title {
+      font-size: 1.875rem;
+      line-height: 1.938rem;
+      margin-bottom: 1.75rem;
+
+      text-align: left;
+      width: 60%;
+    }
   }
 }

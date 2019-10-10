@@ -35,3 +35,16 @@
     @include checkbox-disabled;
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .category {
+    position: absolute;
+    top: -65px;
+    right: 0;
+
+    width: auto;
+    &__item {
+      margin-right: 3.125rem;
+    }
+  }
+}

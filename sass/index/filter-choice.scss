@@ -96,3 +96,105 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .filter-choice {
+    border: 1px solid #C1CAD5;
+    border-radius: 5px;
+
+    width: 100%;
+    margin-bottom: 1.875rem;
+    position: relative;
+
+    &--card {
+      margin-bottom: 0;
+    }
+
+    &--desktop {
+      border: none;
+      border-top: 1px solid #C1CAD5;
+      border-bottom: 1px solid #C1CAD5;
+    }
+
+    &__select {
+      @include flex-setting(column, flex-start, flex-start);
+      width: 100%;
+      border-bottom: 1px solid #C1CAD5;
+
+      position: relative;
+
+      .filter-choice__checkbox {
+        display: none;
+
+        & + label {
+          .filter-choice__heading-pic {
+            transform: rotate(0);
+            transition: 0.4s ease-in-out;
+          }
+        }
+
+        &:checked + label {
+          background-color: transparent;
+
+          .filter-choice__heading-pic {
+            transform: rotate(180deg);
+            transition: 0.4s ease-in-out;
+          }
+        }
+      }
+
+      .filter-choice__heading {
+        @include font-setting($title-font, 0.875rem, 1.063rem, 500, $text-primary);
+        @include flex-setting(row, flex-start, center);
+        width: 100%;
+
+        text-decoration: none;
+        position: relative;
+
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 1.063rem;
+        padding-bottom: 1.063rem;
+        /*Сдвиг стрелки для карточки товара*/
+        &--card {
+          padding-right: 0.688rem;
+        }
+
+        &-icon {
+          margin-right: 0.625rem;
+        }
+
+        &-pic {
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+
+      .filter-choice__content {
+        width: 100%;
+        position: relative;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+        transition: max-height 400ms ease-in-out;
+
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+
+      .filter-choice__checkbox:checked ~ .filter-choice__content {
+      	max-height: 1000px;
+      	transition: max-height 400ms ease-in-out;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}

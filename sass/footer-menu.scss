@@ -39,3 +39,19 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .footer-menu {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-height: 97px;
+    padding-bottom: 1.438rem;
+    padding-top: 1.625rem;
+
+    &__item {
+      width: 20%;
+      margin-bottom: 0.625rem;
+    }
+  }
+}

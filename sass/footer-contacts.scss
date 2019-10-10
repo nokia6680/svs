@@ -50,3 +50,68 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .footer-contacts {
+    &__info {
+      padding-top: 0.938rem;
+      padding-bottom: 0.938rem;
+      padding-left: 1.25rem;
+
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      width: 73.36%;
+      transition: 0.1s ease-in;
+    }
+
+    &__info-call,
+    &__info-time {
+      @include flex-setting(row, flex-start, center);
+    }
+
+    &__info-call {
+      margin-right: 3.125rem;
+    }
+
+    &__pic {
+      display: block;
+      margin-right: 0.625rem;
+    }
+
+    &__callback {
+      width: 26.64%;
+      transition: 0.1s ease-in;
+    }
+
+    &__callback-link {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0.938rem 1.75rem;
+      padding-left: 1rem;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 17px;
+        height: 16px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5078 1.43359C15.8542 1.50651 16.0273 1.71615 16.0273 2.0625C16.0273 5.5625 14.7878 8.55208 12.3086 11.0312C9.82943 13.5104 6.83984 14.75 3.33984 14.75C2.99349 14.75 2.78385 14.5768 2.71094 14.2305L2.05469 11.3867C1.96354 11.0404 2.09115 10.7943 2.4375 10.6484L5.5 9.33594C5.79167 9.20833 6.04688 9.27214 6.26562 9.52734L7.60547 11.168C8.68099 10.6758 9.62891 10.0104 10.4492 9.17188C11.2878 8.33333 11.9531 7.38542 12.4453 6.32812L10.8047 4.96094C10.5495 4.76042 10.4857 4.50521 10.6133 4.19531L11.9258 1.13281C12.0716 0.804688 12.3177 0.686198 12.6641 0.777344L15.5078 1.43359Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 2H6V0L9 2.5L6 5V3H0V2Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        top: 50%;
+        left: 1.25rem;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

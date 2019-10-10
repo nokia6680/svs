@@ -56,3 +56,22 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .catalog-list {
+    @include flex-setting(row, flex-start, flex-start);
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin-bottom: 2.5rem;
+
+    .item:nth-child(3n+3) {
+      margin-right: 1.25rem;
+    }
+
+    .item:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+}

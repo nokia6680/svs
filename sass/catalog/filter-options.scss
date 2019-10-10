@@ -1,3 +1,106 @@
 .filter-options {
   display: none;
 }
+
+@media only screen and (min-width: $tablet) {
+  .filter-options {
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 216px;
+    border: 1px solid #C1CAD5;
+    border-radius: 5px;
+
+    &__head {
+      width: 100%;
+      @include flex-setting(column, flex-start, flex-start);
+
+      padding-left: 1.125rem;
+      padding-top: 1.438rem;
+      padding-bottom: 1.25rem;
+    }
+
+    &__title {
+      @include font-setting($title-font, 1.25rem, 1.5rem, 500, $text-primary);
+      margin: 0;
+
+      margin-bottom: 1.063rem;
+    }
+
+    &__reset {
+      @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+      letter-spacing: 0.01em;
+      border: none;
+      border-bottom: 1px dotted #828C98;
+
+      padding: 0;
+
+      background-color: transparent;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $btn-color;
+        transition: 0.1s ease-in;
+      }
+    }
+
+    &__footer {
+      width: 100%;
+      @include flex-setting(column, flex-start, center);
+
+      padding-bottom: 1.875rem;
+    }
+
+    &__submit {
+      @include flex-setting(row, center, center);
+      width: 175px;
+      height: 60px;
+      background-color: $btn-color;
+      border-radius: 5px;
+      text-decoration: none;
+
+      margin-bottom: 1.625rem;
+
+      &:hover,
+      &:active {
+        background-color: $btn-hover;
+      }
+    }
+
+    &__submit-empty,
+    &__submit-filtered {
+      @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+    }
+
+    &__submit-filtered {
+      width: 100%;
+      @include flex-setting(row, center, center);
+    }
+
+    &__submit-count {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 1px;
+        height: 40px;
+
+        background-color: #E4D9C6;
+
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &__submit-text {
+      padding-left: 0.875rem;
+      padding-right: 0.875rem;
+    }
+  }
+}

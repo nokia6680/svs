@@ -36,13 +36,19 @@
     }
   }
 
+  &__wrap {
+    @include flex-setting(column, flex-end, flex-start);
+
+    height: 100%;
+  }
+
   &__title {
     @include font-setting($title-font, 1.625rem, 1, 500, $text-secondary);
     margin: 0;
     margin-bottom: 1.438rem;
     padding-left: 0.625rem;
 
-    z-index: 1;
+    z-index: 3;
   }
 
   &__description {
@@ -51,6 +57,73 @@
     padding-left: 0.625rem;
     margin-bottom: 1.25rem;
 
-    z-index: 1;
+    z-index: 3;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .intro-slider {
+    width: 100%;
+
+    border-radius: 0px;
+
+    &__item {
+      justify-content: flex-start;
+      background-color: #fff;
+
+      background-image: url('../img/intro-slide-big.png');
+      border-radius: 0;
+
+      padding-top: 2.063rem;
+
+      max-height: 446px;
+      min-height: 446px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__wrap {
+      justify-content: flex-start;
+      padding-left: 2.5rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      color: $text-primary;
+      max-width: 265px;
+      text-align: left;
+
+      margin-bottom: 7.25rem;
+      padding-left: 0;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 1px;
+        height: 50px;
+
+        background-color: #0269D7;
+
+        left: 0;
+        bottom: -80px;
+      }
+    }
+
+    &__description {
+      font-size: 1rem;
+      line-height: 1.375rem;
+      color: $text-primary;
+      margin: 0;
+      padding-left: 0;
+      margin-bottom: 0;
+
+      max-width: 240px;
+      text-align: left;
+    }
   }
 }

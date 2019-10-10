@@ -18,3 +18,10 @@
     margin: 0;
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .about {
+    margin-bottom: 1.875rem;
+    padding: 0 2.5rem;
+  }
+}

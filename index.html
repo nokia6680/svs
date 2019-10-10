@@ -9,7 +9,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -178,6 +178,19 @@
 		<!--Icon books-->
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-books">
 			<path d="M14.8203 0.625C15.0755 0.606771 15.2943 0.679688 15.4766 0.84375C15.6589 1.00781 15.75 1.21745 15.75 1.47266V10.7148C15.75 10.9336 15.668 11.125 15.5039 11.2891C15.3581 11.4531 15.1667 11.5352 14.9297 11.5352C12.3776 11.681 10.3815 12.1094 8.94141 12.8203C8.85026 12.875 8.75 12.8932 8.64062 12.875C8.54948 12.8568 8.46745 12.8021 8.39453 12.7109C8.33984 12.638 8.3125 12.556 8.3125 12.4648V2.51172C8.3125 2.34766 8.3763 2.22917 8.50391 2.15625C9.90755 1.29948 12.013 0.789062 14.8203 0.625ZM7.24609 2.15625C7.3737 2.22917 7.4375 2.34766 7.4375 2.51172V12.4648C7.4375 12.6107 7.36458 12.7201 7.21875 12.793C7.09115 12.8841 6.95443 12.8932 6.80859 12.8203C5.36849 12.1094 3.3724 11.681 0.820312 11.5352C0.583333 11.5352 0.382812 11.4531 0.21875 11.2891C0.0729167 11.125 0 10.9336 0 10.7148V1.47266C0 1.21745 0.0911458 1.00781 0.273438 0.84375C0.455729 0.679688 0.674479 0.606771 0.929688 0.625C3.73698 0.789062 5.84245 1.29948 7.24609 2.15625Z" fill="#84AA32"/>
+		</symbol>
+		<!--Green phone-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-phone-green">
+			<path d="M13.5078 1.43359C13.8542 1.50651 14.0273 1.71615 14.0273 2.0625C14.0273 5.5625 12.7878 8.55208 10.3086 11.0312C7.82943 13.5104 4.83984 14.75 1.33984 14.75C0.99349 14.75 0.783854 14.5768 0.710938 14.2305L0.0546875 11.3867C-0.0364583 11.0404 0.0911458 10.7943 0.4375 10.6484L3.5 9.33594C3.79167 9.20833 4.04688 9.27214 4.26562 9.52734L5.60547 11.168C6.68099 10.6758 7.62891 10.0104 8.44922 9.17188C9.28776 8.33333 9.95312 7.38542 10.4453 6.32812L8.80469 4.96094C8.54948 4.76042 8.48568 4.50521 8.61328 4.19531L9.92578 1.13281C10.0716 0.804688 10.3177 0.686198 10.6641 0.777344L13.5078 1.43359Z" fill="#84AA32"/>
+		</symbol>
+		<!--Green phone-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-clock-green">
+			<path d="M2.1875 2.96484C3.51823 1.63411 5.1224 0.96875 7 0.96875C8.8776 0.96875 10.4727 1.63411 11.7852 2.96484C13.1159 4.27734 13.7812 5.8724 13.7812 7.75C13.7812 9.6276 13.1159 11.2318 11.7852 12.5625C10.4727 13.875 8.8776 14.5312 7 14.5312C5.1224 14.5312 3.51823 13.875 2.1875 12.5625C0.875 11.2318 0.21875 9.6276 0.21875 7.75C0.21875 5.8724 0.875 4.27734 2.1875 2.96484ZM8.55859 10.5391C8.74089 10.6667 8.89583 10.6484 9.02344 10.4844L9.78906 9.41797C9.91667 9.23568 9.89844 9.08073 9.73438 8.95312L7.98438 7.69531V3.92188C7.98438 3.70312 7.875 3.59375 7.65625 3.59375H6.34375C6.125 3.59375 6.01562 3.70312 6.01562 3.92188V8.51562C6.01562 8.625 6.0612 8.71615 6.15234 8.78906L8.55859 10.5391Z" fill="#84AA32"/>
+		</symbol>
+		<!--Callback phone-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-callback">
+			<path d="M15.5078 1.43359C15.8542 1.50651 16.0273 1.71615 16.0273 2.0625C16.0273 5.5625 14.7878 8.55208 12.3086 11.0312C9.82943 13.5104 6.83984 14.75 3.33984 14.75C2.99349 14.75 2.78385 14.5768 2.71094 14.2305L2.05469 11.3867C1.96354 11.0404 2.09115 10.7943 2.4375 10.6484L5.5 9.33594C5.79167 9.20833 6.04688 9.27214 6.26562 9.52734L7.60547 11.168C8.68099 10.6758 9.62891 10.0104 10.4492 9.17188C11.2878 8.33333 11.9531 7.38542 12.4453 6.32812L10.8047 4.96094C10.5495 4.76042 10.4857 4.50521 10.6133 4.19531L11.9258 1.13281C12.0716 0.804688 12.3177 0.686198 12.6641 0.777344L15.5078 1.43359Z" fill="#ffffff"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2H6V0L9 2.5L6 5V3H0V2Z" fill="#ffffff"/>
 		</symbol>
 	</svg>
 	<!--End of SVG sprite-->
@@ -349,58 +362,71 @@
 	<!---->
 	<main class="main">
 		<!--Intro section-->
-		<section class="main__intro intro">
+		<section class="main__intro intro swiper-container">
 			<!--intro slider-->
-			<div class="intro__slider intro-slider" id="intro-slider">
-				<div class="intro-slider__item">
-					<h1 class="intro-slider__title">Заголовок 1</h1>
-					<p class="intro-slider__description">Какое-то описание чего-то Какое-то описание чего-то 1</p>
+			<div class="intro__slider intro-slider swiper-wrapper" id="intro-slider">
+				<div class="intro-slider__item swiper-slide">
+					<div class="intro-slider__wrap">
+						<h1 class="intro-slider__title">Перчатки на каждый день</h1>
+						<p class="intro-slider__description">Новая серия универсальных перчаток «Торро Эконом» с защитой от проколов</p>
+					</div>
 				</div>
-				<div class="intro-slider__item">
-					<h1 class="intro-slider__title">Заголовок 2</h1>
-					<p class="intro-slider__description">Какое-то описание чего-то Какое-то описание чего-то 2</p>
+				<div class="intro-slider__item swiper-slide">
+					<div class="intro-slider__wrap">
+						<h1 class="intro-slider__title">Перчатки на каждый день</h1>
+						<p class="intro-slider__description">Новая серия универсальных перчаток «Торро Эконом» с защитой от проколов</p>
+					</div>
 				</div>
-				<div class="intro-slider__item">
-					<h1 class="intro-slider__title">Заголовок 3</h1>
-					<p class="intro-slider__description">Какое-то описание чего-то Какое-то описание чего-то 3</p>
+				<div class="intro-slider__item swiper-slide">
+					<div class="intro-slider__wrap">
+						<h1 class="intro-slider__title">Перчатки на каждый день</h1>
+						<p class="intro-slider__description">Новая серия универсальных перчаток «Торро Эконом» с защитой от проколов</p>
+					</div>
 				</div>
+			</div>
+			<div class="intro__btn">
+				<div class="button-prev"></div>
+				<div class="swiper-pagination"></div>
+				<div class="button-next"></div>
 			</div>
 		</section>
 		<!--Activities section-->
 		<section class="main__activity activity">
-			<h2 class="activity__title">Производим средства защиты рук</h2>
-			<ul class="activity__list act-list">
-				<!--Single item-->
-				<li class="act-list__item">
-					<h3 class="act-list__item-title">
-						Высокое качество
-						<svg class="act-list__pic act-list__pic--star" width="20" height="19">
-							<use xlink:href="#icon-star-green"></use>
-						</svg>
-					</h3>
-					<p class="act-list__item-description">Используем нити плотной вязки. Покрытия не впитываются в ткань. Станки на новых линиях контролирует технолог завода-производителя.</p>
-				</li>
-				<!--Single item-->
-				<li class="act-list__item">
-					<h3 class="act-list__item-title">
-						Без посредников
-						<svg class="act-list__pic act-list__pic--scale" width="21" height="16">
-							<use xlink:href="#icon-scale-green"></use>
-						</svg>
-					</h3>
-					<p class="act-list__item-description">Цеха расположены в Московской области. Не будет проблем с таможней, внезапного повышения цен и сорванных сроков.</p>
-				</li>
-				<!--Single item-->
-				<li class="act-list__item">
-					<h3 class="act-list__item-title">
-						Гибкое предложение
-						<svg class="act-list__pic act-list__pic--chat" width="25" height="20">
-							<use xlink:href="#icon-chat-green"></use>
-						</svg>
-					</h3>
-					<p class="act-list__item-description">Ассортимент всегда полон. Если нет нужного количества, оперативно его произведём. Напечатаем партию с вашим логотипом и фирменными цветами.</p>
-				</li>
-			</ul>
+			<div class="activity__wrapper">
+				<h2 class="activity__title">Производим средства защиты рук</h2>
+				<ul class="activity__list act-list">
+					<!--Single item-->
+					<li class="act-list__item">
+						<h3 class="act-list__item-title">
+							Высокое качество
+							<svg class="act-list__pic act-list__pic--star" width="20" height="19">
+								<use xlink:href="#icon-star-green"></use>
+							</svg>
+						</h3>
+						<p class="act-list__item-description">Используем нити плотной вязки. Покрытия не впитываются в ткань. Станки на новых линиях контролирует технолог завода-производителя.</p>
+					</li>
+					<!--Single item-->
+					<li class="act-list__item">
+						<h3 class="act-list__item-title">
+							Без посредников
+							<svg class="act-list__pic act-list__pic--scale" width="21" height="16">
+								<use xlink:href="#icon-scale-green"></use>
+							</svg>
+						</h3>
+						<p class="act-list__item-description">Цеха расположены в Московской области. Не будет проблем с таможней, внезапного повышения цен и сорванных сроков.</p>
+					</li>
+					<!--Single item-->
+					<li class="act-list__item">
+						<h3 class="act-list__item-title">
+							Гибкое предложение
+							<svg class="act-list__pic act-list__pic--chat" width="25" height="20">
+								<use xlink:href="#icon-chat-green"></use>
+							</svg>
+						</h3>
+						<p class="act-list__item-description">Ассортимент всегда полон. Если нет нужного количества, оперативно его произведём. Напечатаем партию с вашим логотипом и фирменными цветами.</p>
+					</li>
+				</ul>
+			</div>
 		</section>
 		<!--Choice section-->
 		<section class="main__choice choice">
@@ -1031,15 +1057,15 @@
 				<div class="footer-contacts__info">
 					<!--Link to call-->
 					<a class="footer-contacts__info-call" href="tel:+74959899605" target="_self" title="Контактный номер телефона">
-						<svg class="footer-contacts__pic footer-contacts__pic--call" width="14" height="16">
-							<use xlink:href="#icon-сall"></use>
+						<svg class="footer-contacts__pic footer-contacts__pic--call" width="15" height="15">
+							<use xlink:href="#icon-phone-green"></use>
 						</svg>
 						(495) 989-96-05
 					</a>
 					<!--Schedule-->
 					<b class="footer-contacts__info-time">
-						<svg class="footer-contacts__pic footer-contacts__pic--time" width="14" height="16">
-							<use xlink:href="#icon-clock"></use>
+						<svg class="footer-contacts__pic footer-contacts__pic--time" width="14" height="15">
+							<use xlink:href="#icon-clock-green"></use>
 						</svg>
 						Пн&mdash;Пт&nbsp;с&nbsp;9&nbsp;до&nbsp;18
 					</b>
@@ -1047,17 +1073,16 @@
 				<!--Callback button-link-->
 				<div class="footer-contacts__callback">
 					<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
-						<svg class="footer-contacts__pic footer-contacts__pic--call" width="14" height="16">
-							<use xlink:href="#icon-сallback"></use>
-						</svg>
 						Заказать звонок
 					</a>
 				</div>
 			</div>
 			<!--Footer legal information-->
 			<div class="footer-nav__legal footer-legal">
-				<span class="footer-legal__copyright">&copy; ООО &laquo;СВС Ритейл&raquo;, 2019</span>
-				<a class="footer-legal__policy" href="#" target="_blank" title="Политика обработки персональных данных">Политика обработки персональных данных</a>
+				<div class="footer-legal__wrap">
+					<span class="footer-legal__copyright">&copy; ООО &laquo;СВС Ритейл&raquo;, 2019</span>
+					<a class="footer-legal__policy" href="#" target="_blank" title="Политика обработки персональных данных">Политика обработки персональных данных</a>
+				</div>
 				<span class="footer-legal__development">Разработка &mdash; <a class="footer-legal__development-link" href="https://mediaaid.ru/" target="_blank" title="Разработано в компании Mediaiad Design">mediaaid.ru</a></span>
 			</div>
 		</nav>
@@ -1111,8 +1136,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="https://unpkg.com/swiper/js/swiper.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/slider.js"></script>
 </body>
