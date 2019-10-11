@@ -62,3 +62,28 @@
     @include font-setting($primary-font, 0.75rem, 1rem, 400, $text-primary);
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .documents {
+    padding: 1.313rem 1.25rem 1.875rem 1.5rem;
+
+    margin-bottom: 6.75rem;
+
+    &__header {
+      margin-bottom: 0.625rem;
+    }
+
+    &__title {
+      max-width: 100%;
+      margin-bottom: 1.875rem;
+    }
+
+    &__list {
+      @include flex-setting(row, flex-start, flex-start);
+    }
+
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+}

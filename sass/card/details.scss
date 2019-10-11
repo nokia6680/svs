@@ -8,5 +8,23 @@
   &__description {
     width: 100%;
     margin-bottom: 3.75rem;
+
+    @include flex-setting(column, flex-start, center);
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .details {
+    width: 100%;
+
+    padding: 0 2.5rem;
+
+    &__description {
+      margin-bottom: 3rem;
+
+      @include flex-setting(row, space-between, flex-start);
+
+      transition: 0.2s ease-in;
+    }
   }
 }

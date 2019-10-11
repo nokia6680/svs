@@ -4,9 +4,21 @@
 
   @include flex-setting(column, flex-end, center);
 
-  display: flex !important;
-
   &__frame {
     @include flex-setting(column, center, center);
+  }
+
+  &__photo {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .card-item {
+    height: 617px;
+
+    &__frame {
+      height: 617px;
+    }
   }
 }

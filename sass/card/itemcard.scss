@@ -25,22 +25,33 @@
     @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
     margin: 0;
   }
+
+  /*Слайдер фотографий*/
+  &__slider {
+    order: 2;
+  }
+
+  &__utils {
+    order: 3;
+
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+    margin-bottom: 2rem;
+  }
   /*Блок ссылок на скачиваемые документы*/
   &__files {
-    order: 4;
     @include flex-setting(column, flex-start, center);
-
+    order: 2;
     width: 100%;
     border: 1px solid #C1CAD5;
     border-radius: 5px;
 
     max-width: 280px;
 
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     list-style: none;
-
-    margin-bottom: 2rem;
     padding: 0 0.688rem;
 
     &-item {
@@ -73,34 +84,16 @@
       margin-right: 0.875rem;
     }
   }
-  /*Слайдер фотографий*/
-  &__slider {
-    order: 2;
-  }
   /*Страна производства*/
   &__national {
-    order: 3;
     @include flex-setting(row, flex-start, center);
 
+    align-self: flex-start;
+    order: 1;
     padding: 0 0.625rem;
-    padding-bottom: 1.25rem;
-    margin-bottom: 2.438rem;
+    margin-bottom: 1.25rem;
 
     width: 100%;
-
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-
-      width: 100%;
-      height: 1px;
-
-      background-color: #c1cad5;
-      bottom: 0;
-      left: 0;
-    }
 
     &-pic {
       border-radius: 50%;
@@ -119,13 +112,18 @@
   }
   /*Описание продукта*/
   &__description {
-    order: 5;
+    order: 4;
 
     @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
 
     padding: 0 0.625rem;
     margin-top: 0;
     margin-bottom: 1.938rem;
+  }
+  /*Цвета - скрыты на мобиле*/
+  &__color {
+    order: 5;
+    display: none;
   }
   /*Кнопка предзаказа*/
   &__preorder {
@@ -148,6 +146,157 @@
     &:hover,
     &:active {
       @include btn-hover;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .itemcard {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    margin-bottom: 5rem;
+    /*Информация - название и тип*/
+    &__info {
+      padding: 0;
+      margin-bottom: 1.875rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 1.75rem;
+    }
+    /*Слайдер фотографий*/
+    &__slider {
+      order: 2;
+    }
+    /*Объединение файлов и страны производства*/
+    &__utils {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 2rem;
+    }
+    /*Блок ссылок на скачиваемые документы*/
+    &__files {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      width: auto;
+      max-width: 452px;
+      padding: 0 2.375rem;
+
+      &-item {
+        width: 100%;
+
+        border-bottom: none;
+        margin-right: 4.75rem;
+
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          width: 1px;
+          height: 38px;
+
+          background-color: #C1CAD5;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -35px;
+        }
+
+        &:last-of-type {
+          margin: 0;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &-pic {
+        margin-right: 1rem;
+      }
+    }
+    /*Страна производства*/
+    &__national {
+      margin: 0;
+      align-self: center;
+    }
+    /*Описание продукта*/
+    &__description {
+      order: 4;
+
+      font-size: 1rem;
+      line-height: 1.375rem;
+
+      padding: 0;
+      margin-bottom: 2.188rem;
+    }
+    /*Блок выбора цвета*/
+    &__color {
+      @include flex-setting(column, flex-start, flex-start);
+
+      &-title {
+        @include font-setting($primary-font, 0.75rem, 1rem, 600, $text-primary);
+        margin: 0;
+        margin-bottom: 0.625rem;
+      }
+
+      &-list {
+        @include flex-setting(row, flex-start, flex-start);
+
+        width: auto;
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        margin-bottom: 3.375rem;
+      }
+
+      &-item {
+        @include flex-setting(column, flex-end, center);
+
+        border: 1px solid #F1F0EC;
+        border-radius: 3px;
+
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+
+        margin-right: 1.25rem;
+
+        height: 86px;
+        width: 72px;
+
+        cursor: pointer;
+        outline: none;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &:active,
+        &:hover,
+        &:focus {
+          border-color: $btn-color;
+          transition: 0.1s ease-in;
+        }
+      }
+
+      &-frame {
+        @include flex-setting(column, flex-end, center);
+      }
+    }
+    /*Кнопка предзаказа*/
+    &__preorder {
+      align-self: flex-start;
     }
   }
 }

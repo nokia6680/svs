@@ -1,3 +1,63 @@
+const TabItemSelector = '.contact-list__item';
+const ContentItemSelector = '.address__item';
+
+class TabsManager {
+  constructor(navNode){
+    this.tabs = [];
+    this.activeTab = null;
+
+    this.initFromHtml(navNode);
+
+    this.activateTab(this.tabs[0]);
+  }
+
+  initFromHtml (navNode) {
+    const headers  = navNode.querySelectorAll(TabItemSelector);
+    const contents = navNode.querySelectorAll(ContentItemSelector);
+
+    for (var i = 0; i < headers.length; i++) {
+        this.registerTab(headers[i], contents[i]);
+    }
+  }
+
+  registerTab (header, content) {
+    const tab = new TabItem(header, content);
+    tab.onActivate(() => this.activateTab(tab));
+    this.tabs.push(tab);
+  }
+
+  activateTab (tabItem) {
+    if (this.activeTab) {
+        this.activeTab.setActive(false);
+    }
+
+    this.activeTab = tabItem;
+    this.activeTab.setActive(true);
+  }
+
+}
+
+const ActiveTabHeaderClass = 'contact-list__item--active';
+const ActiveTabContentClass = 'address__item--active';
+
+class TabItem {
+    constructor (header, content) {
+        this.header  = header;
+        this.content = content;
+    }
+    onActivate (action) {
+        this.header.addEventListener('click', () => action(this));
+    }
+    setActive(value) {
+        this.header.classList.toggle(ActiveTabHeaderClass, value);
+        this.content.classList.toggle(ActiveTabContentClass, value);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  let tabs = new TabsManager(document.querySelector('.contacts'));
+});
+
 /*Menu*/
 const MenuButton = document.querySelector('.header-nav__toggle');
 const MobileMenu = document.querySelector('.nav-menu');
@@ -9,7 +69,7 @@ const CatView = document.querySelector('.catalog-filter__toggle');
 const CatList = document.querySelector('.catalog-list');
 /*Variables for callback popup*/
 
-document.querySelector('.header-nav__toggle').onclick = function(e){
+document.querySelector('.header-nav__toggle').onclick = function(){
 	MenuButton.classList.toggle('open');
 	MobileMenu.classList.toggle('active');
 	MenuWrap.classList.toggle('active');
@@ -26,8 +86,7 @@ document.querySelector('.header-nav__search').onclick = function(){
 	document.getElementById("search-1").focus();
 };
 
-/*Catalog grid view*/
-document.querySelector('.catalog-filter__toggle').onclick = function(e){
+document.querySelector('.catalog-filter__toggle').onclick = function(){
 	CatView.classList.toggle('active');
 	CatList.classList.toggle('grid');
 };

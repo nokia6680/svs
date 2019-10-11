@@ -68,3 +68,23 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .pagination {
+    margin-bottom: 4.563rem;
+    width: auto;
+
+    &__list {
+      justify-content: center;
+      width: auto;
+    }
+
+    &__item {
+      margin-right: 0.625rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

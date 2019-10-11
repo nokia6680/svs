@@ -27,3 +27,21 @@
     margin-right: 0.625rem;
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .return {
+    padding: 0 2.5rem;
+
+    &--upper {
+      margin-bottom: 2.25rem;
+    }
+
+    &--lower {
+      margin-bottom: 3.563rem;
+    }
+
+    &__link-pic {
+      margin-right: 1.25rem;
+    }
+  }
+}

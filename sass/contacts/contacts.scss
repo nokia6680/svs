@@ -13,35 +13,19 @@
     align-self: flex-start;
   }
 
-  &__details {
+  &__wrap {
+    width: 100%;
+    @include flex-setting(column, flex-start, flex-start);
+  }
+
+  &__info {
+    width: 100%;
     @include flex-setting(column, flex-start, flex-start);
 
-    width: 100%;
-
-    margin-bottom: 2.313rem;
+    margin-bottom: 4.125rem;
   }
 
-  &__link {
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    @include font-setting($primary-font, 1.125rem, 1.563rem, 400, $text-primary);
-    text-decoration: none;
-
-    &--noicon {
-      padding-left: 1.5rem;
-      margin-bottom: 2.313rem;
-    }
-
-    &--blocked {
-      line-height: 1.5rem;
-    }
-  }
-
-  &__link-pic {
-    margin-right: 0.625rem;
-  }
-
+  /*Кнопка заказа обратного звонка*/
   &__recall {
     @include flex-setting(column, center, center);
     @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
@@ -62,10 +46,31 @@
       @include btn-hover;
     }
   }
-
   &__recall-note {
     @include font-setting($primary-font, 0.75rem, 1rem, 700, #c4c4c4);
     text-align: center;
     align-self: center;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .contacts {
+    padding: 0 2.5rem;
+
+    &__title {
+      margin-bottom: 3.375rem;
+    }
+
+    &__wrap {
+      @include flex-setting(row, space-between, flex-start);
+
+      margin-bottom: 5.625rem;
+    }
+
+    &__info {
+      max-width: 280px;
+      margin-bottom: 0;
+      margin-right: 2.5rem;
+    }
   }
 }
