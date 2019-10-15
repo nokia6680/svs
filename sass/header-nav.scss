@@ -2,8 +2,12 @@
   width: 100%;
   @include flex-setting(row, space-between, center);
 
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  &__wrap {
+    width: 100%;
+    @include flex-setting(row, space-between, center);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
   &__logo {
     width: 74px;
@@ -148,9 +152,51 @@
 
 @media only screen and (min-width: $tablet) {
   .header-nav {
+    justify-content: center;
+
+    &__wrap {
+      max-width: 688px;
+      padding-top: 0.875rem;
+      padding-bottom: 0.875rem;
+    }
+
     &__search {
       margin-left: 0;
       margin-right: 2.5rem;
+    }
+  }
+}
+
+
+@media only screen and (min-width: $laptop) {
+  .header-nav {
+    padding: 0;
+
+    border-radius: 0px 0px 5px 5px;
+
+    justify-content: center;
+
+    background-color: #F0EFED;
+
+    &__wrap {
+      width: 100%;
+      max-width: 944px;
+      @include flex-setting(row, space-between, center);
+    }
+
+    &__logo {
+      width: 161px;
+      height: 60px;
+
+      margin-right: 6.563rem;
+    }
+
+    &__search {
+      display: none;
+    }
+
+    &__toggle {
+      display: none;
     }
   }
 }

@@ -13,5 +13,26 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .similar-list {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__item {
+      margin-right: 1.25rem;
+      margin-bottom: 0;
+
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
   }
 }

@@ -12,9 +12,10 @@
 @media only screen and (min-width: $tablet) {
   .intro {
     margin-bottom: 2.125rem;
-    
+    max-width: 728px;
+
     &__btn {
-      padding-left: 2.5rem;
+      padding-left: 0;
       width: auto;
       align-self: flex-start;
 
@@ -77,6 +78,17 @@
       z-index: 5;
 
       margin-left: 1.875rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .intro {
+    margin-bottom: 2.125rem;
+    max-width: 1004px;
+
+    &__btn {
+      padding-left: 1.25rem;
     }
   }
 }

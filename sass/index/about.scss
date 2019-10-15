@@ -22,6 +22,24 @@
 @media only screen and (min-width: $tablet) {
   .about {
     margin-bottom: 1.875rem;
-    padding: 0 2.5rem;
+    padding: 0;
+
+    width: 100%;
+    max-width: 688px;
+
+    transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .about {
+    margin-bottom: 2.5rem;
+    max-width: 944px;
+
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 2.5rem;
+    }
   }
 }

@@ -2,3 +2,22 @@
   @include flex-setting(column, flex-start, center);
   @include container;
 }
+
+@media only screen and (min-width: $tablet) {
+  .main {
+    &--catalog,
+    &--card {
+      max-width: 688px;
+      transition: 0.1s ease-in;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .main {
+    &--catalog,
+    &--card {
+      max-width: 944px;
+    }
+  }
+}

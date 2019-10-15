@@ -104,25 +104,66 @@
 
 @media only screen and (min-width: $tablet) {
   .choice {
+    width: 100%;
+    max-width: 688px;
     align-items: flex-start;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding: 0;
 
     margin-bottom: 4.188rem;
+
+    transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
 
     &__title {
       font-size: 1.75rem;
       line-height: 2.063rem;
       margin-bottom: 2.375rem;
+      align-self: flex-start;
     }
 
     &__wrap {
       width: 100%;
+      max-width: 688px;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
 
       margin-bottom: 1.875rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .choice {
+    max-width: 944px;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 396px;
+      height: 320px;
+
+      background-image: url('../img/choice-hand.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+
+      top: 76px;
+      right: -7%;
+    }
+
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 2.375rem;
+    }
+
+    &__wrap {
+      max-width: 600px;
+
+      margin-bottom: 2.5rem;
     }
   }
 }

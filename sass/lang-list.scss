@@ -38,3 +38,26 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .lang-list {
+    margin-left: 0.625rem;
+
+    &__item {
+      &:first-of-type {
+        margin-right: 0.625rem;
+
+        &::after {
+          @include font-setting($title-font, 0.75rem, 0.875rem, 400, $text-primary);
+        }
+      }
+    }
+
+    &__label {
+      cursor: pointer;
+      outline: none;
+      
+      @include font-setting($title-font, 0.75rem, 0.875rem, 400, $text-primary);
+    }
+  }
+}

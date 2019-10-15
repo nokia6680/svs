@@ -55,7 +55,10 @@
 
 @media only screen and (min-width: $tablet) {
   .contacts {
-    padding: 0 2.5rem;
+    padding: 0;
+    max-width: 688px;
+
+    transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
 
     &__title {
       margin-bottom: 3.375rem;
@@ -71,6 +74,20 @@
       max-width: 280px;
       margin-bottom: 0;
       margin-right: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .contacts {
+    max-width: 944px;
+
+    &__title {
+      margin-bottom: 2.5rem;
+    }
+
+    &__wrap {
+      margin-bottom: 5.625rem;
     }
   }
 }

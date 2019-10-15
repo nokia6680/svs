@@ -118,12 +118,40 @@
     width: 216px;
     height: 416px;
     margin-bottom: 1.875rem;
-    margin-right: 1.25rem;
     padding: 0.75rem 0.688rem;
 
-    &:nth-child(3n+3) {
-      margin-right: 0;
+    &__details {
+      height: 100%;
+      justify-content: space-between;
     }
+
+    &__frame {
+      height: 242px;
+      max-height: 242px;
+
+      overflow: hidden;
+    }
+
+    &__image {
+      max-height: 242px;
+    }
+
+    &__description {
+      font-size: 0.875rem;
+      line-height: 1.188rem;
+
+      padding-bottom: 0;
+      margin-bottom: 1.875rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .item {
+    width: 222px;
+    height: 416px;
+    margin-bottom: 1.875rem;
+    padding: 0.75rem 0.688rem;
 
     &__details {
       height: 100%;

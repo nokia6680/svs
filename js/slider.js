@@ -15,3 +15,32 @@ var swiper = new Swiper('.swiper-container', {
     },
   },
 });
+
+var swiper = new Swiper('.swiper-container-2', {
+  autoplay: true,
+  loop: true,
+
+  breakpoints: {
+    320: {
+      pagination: {
+        el: '.fraction-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.slide-next',
+        prevEl: '.slide-prev',
+      },
+    },
+    
+    768: {
+      pagination: {
+        el: '.fraction-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.slide-next',
+        prevEl: '.slide-prev',
+      },
+    },
+  },
+});

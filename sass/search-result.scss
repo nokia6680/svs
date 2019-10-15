@@ -8,7 +8,7 @@
 
   background-color: #ffffff;
 
-  width: 300px;
+  width: 100%;
   left: 0px;
   top: -10px;
 
@@ -19,6 +19,7 @@
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   padding-bottom: 1.875rem;
+
   /*Верхняя часть*/
   &__upper {
     @include flex-setting(column, flex-start, flex-start);
@@ -67,6 +68,44 @@
     &:active {
       background-color: #754440;
       transition: 0.1s ease-in;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .search-result {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top: 50px;
+
+    border-radius: 0px 0px 5px 5px;
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0;
+
+    &.active {
+      padding-top: 1.25rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-bottom: 2.5rem;
+
+      max-height: 700px;
+
+      transition: max-height 0.2s ease-in;
+    }
+    /*Верхняя часть*/
+    &__upper {
+      @include flex-setting(column, flex-start, flex-start);
+      width: 490px;
+    }
+    /*Нижняя часть*/
+    &__lower {
+      width: 490px;
+    }
+    &__link {
+      align-self: flex-start;
     }
   }
 }

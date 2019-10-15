@@ -44,3 +44,38 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: auto;
+    border: none;
+
+    margin-bottom: 0;
+
+    &__item {
+      width: auto;
+      border: none;
+      border-right: 1px solid #D2CECB;
+
+      &--catalog,
+      &--sales,
+      &--about,
+      &--whywe,
+      &--contacts {
+        display: none;
+      }
+    }
+
+    &__link {
+      padding: 0;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+
+      @include font-setting($title-font, 0.875rem, 1.063rem, 400, $text-primary);
+    }
+  }
+}

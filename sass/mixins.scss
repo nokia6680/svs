@@ -75,16 +75,8 @@
   position: relative;
   padding-left: 25px;
 
-  @media only screen and (min-width: $mobile) {
-
-  }
-
   @media only screen and (min-width: $laptop) {
-
-  }
-
-  @media only screen and (min-width: $widebook-hd) {
-
+    padding-left: 2.25rem;
   }
 }
 

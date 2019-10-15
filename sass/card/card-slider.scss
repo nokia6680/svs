@@ -121,3 +121,9 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .card-slider {
+    display: none;
+  }
+}

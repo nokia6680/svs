@@ -2,6 +2,15 @@
   @include flex-setting(column, flex-start, center);
   @include container;
   padding: 0 0.625rem;
+
+  &__wrap {
+    @include flex-setting(column, center, center);
+    width: 100%;
+
+    background-color: #FAF9F7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 }
 
 

@@ -21,10 +21,6 @@
     z-index: 999;
   }
 
-  &__wrap {
-    @include container;
-  }
-
   /*Header on catalog page*/
   &--catalog {
     margin-bottom: 1.375rem;
@@ -40,7 +36,6 @@
 
   &--search {
     @include flex-setting(column, flex-start, center);
-
     .header__wrap {
       margin-bottom: 1rem;
     }
@@ -53,6 +48,50 @@
 
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+
+    /*Header on catalog page*/
+    &--catalog {
+      margin-bottom: 3.125rem;
+    }
+
+    &--card {
+      margin-bottom: 1.75rem;
+    }
+
+    &--contacts {
+      margin-bottom: 1.5rem;
+    }
+
+    &--search {
+      @include flex-setting(column, flex-start, center);
+
+      .header__wrap {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .header {
+    @include flex-setting(column, center, center);
+    margin-top: 0.625rem;
+    margin-bottom: 0;
+
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+
+    width: 100%;
+
+    background-color: transparent;
+
+    &__nav {
+      order: 2;
+    }
+
+    &__menu {
+      order: 1;
+    }
 
     /*Header on catalog page*/
     &--catalog {

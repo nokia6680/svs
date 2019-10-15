@@ -41,6 +41,9 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    max-width: 688px;
+    transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+
     &__item {
       @include flex-setting(column, flex-start, flex-start);
 
@@ -82,6 +85,46 @@
       &--chat {
         right: -60px;
         bottom: 4px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .act-list {
+    max-width: 944px;
+
+    &__item {
+      width: 30%;
+    }
+
+    &__item-title {
+      justify-content: flex-start;
+      width: 100%;
+      font-size: 1.375rem;
+      line-height: 1.625rem;
+    }
+
+    &__pic {
+      position: relative;
+      margin-left: 0.625rem;
+
+      bottom: auto;
+      right: auto;
+
+      &--star {
+        bottom: auto;
+        right: auto;
+      }
+
+      &--scale {
+        bottom: auto;
+        right: auto;
+      }
+
+      &--chat {
+        bottom: auto;
+        right: auto;
       }
     }
   }

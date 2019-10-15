@@ -8,7 +8,6 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
@@ -16,7 +15,6 @@
 	<![endif]-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap&subset=cyrillic" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Passion+One&display=swap" rel="stylesheet">
 	<meta property="og:title" content="" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="" />
@@ -265,16 +263,33 @@
 	<!--End of SVG sprite-->
 	<!--Page header-->
 	<header class="header header--card">
-		<div class="header__wrap">
-			<nav class="header__nav header-nav">
+		<nav class="header__nav header-nav">
+			<div class="header-nav__wrap">
 				<!--Logo-->
 				<div class="header-nav__logo">
 					<a class="header-nav__link" href="index.html" target="_self">
-						<img class="header-nav__logo-image" src="img/logo.svg" width="74" height="28" alt="СВС - перчатки на каждый день" title="СВС - перчатки на каждый день" />
+						<img class="header-nav__logo-image" src="img/logo.svg" alt="СВС - перчатки на каждый день" title="СВС - перчатки на каждый день" />
 					</a>
 				</div>
+				<!--Menu description-->
+				<p class="header-nav__description">Производим средства защиты рук</p>
+				<!--Desktop menu-->
+				<ul class="header-nav__menu header-menu">
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="catalog.html" target="_self" title="Продукция">Продукция</a>
+					</li>
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="promotions.html" target="_self" title="Акции">Акции</a>
+					</li>
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="whywe.html" target="_self" title="Почему мы">Почему мы</a>
+					</li>
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="about.html" target="_self" title="О нас">О нас</a>
+					</li>
+				</ul>
 				<!--Mobile contacts-->
-				<div class="header-nav__contacts nav-contacts nav-contacts--mobile">
+				<div class="header-nav__contacts nav-contacts">
 					<a class="nav-contacts__link nav-contacts__link--tel" href="tel:+79123456789" target="_self">8 800 000-00-00</a>
 					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
 				</div>
@@ -289,21 +304,44 @@
 				</button>
 				<!--Menu button-->
 				<div class="header-nav__toggle" id="nav-icon4">
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
 				</div>
-				<!--Menu description-->
-				<p class="header-nav__description">Производим средства защиты рук</p>
-			</nav>
-			<!--Menu-->
-			<div class="header__menu nav-menu">
+				<!--Desktop contacts list-->
+				<div class="header-nav__service header-info">
+					<a class="header-info__title" href="contacts.html" target="_self" title="Контакты">Контакты</a>
+					<ul class="header-info__list">
+						<li class="header-info__item">
+							<a class="header-info__link" href="tel:+79123456789" target="_self">(495) 989-96-05</a>
+						</li>
+						<li class="header-info__item">
+							<a class="header-info__link" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
+						</li>
+						<li class="header-info__item">
+							<button class="header-info__call" type="button">Заказать звонок</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--Menu-->
+		<div class="header__menu nav-menu">
+			<div class="nav-menu__wrap">
 				<!--Search div-->
 				<div class="nav-menu__search">
-					<input class="nav-menu__search-input" type="search" name="search" id="search-1" placeholder="Поиск" />
-					<label class="nav-menu__search-input-btn" for="search-1"></label>
+					<svg class="nav-menu__search-pic" width="22" height="22">
+						<use xlink:href="#icon-search"></use>
+					</svg>
+					<form class="nav-menu__form" action="#" method="post" autocomplete="on">
+						<input class="nav-menu__search-input" type="search" name="search" id="search-1" placeholder="Поиск по сайту" />
+						<label class="nav-menu__search-input-btn" for="search-1"></label>
+					</form>
+					<svg class="nav-menu__search-close" width="14" height="14">
+						<use xlink:href="#icon-cross-black"></use>
+					</svg>
 					<!--Search results-->
-					<div class="nav-menu__search-result search-result" style="display: none;" id="search-result-1">
+					<div class="nav-menu__search-result search-result" id="search-result-1">
 						<div class="search-result__upper">
 							<h3 class="search-result__title">Сферы</h3>
 							<b class="search-result__type">
@@ -343,7 +381,7 @@
 										<source media="(min-width: 768px)" srcset="img/search-result-1.webp" type="image/webp" />
 										<source media="(min-width: 768px)" srcset="img/search-result-1.png" />
 										<source srcset="img/search-result-1.webp" type="image/webp" />
-										<img src="img/search-result-1.png" />
+										<img class="result-preview__frame-pic" src="img/search-result-1.png" />
 									</picture>
 									<div class="result-preview__item-info">
 										<b class="result-preview__item-title">Перчатки нейлоновые с рельефным натуральным латексом</b>
@@ -360,76 +398,72 @@
 						</div>
 					</div>
 				</div>
-				<!--Menu list-->
-				<ul class="nav-menu__list nav-list">
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="#" target="_self">Акции</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="#" target="_self">О нас</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="#" target="_self">Почему мы</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="#" target="_self">Вакансии</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="#" target="_self">Поставщики</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="contacts.html" target="_self">Контакты</a>
-					</li>
-				</ul>
-				<!--Menu service block-->
-				<div class="nav-menu__service nav-service">
-					<!--Lang switcher-->
-					<div class="nav-service__lang service-lang">
-						<svg class="service-lang__pic" width="14" height="16">
-							<use xlink:href="#icon-globe-white"></use>
-						</svg>
-						<ul class="service-lang__list lang-list">
-							<li class="lang-list__item">
-								<label class="lang-list__label" for="eng">Eng</label>
-								<input class="lang-list__radio visually-hidden" id="eng" name="lang" value="eng" />
-							</li>
-							<li class="lang-list__item">
-								<label class="lang-list__label" for="rus">Rus</label>
-								<input class="lang-list__radio visually-hidden" id="rus" name="lang" value="rus" />
-							</li>
-						</ul>
-					</div>
-					<!--Callback link-->
-					<a class="nav-service__call callback" href="#" target="_self" onclick="openbox('popup-callback');return false;">
-						<svg class="nav-service__pic nav-service__pic--phone" width="15" height="15">
-							<use xlink:href="#icon-phone-white"></use>
-						</svg>
-						Заказать звонок
-					</a>
-					<!--Desktop contacts list-->
-					<div class="nav-service__contacts service-contacts">
-						<h3 class="service-contacts__title">Контакты</h3>
-						<ul class="service-contacts__list service-list">
-							<li class="service-list__item">
-								<a class="service-list__link" href="tel:+79123456789" target="_self">8 800 000-00-00</a>
-							</li>
-							<li class="service-list__item">
-								<a class="service-list__link" href="tel:+79123456789" target="_self">(495) 989-96-05</a>
-							</li>
-							<li class="service-list__item">
-								<a class="service-list__link" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
-							</li>
-						</ul>
+				<div class="nav-menu__links">
+					<!--Mobile Menu list-->
+					<ul class="nav-menu__list nav-list">
+						<li class="nav-list__item nav-list__item--catalog">
+							<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
+						</li>
+						<li class="nav-list__item nav-list__item--sales">
+							<a class="nav-list__link" href="#" target="_self">Акции</a>
+						</li>
+						<li class="nav-list__item nav-list__item--about">
+							<a class="nav-list__link" href="#" target="_self">О нас</a>
+						</li>
+						<li class="nav-list__item nav-list__item--whywe">
+							<a class="nav-list__link" href="#" target="_self">Почему мы</a>
+						</li>
+						<li class="nav-list__item nav-list__item--job">
+							<a class="nav-list__link" href="#" target="_self">Вакансии</a>
+						</li>
+						<li class="nav-list__item nav-list__item--supply">
+							<a class="nav-list__link" href="#" target="_self">Поставщики</a>
+						</li>
+						<li class="nav-list__item nav-list__item--contacts">
+							<a class="nav-list__link" href="contacts.html" target="_self">Контакты</a>
+						</li>
+					</ul>
+					<!--Menu service block-->
+					<div class="nav-menu__service nav-service">
+							<!--Lang switcher-->
+						<div class="nav-service__lang service-lang">
+							<svg class="service-lang__pic service-lang__pic--white" width="14" height="16">
+								<use xlink:href="#icon-globe-white"></use>
+							</svg>
+							<svg class="service-lang__pic service-lang__pic--black" width="12" height="13">
+								<use xlink:href="#icon-globe-black"></use>
+							</svg>
+							<ul class="service-lang__list lang-list">
+								<li class="lang-list__item">
+									<label class="lang-list__label" for="eng">Eng</label>
+									<input class="lang-list__radio visually-hidden" id="eng" name="lang" value="eng" />
+								</li>
+								<li class="lang-list__item">
+									<label class="lang-list__label" for="rus">Rus</label>
+									<input class="lang-list__radio visually-hidden" id="rus" name="lang" value="rus" />
+								</li>
+							</ul>
+						</div>
+						<!--Callback link-->
+						<a class="nav-service__call callback" href="#" target="_self" onclick="openbox('popup-callback');return false;">
+							<svg class="nav-service__pic nav-service__pic--phone" width="15" height="15">
+								<use xlink:href="#icon-phone-white"></use>
+							</svg>
+							Заказать звонок
+						</a>
+						<!--Desktop search btn-->
+						<button class="nav-service__search" type="button">
+							<svg class="nav-service__search-pic" width="22" height="22">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 	<!---->
-	<main class="main">
+	<main class="main main--card">
 		<!--Link to similar-->
 		<div class="main__return return return--upper">
 			<a class="return__link" href="catalog.html" target="_self" title="Назад в каталог">
@@ -441,102 +475,190 @@
 		</div>
 		<!--Item card-->
 		<section itemscope itemtype="http://schema.org/Product" class="main__itemcard itemcard">
+			<!--Desktop gallery-->
+			<div class="itemcard__gallery gallery">
+				<!--Big images-->
+				<div class="gallery__slider swiper-container-3 gallery-top">
+					<button class="gallery__expand" type="button">+</button>
+					<div class="gallery__wrapper swiper-wrapper">
+						<!--Single item photo-->
+						<div class="gallery__item swiper-slide">
+							<picture class="gallery__frame">
+								<!--Retina 3x WebP-->
+								<source type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-1@3x.webp 3x" sizes="100vw" />
+								<!--Retina 2x WebP-->
+								<source type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-1@2x.webp 2x" sizes="100vw" />
+								<!--Normal WebP-->
+								<source type="image/webp" srcset="img/latest-1@1x.webp" sizes="100vw" />
+								<!--Retina 3x JPG-->
+								<source media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-1@3x.jpg 3x" sizes="100vw" />
+								<!--Retina 2x JPG-->
+								<source media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-1@2x.jpg 2x" sizes="100vw" />
+								<!--Normal JPG-->
+								<img itemprop="image" class="gallery__photo" src="img/latest-1@1x.jpg" />
+							</picture>
+						</div>
+						<!--Single item photo-->
+						<div class="gallery__item swiper-slide">
+							<picture class="gallery__frame">
+								<!--Retina 3x WebP-->
+								<source type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-2@3x.webp 3x" sizes="100vw" />
+								<!--Retina 2x WebP-->
+								<source type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-2@2x.webp 2x" sizes="100vw" />
+								<!--Normal WebP-->
+								<source type="image/webp" srcset="img/latest-2@1x.webp" sizes="100vw" />
+								<!--Retina 3x JPG-->
+								<source media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-2@3x.jpg 3x" sizes="100vw" />
+								<!--Retina 2x JPG-->
+								<source media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-2@2x.jpg 2x" sizes="100vw" />
+								<!--Normal JPG-->
+								<img class="gallery__photo" src="img/latest-2@1x.jpg" />
+							</picture>
+						</div>
+					</div>
+					<div class="slide-prev-0"></div>
+					<div class="slide-next-0"></div>
+					<!-- Add Pagination -->
+					<div class="fraction-pagination"></div>
+				</div>
+				<!--Big images-->
+				<div class="gallery__slider swiper-container-3 gallery-thumbs">
+					<div class="gallery__wrapper swiper-wrapper">
+						<!--Single item photo-->
+						<div class="gallery__item gallery__item--thumb swiper-slide">
+							<picture class="gallery__frame gallery__frame--thumb">
+								<!--Retina 3x WebP-->
+								<source type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-1@3x.webp 3x" sizes="100vw" />
+								<!--Retina 2x WebP-->
+								<source type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-1@2x.webp 2x" sizes="100vw" />
+								<!--Normal WebP-->
+								<source type="image/webp" srcset="img/latest-1@1x.webp" sizes="100vw" />
+								<!--Retina 3x JPG-->
+								<source media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-1@3x.jpg 3x" sizes="100vw" />
+								<!--Retina 2x JPG-->
+								<source media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-1@2x.jpg 2x" sizes="100vw" />
+								<!--Normal JPG-->
+								<img itemprop="image" class="gallery__photo gallery__photo--thumb" src="img/latest-1@1x.jpg" />
+							</picture>
+						</div>
+						<!--Single item photo-->
+						<div class="gallery__item gallery__item--thumb swiper-slide">
+							<picture class="gallery__frame gallery__frame--thumb">
+								<!--Retina 3x WebP-->
+								<source type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-2@3x.webp 3x" sizes="100vw" />
+								<!--Retina 2x WebP-->
+								<source type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-2@2x.webp 2x" sizes="100vw" />
+								<!--Normal WebP-->
+								<source type="image/webp" srcset="img/latest-2@1x.webp" sizes="100vw" />
+								<!--Retina 3x JPG-->
+								<source media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-2@3x.jpg 3x" sizes="100vw" />
+								<!--Retina 2x JPG-->
+								<source media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-2@2x.jpg 2x" sizes="100vw" />
+								<!--Normal JPG-->
+								<img class="gallery__photo gallery__photo--thumb" src="img/latest-2@1x.jpg" />
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!--Itemcard info-->
-			<div class="itemcard__info">
-				<h1 itemprop="name" class="itemcard__title">Перчатки нейлоновые с рельефным натуральным латексом</h1>
-				<p class="itemcard__type">Для слесарных работ</p>
-			</div>
-			<!--Itemcard files only for desktops-->
-			<div class="itemcard__utils">
-				<ul class="itemcard__files">
-					<li class="itemcard__files-item">
-						<svg class="itemcard__files-pic" width="14" height="16">
-							<use xlink:href="#icon-sizes"></use>
-						</svg>
-						<a class="itemcard__files-link" href="#" target="_blank" title="Таблица размеров">Таблица&nbsp;размеров</a>
-					</li>
-					<li class="itemcard__files-item">
-						<svg class="itemcard__files-pic" width="16" height="13">
-							<use xlink:href="#icon-books"></use>
-						</svg>
-						<a class="itemcard__files-link" href="#" target="_blank" title="Скачать презентацию в PDF">Презентацию&nbsp;в&nbsp;PDF</a>
-					</li>
-				</ul>
-				<!--Itemcard made in information-->
-				<div class="itemcard__national">
-					<svg class="itemcard__national-pic" width="20" height="20">
-						<use xlink:href="#flag-rus"></use>
-					</svg>
-					<b class="itemcard__national-description">Сделано в России</b>
+			<div class="itemcard__wrapper">
+				<div class="itemcard__info">
+					<h1 itemprop="name" class="itemcard__title">Перчатки нейлоновые с рельефным натуральным латексом</h1>
+					<p class="itemcard__type">Для слесарных работ</p>
 				</div>
-			</div>
-			<!--Itemcard description-->
-			<p itemprop="description" class="itemcard__description">Перчатка эталонного качества российского производства из натурального хлопка с двойным латексным покрытием. Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению
-				влаги внутрь, обеспечивает высокую износостойкость, защищает руки от механических воздействий. Более эффективная и долговечная альтернатива обычным ХБ перчаткам с ПВХ нанесением.</p>
-			<!--Itemcard color picker-->
-			<div class="itemcard__color">
-				<h3 class="itemcard__color-title">Доступные цвета</h3>
-				<ul class="itemcard__color-list">
-					<li class="itemcard__color-item">
-						<picture class="itemcard__color-frame">
-							<source srcset="img/color-1.webp" type="image/webp" />
-							<img class="itemcard__color-pic" src="img/color-1.png" alt="Цвет-1" />
-						</picture>
-					</li>
-					<li class="itemcard__color-item">
-						<picture class="itemcard__color-frame">
-							<source srcset="img/color-2.webp" type="image/webp" />
-							<img class="itemcard__color-pic" src="img/color-2.png" alt="Цвет-2" />
-						</picture>
-					</li>
-				</ul>
-			</div>
-			<!--Itemcard photo slider-->
-			<div class="itemcard__slider card-slider swiper-container-2">
-				<button class="card-slider__expand" type="button">+</button>
-				<div class="card-slider__wrapper swiper-wrapper">
-					<!--Single item photo-->
-					<div class="card-slider__item card-item swiper-slide">
-						<picture class="card-item__frame">
-							<!--Retina 3x WebP-->
-							<source type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-1@3x.webp 3x" sizes="100vw" />
-							<!--Retina 2x WebP-->
-							<source type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-1@2x.webp 2x" sizes="100vw" />
-							<!--Normal WebP-->
-							<source type="image/webp" srcset="img/latest-1@1x.webp" sizes="100vw" />
-							<!--Retina 3x JPG-->
-							<source media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-1@3x.jpg 3x" sizes="100vw" />
-							<!--Retina 2x JPG-->
-							<source media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-1@2x.jpg 2x" sizes="100vw" />
-							<!--Normal JPG-->
-							<img itemprop="image" class="card-item__photo" src="img/latest-1@1x.jpg" />
-						</picture>
-					</div>
-					<!--Single item photo-->
-					<div class="card-slider__item card-item swiper-slide">
-						<picture class="card-item__frame">
-							<!--Retina 3x WebP-->
-							<source type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-2@3x.webp 3x" sizes="100vw" />
-							<!--Retina 2x WebP-->
-							<source type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-2@2x.webp 2x" sizes="100vw" />
-							<!--Normal WebP-->
-							<source type="image/webp" srcset="img/latest-2@1x.webp" sizes="100vw" />
-							<!--Retina 3x JPG-->
-							<source media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-2@3x.jpg 3x" sizes="100vw" />
-							<!--Retina 2x JPG-->
-							<source media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-2@2x.jpg 2x" sizes="100vw" />
-							<!--Normal JPG-->
-							<img class="card-item__photo" src="img/latest-2@1x.jpg" />
-						</picture>
+				<!--Itemcard files only for desktops-->
+				<div class="itemcard__utils">
+					<ul class="itemcard__files">
+						<li class="itemcard__files-item">
+							<svg class="itemcard__files-pic" width="14" height="16">
+								<use xlink:href="#icon-sizes"></use>
+							</svg>
+							<a class="itemcard__files-link" href="#" target="_blank" title="Таблица размеров">Таблица&nbsp;размеров</a>
+						</li>
+						<li class="itemcard__files-item">
+							<svg class="itemcard__files-pic" width="16" height="13">
+								<use xlink:href="#icon-books"></use>
+							</svg>
+							<a class="itemcard__files-link" href="#" target="_blank" title="Скачать презентацию в PDF">Презентацию&nbsp;в&nbsp;PDF</a>
+						</li>
+					</ul>
+					<!--Itemcard made in information-->
+					<div class="itemcard__national">
+						<svg class="itemcard__national-pic" width="20" height="20">
+							<use xlink:href="#flag-rus"></use>
+						</svg>
+						<b class="itemcard__national-description">Сделано в России</b>
 					</div>
 				</div>
-				<div class="slide-prev"></div>
-				<div class="slide-next"></div>
-				<!-- Add Pagination -->
-				<div class="fraction-pagination"></div>
+				<!--Itemcard description-->
+				<p itemprop="description" class="itemcard__description">Перчатка эталонного качества российского производства из натурального хлопка с двойным латексным покрытием. Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению
+					влаги внутрь, обеспечивает высокую износостойкость, защищает руки от механических воздействий. Более эффективная и долговечная альтернатива обычным ХБ перчаткам с ПВХ нанесением.</p>
+				<!--Itemcard color picker-->
+				<div class="itemcard__color">
+					<h3 class="itemcard__color-title">Доступные цвета</h3>
+					<ul class="itemcard__color-list">
+						<li class="itemcard__color-item">
+							<picture class="itemcard__color-frame">
+								<source srcset="img/color-1.webp" type="image/webp" />
+								<img class="itemcard__color-pic" src="img/color-1.png" alt="Цвет-1" />
+							</picture>
+						</li>
+						<li class="itemcard__color-item">
+							<picture class="itemcard__color-frame">
+								<source srcset="img/color-2.webp" type="image/webp" />
+								<img class="itemcard__color-pic" src="img/color-2.png" alt="Цвет-2" />
+							</picture>
+						</li>
+					</ul>
+				</div>
+				<!--Itemcard photo slider-->
+				<div class="itemcard__slider card-slider card-slider--small swiper-container-2">
+					<button class="card-slider__expand" type="button">+</button>
+					<div class="card-slider__wrapper swiper-wrapper">
+						<!--Single item photo-->
+						<div class="card-slider__item card-item swiper-slide">
+							<picture class="card-item__frame">
+								<!--Retina 3x WebP-->
+								<source type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-1@3x.webp 3x" sizes="100vw" />
+								<!--Retina 2x WebP-->
+								<source type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-1@2x.webp 2x" sizes="100vw" />
+								<!--Normal WebP-->
+								<source type="image/webp" srcset="img/latest-1@1x.webp" sizes="100vw" />
+								<!--Retina 3x JPG-->
+								<source media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-1@3x.jpg 3x" sizes="100vw" />
+								<!--Retina 2x JPG-->
+								<source media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-1@2x.jpg 2x" sizes="100vw" />
+								<!--Normal JPG-->
+								<img itemprop="image" class="card-item__photo" src="img/latest-1@1x.jpg" />
+							</picture>
+						</div>
+						<!--Single item photo-->
+						<div class="card-slider__item card-item swiper-slide">
+							<picture class="card-item__frame">
+								<!--Retina 3x WebP-->
+								<source type="image/webp" media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-2@3x.webp 3x" sizes="100vw" />
+								<!--Retina 2x WebP-->
+								<source type="image/webp" media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-2@2x.webp 2x" sizes="100vw" />
+								<!--Normal WebP-->
+								<source type="image/webp" srcset="img/latest-2@1x.webp" sizes="100vw" />
+								<!--Retina 3x JPG-->
+								<source media="(min-resolution: 384dpi), (-webkit-min-device-pixel-ratio: 3)" srcset="img/latest-2@3x.jpg 3x" sizes="100vw" />
+								<!--Retina 2x JPG-->
+								<source media="(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)" srcset="img/latest-2@2x.jpg 2x" sizes="100vw" />
+								<!--Normal JPG-->
+								<img class="card-item__photo" src="img/latest-2@1x.jpg" />
+							</picture>
+						</div>
+					</div>
+					<div class="slide-prev"></div>
+					<div class="slide-next"></div>
+					<!-- Add Pagination -->
+					<div class="fraction-pagination"></div>
+				</div>
+				<!--Itemcard pre-order-->
+				<a class="itemcard__preorder" href="#" target="_self" title="Оформить предзаказ" onclick="openorder('popup-preorder');return false;">Оформить предзаказ</a>
 			</div>
-			<!--Itemcard pre-order-->
-			<a class="itemcard__preorder" href="#" target="_self" title="Оформить предзаказ" onclick="openorder('popup-preorder');return false;">Оформить предзаказ</a>
 		</section>
 		<!--advantagesantages section-->
 		<section class="main__advantages advantages">
@@ -810,7 +932,6 @@
 						<use xlink:href="#icon-fingerprint"></use>
 					</svg>
 				</div>
-
 				<ul class="documents__list">
 					<li class="documents__item">
 						<a class="documents__item-link" href="#" target="_blank" title="Паспорт">Паспорт</a>
@@ -819,12 +940,6 @@
 					<li class="documents__item">
 						<a class="documents__item-link" href="#" target="_blank" title="Презентация">Презентация</a>
 						<span class="documents__item-info">PDF, 1.0 Мб</span>
-					</li>
-					<li class="documents__item">
-						<a class="documents__item-link" href="#" target="_blank" title="Декларация соответствия">Декларация соответствия</a>
-					</li>
-					<li class="documents__item">
-						<a class="documents__item-link" href="#" target="_blank" title="Подбор размера">Подбор размера</a>
 					</li>
 				</ul>
 			</div>
@@ -1017,32 +1132,34 @@
 	<footer class="footer">
 		<nav class="footer__nav footer-nav">
 			<!--Footer navi-->
-			<ul class="footer-nav__menu footer-menu">
-				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="catalog.html" title="" target="_self">Продукция</a>
-				</li>
-				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="#" title="" target="_self">Акции</a>
-				</li>
-				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="about.html" title="" target="_self">О нас</a>
-				</li>
-				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="#" title="" target="_self">Почему мы</a>
-				</li>
-				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="#" title="" target="_self">Вакансии</a>
-				</li>
-				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="#" title="" target="_self">Поставщики</a>
-				</li>
-				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="contacts.html" title="" target="_self">Контакты</a>
-				</li>
-				<li class="footer-menu__item">
-					<a class="footer-menu__link" href="#" title="" target="_self">In English</a>
-				</li>
-			</ul>
+			<div class="footer-nav__wrap">
+				<ul class="footer-nav__menu footer-menu">
+					<li class="footer-menu__item">
+						<a class="footer-menu__link" href="catalog.html" title="" target="_self">Продукция</a>
+					</li>
+					<li class="footer-menu__item">
+						<a class="footer-menu__link" href="#" title="" target="_self">Акции</a>
+					</li>
+					<li class="footer-menu__item">
+						<a class="footer-menu__link" href="about.html" title="" target="_self">О нас</a>
+					</li>
+					<li class="footer-menu__item">
+						<a class="footer-menu__link" href="#" title="" target="_self">Почему мы</a>
+					</li>
+					<li class="footer-menu__item">
+						<a class="footer-menu__link" href="#" title="" target="_self">Вакансии</a>
+					</li>
+					<li class="footer-menu__item">
+						<a class="footer-menu__link" href="#" title="" target="_self">Поставщики</a>
+					</li>
+					<li class="footer-menu__item">
+						<a class="footer-menu__link" href="contacts.html" title="" target="_self">Контакты</a>
+					</li>
+					<li class="footer-menu__item">
+						<a class="footer-menu__link" href="#" title="" target="_self">In English</a>
+					</li>
+				</ul>
+			</div>
 			<!--Footer information-->
 			<div class="footer-nav__contacts footer-contacts">
 				<div class="footer-contacts__info">
@@ -1128,7 +1245,7 @@
 		</div>
 	</div>
 	<!--Preorder popup-->
-	<div class="popup-preorder" style="display: none;" id="popup-preorder">
+	<div class="popup-preorder" id="popup-preorder" style="display: none">
 		<div class="popup-preorder__wrapper">
 			<div class="popup-preorder__header">
 				<h2 class="popup-preorder__title">Предзаказ</h2>
@@ -1166,14 +1283,7 @@
 			</div>
 			<!--Callback reaction div-->
 			<div class="popup-preorder__reaction" style="display: none">
-				<picture class="popup-preorder__frame">
-					<source media="(min-width: 1200px)" srcset="img/thumb-up.webp" type="image/webp">
-					<source media="(min-width: 1200px)" srcset="img/thumb-up.png">
-					<source media="(min-width: 768px)" srcset="img/thumb-up.webp" type="image/webp">
-					<source media="(min-width: 768px)" srcset="img/thumb-up.png">
-					<source srcset="img/thumb-up.webp" type="image/webp">
-					<img class="popup-preorder__image" src="img/thumb-up.png" alt="Спасибо! Мы вам перезвоним!" title="Спасибо! Мы вам перезвоним!">
-				</picture>
+				<img class="popup-preorder__img" src="img/preorder-icon.svg" alt="Предзаказ принят!" />
 				<p class="popup-preorder__answer">
 					Спасибо, что обратились к нам. Менеджер перезвонит по номеру <span class="popup-preorder__answer-phone" id="client-number">+7 999 133 15 96</span> в течение 10 минут
 				</p>
@@ -1181,7 +1291,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/slider.js"></script>
 </body>

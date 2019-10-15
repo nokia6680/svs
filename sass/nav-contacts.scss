@@ -30,3 +30,9 @@
     margin-right: 2.5rem;
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .nav-contacts {
+    display: none;
+  }
+}

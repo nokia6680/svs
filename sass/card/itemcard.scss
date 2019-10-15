@@ -4,6 +4,11 @@
   width: 100%;
   margin-bottom: 3rem;
 
+  &__wrapper {
+    width: 100%;
+    @include flex-setting(column, flex-start, flex-start);
+  }
+
   /*Информация - название и тип*/
   &__info {
     @include flex-setting(column, flex-start, flex-start);
@@ -152,8 +157,8 @@
 
 @media only screen and (min-width: $tablet) {
   .itemcard {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 0;
+    padding-right: 0;
 
     margin-bottom: 5rem;
     /*Информация - название и тип*/
@@ -297,6 +302,84 @@
     /*Кнопка предзаказа*/
     &__preorder {
       align-self: flex-start;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .itemcard {
+    width: 100%;
+    max-width: 944px;
+    height: 580px;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+    &__wrapper {
+      width: 450px;
+    }
+
+    /*Информация - название и тип*/
+    &__info {
+      padding: 0;
+      margin-bottom: 1.125rem;
+    }
+
+    &__title {
+      font-size: 1.375rem;
+      line-height: 1.75rem;
+      margin-bottom: 0.625rem;
+    }
+
+    /*Объединение файлов и страны производства*/
+    &__utils {
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      margin-bottom: 1.125rem;
+    }
+    /*Блок ссылок на скачиваемые документы*/
+    &__files {
+      order: 1;
+
+      max-width: 450px;
+      padding: 0 1.25rem;
+      margin-bottom: 1.125rem;
+
+      &-link {
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+      }
+    }
+    /*Страна производства*/
+    &__national {
+      order: 2;
+      margin: 0;
+      align-self: flex-start;
+      padding-left: 0;
+    }
+    /*Описание продукта*/
+    &__description {
+      order: 4;
+
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+
+      padding: 0;
+      margin-bottom: 1.125rem;
+
+      max-height: 126px;
+      overflow-y: scroll;
+    }
+    /*Блок выбора цвета*/
+    &__color {
+      &-list {
+        margin-bottom: 3.5rem;
+      }
     }
   }
 }

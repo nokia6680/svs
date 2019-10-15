@@ -8,7 +8,6 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -153,52 +152,157 @@
 	</svg>
 	<!--End of SVG sprite-->
 	<!--Page header-->
-	<header class="header header--search">
-		<div class="header__wrap">
-			<nav class="header__nav header-nav">
+	<header class="header">
+		<nav class="header__nav header-nav">
+			<div class="header-nav__wrap">
 				<!--Logo-->
 				<div class="header-nav__logo">
 					<a class="header-nav__link" href="index.html" target="_self">
-						<img class="header-nav__logo-image" src="img/logo.svg" width="74" height="28" alt="СВС - перчатки на каждый день" title="СВС - перчатки на каждый день" />
+						<img class="header-nav__logo-image" src="img/logo.svg" alt="СВС - перчатки на каждый день" title="СВС - перчатки на каждый день" />
 					</a>
-				</div>
-				<!--Mobile contacts-->
-				<div class="header-nav__contacts nav-contacts nav-contacts--mobile">
-					<a class="nav-contacts__link nav-contacts__link--tel" href="tel:+79123456789" target="_self">8 800 000-00-00</a>
-					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
-				</div>
-				<!--Menu button-->
-				<div class="header-nav__toggle" id="nav-icon4">
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
 				</div>
 				<!--Menu description-->
 				<p class="header-nav__description">Производим средства защиты рук</p>
-			</nav>
-			<!--Menu-->
-			<div class="header__menu nav-menu">
-				<!--Menu list-->
+				<!--Desktop menu-->
+				<ul class="header-nav__menu header-menu">
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="catalog.html" target="_self" title="Продукция">Продукция</a>
+					</li>
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="promotions.html" target="_self" title="Акции">Акции</a>
+					</li>
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="whywe.html" target="_self" title="Почему мы">Почему мы</a>
+					</li>
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="about.html" target="_self" title="О нас">О нас</a>
+					</li>
+				</ul>
+				<!--Mobile contacts-->
+				<div class="header-nav__contacts nav-contacts">
+					<a class="nav-contacts__link nav-contacts__link--tel" href="tel:+79123456789" target="_self">8 800 000-00-00</a>
+					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
+				</div>
+				<!--Search button-->
+				<button class="header-nav__search" type="button">
+					<svg class="header-nav__search-pic header-nav__search-pic--closed" width="22" height="22">
+						<use xlink:href="#icon-search"></use>
+					</svg>
+					<svg class="header-nav__search-pic header-nav__search-pic--opened" width="22" height="22">
+						<use xlink:href="#icon-search-white"></use>
+					</svg>
+				</button>
+				<!--Menu button-->
+				<div class="header-nav__toggle" id="nav-icon4">
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				</div>
+				<!--Desktop contacts list-->
+				<div class="header-nav__service header-info">
+					<a class="header-info__title" href="contacts.html" target="_self" title="Контакты">Контакты</a>
+					<ul class="header-info__list">
+						<li class="header-info__item">
+							<a class="header-info__link" href="tel:+79123456789" target="_self">(495) 989-96-05</a>
+						</li>
+						<li class="header-info__item">
+							<a class="header-info__link" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
+						</li>
+						<li class="header-info__item">
+							<button class="header-info__call" type="button">Заказать звонок</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--Menu-->
+		<div class="header__menu nav-menu">
+			<div class="nav-menu__wrap">
+				<!--Search div-->
+				<div class="nav-menu__search">
+					<form class="nav-menu__form" action="#" method="post" autocomplete="on">
+						<input class="nav-menu__search-input" type="search" name="search" id="search-1" placeholder="Поиск" />
+						<label class="nav-menu__search-input-btn" for="search-1"></label>
+					</form>
+					<!--Search results-->
+					<div class="nav-menu__search-result search-result" style="display: none;" id="search-result-1">
+						<div class="search-result__upper">
+							<h3 class="search-result__title">Сферы</h3>
+							<b class="search-result__type">
+								<svg class="search-result__type-pic" width="5" height="11">
+									<use xlink:href="#icon-angle"></use>
+								</svg>
+								Автомобильные работы</b>
+						</div>
+						<div class="search-result__lower">
+							<h3 class="search-result__title">Средства защиты</h3>
+							<ul class="search-result__preview result-preview">
+								<!--Single item-->
+								<li class="result-preview__item">
+									<picture class="result-preview__frame">
+										<source media="(min-width: 1200px)" srcset="img/search-result-2.webp" type="image/webp" />
+										<source media="(min-width: 1200px)" srcset="img/search-result-2.png" />
+										<source media="(min-width: 768px)" srcset="img/search-result-2.webp" type="image/webp" />
+										<source media="(min-width: 768px)" srcset="img/search-result-2.png" />
+										<source srcset="img/search-result-2.webp" type="image/webp" />
+										<img class="result-preview__frame-pic" src="img/search-result-2.png" />
+									</picture>
+									<div class="result-preview__item-info">
+										<b class="result-preview__item-title">Перчатки утепленные с ПВХ покрытием (осень эконом)</b>
+										<span class="result-preview__item-sign result-preview__item-sign--latest" style="display: none;">Новинка
+											<svg class="result-preview__pic" width="12" height="12">
+												<use xlink:href="#icon-star-white"></use>
+											</svg>
+										</span>
+										<span class="result-preview__item-sign result-preview__item-sign--sale">Акция %</span>
+									</div>
+								</li>
+								<!--Single item-->
+								<li class="result-preview__item">
+									<picture class="result-preview__frame">
+										<source media="(min-width: 1200px)" srcset="img/search-result-1.webp" type="image/webp" />
+										<source media="(min-width: 1200px)" srcset="img/search-result-1.png" />
+										<source media="(min-width: 768px)" srcset="img/search-result-1.webp" type="image/webp" />
+										<source media="(min-width: 768px)" srcset="img/search-result-1.png" />
+										<source srcset="img/search-result-1.webp" type="image/webp" />
+										<img src="img/search-result-1.png" />
+									</picture>
+									<div class="result-preview__item-info">
+										<b class="result-preview__item-title">Перчатки нейлоновые с рельефным натуральным латексом</b>
+										<span class="result-preview__item-sign result-preview__item-sign--latest">Новинка
+											<svg class="result-preview__pic" width="12" height="12">
+												<use xlink:href="#icon-star-white"></use>
+											</svg>
+										</span>
+										<span class="result-preview__item-sign result-preview__item-sign--sale" style="display: none;">Акция %</span>
+									</div>
+								</li>
+							</ul>
+							<a class="search-result__link" href="search-result.html" target="_self">Результаты поиска</a>
+						</div>
+					</div>
+				</div>
+				<!--Mobile Menu list-->
 				<ul class="nav-menu__list nav-list">
-					<li class="nav-list__item">
+					<li class="nav-list__item nav-list__item--catalog">
 						<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
 					</li>
-					<li class="nav-list__item">
+					<li class="nav-list__item nav-list__item--sales">
 						<a class="nav-list__link" href="#" target="_self">Акции</a>
 					</li>
-					<li class="nav-list__item">
+					<li class="nav-list__item nav-list__item--about">
 						<a class="nav-list__link" href="#" target="_self">О нас</a>
 					</li>
-					<li class="nav-list__item">
+					<li class="nav-list__item nav-list__item--whywe">
 						<a class="nav-list__link" href="#" target="_self">Почему мы</a>
 					</li>
-					<li class="nav-list__item">
+					<li class="nav-list__item nav-list__item--job">
 						<a class="nav-list__link" href="#" target="_self">Вакансии</a>
 					</li>
-					<li class="nav-list__item">
+					<li class="nav-list__item nav-list__item--supply">
 						<a class="nav-list__link" href="#" target="_self">Поставщики</a>
 					</li>
-					<li class="nav-list__item">
+					<li class="nav-list__item nav-list__item--contacts">
 						<a class="nav-list__link" href="contacts.html" target="_self">Контакты</a>
 					</li>
 				</ul>
@@ -206,8 +310,11 @@
 				<div class="nav-menu__service nav-service">
 						<!--Lang switcher-->
 					<div class="nav-service__lang service-lang">
-						<svg class="service-lang__pic" width="14" height="16">
+						<svg class="service-lang__pic service-lang__pic--white" width="14" height="16">
 							<use xlink:href="#icon-globe-white"></use>
+						</svg>
+						<svg class="service-lang__pic service-lang__pic--black" width="12" height="13">
+							<use xlink:href="#icon-globe-black"></use>
 						</svg>
 						<ul class="service-lang__list lang-list">
 							<li class="lang-list__item">
@@ -227,82 +334,79 @@
 						</svg>
 						Заказать звонок
 					</a>
-					<!--Desktop contacts list-->
-					<div class="nav-service__contacts service-contacts">
-						<h3 class="service-contacts__title">Контакты</h3>
-						<ul class="service-contacts__list service-list">
-							<li class="service-list__item">
-								<a class="service-list__link" href="tel:+79123456789" target="_self">8 800 000-00-00</a>
-							</li>
-							<li class="service-list__item">
-								<a class="service-list__link" href="tel:+79123456789" target="_self">(495) 989-96-05</a>
-							</li>
-							<li class="service-list__item">
-								<a class="service-list__link" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="header__search header-search">
-			<input class="header-search__input" type="search" name="search" id="search-1" placeholder="Поиск" />
-			<label class="header-search__input-btn" for="search-1"></label>
-			<!--Search results-->
-			<div class="header-search__result search-result" id="search-result-3" style="display: none;">
-				<div class="search-result__upper">
-					<h3 class="search-result__title">Сферы</h3>
-					<b class="search-result__type">
-						<svg class="search-result__type-pic" width="8" height="13">
-							<use xlink:href="#icon-angle"></use>
+					<!--Desktop search btn-->
+					<form class="nav-service__form">
+						<label class="nav-service__label" for="search-desk">
+							<svg class="nav-service__search-pic" width="22" height="22">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+							<input class="nav-service__input" type="search" name="search" placeholder="Поиск по сайту" />
+							<svg class="nav-service__input-pic nav-service__input-pic--close" width="14" height="14">
+								<use xlink:href="#icon-cross-black"></use>
+							</svg>
+						</label>
+					</form>
+					<button class="nav-service__search" type="button">
+						<svg class="nav-service__search-pic" width="22" height="22">
+							<use xlink:href="#icon-search"></use>
 						</svg>
-						Автомобильные работы</b>
-				</div>
-				<div class="search-result__lower">
-					<h3 class="search-result__title">Средства защиты</h3>
-					<ul class="search-result__preview result-preview">
-						<!--Single item-->
-						<li class="result-preview__item">
-							<picture class="result-preview__frame">
-								<source media="(min-width: 1200px)" srcset="img/search-result-2.webp" type="image/webp" />
-								<source media="(min-width: 1200px)" srcset="img/search-result-2.png" />
-								<source media="(min-width: 768px)" srcset="img/search-result-2.webp" type="image/webp" />
-								<source media="(min-width: 768px)" srcset="img/search-result-2.png" />
-								<source srcset="img/search-result-2.webp" type="image/webp" />
-								<img class="result-preview__frame-pic" src="img/search-result-2.png" />
-							</picture>
-							<div class="result-preview__item-info">
-								<b class="result-preview__item-title">Перчатки утепленные с ПВХ покрытием (осень эконом)</b>
-								<span class="result-preview__item-sign result-preview__item-sign--latest" style="display: none;">Новинка
-									<svg class="result-preview__pic" width="12" height="12">
-										<use xlink:href="#icon-star-white"></use>
-									</svg>
-								</span>
-								<span class="result-preview__item-sign result-preview__item-sign--sale">Акция %</span>
-							</div>
-						</li>
-						<!--Single item-->
-						<li class="result-preview__item">
-							<picture class="result-preview__frame">
-								<source media="(min-width: 1200px)" srcset="img/search-result-1.webp" type="image/webp" />
-								<source media="(min-width: 1200px)" srcset="img/search-result-1.png" />
-								<source media="(min-width: 768px)" srcset="img/search-result-1.webp" type="image/webp" />
-								<source media="(min-width: 768px)" srcset="img/search-result-1.png" />
-								<source srcset="img/search-result-1.webp" type="image/webp" />
-								<img class="result-preview__frame-pic" src="img/search-result-1.png" />
-							</picture>
-							<div class="result-preview__item-info">
-								<b class="result-preview__item-title">Перчатки нейлоновые с рельефным натуральным латексом</b>
-								<span class="result-preview__item-sign result-preview__item-sign--latest">Новинка
-									<svg class="result-preview__pic" width="12" height="12">
-										<use xlink:href="#icon-star-white"></use>
-									</svg>
-								</span>
-								<span class="result-preview__item-sign result-preview__item-sign--sale" style="display: none;">Акция %</span>
-							</div>
-						</li>
-					</ul>
-					<a class="search-result__link" href="search-result.html" target="_self">Результаты поиска</a>
+					</button>
+					<div class="nav-service__search-result search-result" style="display: none;" id="search-result-2">
+						<div class="search-result__upper">
+							<h3 class="search-result__title">Сферы</h3>
+							<b class="search-result__type">
+								<svg class="search-result__type-pic" width="5" height="11">
+									<use xlink:href="#icon-angle"></use>
+								</svg>
+								Автомобильные работы</b>
+						</div>
+						<div class="search-result__lower">
+							<h3 class="search-result__title">Средства защиты</h3>
+							<ul class="search-result__preview result-preview">
+								<!--Single item-->
+								<li class="result-preview__item">
+									<picture class="result-preview__frame">
+										<source media="(min-width: 1200px)" srcset="img/search-result-2.webp" type="image/webp" />
+										<source media="(min-width: 1200px)" srcset="img/search-result-2.png" />
+										<source media="(min-width: 768px)" srcset="img/search-result-2.webp" type="image/webp" />
+										<source media="(min-width: 768px)" srcset="img/search-result-2.png" />
+										<source srcset="img/search-result-2.webp" type="image/webp" />
+										<img class="result-preview__frame-pic" src="img/search-result-2.png" />
+									</picture>
+									<div class="result-preview__item-info">
+										<b class="result-preview__item-title">Перчатки утепленные с ПВХ покрытием (осень эконом)</b>
+										<span class="result-preview__item-sign result-preview__item-sign--latest" style="display: none;">Новинка
+											<svg class="result-preview__pic" width="12" height="12">
+												<use xlink:href="#icon-star-white"></use>
+											</svg>
+										</span>
+										<span class="result-preview__item-sign result-preview__item-sign--sale">Акция %</span>
+									</div>
+								</li>
+								<!--Single item-->
+								<li class="result-preview__item">
+									<picture class="result-preview__frame">
+										<source media="(min-width: 1200px)" srcset="img/search-result-1.webp" type="image/webp" />
+										<source media="(min-width: 1200px)" srcset="img/search-result-1.png" />
+										<source media="(min-width: 768px)" srcset="img/search-result-1.webp" type="image/webp" />
+										<source media="(min-width: 768px)" srcset="img/search-result-1.png" />
+										<source srcset="img/search-result-1.webp" type="image/webp" />
+										<img src="img/search-result-1.png" />
+									</picture>
+									<div class="result-preview__item-info">
+										<b class="result-preview__item-title">Перчатки нейлоновые с рельефным натуральным латексом</b>
+										<span class="result-preview__item-sign result-preview__item-sign--latest">Новинка
+											<svg class="result-preview__pic" width="12" height="12">
+												<use xlink:href="#icon-star-white"></use>
+											</svg>
+										</span>
+										<span class="result-preview__item-sign result-preview__item-sign--sale" style="display: none;">Акция %</span>
+									</div>
+								</li>
+							</ul>
+							<a class="search-result__link" href="search-result.html" target="_self">Результаты поиска</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -548,7 +652,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

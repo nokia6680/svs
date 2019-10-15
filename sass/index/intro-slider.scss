@@ -86,7 +86,9 @@
 
     &__wrap {
       justify-content: flex-start;
-      padding-left: 2.5rem;
+      align-self: center;
+      max-width: 688px;
+      width: 100%;
     }
 
     &__title {
@@ -124,6 +126,42 @@
 
       max-width: 240px;
       text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .intro-slider {
+    &__item {
+      padding-top: 2.063rem;
+
+      max-height: 590px;
+      min-height: 590px;
+    }
+
+    &__wrap {
+      max-width: 944px;
+    }
+
+    &__title {
+      font-size: 3rem;
+      max-width: 265px;
+
+      margin-bottom: 10.25rem;
+
+      &::after {
+        width: 2px;
+        height: 94px;
+
+        bottom: -120px;
+      }
+    }
+
+    &__description {
+      font-size: 1.125rem;
+      line-height: 1.563rem;
+
+      max-width: 242px;
     }
   }
 }

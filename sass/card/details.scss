@@ -17,7 +17,7 @@
   .details {
     width: 100%;
 
-    padding: 0 2.5rem;
+    padding: 0;
 
     &__description {
       margin-bottom: 3rem;
@@ -25,6 +25,24 @@
       @include flex-setting(row, space-between, flex-start);
 
       transition: 0.2s ease-in;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .details {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__description {
+      width: auto;
+      margin-bottom: 1.25rem;
+      justify-content: flex-start;
+    }
+
+    &__list {
+      margin-right: 1.25rem;
     }
   }
 }

@@ -1,0 +1,89 @@
+.header-info {
+  display: none;
+}
+
+@media only screen and (min-width: $laptop) {
+  .header-info {
+    @include flex-setting(column, flex-start, flex-end);
+    margin-right: 0;
+    margin-left: auto;
+
+    &__title {
+      @include font-setting($title-font, 1rem, 1.188rem, 700, $text-primary);
+      text-decoration: none;
+
+      margin-bottom: 0.438rem;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $link-hover;
+        transition: 0.1s ease-in;
+      }
+    }
+
+    &__list {
+      @include flex-setting(column, flex-start, flex-end);
+      @include ul-nostyle;
+    }
+
+    &__item {
+      width: auto;
+    }
+
+    &__link {
+      @include font-setting($title-font, 1rem, 1.188rem, 400, $text-primary);
+      text-decoration: none;
+
+      cursor: pointer;
+      outline: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $link-hover;
+        transition: 0.1s ease-in;
+      }
+    }
+
+    &__call {
+      background-color: transparent;
+      border: none;
+
+      @include font-setting($title-font, 1rem, 1.188rem, 400, $text-primary);
+      text-decoration: none;
+
+      cursor: pointer;
+      outline: none;
+
+      padding: 0;
+      padding-left: 1.625rem;
+
+      position: relative;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $link-hover;
+        transition: 0.1s ease-in;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 17px;
+        height: 16px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4805 1.43359C16.6445 1.46094 16.7539 1.54297 16.8633 1.65234C16.9453 1.78906 17 1.92578 17 2.0625C17 4.35938 16.4258 6.49219 15.2773 8.46094C14.1289 10.375 12.625 11.9062 10.7109 13.0273C8.74219 14.1758 6.60938 14.75 4.3125 14.75C4.14844 14.75 4.01172 14.7227 3.90234 14.6133C3.76562 14.5312 3.68359 14.3945 3.68359 14.2305L3.02734 11.3867C2.97266 11.25 3 11.1133 3.08203 10.9492C3.13672 10.8125 3.24609 10.7031 3.41016 10.6484L6.47266 9.33594C6.58203 9.28125 6.71875 9.28125 6.88281 9.30859C7.01953 9.33594 7.12891 9.41797 7.23828 9.52734L8.57812 11.168C9.64453 10.6758 10.6016 10.0195 11.4219 9.17188C12.2422 8.35156 12.9258 7.39453 13.418 6.32812L11.7773 4.96094C11.668 4.87891 11.5859 4.76953 11.5586 4.63281C11.5039 4.49609 11.5312 4.35938 11.5859 4.19531L12.8984 1.13281C12.9531 1.02344 13.0352 0.914062 13.1992 0.832031C13.3359 0.777344 13.4727 0.75 13.6367 0.777344L16.4805 1.43359Z' fill='%2384AA32'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 3H6V1L9 3.5L6 6V4H0V3Z' fill='%2384AA32'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

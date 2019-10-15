@@ -5,5 +5,30 @@
 
   &__pic {
     min-width: 14px;
+
+    &--black {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .service-lang {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    border-right: 1px solid #D2CECB;
+
+    &__pic {
+      &--black {
+        display: block;
+        min-width: 12px;
+      }
+
+      &--white {
+        display: none;
+        margin-right: 0.25rem;
+      }
+    }
   }
 }

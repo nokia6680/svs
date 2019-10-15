@@ -1,9 +1,6 @@
 .footer-menu {
   @include flex-setting(column, flex-start, flex-start);
 
-  background-color: #FAF9F7;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   flex-wrap: wrap;
   width: 100%;
 
@@ -42,16 +39,40 @@
 
 @media only screen and (min-width: $tablet) {
   .footer-menu {
+    max-width: 688px;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
     max-height: 97px;
+    padding: 0;
     padding-bottom: 1.438rem;
     padding-top: 1.625rem;
+
+    transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
 
     &__item {
       width: 20%;
       margin-bottom: 0.625rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .footer-menu {
+    max-width: 944px;
+    flex-wrap: nowrap;
+
+    padding-bottom: 1.313rem;
+    padding-top: 1.5rem;
+
+    &__item {
+      width: auto;
+      margin-bottom: 0;
+      margin-right: 1.875rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
