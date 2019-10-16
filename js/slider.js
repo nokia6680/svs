@@ -31,7 +31,7 @@ var swiper = new Swiper('.swiper-container-2', {
         prevEl: '.slide-prev',
       },
     },
-    
+
     768: {
       pagination: {
         el: '.fraction-pagination',
@@ -43,4 +43,28 @@ var swiper = new Swiper('.swiper-container-2', {
       },
     },
   },
+});
+
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+  spaceBetween: 20,
+  slidesPerView: 2,
+  freeMode: false,
+  autoplay: false,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+var galleryTop = new Swiper('.gallery-top', {
+  spaceBetween: 0,
+  autoplay: false,
+  pagination: {
+    el: '.fraction-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.slide-next-0',
+    prevEl: '.slide-prev-0',
+  },
+  thumbs: {
+    swiper: galleryThumbs
+  }
 });
