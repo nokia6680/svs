@@ -22,3 +22,18 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .map {
+    &__wrap {
+      width: 800px;
+      min-width: 800px;
+      max-width: 800px;
+      height: 536px;
+      min-height: 536px;
+      max-height: 536px;
+
+      margin-bottom: 0;
+    }
+  }
+}

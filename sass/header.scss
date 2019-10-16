@@ -115,3 +115,26 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .header {
+    /*Header on catalog page*/
+    &--catalog {
+      margin-bottom: 2.5rem;
+    }
+
+    &--card {
+      margin-bottom: 1.875rem;
+    }
+
+    &--contacts {
+      margin-bottom: 2.5rem;
+    }
+
+    &--search {
+      .header__wrap {
+        
+      }
+    }
+  }
+}

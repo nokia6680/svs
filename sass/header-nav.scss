@@ -156,6 +156,7 @@
 
     &__wrap {
       max-width: 688px;
+      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
       padding-top: 0.875rem;
       padding-bottom: 0.875rem;
     }
@@ -189,6 +190,42 @@
       height: 60px;
 
       margin-right: 6.563rem;
+    }
+
+    &__search {
+      display: none;
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
+}
+
+
+@media only screen and (min-width: $laptop-wide) {
+  .header-nav {
+    &__wrap {
+      max-width: 1200px;
+    }
+
+    &__logo {
+      width: 161px;
+      height: 60px;
+
+      margin-right: 6.188rem;
+    }
+
+    &__description {
+      @include flex-setting(column, center, center);
+      @include font-setting($title-font, 1rem, 1.375rem, 500, $text-primary);
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+
+      margin-right: 6.875rem;
+
+      max-width: 120px;
     }
 
     &__search {

@@ -104,3 +104,11 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .filter-options {
+    width: 280px;
+
+    transition: 0.2s ease-in;
+  }
+}

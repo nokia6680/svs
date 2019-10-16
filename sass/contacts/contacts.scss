@@ -56,7 +56,6 @@
 @media only screen and (min-width: $tablet) {
   .contacts {
     padding: 0;
-    max-width: 688px;
 
     transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
 
@@ -80,14 +79,37 @@
 
 @media only screen and (min-width: $laptop) {
   .contacts {
-    max-width: 944px;
-
     &__title {
       margin-bottom: 2.5rem;
     }
 
     &__wrap {
       margin-bottom: 5.625rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .contacts {
+    &__title {
+      font-size: 2.625rem;
+      margin-bottom: 5.625rem;
+    }
+
+    &__wrap {
+      margin-bottom: 8.313rem;
+    }
+
+    &__info {
+      width: 360px;
+      max-width: 360px;
+
+      align-items: flex-start;
+    }
+
+    &__recall {
+      align-self: flex-start;
+      margin-left: 1.5rem;
     }
   }
 }

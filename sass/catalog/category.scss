@@ -48,3 +48,22 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .category {
+    justify-content: flex-end;
+    position: absolute;
+    top: -65px;
+    right: 0;
+
+    width: auto;
+    &__item {
+      justify-content: flex-end;
+      margin-right: 3.125rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

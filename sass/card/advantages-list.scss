@@ -66,3 +66,24 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .advantages-list {
+    flex-wrap: nowrap;
+
+    &__item {
+      width: 25%;
+      margin-bottom: 0;
+
+      &:nth-child(2n + 1) {
+        margin-right: 0;
+      }
+
+      margin-right: 0;
+    }
+
+    &__description {
+      max-width: 200px;
+    }
+  }
+}

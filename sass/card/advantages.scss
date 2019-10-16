@@ -26,3 +26,10 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .advantages {
+    padding: 0;
+    margin-bottom: 4.25rem;
+  }
+}

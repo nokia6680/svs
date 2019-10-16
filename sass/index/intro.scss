@@ -92,3 +92,14 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .intro {
+    margin-bottom: 2.5rem;
+    max-width: 1345px;
+
+    &__btn {
+      padding-left: 2.5rem;
+    }
+  }
+}

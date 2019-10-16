@@ -129,3 +129,31 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .act-list {
+    max-width: 1200px;
+
+    &__item {
+      width: 33%;
+    }
+
+    &__item-title {
+      justify-content: flex-start;
+      width: 100%;
+      font-size: 1.875rem;
+      line-height: 2.063rem;
+    }
+
+    &__item-description {
+      max-width: 310px;
+    }
+
+    &__pic {
+      position: relative;
+      margin-left: 1.125rem;
+
+      transform: scale(1.6);
+    }
+  }
+}

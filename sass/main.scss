@@ -6,8 +6,10 @@
 @media only screen and (min-width: $tablet) {
   .main {
     &--catalog,
-    &--card {
+    &--card,
+    &--contacts {
       max-width: 688px;
+      padding: 0;
       transition: 0.1s ease-in;
     }
   }
@@ -16,8 +18,19 @@
 @media only screen and (min-width: $laptop) {
   .main {
     &--catalog,
-    &--card {
+    &--card,
+    &--contacts {
       max-width: 944px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .main {
+    &--catalog,
+    &--card,
+    &--contacts {
+      max-width: 1200px;
     }
   }
 }

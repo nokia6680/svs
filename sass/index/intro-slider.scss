@@ -88,6 +88,7 @@
       justify-content: flex-start;
       align-self: center;
       max-width: 688px;
+      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
       width: 100%;
     }
 
@@ -101,6 +102,7 @@
       padding-left: 0;
 
       position: relative;
+      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
 
       &::after {
         position: absolute;
@@ -162,6 +164,18 @@
       line-height: 1.563rem;
 
       max-width: 242px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .intro-slider {
+    &__item {
+      padding-top: 5rem;
+    }
+
+    &__wrap {
+      max-width: 1200px;
     }
   }
 }

@@ -38,3 +38,15 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .heading {
+    &__title {
+      margin-bottom: 2.5rem;
+    }
+
+    &__catalog-pic {
+      margin-left: 0.875rem;
+    }
+  }
+}

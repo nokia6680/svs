@@ -309,7 +309,6 @@
 @media only screen and (min-width: $laptop) {
   .itemcard {
     width: 100%;
-    max-width: 944px;
     height: 580px;
 
     flex-direction: row;
@@ -374,11 +373,74 @@
 
       max-height: 126px;
       overflow-y: scroll;
+
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+
+      overflow: hidden;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
     }
     /*Блок выбора цвета*/
     &__color {
       &-list {
         margin-bottom: 3.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .itemcard {
+    width: 100%;
+    height: 734px;
+    margin-bottom: 4.813rem;
+
+    &__wrapper {
+      width: 476px;
+    }
+    /*Информация - название и тип*/
+    &__info {
+      padding: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 1.75rem;
+    }
+
+    /*Объединение файлов и страны производства*/
+    &__utils {
+      margin-bottom: 1.75rem;
+    }
+    /*Блок ссылок на скачиваемые документы*/
+    &__files {
+      max-width: 476px;
+      padding: 0 2.25rem;
+      margin-bottom: 2.125rem;
+
+      &-link {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+    /*Описание продукта*/
+    &__description {
+      font-size: 1rem;
+      line-height: 1.375rem;
+      margin-bottom: 2.125rem;
+
+      max-height: 154px;
+      overflow-y: scroll;
+    }
+    /*Блок выбора цвета*/
+    &__color {
+      &-list {
+        margin-bottom: 3.438rem;
       }
     }
   }

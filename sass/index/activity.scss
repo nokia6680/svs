@@ -82,3 +82,23 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .activity {
+    max-width: 1346px;
+
+    &__wrapper {
+      max-width: 1200px;
+      padding-top: 3.438rem;
+      padding-bottom: 3.75rem;
+    }
+
+    &__title {
+      font-size: 2.839rem;
+      line-height: 3.063rem;
+      margin-bottom: 3.313rem;
+
+      width: 55%;
+    }
+  }
+}

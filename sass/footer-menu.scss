@@ -76,3 +76,9 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .footer-menu {
+    max-width: 1200px;
+  }
+}

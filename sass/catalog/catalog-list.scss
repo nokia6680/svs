@@ -101,3 +101,9 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .catalog-list {
+    margin-bottom: 2.625rem;
+  }
+}

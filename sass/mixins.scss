@@ -17,9 +17,9 @@
   }
 
   @media only screen and (min-width: $laptop-wide) {
-    max-width: 1430px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0.625rem;
   }
 
   @media only screen and (min-width: $widebook-hd) {

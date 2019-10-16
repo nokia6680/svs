@@ -172,3 +172,30 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .item {
+    width: 285px;
+    height: 494px;
+    margin-bottom: 1.25rem;
+    padding: 1.125rem 1.125rem;
+
+    &__frame {
+      height: 312px;
+      max-height: 312px;
+    }
+
+    &__image {
+      height: 312px;
+      max-height: 312px;
+    }
+
+    &__description {
+      font-size: 1rem;
+      line-height: 1.375rem;
+
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}

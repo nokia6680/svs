@@ -140,6 +140,7 @@
   .nav-menu {
     &__wrap {
       max-width: 688px;
+      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
     }
   }
 }
@@ -246,6 +247,7 @@
     &__links {
       @include flex-setting(row, flex-end, center);
       width: 100%;
+      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
       max-width: 944px;
       padding-top: 0.688rem;
       padding-bottom: 0.688rem;
@@ -263,6 +265,18 @@
 
     &__links.active {
       display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .nav-menu {
+    &__wrap {
+      max-width: 1200px;
+    }
+
+    &__links {
+      max-width: 1200px;
     }
   }
 }

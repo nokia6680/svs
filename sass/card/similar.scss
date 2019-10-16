@@ -39,3 +39,13 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .similar {
+    margin-bottom: 4.563rem;
+
+    &__title {
+      margin-bottom: 2.188rem;
+    }
+  }
+}

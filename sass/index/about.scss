@@ -43,3 +43,16 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .about {
+    margin-bottom: 2.688rem;
+    max-width: 1200px;
+
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 2.688rem;
+    }
+  }
+}
