@@ -36,13 +36,14 @@
 
 @media only screen and (min-width: $tablet) {
   .footer-legal {
-
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    align-self: center;
+    transition: 0.2s ease-in;
 
-    padding: 0 1.25rem;
-    padding-bottom: 0;
+    padding: 0;
+    max-width: 688px;
 
     margin-bottom: 2.5rem;
 
@@ -54,5 +55,17 @@
       text-align: right;
       width: 100%;
     }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .footer-legal {
+    max-width: 944px;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .footer-legal {
+    max-width: 1200px;
   }
 }

@@ -1117,27 +1117,33 @@
 			</div>
 			<!--Footer information-->
 			<div class="footer-nav__contacts footer-contacts">
-				<div class="footer-contacts__info">
-					<!--Link to call-->
-					<a class="footer-contacts__info-call" href="tel:+74959899605" target="_self" title="Контактный номер телефона">
-						<svg class="footer-contacts__pic footer-contacts__pic--call" width="15" height="15">
-							<use xlink:href="#icon-phone-green"></use>
-						</svg>
-						(495) 989-96-05
-					</a>
-					<!--Schedule-->
-					<b class="footer-contacts__info-time">
-						<svg class="footer-contacts__pic footer-contacts__pic--time" width="14" height="15">
-							<use xlink:href="#icon-clock-green"></use>
-						</svg>
-						Пн&mdash;Пт&nbsp;с&nbsp;9&nbsp;до&nbsp;18
-					</b>
-				</div>
-				<!--Callback button-link-->
-				<div class="footer-contacts__callback">
-					<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
-						Заказать звонок
-					</a>
+				<div class="footer-contacts__wrap">
+					<div class="footer-contacts__info">
+						<ul class="footer-contacts__list">
+							<li class="footer-contacts__list-item">
+								<!--Link to call-->
+								<a class="footer-contacts__info-call" href="tel:+74959899605" target="_self" title="Контактный номер телефона">
+									<svg class="footer-contacts__pic footer-contacts__pic--call" width="15" height="15">
+										<use xlink:href="#icon-phone-green"></use>
+									</svg>
+									(495) 989-96-05
+								</a>
+							</li>
+							<li class="footer-contacts__list-item">
+								<!--Schedule-->
+								<b class="footer-contacts__info-time">
+									<svg class="footer-contacts__pic footer-contacts__pic--time" width="14" height="15">
+										<use xlink:href="#icon-clock-green"></use>
+									</svg>
+									Пн&mdash;Пт&nbsp;с&nbsp;9&nbsp;до&nbsp;18
+								</b>
+							</li>
+						</ul>
+						<!--Callback button-link-->
+						<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
+							Заказать звонок
+						</a>
+					</div>
 				</div>
 			</div>
 			<!--Footer legal information-->
