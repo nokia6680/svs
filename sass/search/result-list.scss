@@ -5,3 +5,58 @@
 
   margin-bottom: 3.75rem;
 }
+
+@media only screen and (min-width: $tablet) {
+  .result-list {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-bottom: 3.75rem;
+
+    &__item {
+      margin-right: 1.25rem;
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .result-list {
+    margin-bottom: 4.75rem;
+
+    &__item {
+      margin-right: 1.125rem;
+
+      &:nth-child(3n+3) {
+        margin-right: 1.125rem;
+      }
+
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .result-list {
+    margin-bottom: 4.75rem;
+
+    &__item {
+      margin-right: 1.25rem;
+
+      &:nth-child(3n+3) {
+        margin-right: 1.25rem;
+      }
+
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+  }
+}

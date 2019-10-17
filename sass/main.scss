@@ -7,7 +7,8 @@
   .main {
     &--catalog,
     &--card,
-    &--contacts {
+    &--contacts,
+    &--search {
       max-width: 688px;
       padding: 0;
       transition: 0.1s ease-in;
@@ -19,7 +20,8 @@
   .main {
     &--catalog,
     &--card,
-    &--contacts {
+    &--contacts,
+    &--search {
       max-width: 944px;
     }
   }
@@ -29,7 +31,8 @@
   .main {
     &--catalog,
     &--card,
-    &--contacts {
+    &--contacts,
+    &--search {
       max-width: 1200px;
     }
   }

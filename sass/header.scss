@@ -63,11 +63,8 @@
     }
 
     &--search {
+      margin-bottom: 1.5rem;
       @include flex-setting(column, flex-start, center);
-
-      .header__wrap {
-        margin-bottom: 1rem;
-      }
     }
   }
 }
@@ -76,7 +73,6 @@
   .header {
     @include flex-setting(column, center, center);
     margin-top: 0.625rem;
-    margin-bottom: 0;
 
     padding-left: 0.625rem;
     padding-right: 0.625rem;
@@ -107,11 +103,7 @@
     }
 
     &--search {
-      @include flex-setting(column, flex-start, center);
-
-      .header__wrap {
-        margin-bottom: 1rem;
-      }
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -132,9 +124,7 @@
     }
 
     &--search {
-      .header__wrap {
-        
-      }
+      margin-bottom: 2.5rem;
     }
   }
 }

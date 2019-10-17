@@ -14,3 +14,28 @@
     margin-bottom: 1.25rem;
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .result-wrap {
+    padding: 0;
+    transition: 0.1s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+
+    align-items: flex-start;
+
+    &__title {
+      font-size: 1.875rem;
+      line-height: 2.375rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .result-wrap {
+    &__title {
+      font-size: 2.875rem;
+      line-height: 3rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

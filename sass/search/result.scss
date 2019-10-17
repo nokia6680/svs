@@ -16,11 +16,47 @@
 
   &__description {
     width: 100%;
-    
+
     @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
     margin: 0;
     margin-bottom: 1.875rem;
 
     @include extra-padding;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .result {
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 2.25rem;
+
+      padding: 0;
+    }
+
+    &__description {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      margin-bottom: 1.875rem;
+
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .result {
+    &__title {
+      font-size: 2.625rem;
+      line-height: 2.875rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &__description {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      margin-bottom: 2rem;
+    }
   }
 }
