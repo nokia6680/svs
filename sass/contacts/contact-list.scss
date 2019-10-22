@@ -19,7 +19,7 @@
     }
   }
 
-  &__item--active {
+  .tabItem--active {
     .contact-list__link {
       opacity: 1;
       transition: 0.1s ease-in;

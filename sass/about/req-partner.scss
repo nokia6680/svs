@@ -1,0 +1,105 @@
+.req-partner {
+  width: 100%;
+
+  padding: 0.963rem 1.188rem 2.313rem 1.5rem;
+
+  margin-bottom: 3.75rem;
+
+  @include flex-setting(column, flex-start, flex-start);
+
+  background-color: #E4D9C6;
+  border-radius: 5px;
+
+  &__header {
+    width: 100%;
+    @include flex-setting(row, space-between, flex-start);
+  }
+
+  &__title {
+    @include font-setting($title-font, 1.5rem, 1.75rem, 500, $text-primary);
+    max-width: 150px;
+    margin-top: 0;
+    margin-bottom: 2.125rem;
+  }
+
+  &__list {
+    @include flex-setting(column, flex-start, flex-start);
+    @include ul-nostyle;
+
+    width: 100%;
+  }
+
+  &__item {
+    @include flex-setting(column, flex-start, flex-start);
+    width: 100%;
+
+    margin-bottom: 1.125rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    @include font-setting($primary-font, 1rem, 1.375rem, 700, $text-primary);
+
+    text-decoration: none;
+    width: auto;
+    height: 100%;
+
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      transition: 0.1s ease-in;
+    }
+  }
+
+  &__info {
+    @include font-setting($primary-font, 0.75rem, 1rem, 400, $text-primary);
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .req-partner {
+    margin: 0 auto;
+
+    max-width: 275px;
+
+    padding-top: 1.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .req-partner {
+    margin: 0;
+
+    max-width: 35%;
+
+    margin-top: 5.125rem;
+
+    padding-top: 1.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .req-partner {
+    max-width: 275px;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .req-partner {
+    margin-top: 3.375rem;
+    max-width: 275px;
+  }
+}

@@ -3,12 +3,21 @@
   @include container;
 }
 
+@media only screen and (min-width: 414px) {
+  .main {
+    &--about {
+      max-width: 380px;
+    }
+  }
+}
+
 @media only screen and (min-width: $tablet) {
   .main {
     &--catalog,
     &--card,
     &--contacts,
-    &--search {
+    &--search,
+    &--about {
       max-width: 688px;
       padding: 0;
       transition: 0.1s ease-in;
@@ -21,7 +30,8 @@
     &--catalog,
     &--card,
     &--contacts,
-    &--search {
+    &--search,
+    &--about {
       max-width: 944px;
     }
   }
@@ -32,7 +42,8 @@
     &--catalog,
     &--card,
     &--contacts,
-    &--search {
+    &--search,
+    &--about {
       max-width: 1200px;
     }
   }

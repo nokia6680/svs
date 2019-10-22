@@ -13,7 +13,7 @@
     display: none;
   }
 
-  &__item--active {
+  .contentItem--active {
     @include flex-setting(column, flex-start, flex-start);
   }
 

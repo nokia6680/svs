@@ -1,0 +1,26 @@
+.req-details {
+  width: 100%;
+
+  @include flex-setting(column, flex-start, center);
+
+  &__item.subcontentItem {
+    display: none;
+  }
+
+  &__item.subcontentItem--active {
+    @include flex-setting(column, flex-start, center);
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .req-details {
+    width: 60%;
+    transition: 0.1s ease-in;
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .req-details {
+    width: 65%;
+  }
+}

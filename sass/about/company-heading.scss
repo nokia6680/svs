@@ -1,0 +1,66 @@
+.company-heading {
+  width: 100%;
+
+  @include flex-setting(column, flex-start, flex-start);
+
+  &__info {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, flex-start);
+
+    &-title {
+      @include font-setting($title-font, 2rem, 2.375rem, 500, $text-primary);
+      margin: 0;
+      margin-bottom: 1.875rem;
+    }
+
+    &-description {
+      @include font-setting($title-font, 1rem, 1.375rem, 500, $text-primary);
+      margin: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .company-heading {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, flex-start);
+
+    &__info {
+      &-title {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+      }
+
+      &-description {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .company-heading {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, flex-start);
+
+    &__info {
+      &-title {
+        font-size: 2.625rem;
+        line-height: 3.125rem;
+      }
+
+      &-description {
+        font-weight: 500;
+        font-size: 1.75rem;
+        line-height: 2rem;
+
+        max-width: 675px;
+      }
+    }
+  }
+}

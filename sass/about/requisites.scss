@@ -1,0 +1,13 @@
+.requisites {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+@media only screen and (min-width: $tablet) {
+  .requisites {
+    &__wrapper {
+      width: 100%;
+      @include flex-setting(row, space-between, flex-start);
+    }
+  }
+}

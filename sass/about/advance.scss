@@ -1,0 +1,209 @@
+.advance {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  &__info {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+
+    margin-bottom: 1.875rem;
+  }
+
+  &__list {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include flex-setting(column, flex-start, flex-start);
+    border: 1px solid #C1CAD5;
+    border-radius: 5px;
+
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+
+    padding: 0.625rem 0.625rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__item-title {
+    @include flex-setting(row, space-between, center);
+    @include font-setting($title-font, 1.125rem, 1.625rem, 400, $text-primary);
+
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  &__item-description {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    text-align: left;
+
+    margin: 0;
+  }
+
+  &__promo {
+    @include flex-setting(column, flex-start, center);
+
+    width: 100%;
+    max-width: 345px;
+
+    border-radius: 5px;
+    background-color: #84AA32;
+
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+
+    &-frame {
+      @include flex-setting(column, center, center);
+      object-fit: cover;
+
+      max-height: 386px;
+    }
+
+    &-details {
+      @include flex-setting(column, flex-start, flex-start);
+
+      padding: 1.25rem 1.25rem;
+    }
+
+    &-title {
+      @include font-setting($title-font, 1.5rem, 1.75rem, 500, $text-secondary);
+      margin-bottom: 0.625rem;
+    }
+
+    &-description {
+      @include font-setting($primary-font, 1.125rem, 1.563rem, 400, $text-secondary);
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .advance {
+    transition: 0.1s ease-in;
+    &__list {
+      margin-bottom: 2.5rem;
+      transition: 0.1s ease-in;
+    }
+
+    &__item {
+      transition: 0.1s ease-in;
+      max-width: 345px;
+      height: 260px;
+
+      padding: 1.125rem 1.25rem;
+    }
+
+    &__item-title {
+      align-items: flex-start;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__item-description {
+      font-size: 1rem;
+      line-height: 1.375rem;
+    }
+
+    &__promo {
+      &-details {
+        padding: 2.25rem 2.25rem;
+      }
+
+      &-title {
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .advance {
+    &__list {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    &__item {
+      max-width: 330px;
+      height: 285px;
+
+      padding: 1.125rem 1.25rem;
+      margin-right: 1.75rem;
+
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+
+    &__item-title {
+      font-size: 1.125rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .advance {
+    &__info {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__list {
+      margin-bottom: 2.5rem;
+    }
+
+    &__item {
+      max-width: 278px;
+      height: 300px;
+
+      padding: 1.125rem 1.25rem;
+      margin-right: 1.25rem;
+      margin-bottom: 0.75rem;
+
+      &:nth-child(2n+2) {
+        margin-right: 0;
+      }
+    }
+
+    &__item-title {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__item-description {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .advance {
+    &__list {
+      margin-bottom: 8.75rem;
+    }
+
+    &__item {
+      max-width: 390px;
+    }
+
+    &__item-title {
+      font-size: 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &__item-description {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,5 +1,5 @@
-const TabItemSelector = '.contact-list__item';
-const ContentItemSelector = '.address__item';
+const TabItemSelector = '.tabItem';
+const ContentItemSelector = '.contentItem';
 
 class TabsManager {
   constructor(navNode){
@@ -34,11 +34,10 @@ class TabsManager {
     this.activeTab = tabItem;
     this.activeTab.setActive(true);
   }
-
 }
 
-const ActiveTabHeaderClass = 'contact-list__item--active';
-const ActiveTabContentClass = 'address__item--active';
+const ActiveTabHeaderClass = 'tabItem--active';
+const ActiveTabContentClass = 'contentItem--active';
 
 class TabItem {
     constructor (header, content) {
@@ -55,5 +54,5 @@ class TabItem {
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  let tabs = new TabsManager(document.querySelector('.contacts'));
+  let tabs = new TabsManager(document.querySelector('.main'));
 });

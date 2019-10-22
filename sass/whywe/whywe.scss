@@ -1,0 +1,49 @@
+.whywe {
+  width: 100%;
+
+  @include flex-setting(column, flex-start, center);
+
+  &__header {
+    width: 100%;
+    @include flex-setting(column, flex-start, flex-start);
+  }
+
+  &__title {
+    @include font-setting($title-font, 2rem, 2.375rem, 500, $text-primary);
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  &__link {
+    @include flex-setting(row, flex-start, center);
+    @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-primary);
+
+    margin: 0;
+    margin-bottom: 1.875rem;
+
+    text-decoration: none;
+
+    &-pic {
+      margin-right: 0.25rem;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    @include flex-setting(column, flex-start, flex-start);
+
+    margin-bottom: 2.5rem;
+
+    &-text {
+      @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-primary);
+      margin: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    &-description {
+      @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+      margin: 0;
+      margin-bottom: 0.625rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.company-contents {
+  width: 100%;
+
+  @include flex-setting(column, flex-start, center);
+
+  &__item.contentItem {
+    display: none;
+  }
+
+  &__item.contentItem--active {
+    @include flex-setting(column, flex-start, center);
+  }
+}
