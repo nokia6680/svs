@@ -17,6 +17,11 @@
 
     cursor: pointer;
     outline: none;
+
+    &--active {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
   }
 
   &__list {
@@ -38,6 +43,10 @@
     box-shadow: 0px 0px 30px rgba(190, 181, 167, 0.5);
 
     display: none;
+
+    &--active {
+      display: flex;
+    }
   }
 
   &__item {

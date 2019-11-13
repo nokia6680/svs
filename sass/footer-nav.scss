@@ -1,6 +1,6 @@
 .footer-nav {
+  width: 100%;
   @include flex-setting(column, flex-start, center);
-  @include container;
   padding: 0 0.625rem;
 
   &__wrap {
@@ -8,14 +8,16 @@
     width: 100%;
 
     background-color: #FAF9F7;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
 }
 
 
 @media only screen and (min-width: $tablet) {
   .footer-nav {
-    padding: 0 0.625rem;
+    padding: 0;
+
+    border-radius: 0;
   }
 }

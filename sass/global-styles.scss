@@ -42,6 +42,47 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.body--whywe {
+  overflow-x: hidden;
+
+  @media only screen and (min-width: $laptop) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 1052px;
+      height: 660px;
+
+      background-image: url('../img/why-ruka.png');
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      top: 140px;
+      right: 0;
+
+      z-index: 4;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    &::after {
+      transform: scale(1.2);
+
+      top: 190px;
+      right: 0;
+    }
+  }
 }
 
 .hidden {

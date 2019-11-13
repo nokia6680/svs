@@ -12,7 +12,6 @@
 @media only screen and (min-width: $tablet) {
   .intro {
     margin-bottom: 2.125rem;
-    max-width: 728px;
 
     &__btn {
       padding-left: 0;
@@ -85,7 +84,6 @@
 @media only screen and (min-width: $laptop) {
   .intro {
     margin-bottom: 2.125rem;
-    max-width: 1004px;
 
     &__btn {
       padding-left: 1.25rem;
@@ -96,8 +94,7 @@
 @media only screen and (min-width: $laptop-wide) {
   .intro {
     margin-bottom: 2.5rem;
-    max-width: 1345px;
-
+    
     &__btn {
       padding-left: 2.5rem;
     }

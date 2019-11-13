@@ -64,6 +64,7 @@
 
 @media only screen and (min-width: $tablet) {
   .footer-contacts {
+
     &__info {
       transition: 0.1s ease-in;
       max-width: 688px;
@@ -72,6 +73,7 @@
     &__wrap {
       @include flex-setting(row, center, center);
       overflow: hidden;
+      border-radius: 0;
     }
 
     &__list {
@@ -102,24 +104,10 @@
       width: auto;
       padding: 0.938rem 0;
       padding-left: 2.5rem;
+      padding-right: 1.5rem;
 
       position: relative;
       border-radius: 0;
-
-      &::before {
-        position: absolute;
-
-        content: '';
-
-        width: 500px;
-        height: 100%;
-
-        background-color: #84AA32;
-        top: 0;
-        right: -500px;
-
-        z-index: 0;
-      }
 
       &::after {
         position: absolute;
@@ -147,6 +135,10 @@
     &__info {
       max-width: 944px;
     }
+
+    &__callback-link {
+      padding-right: 2.5rem;
+    }
   }
 }
 
@@ -154,6 +146,14 @@
   .footer-contacts {
     &__info {
       max-width: 1200px;
+    }
+
+    &__callback-link {
+      padding-left: 3.5rem;
+
+      &::after {
+        left: 2rem;
+      }
     }
   }
 }

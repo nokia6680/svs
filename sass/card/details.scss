@@ -11,6 +11,10 @@
 
     @include flex-setting(column, flex-start, center);
   }
+
+  &__control {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: $tablet) {
@@ -34,6 +38,42 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+
+    position: relative;
+
+    padding-top: 38px;
+
+    &__control {
+      @include flex-setting(row, flex-start, center);
+
+      width: auto;
+      position: absolute;
+
+      top: 0;
+    }
+
+    &__expand {
+      border: none;
+      background-color: transparent;
+
+      cursor: pointer;
+      outline: none;
+
+      position: relative;
+
+      @include font-setting($primary-font, 0.875rem, 1.188rem, 600, #828C98);
+    }
+
+    &__expand-pic {
+      margin-top: 2px;
+      transform: rotate(180deg);
+      transition: 0.2s ease-in;
+
+      &.open {
+        transform: rotate(0);
+        transition: 0.2s ease-in;
+      }
+    }
 
     &__description {
       width: auto;

@@ -35,6 +35,9 @@
 <body class="body">
 	<!--SVG sprite-->
 	<svg width="0" height="0" class="hidden">
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-angle">
+			<path d="M1 1L6 6.5L1 12" stroke="#84AA32" stroke-width="2" />
+		</symbol>
 		<!--Icon search-->
 		<symbol viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-search">
 			<path
@@ -192,6 +195,15 @@
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-clock-green">
 			<path d="M2.1875 2.96484C3.51823 1.63411 5.1224 0.96875 7 0.96875C8.8776 0.96875 10.4727 1.63411 11.7852 2.96484C13.1159 4.27734 13.7812 5.8724 13.7812 7.75C13.7812 9.6276 13.1159 11.2318 11.7852 12.5625C10.4727 13.875 8.8776 14.5312 7 14.5312C5.1224 14.5312 3.51823 13.875 2.1875 12.5625C0.875 11.2318 0.21875 9.6276 0.21875 7.75C0.21875 5.8724 0.875 4.27734 2.1875 2.96484ZM8.55859 10.5391C8.74089 10.6667 8.89583 10.6484 9.02344 10.4844L9.78906 9.41797C9.91667 9.23568 9.89844 9.08073 9.73438 8.95312L7.98438 7.69531V3.92188C7.98438 3.70312 7.875 3.59375 7.65625 3.59375H6.34375C6.125 3.59375 6.01562 3.70312 6.01562 3.92188V8.51562C6.01562 8.625 6.0612 8.71615 6.15234 8.78906L8.55859 10.5391Z" fill="#84AA32"/>
 		</symbol>
+		<!--Callback phone-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-callback">
+			<path d="M15.5078 1.43359C15.8542 1.50651 16.0273 1.71615 16.0273 2.0625C16.0273 5.5625 14.7878 8.55208 12.3086 11.0312C9.82943 13.5104 6.83984 14.75 3.33984 14.75C2.99349 14.75 2.78385 14.5768 2.71094 14.2305L2.05469 11.3867C1.96354 11.0404 2.09115 10.7943 2.4375 10.6484L5.5 9.33594C5.79167 9.20833 6.04688 9.27214 6.26562 9.52734L7.60547 11.168C8.68099 10.6758 9.62891 10.0104 10.4492 9.17188C11.2878 8.33333 11.9531 7.38542 12.4453 6.32812L10.8047 4.96094C10.5495 4.76042 10.4857 4.50521 10.6133 4.19531L11.9258 1.13281C12.0716 0.804688 12.3177 0.686198 12.6641 0.777344L15.5078 1.43359Z" fill="#ffffff"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2H6V0L9 2.5L6 5V3H0V2Z" fill="#ffffff"/>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-cross-black">
+			<path d="M1 1L13 13" stroke="black" stroke-width="2"/>
+			<path d="M13 1L0.999999 13" stroke="black" stroke-width="2"/>
+		</symbol>
 	</svg>
 	<!--End of SVG sprite-->
 	<!--Page header-->
@@ -223,7 +235,7 @@
 				</ul>
 				<!--Mobile contacts-->
 				<div class="header-nav__contacts nav-contacts">
-					<a class="nav-contacts__link nav-contacts__link--tel" href="tel:+79123456789" target="_self">8 800 000-00-00</a>
+					<a class="nav-contacts__link nav-contacts__link--tel" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
 					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
 				</div>
 				<!--Search button-->
@@ -237,16 +249,16 @@
 				</button>
 				<!--Menu button-->
 				<div class="header-nav__toggle" id="nav-icon4">
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-					<span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
 				</div>
 				<!--Desktop contacts list-->
 				<div class="header-nav__service header-info">
 					<a class="header-info__title" href="contacts.html" target="_self" title="Контакты">Контакты</a>
 					<ul class="header-info__list">
 						<li class="header-info__item">
-							<a class="header-info__link" href="tel:+79123456789" target="_self">(495) 989-96-05</a>
+							<a class="header-info__link" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
 						</li>
 						<li class="header-info__item">
 							<a class="header-info__link" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
@@ -278,7 +290,7 @@
 						<div class="search-result__upper">
 							<h3 class="search-result__title">Сферы</h3>
 							<b class="search-result__type">
-								<svg class="search-result__type-pic" width="5" height="11">
+								<svg class="search-result__type-pic" width="7" height="12">
 									<use xlink:href="#icon-angle"></use>
 								</svg>
 								Автомобильные работы</b>
@@ -346,11 +358,11 @@
 						<li class="nav-list__item nav-list__item--whywe">
 							<a class="nav-list__link" href="#" target="_self">Почему мы</a>
 						</li>
+						<li class="nav-list__item nav-list__item--supply">
+							<a class="nav-list__link" href="#" target="_self">Поставщикам</a>
+						</li>
 						<li class="nav-list__item nav-list__item--job">
 							<a class="nav-list__link" href="#" target="_self">Вакансии</a>
-						</li>
-						<li class="nav-list__item nav-list__item--supply">
-							<a class="nav-list__link" href="#" target="_self">Поставщики</a>
 						</li>
 						<li class="nav-list__item nav-list__item--contacts">
 							<a class="nav-list__link" href="contacts.html" target="_self">Контакты</a>
@@ -358,7 +370,7 @@
 					</ul>
 					<!--Menu service block-->
 					<div class="nav-menu__service nav-service">
-						<!--Lang switcher-->
+							<!--Lang switcher-->
 						<div class="nav-service__lang service-lang">
 							<svg class="service-lang__pic service-lang__pic--white" width="14" height="16">
 								<use xlink:href="#icon-globe-white"></use>
@@ -426,7 +438,7 @@
 								mail@svscompany.ru
 							</a>
 							<a class="address__link address__link--blocked address__link--phone" href="tel:+74959899605" target="_blank" title="(495) 989-96-05">
-								(495) 989-96-05
+								+7 (495) 989-96-05
 							</a>
 							<a class="address__link address__link--blocked address__link--noicon" href="tel:+78004112435" target="_blank" title="8 800 411-24-35">
 								8 800 411-24-35
@@ -442,7 +454,7 @@
 								mail@svscompany.ru
 							</a>
 							<a class="address__link address__link--blocked address__link--phone" href="tel:+74959899605" target="_blank" title="(495) 989-96-05">
-								(495) 989-96-05
+								+7 (495) 989-96-05
 							</a>
 							<a class="address__link address__link--blocked address__link--noicon" href="tel:+78004112435" target="_blank" title="8 800 411-24-35">
 								8 800 411-24-35
@@ -458,7 +470,7 @@
 								mail@svscompany.ru
 							</a>
 							<a class="address__link address__link--blocked address__link--phone" href="tel:+74959899605" target="_blank" title="(495) 989-96-05">
-								(495) 989-96-05
+								+7 (495) 989-96-05
 							</a>
 							<a class="address__link address__link--blocked address__link--noicon" href="tel:+78004112435" target="_blank" title="8 800 411-24-35">
 								8 800 411-24-35
@@ -474,7 +486,7 @@
 								mail@svscompany.ru
 							</a>
 							<a class="address__link address__link--blocked address__link--phone" href="tel:+74959899605" target="_blank" title="(495) 989-96-05">
-								(495) 989-96-05
+								+7 (495) 989-96-05
 							</a>
 							<a class="address__link address__link--blocked address__link--noicon" href="tel:+78004112435" target="_blank" title="8 800 411-24-35">
 								8 800 411-24-35
@@ -539,7 +551,7 @@
 									<svg class="footer-contacts__pic footer-contacts__pic--call" width="15" height="15">
 										<use xlink:href="#icon-phone-green"></use>
 									</svg>
-									(495) 989-96-05
+									+7 (495) 989-96-05
 								</a>
 							</li>
 							<li class="footer-contacts__list-item">

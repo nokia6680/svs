@@ -47,3 +47,65 @@
     }
   }
 }
+
+@media only screen and (min-width: $tablet) {
+  .whywe {
+    &__header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 1.875rem;
+    }
+
+    &__link {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .whywe {
+    position: relative;
+
+    &__header {
+      margin-bottom: 2.5rem;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+      margin-bottom: 0;
+    }
+
+    &__link {
+      font-size: 0.75rem;
+      line-height: 1rem;
+
+      z-index: 9;
+
+      &-pic {
+        transform: scale(0.6);
+      }
+    }
+
+    &__info {
+      align-self: flex-start;
+      width: 565px;
+      margin-bottom: 8.75rem;
+
+      &-text {
+        font-size: 1.5rem;
+        line-height: 2.063rem;
+        margin: 0;
+        margin-bottom: 3.75rem;
+      }
+
+      &-description {
+        font-size: 1rem;
+        line-height: 1.375rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}

@@ -215,6 +215,8 @@
 
     &__search-close {
       display: block;
+      cursor: pointer;
+      outline: none;
     }
 
     &__search-input {
@@ -261,10 +263,12 @@
       transform: none;
 
       margin-bottom: 0;
+      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
     }
 
     &__links.active {
       display: none;
+      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
     }
   }
 }

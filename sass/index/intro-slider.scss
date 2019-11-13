@@ -68,10 +68,12 @@
     border-radius: 0px;
 
     &__item {
+      width: 100%;
       justify-content: flex-start;
       background-color: #fff;
 
-      background-image: url('../img/intro-slide-big.png');
+      background-image: url('../img/slide-1.jpg');
+      background-size: cover;
       border-radius: 0;
 
       padding-top: 2.063rem;
@@ -172,10 +174,24 @@
   .intro-slider {
     &__item {
       padding-top: 5rem;
+
+      max-height: 630px;
+      min-height: 630px;
     }
 
     &__wrap {
       max-width: 1200px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1920px) {
+  .intro-slider {
+    &__item {
+      padding-top: 5rem;
+      max-height: 1064px;
+      min-height: 1064px;
     }
   }
 }
