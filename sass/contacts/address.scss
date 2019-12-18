@@ -23,6 +23,7 @@
     align-items: center;
     @include font-setting($primary-font, 1rem, 1.25rem, 400, $text-primary);
     text-decoration: none;
+    flex-wrap: wrap;
 
     margin-bottom: 1.875rem;
 
@@ -49,6 +50,9 @@
     }
 
     &--phone {
+      line-height: 1.5rem;
+      margin-bottom: 1.875rem;
+
       &::after {
         position: absolute;
         content: '';
@@ -65,16 +69,6 @@
         transform: translateY(-50%);
         left: 0;
       }
-    }
-
-    &--blocked {
-      line-height: 1.5rem;
-      margin-bottom: 0;
-    }
-
-    &--noicon {
-      padding-left: 1.5rem;
-      margin-bottom: 1.875rem;
     }
 
     &--place {
@@ -111,16 +105,6 @@
 
       margin-bottom: 1.625rem;
       max-width: 340px;
-
-      &--blocked {
-        line-height: 1.5rem;
-        margin-bottom: 0;
-      }
-
-      &--noicon {
-        padding-left: 1.5rem;
-        margin-bottom: 1.625rem;
-      }
     }
   }
 }

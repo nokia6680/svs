@@ -4,6 +4,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>СВС | компания</title>
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "url": "", // урл сайта
+		  "logo": "http://www.svs.com/logo.png", // логотип СВС
+		  "contactPoint": [{
+		    "@type": "ContactPoint",
+		    "telephone": "+74959899605",
+		    "contactType": "Офис продаж в Москве"
+		  }]
+		}
+	</script>
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
@@ -417,11 +430,11 @@
 				<li class="contact-list__item tabItem tabItem--active goto" data-goto="Офис продаж в Москве">
 					<a class="contact-list__link" href="" target="_self">Офис продаж в Москве</a>
 				</li>
-				<li class="contact-list__item tabItem goto" data-goto="Центральный ФО">
-					<a class="contact-list__link" href="" target="_self">Центральный ФО</a>
-				</li>
 				<li class="contact-list__item tabItem goto" data-goto="Производство">
 					<a class="contact-list__link" href="" target="_self">Производство</a>
+				</li>
+				<li class="contact-list__item tabItem goto" data-goto="Центральный ФО">
+					<a class="contact-list__link" href="" target="_self">Центральный ФО</a>
 				</li>
 				<li class="contact-list__item tabItem goto" data-goto="Северо-Кавказский и южный ФО">
 					<a class="contact-list__link" href="" target="_self">Северо-Кавказский и южный ФО</a>
@@ -432,67 +445,55 @@
 				<div class="contacts__info">
 					<div class="contacts__address address">
 						<!--Address-1-->
-						<div class="address__item contentItem contentItem--active" id="address-1">
-							<h3 class="address__title">Офис продаж в Москве</h3>
-							<a class="address__link address__link--mail" href="mailto:mail@svscompany.ru" target="_blank" title="mail@svscompany.ru">
+						<div itemscope itemptype="http://schema.org/Organization" class="address__item contentItem contentItem--active" id="address-1">
+							<h3 itemprop="name" class="address__title">Офис продаж в Москве</h3>
+							<a itemprop="email" class="address__link address__link--mail" href="mailto:mail@svscompany.ru" target="_blank" title="mail@svscompany.ru">
 								mail@svscompany.ru
 							</a>
-							<a class="address__link address__link--blocked address__link--phone" href="tel:+74959899605" target="_blank" title="(495) 989-96-05">
+							<a itemprop="telephone" class="address__link address__link--phone" href="tel:+74959899605" target="_blank" title="+7 (495) 989-96-05">
 								+7 (495) 989-96-05
 							</a>
-							<a class="address__link address__link--blocked address__link--noicon" href="tel:+78004112435" target="_blank" title="8 800 411-24-35">
-								8 800 411-24-35
-							</a>
 							<a class="address__link address__link--place">
-								142645, Московская область, Орехово-Зуевский район, д. Авсюнино, участок № 108В, строение 5
+								<span itemprop="postalCode">109431</span>,<span itemprop="addressLocality">&nbsp;г. Москва</span>,<span itemprop="streetAddress">ул. Привольная, д. 70, корп. 1</span>
 							</a>
 						</div>
 						<!--Address-2-->
-						<div class="address__item contentItem" id="address-2">
-							<h3 class="address__title">Центральный ФО</h3>
-							<a class="address__link address__link--mail" href="mailto:mail@svscompany.ru" target="_blank" title="mail@svscompany.ru">
+						<div itemscope itemptype="http://schema.org/Organization" class="address__item contentItem" id="address-2">
+							<h3 itemprop="name" class="address__title">Производство</h3>
+							<a itemprop="email" class="address__link address__link--mail" href="mailto:mail@svscompany.ru" target="_blank" title="mail@svscompany.ru">
 								mail@svscompany.ru
 							</a>
-							<a class="address__link address__link--blocked address__link--phone" href="tel:+74959899605" target="_blank" title="(495) 989-96-05">
-								+7 (495) 989-96-05
-							</a>
-							<a class="address__link address__link--blocked address__link--noicon" href="tel:+78004112435" target="_blank" title="8 800 411-24-35">
-								8 800 411-24-35
+							<a itemprop="telephone" class="address__link address__link--phone" href="tel:+74964138463" target="_blank" title="+7 (496) 413-84-63">
+								+7 (496) 413-84-63
 							</a>
 							<a class="address__link address__link--place">
-								142645, Московская область, Орехово-Зуевский район, д. Авсюнино, участок № 108В, строение 5
+								<span itemprop="postalCode">142645</span>,&nbsp;<span itemprop="addressLocality">Московская область</span>,<span itemprop="streetAddress">Орехово-Зуевский район, д. Авсюнино, участок № 108В, строение 5</span>
 							</a>
 						</div>
 						<!--Address-3-->
-						<div class="address__item contentItem" id="address-3">
-							<h3 class="address__title">Производство</h3>
-							<a class="address__link address__link--mail" href="mailto:mail@svscompany.ru" target="_blank" title="mail@svscompany.ru">
+						<div itemscope itemptype="http://schema.org/Organization" class="address__item contentItem" id="address-3">
+							<h3 itemprop="name" class="address__title">Центральный ФО</h3>
+							<a itemprop="email" class="address__link address__link--mail" href="mailto:mail@svscompany.ru" target="_blank" title="mail@svscompany.ru">
 								mail@svscompany.ru
 							</a>
-							<a class="address__link address__link--blocked address__link--phone" href="tel:+74959899605" target="_blank" title="(495) 989-96-05">
-								+7 (495) 989-96-05
-							</a>
-							<a class="address__link address__link--blocked address__link--noicon" href="tel:+78004112435" target="_blank" title="8 800 411-24-35">
-								8 800 411-24-35
+							<a itemprop="telephone" class="address__link address__link--phone" href="tel:+79035082537" target="_blank" title="+7 (903) 508-25-37">
+								+7 (903) 508-25-37
 							</a>
 							<a class="address__link address__link--place">
-								142645, Московская область, Орехово-Зуевский район, д. Авсюнино, участок № 108В, строение 5
+								<span itemprop="postalCode">143987</span>, <span itemprop="addressLocality">Московская&nbsp;область,&nbsp;г.&nbsp;Балашиха,</span><span itemprop="streetAddress">ул. Колхозная, д. 12, корп. 2, помещение VII (1)</span>
 							</a>
 						</div>
 						<!--Address-4-->
-						<div class="address__item contentItem" id="address-4">
-							<h3 class="address__title">Северо-Кавказский ФО</h3>
-							<a class="address__link address__link--mail" href="mailto:mail@svscompany.ru" target="_blank" title="mail@svscompany.ru">
+						<div itemscope itemptype="http://schema.org/Organization" class="address__item contentItem" id="address-4">
+							<h3 itemprop="name" class="address__title">Северо-Кавказский и южный ФО</h3>
+							<a itemprop="email" class="address__link address__link--mail" href="mailto:mail@svscompany.ru" target="_blank" title="mail@svscompany.ru">
 								mail@svscompany.ru
 							</a>
-							<a class="address__link address__link--blocked address__link--phone" href="tel:+74959899605" target="_blank" title="(495) 989-96-05">
-								+7 (495) 989-96-05
-							</a>
-							<a class="address__link address__link--blocked address__link--noicon" href="tel:+78004112435" target="_blank" title="8 800 411-24-35">
-								8 800 411-24-35
+							<a itemprop="telephone" class="address__link address__link--phone" href="tel:+79283000059" target="_blank" title="+7 (928) 300-00-59">
+								+7 (928) 300-00-59
 							</a>
 							<a class="address__link address__link--place">
-								142645, Московская область, Орехово-Зуевский район, д. Авсюнино, участок № 108В, строение 5
+								<span itemprop="postalCode">357555</span>,<span itemprop="addressLocality">Ставропольский край, г.&nbsp;Пятигорск,</span><span itemprop="streetAddress">ул.&nbsp;Дмитрия&nbsp;Донского,&nbsp;56</span>
 							</a>
 						</div>
 					</div>
