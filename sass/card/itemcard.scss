@@ -27,7 +27,7 @@
   }
 
   &__type {
-    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 600, $text-primary);
     margin: 0;
   }
 
@@ -49,10 +49,11 @@
     @include flex-setting(column, flex-start, center);
     order: 2;
     width: 100%;
-    border: 1px solid #C1CAD5;
+    border: 1px solid #00778B;
     border-radius: 5px;
 
     max-width: 280px;
+    position: relative;
 
     margin: 0;
     padding: 0;
@@ -64,7 +65,7 @@
 
       @include flex-setting(row, center, center);
 
-      border-bottom: 1px solid #C1CAD5;
+      border-bottom: 1px solid #00778B;
 
       &:last-of-type {
         border-bottom: none;
@@ -88,7 +89,67 @@
     &-pic {
       margin-right: 0.875rem;
     }
+
+    &-sizes {
+      width: 100%;
+      position: absolute;
+      min-width: 280px;
+
+      top: 51px;
+      left: -1px;
+      right: 0;
+      background-color: #fff;
+
+      @include flex-setting(column, flex-start, flex-start);
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      max-height: 0;
+
+      border: 1px solid #00778B;
+      border-top: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      overflow-y: hidden;
+      visibility: hidden;
+      transition: max-height 400ms ease-in-out;
+
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      &.active {
+        max-height: 500px;
+        transition: max-height 400ms ease-in-out;
+        visibility: visible;
+        background-color: #fff;
+
+        z-index: 10;
+      }
+    }
   }
+
+  &__sizes-item {
+    @include flex-setting(column, flex-start, flex-start);
+    padding-left: 3.5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  &__sizes-title {
+    @include font-setting($title-font, 1rem, 1, 600, $text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  &__sizes-text {
+    @include font-setting($primary-font, 1rem, 1, 400, $text-primary);
+  }
+
   /*Страна производства*/
   &__national {
     @include flex-setting(row, flex-start, center);
@@ -194,6 +255,7 @@
       width: auto;
       max-width: 452px;
       padding: 0 2.375rem;
+      z-index: 11;
 
       &-item {
         width: 100%;
@@ -210,7 +272,7 @@
           width: 1px;
           height: 38px;
 
-          background-color: #C1CAD5;
+          background-color: #00778B;
           top: 50%;
           transform: translateY(-50%);
           right: -35px;
@@ -228,7 +290,65 @@
       &-pic {
         margin-right: 1rem;
       }
+
+      &-sizes {
+        width: 100%;
+        position: absolute;
+        min-width: 216px;
+
+        top: 43px;
+        left: -37px;
+        right: auto;
+        background-color: #fff;
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-height: 0;
+
+        border: 1px solid #00778B;
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        overflow-y: hidden;
+        visibility: hidden;
+        transition: max-height 400ms ease-in-out;
+
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        &.active {
+          max-height: 500px;
+          transition: max-height 400ms ease-in-out;
+          visibility: visible;
+          background-color: #fff;
+        }
+      }
     }
+
+    &__sizes-item {
+      @include flex-setting(column, flex-start, flex-start);
+      padding-left: 3.5rem;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+    }
+
+    &__sizes-title {
+      @include font-setting($title-font, 1rem, 1, 600, $text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    &__sizes-text {
+      @include font-setting($primary-font, 1rem, 1, 400, $text-primary);
+    }
+
     /*Страна производства*/
     &__national {
       margin: 0;
@@ -290,7 +410,7 @@
         &:active,
         &:hover,
         &:focus {
-          border-color: $btn-color;
+          border-color: #00778B;
           transition: 0.1s ease-in;
         }
       }
@@ -360,6 +480,10 @@
       margin: 0;
       align-self: flex-start;
       padding-left: 0;
+
+      &-description {
+        font-size: 1rem;
+      }
     }
     /*Описание продукта*/
     &__description {
@@ -370,18 +494,6 @@
 
       padding: 0;
       margin-bottom: 1.125rem;
-
-      max-height: 126px;
-      overflow-y: scroll;
-
-      -ms-overflow-style: none;
-      overflow: -moz-scrollbars-none;
-
-      overflow: hidden;
-
-      &::-webkit-scrollbar {
-        width: 0;
-      }
     }
     /*Блок выбора цвета*/
     &__color {
@@ -433,9 +545,6 @@
       font-size: 1rem;
       line-height: 1.375rem;
       margin-bottom: 2.125rem;
-
-      max-height: 154px;
-      overflow-y: scroll;
     }
     /*Блок выбора цвета*/
     &__color {

@@ -6,7 +6,7 @@
   margin-bottom: 2.25rem;
 
   &__wrapper {
-    border: 1px solid #D0DAE5;
+    border: 1px solid #00778B;
     border-radius: 5px;
 
     padding-top: 1.763rem;
@@ -36,7 +36,7 @@
 
     max-width: 728px;
 
-    border: 1px solid #D0DAE5;
+    border: 1px solid #00778B;
     border-radius: 5px;
 
     &__wrapper {
@@ -57,7 +57,7 @@
 
       text-align: left;
       align-self: flex-start;
-      width: 60%;
+      width: 100%;
     }
   }
 }
@@ -78,7 +78,7 @@
       margin-bottom: 1.75rem;
 
       text-align: left;
-      width: 55%;
+      width: 100%;
     }
   }
 }
@@ -97,8 +97,6 @@
       font-size: 2.839rem;
       line-height: 3.063rem;
       margin-bottom: 3.313rem;
-
-      width: 55%;
     }
   }
 }

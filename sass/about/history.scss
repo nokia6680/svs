@@ -1,0 +1,76 @@
+.history {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  width: 100%;
+
+  @include flex-setting(column, flex-start, flex-start);
+
+  &__title {
+    @include font-setting($title-font, 1.125rem, 1.625rem, 500, $text-primary);
+
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0.625rem;
+  }
+
+  &__description {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    text-align: left;
+    align-self: flex-start;
+
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  &__list {
+    @include flex-setting(column, flex-start, center);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+      width: 100%;
+      @include flex-setting(column, flex-start, flex-start);
+
+      margin-bottom: 0.625rem;
+    }
+
+    &-year {
+      @include font-setting($primary-font, 1.125rem, 1.188rem, 500, $text-primary);
+      margin-bottom: 0.625rem;
+    }
+
+    &-description {
+      @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+      margin-bottom: 0.625rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .history {
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+
+    &__list {
+      &-item {
+        margin-bottom: 1.25rem;
+      }
+
+      &-year {
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+
+      &-description {
+        font-size: 1rem;
+      }
+    }
+  }
+}

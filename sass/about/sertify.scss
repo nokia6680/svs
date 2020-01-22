@@ -10,6 +10,8 @@
 
   margin-bottom: 2.5rem;
 
+  display: none;
+
   &__title {
     @include font-setting($title-font, 1.375rem, 1.5rem, 500, $text-primary);
     margin: 0;
@@ -91,7 +93,7 @@
 @media only screen and (min-width: $laptop-wide) {
   .sertify {
     margin-bottom: 8.75rem;
-    
+
     &__list {
       justify-content: flex-start;
     }

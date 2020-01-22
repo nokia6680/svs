@@ -11,6 +11,12 @@
 
   position: relative;
 
+  cursor: pointer;
+
+  &:hover > .item__overlay {
+    @include flex-setting(column, flex-start, flex-start);
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -18,15 +24,38 @@
   &__overlay {
     position: absolute;
 
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 320px;
+    overflow: hidden;
 
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0.625rem;
+    left: 0.625rem;
+    right: 0.625rem;
     bottom: 0;
 
+    padding: 0.625rem 0.625rem;
+
     display: none;
+
+    background-color: #84AA32;
+    border-radius: 3px;
+
+    pointer-events: none;
+
+    &-text {
+      margin: 0;
+      @include font-setting($primary-font, 0.875rem, 1.3, 400, $text-secondary);
+
+      overflow-y: scroll;
+      pointer-events: all;
+
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
   }
 
   &__link {
@@ -69,6 +98,8 @@
 
       width: 72px;
       height: 22px;
+
+      display: none;
     }
   }
 
@@ -147,6 +178,11 @@
       padding-bottom: 0;
       margin-bottom: 1.875rem;
     }
+
+    &__overlay {
+      width: auto;
+      height: 242px;
+    }
   }
 }
 
@@ -204,6 +240,11 @@
 
       padding-bottom: 0;
       margin-bottom: 0;
+    }
+
+    &__overlay {
+      height: 320px;
+      padding: 1.25rem 1.25rem;
     }
   }
 }

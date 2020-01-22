@@ -17,6 +17,7 @@
     @include flex-setting(row, flex-start, center);
 
     text-decoration: none;
+    display: none;
   }
 
   &__catalog-pic {

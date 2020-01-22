@@ -58,6 +58,10 @@
 @media only screen and (min-width: $laptop) {
   .contact-list {
     margin-bottom: 4.625rem;
+
+    &__link {
+      font-size: 1.188rem;
+    }
   }
 }
 

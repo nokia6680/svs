@@ -16,9 +16,11 @@
     &__btn {
       padding-left: 0;
       width: auto;
-      align-self: flex-start;
+      align-self: center;
 
       @include flex-setting(row, space-between, center);
+
+      margin-top: 0.625rem;
     }
 
     .swiper-pagination {
@@ -94,7 +96,7 @@
 @media only screen and (min-width: $laptop-wide) {
   .intro {
     margin-bottom: 2.5rem;
-    
+
     &__btn {
       padding-left: 2.5rem;
     }

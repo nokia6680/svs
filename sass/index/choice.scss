@@ -12,6 +12,31 @@
     margin-bottom: 2.25rem;
   }
 
+  &__expand {
+    @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+    letter-spacing: 0.01em;
+
+    background-color: transparent;
+    border: none;
+
+    border-bottom: 1px dashed #828C98;
+
+    padding: 0;
+
+    cursor: pointer;
+    outline: none;
+
+    margin-bottom: 1.875rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      border-color: $link-hover;
+      transition: 0.1s ease-in-out;
+    }
+  }
+
   &__wrap {
     width: 100%;
     @include flex-setting(column, flex-start, center);
@@ -127,7 +152,7 @@
       justify-content: space-between;
       align-items: flex-start;
 
-      margin-bottom: 1.875rem;
+      margin-bottom: 0.625rem;
     }
   }
 }
@@ -184,6 +209,10 @@
 
       top: 0px;
       right: -17%;
+    }
+
+    &__reset {
+      margin-left: 5.25rem;
     }
 
     &__title {

@@ -91,12 +91,12 @@
 @media only screen and (min-width: $laptop-wide) {
   .content-list {
     &__item-title {
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: 1.375rem;
     }
 
     &__item-info {
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: 1.375rem;
     }
 
@@ -111,7 +111,7 @@
     }
 
     &__item-description {
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: 1.375rem;
     }
   }

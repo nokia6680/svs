@@ -138,9 +138,7 @@
   .intro-slider {
     &__item {
       padding-top: 2.063rem;
-
       max-height: 590px;
-      min-height: 590px;
     }
 
     &__wrap {
@@ -175,8 +173,7 @@
     &__item {
       padding-top: 5rem;
 
-      max-height: 630px;
-      min-height: 630px;
+      max-height: 640px;
     }
 
     &__wrap {
@@ -190,8 +187,7 @@
   .intro-slider {
     &__item {
       padding-top: 5rem;
-      max-height: 1064px;
-      min-height: 1064px;
+      min-height: 640px;
     }
   }
 }

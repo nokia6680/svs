@@ -13,9 +13,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
+
+    max-width: 688px;
 
     &__item {
-      margin-bottom: 0;
+      margin-bottom: 1.25rem;
     }
   }
 }
@@ -25,10 +28,27 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
+
+    max-width: 944px;
+
+    &__item {
+      margin-right: 1.125rem;
+
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: $laptop-wide) {
+  .similar-list {
+    max-width: 1200px;
 
     &__item {
       margin-right: 1.25rem;
-      margin-bottom: 0;
 
       &:nth-child(4n+4) {
         margin-right: 0;

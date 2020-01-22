@@ -85,6 +85,19 @@ body {
   }
 }
 
+.body-sales {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  footer {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+}
+
 .hidden {
   display: none;
 }

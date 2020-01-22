@@ -1,0 +1,53 @@
+.supply {
+  width: 100%;
+  @include flex-setting(column, flex-start, flex-start);
+  margin-bottom: 2.5rem;
+
+  &__title {
+    @include font-setting($title-font, 1.5rem, 1.75rem, 500, $text-primary);
+    margin: 0;
+
+    margin-bottom: 1.25rem;
+  }
+
+  &__description {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    margin: 0;
+    margin-bottom: 0.625rem;
+
+    &-link {
+      text-decoration: none;
+      color: $text-primary;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $link-hover;
+        transition: 0.1s ease-in;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    padding-left: 1.25rem;
+
+    @include flex-setting(column, flex-start, flex-start);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .supply  {
+    &__title {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+
+    &__description {
+    font-size: 1rem;
+    }
+  }
+}

@@ -4,7 +4,7 @@
   padding: 0;
   list-style: none;
 
-  border: 1px solid #C1CAD5;
+  border: 1px solid #00778B;
   border-radius: 5px;
 
   width: 100%;
@@ -26,18 +26,10 @@
     margin-bottom: 0;
   }
 
-  &--card {
-    margin-bottom: 0;
-
-    .filter-choice__heading-icon {
-      display: none;
-    }
-  }
-
   &__select {
     @include flex-setting(column, flex-start, flex-start);
     width: 100%;
-    border-bottom: 1px solid #C1CAD5;
+    border-bottom: 1px solid #00778B;
 
     position: relative;
 
@@ -73,6 +65,11 @@
       padding-right: 1.25rem;
       padding-top: 1.063rem;
       padding-bottom: 1.063rem;
+
+      z-index: 2;
+
+      cursor: pointer;
+
       /*Сдвиг стрелки для карточки товара*/
       &--card {
         padding-right: 0.688rem;
@@ -114,6 +111,18 @@
       border-bottom: none;
     }
   }
+
+  &--card {
+    margin-bottom: 0;
+
+    .filter-choice__heading {
+      font-weight: 400;
+    }
+
+    .filter-choice__heading-icon {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (min-width: $tablet) {
@@ -122,10 +131,8 @@
     margin-bottom: 1.875rem;
     position: relative;
 
-    border: 1px solid #C1CAD5;
-    border-radius: 5px;
-
     transition: 0.2s ease-in;
+    border: 1px solid #00778B;
 
     &--card {
       width: 334px;
@@ -162,8 +169,8 @@
 
     &--desktop {
       border: none;
-      border-top: 1px solid #C1CAD5;
-      border-bottom: 1px solid #C1CAD5;
+      border-top: 1px solid #00778B;
+      border-bottom: 1px solid #00778B;
 
       .filter-choice__heading {
         padding-left: 1rem;
@@ -182,9 +189,8 @@
     width: 100%;
     margin-bottom: 1.875rem;
     position: relative;
-
-    border: 1px solid #C1CAD5;
     border-radius: 5px;
+    border-bottom: 1px solid #00778B;
 
     transition: 0.2s ease-in;
 
@@ -193,7 +199,7 @@
       margin-bottom: 0;
 
       .filter-choice__heading {
-        font-size: 1rem;
+        font-size: 1.125rem;
         line-height: 1.188rem;
         height: 55px;
 
@@ -222,12 +228,8 @@
     }
 
     &--desktop {
-      border: none;
-      border-top: 1px solid #C1CAD5;
-      border-bottom: 1px solid #C1CAD5;
-
       .filter-choice__heading {
-        padding-left: 1rem;
+        padding-left: 1.125rem;
         padding-right: 0.625rem;
       }
     }
@@ -245,9 +247,7 @@
     margin-bottom: 1.875rem;
     position: relative;
 
-    border: 1px solid #C1CAD5;
     border-radius: 5px;
-
     transition: 0.2s ease-in;
 
     &--card {
@@ -255,7 +255,7 @@
       margin-bottom: 0;
 
       .filter-choice__heading {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         line-height: 1.313rem;
         height: 55px;
         font-weight: 400;
@@ -285,11 +285,8 @@
     }
 
     &--desktop {
-      border: none;
-      border-top: 1px solid #C1CAD5;
-      border-bottom: 1px solid #C1CAD5;
-
       .filter-choice__heading {
+        font-size: 1.25rem;
         padding-left: 1rem;
         padding-right: 0.625rem;
       }

@@ -15,6 +15,11 @@ const Contacts = document.querySelector('.nav-contacts');
 const CatView = document.querySelector('.catalog-filter__toggle');
 const CatList = document.querySelector('.catalog-list');
 /*Variables for callback popup*/
+const TableList = document.querySelector('.itemcard__files-sizes');
+const TableListBtn = document.querySelector('.itemcard__files-item--1');
+/*Variables for callback popup*/
+const SeoList = document.querySelector('.about__container');
+const SeoListBtn = document.querySelector('.about__expand');
 
 document.querySelector('.nav-service__search').onclick = function () {
   SearchDeskField.classList.add('active');
@@ -45,6 +50,15 @@ document.querySelector('.header-nav__search').onclick = function(){
 	SearchBtn.classList.toggle('active');
 	Contacts.classList.toggle('active');
 	document.getElementById("search-1").focus();
+};
+
+document.querySelector('.about__expand').onclick = function () {
+  SeoList.classList.toggle('active');
+};
+
+
+document.querySelector('.itemcard__files-item--1').onclick = function () {
+  TableList.classList.toggle('active');
 };
 
 document.querySelector('.catalog-filter__toggle').onclick = function(){

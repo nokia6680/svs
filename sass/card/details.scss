@@ -42,6 +42,7 @@
     position: relative;
 
     padding-top: 38px;
+    margin-bottom: 5rem;
 
     &__control {
       @include flex-setting(row, flex-start, center);

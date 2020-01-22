@@ -74,7 +74,7 @@
       border-radius: 100%;
       border: none;
 
-      background-color: $btn-color;
+      background-color: transparent;
 
       padding: 0;
 
@@ -82,11 +82,6 @@
       outline: none;
 
       z-index: 10;
-
-      &:hover,
-      &:active {
-        @include btn-hover;
-      }
     }
 
     &__slider.gallery-top {

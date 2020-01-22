@@ -13,9 +13,87 @@
     margin-bottom: 1.25rem;
   }
 
+  &__container {
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+    max-height: 110px;
+    min-height: 110px;
+
+    overflow-y: hidden;
+
+    margin-bottom: 2.5rem;
+
+    transition: max-height 400ms ease-in-out;
+
+    &.active {
+      max-height: 4000px;
+      transition: max-height 400ms ease-in-out;
+    }
+  }
+
+  &__subtitle {
+    @include font-setting($title-font, 1rem, 1.25rem, 500, $text-primary);
+    margin: 0;
+
+    margin-bottom: 1.25rem;
+  }
+
   &__description {
     @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
     margin: 0;
+    margin-bottom: 0.625rem;
+
+    &-head {
+      @include font-setting($primary-font, 1rem, 1.25rem, 600, $text-primary);
+      margin: 0;
+
+      margin-bottom: 1.25rem;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $text-primary;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $link-hover;
+        transition: 0.1s ease-in;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+      padding-left: 1.25rem;
+    }
+  }
+
+  &__expand {
+    @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+    @include flex-setting(column, center, center);
+    text-decoration: none;
+    text-align: center;
+
+    background-color: $btn-color;
+    border: none;
+
+    align-self: center;
+
+    width: 200px;
+    height: 60px;
+
+    border-radius: 5px;
+
+    &:hover,
+    &:active {
+      @include btn-hover;
+    }
   }
 }
 

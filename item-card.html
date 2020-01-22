@@ -60,6 +60,12 @@
 				d="M21.48 18.843c.17.213.298.468.298.723 0 .298-.128.553-.298.723l-1.19 1.191a.996.996 0 0 1-.724.298c-.298 0-.553-.085-.723-.298l-4.254-4.253c-.212-.17-.297-.426-.297-.724v-.68c-1.617 1.276-3.403 1.871-5.445 1.871-1.616 0-3.105-.382-4.466-1.19a8.215 8.215 0 0 1-3.19-3.19C.383 11.951 0 10.463 0 8.846 0 7.23.383 5.784 1.191 4.423c.766-1.362 1.829-2.425 3.19-3.233C5.742.425 7.231 0 8.847 0c1.617 0 3.063.425 4.424 1.191a9.056 9.056 0 0 1 3.232 3.233c.766 1.36 1.191 2.807 1.191 4.423 0 2.042-.638 3.87-1.871 5.445h.68c.256 0 .51.127.724.297l4.253 4.254zM8.847 14.292c.979 0 1.872-.213 2.722-.723.851-.468 1.49-1.106 2-1.957.467-.85.723-1.744.723-2.765 0-.978-.255-1.871-.723-2.722a5.627 5.627 0 0 0-2-2c-.85-.467-1.743-.722-2.722-.722-1.02 0-1.914.255-2.765.723-.85.51-1.488 1.148-1.956 1.999-.51.85-.723 1.744-.723 2.722 0 1.021.212 1.914.723 2.765a4.816 4.816 0 0 0 1.956 1.957c.851.51 1.744.723 2.765.723z"
 				fill="#000"></path>
 		</symbol>
+		<!--Icon search green-->
+		<symbol viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-search-green">
+			<path
+				d="M21.48 18.843c.17.213.298.468.298.723 0 .298-.128.553-.298.723l-1.19 1.191a.996.996 0 0 1-.724.298c-.298 0-.553-.085-.723-.298l-4.254-4.253c-.212-.17-.297-.426-.297-.724v-.68c-1.617 1.276-3.403 1.871-5.445 1.871-1.616 0-3.105-.382-4.466-1.19a8.215 8.215 0 0 1-3.19-3.19C.383 11.951 0 10.463 0 8.846 0 7.23.383 5.784 1.191 4.423c.766-1.362 1.829-2.425 3.19-3.233C5.742.425 7.231 0 8.847 0c1.617 0 3.063.425 4.424 1.191a9.056 9.056 0 0 1 3.232 3.233c.766 1.36 1.191 2.807 1.191 4.423 0 2.042-.638 3.87-1.871 5.445h.68c.256 0 .51.127.724.297l4.253 4.254zM8.847 14.292c.979 0 1.872-.213 2.722-.723.851-.468 1.49-1.106 2-1.957.467-.85.723-1.744.723-2.765 0-.978-.255-1.871-.723-2.722a5.627 5.627 0 0 0-2-2c-.85-.467-1.743-.722-2.722-.722-1.02 0-1.914.255-2.765.723-.85.51-1.488 1.148-1.956 1.999-.51.85-.723 1.744-.723 2.722 0 1.021.212 1.914.723 2.765a4.816 4.816 0 0 0 1.956 1.957c.851.51 1.744.723 2.765.723z"
+				fill="#84AA32"></path>
+		</symbol>
 		<!--Icon search menu-->
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-search-menu">
 			<path
@@ -90,7 +96,7 @@
 			<path d="M1 1l16 16m0-16L1 17" stroke="#A0A0A0" stroke-width="2"></path>
 		</symbol>
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-angle-down">
-			<path d="M1 1l8 8 8-8" stroke="#C1CAD5"></path>
+			<path d="M1 1l8 8 8-8" stroke="#84AA32"></path>
 		</symbol>
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-star-green">
 			<path
@@ -519,7 +525,12 @@
 			<div class="itemcard__gallery gallery">
 				<!--Big images-->
 				<div class="gallery__slider swiper-container-3 gallery-top">
-					<button class="gallery__expand" type="button">+</button>
+					<!--Кнопка лупы-->
+					<button class="gallery__expand" type="button">
+						<svg class="gallery__expand-pic" width="22" height="22">
+							<use xlink:href="#icon-search-green"></use>
+						</svg>
+					</button>
 					<div class="gallery__wrapper swiper-wrapper">
 						<!--Single item photo-->
 						<div class="gallery__item swiper-slide">
@@ -610,11 +621,34 @@
 				<!--Itemcard files only for desktops-->
 				<div class="itemcard__utils">
 					<ul class="itemcard__files">
-						<li class="itemcard__files-item">
+						<li class="itemcard__files-item itemcard__files-item--1">
 							<svg class="itemcard__files-pic" width="14" height="16">
 								<use xlink:href="#icon-sizes"></use>
 							</svg>
-							<a class="itemcard__files-link" href="#" target="_blank" title="Таблица размеров">Таблица&nbsp;размеров</a>
+							<b class="itemcard__files-link" href="#" target="_blank" title="Таблица размеров">Таблица&nbsp;размеров</b>
+							<!--Список размеров-->
+							<ul class="itemcard__files-sizes">
+								<li class="itemcard__sizes-item">
+									<b class="itemcard__sizes-title">11 размер</b>
+									<span class="itemcard__sizes-text">Синий</span>
+								</li>
+								<li class="itemcard__sizes-item">
+									<b class="itemcard__sizes-title">10 размер</b>
+									<span class="itemcard__sizes-text">Черный</span>
+								</li>
+								<li class="itemcard__sizes-item">
+									<b class="itemcard__sizes-title">9 размер</b>
+									<span class="itemcard__sizes-text">Коричневый</span>
+								</li>
+								<li class="itemcard__sizes-item">
+									<b class="itemcard__sizes-title">8 размер</b>
+									<span class="itemcard__sizes-text">Желтый</span>
+								</li>
+								<li class="itemcard__sizes-item">
+									<b class="itemcard__sizes-title">7 размер</b>
+									<span class="itemcard__sizes-text">Красный</span>
+								</li>
+							</ul>
 						</li>
 						<li class="itemcard__files-item">
 							<svg class="itemcard__files-pic" width="16" height="13">
@@ -654,7 +688,11 @@
 				</div>
 				<!--Itemcard photo slider-->
 				<div class="itemcard__slider card-slider card-slider--small swiper-container-2">
-					<button class="card-slider__expand" type="button">+</button>
+					<button class="card-slider__expand" type="button">
+						<svg class="card-slider__expand-pic" width="22" height="22">
+							<use xlink:href="#icon-search-green"></use>
+						</svg>
+					</button>
 					<div class="card-slider__wrapper swiper-wrapper">
 						<!--Single item photo-->
 						<div class="card-slider__item card-item swiper-slide">
@@ -1164,8 +1202,7 @@
 					<!--Hidden details block-->
 					<div class="item__overlay">
 						<p class="item__overlay-text">
-							Сплошное одинарное латексное покрытие всей ладони. Перчатки предназначены для выполнения работ со средними значениями механических нагрузок. Лучше подходит для выполнения работы с мелкими деталями. Наше легендарное первое на рынке
-							сплошное латексное покрытие обеспечивает лучшую воздухопроницаемость и износостойкость, что повышает комфорт работников.
+							Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению влаги внутрь, обеспечивает высокую износостойкость
 						</p>
 					</div>
 				</article>
@@ -1220,8 +1257,7 @@
 					<!--Hidden details block-->
 					<div class="item__overlay">
 						<p class="item__overlay-text">
-							Сплошное одинарное латексное покрытие всей ладони. Перчатки предназначены для выполнения работ со средними значениями механических нагрузок. Лучше подходит для выполнения работы с мелкими деталями. Наше легендарное первое на рынке
-							сплошное латексное покрытие обеспечивает лучшую воздухопроницаемость и износостойкость, что повышает комфорт работников.
+							Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению влаги внутрь, обеспечивает высокую износостойкость
 						</p>
 					</div>
 				</article>
@@ -1276,8 +1312,172 @@
 					<!--Hidden details block-->
 					<div class="item__overlay">
 						<p class="item__overlay-text">
-							Сплошное одинарное латексное покрытие всей ладони. Перчатки предназначены для выполнения работ со средними значениями механических нагрузок. Лучше подходит для выполнения работы с мелкими деталями. Наше легендарное первое на рынке
-							сплошное латексное покрытие обеспечивает лучшую воздухопроницаемость и износостойкость, что повышает комфорт работников.
+							Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению влаги внутрь, обеспечивает высокую износостойкость
+						</p>
+					</div>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="similar-list__item item" id="similar-4">
+					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
+						<picture class="item__frame">
+							<source srcset="img/latest-1.webp" type="image/webp">
+							<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+					</a>
+					<div class="item__details">
+						<!--Описание-->
+						<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+						<!--Планки скидок, акций, выбора цвета-->
+						<div class="item__controls">
+							<!--Новинка-->
+							<span class="item__sign item__sign--latest hidden">Новинка
+								<svg class="item__pic" width="12" height="12">
+									<use xlink:href="#icon-star-white"></use>
+								</svg>
+							</span>
+							<!--Распродажа-->
+							<span class="item__sign item__sign--sale">Акция %</span>
+							<div class="item__color item-color">
+								<button class="item-color__toggle" type="button">
+									<span class="item-color__toggle-count">2</span>&nbsp;цвета
+									<svg class="item-color__icon" width="13" height="13">
+										<use xlink:href="#icon-color"></use>
+									</svg>
+								</button>
+								<ul class="item-color__list">
+									<li class="item-color__item">
+										<picture class="item-color__frame">
+											<source srcset="img/color-1.webp" type="image/webp" />
+											<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
+										</picture>
+									</li>
+									<li class="item-color__item">
+										<picture class="item-color__frame">
+											<source srcset="img/color-2.webp" type="image/webp" />
+											<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
+										</picture>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Hidden details block-->
+					<div class="item__overlay">
+						<p class="item__overlay-text">
+							Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению влаги внутрь, обеспечивает высокую износостойкость
+						</p>
+					</div>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="similar-list__item item" id="similar-5">
+					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
+						<picture class="item__frame">
+							<source srcset="img/latest-1.webp" type="image/webp">
+							<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+					</a>
+					<div class="item__details">
+						<!--Описание-->
+						<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+						<!--Планки скидок, акций, выбора цвета-->
+						<div class="item__controls">
+							<!--Новинка-->
+							<span class="item__sign item__sign--latest hidden">Новинка
+								<svg class="item__pic" width="12" height="12">
+									<use xlink:href="#icon-star-white"></use>
+								</svg>
+							</span>
+							<!--Распродажа-->
+							<span class="item__sign item__sign--sale">Акция %</span>
+							<div class="item__color item-color">
+								<button class="item-color__toggle" type="button">
+									<span class="item-color__toggle-count">2</span>&nbsp;цвета
+									<svg class="item-color__icon" width="13" height="13">
+										<use xlink:href="#icon-color"></use>
+									</svg>
+								</button>
+								<ul class="item-color__list">
+									<li class="item-color__item">
+										<picture class="item-color__frame">
+											<source srcset="img/color-1.webp" type="image/webp" />
+											<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
+										</picture>
+									</li>
+									<li class="item-color__item">
+										<picture class="item-color__frame">
+											<source srcset="img/color-2.webp" type="image/webp" />
+											<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
+										</picture>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Hidden details block-->
+					<div class="item__overlay">
+						<p class="item__overlay-text">
+							Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению влаги внутрь, обеспечивает высокую износостойкость
+						</p>
+					</div>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="similar-list__item item" id="similar-6">
+					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
+						<picture class="item__frame">
+							<source srcset="img/latest-1.webp" type="image/webp">
+							<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+					</a>
+					<div class="item__details">
+						<!--Описание-->
+						<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+						<!--Планки скидок, акций, выбора цвета-->
+						<div class="item__controls">
+							<!--Новинка-->
+							<span class="item__sign item__sign--latest hidden">Новинка
+								<svg class="item__pic" width="12" height="12">
+									<use xlink:href="#icon-star-white"></use>
+								</svg>
+							</span>
+							<!--Распродажа-->
+							<span class="item__sign item__sign--sale">Акция %</span>
+							<div class="item__color item-color">
+								<button class="item-color__toggle" type="button">
+									<span class="item-color__toggle-count">2</span>&nbsp;цвета
+									<svg class="item-color__icon" width="13" height="13">
+										<use xlink:href="#icon-color"></use>
+									</svg>
+								</button>
+								<ul class="item-color__list">
+									<li class="item-color__item">
+										<picture class="item-color__frame">
+											<source srcset="img/color-1.webp" type="image/webp" />
+											<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
+										</picture>
+									</li>
+									<li class="item-color__item">
+										<picture class="item-color__frame">
+											<source srcset="img/color-2.webp" type="image/webp" />
+											<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
+										</picture>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Hidden details block-->
+					<div class="item__overlay">
+						<p class="item__overlay-text">
+							Сплошное латексное покрытие всей ладони в 2 слоя. Препятствует проникновению влаги внутрь, обеспечивает высокую износостойкость
 						</p>
 					</div>
 				</article>
