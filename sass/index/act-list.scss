@@ -37,6 +37,10 @@
     position: absolute;
     left: 0;
     top: 0;
+
+    &--cup {
+      transform: scale(0.8);
+    }
   }
 }
 
@@ -75,7 +79,7 @@
 
     &__pic {
       position: absolute;
-      top: 5px;
+      top: 2px;
     }
   }
 }
@@ -139,6 +143,10 @@
     &__pic {
       transform: scale(1.5);
       left: -0.625rem;
+
+      &--cup {
+        transform: scale(1);
+      }
     }
   }
 }
