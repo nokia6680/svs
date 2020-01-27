@@ -1,6 +1,8 @@
 .item {
   @include flex-setting(column, flex-start, center);
   width: 100%;
+  max-height: 540px;
+  min-height: 540px;
 
   border: 1px solid #E4D9C6;
   border-radius: 5px;
@@ -30,6 +32,9 @@
 
   &__details {
     width: 100%;
+    height: 100%;
+
+    min-height: 170px;
 
     @include flex-setting(column, flex-start, flex-start);
   }
@@ -37,6 +42,9 @@
   &__controls {
     width: 100%;
     @include flex-setting(row, flex-start, center);
+
+    margin-bottom: 0;
+    margin-top: auto;
   }
 
   &__sign {
@@ -103,14 +111,32 @@
     @include font-setting($primary-font, 1rem, 1.375rem, 600, $text-primary);
     margin: 0;
 
-    padding-bottom: 3rem;
+    min-height: 44px;
+    max-height: 44px;
+
+    margin-bottom: 1rem;
+  }
+
+  &__articul {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    margin: 0;
+    margin-bottom: 0.625rem;
+  }
+
+  &__options {
+    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    margin: 0;
+    margin-bottom: 1.25rem;
+
+    max-height: 38px;
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .item {
     width: 216px;
-    height: 416px;
+    min-height: 458px;
+    max-height: 458px;
     margin-bottom: 1.875rem;
     padding: 0.75rem 0.688rem;
 
@@ -119,7 +145,6 @@
     }
 
     &__details {
-      height: 100%;
       justify-content: space-between;
     }
 
@@ -138,8 +163,11 @@
       font-size: 0.875rem;
       line-height: 1.188rem;
 
-      padding-bottom: 0;
-      margin-bottom: 1.875rem;
+      margin-bottom: 0.625rem;
+    }
+
+    &__options {
+      font-size: 0.75rem;
     }
   }
 }
@@ -147,7 +175,6 @@
 @media only screen and (min-width: $laptop) {
   .item {
     width: 222px;
-    height: 416px;
     margin-bottom: 1.875rem;
     padding: 0.75rem 0.688rem;
 
@@ -166,7 +193,10 @@
       line-height: 1.188rem;
 
       padding-bottom: 0;
-      margin-bottom: 1.875rem;
+    }
+
+    &__options {
+      font-size: 0.7rem;
     }
   }
 }
@@ -174,7 +204,8 @@
 @media only screen and (min-width: $laptop-wide) {
   .item {
     width: 285px;
-    height: 494px;
+    min-height: 540px;
+    max-height: 540px;
     margin-bottom: 1.25rem;
     padding: 1.125rem 1.125rem;
 
@@ -197,7 +228,18 @@
       line-height: 1.375rem;
 
       padding-bottom: 0;
-      margin-bottom: 0;
+      margin-bottom: 1rem;
+    }
+
+    &__options {
+      font-size: 0.875rem;
+      max-height: 38px;
+
+      overflow: hidden;
+    }
+
+    &__articul {
+      font-size: 0.875rem;
     }
   }
 }
