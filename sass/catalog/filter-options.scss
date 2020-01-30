@@ -1,106 +1,242 @@
 .filter-options {
   display: none;
+
+  &.active {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+
+    @include flex-setting(column, flex-start, center);
+
+    background-color: #fff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 99;
+    overflow-y: scroll;
+  }
+
+  &__head {
+    width: 100%;
+
+    @include flex-setting(row, space-between, center);
+
+    padding: 1.125rem 1.25rem;
+    background-color: #FAF9F7;
+
+    position: relative;
+
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    @include font-setting($title-font, 1.25rem, 1.5rem, 500, $text-primary);
+    margin: 0;
+  }
+
+  &__close {
+    @include flex-setting(column, center, center);
+
+    background-color: transparent;
+    border: none;
+
+    position: relative;
+
+    cursor: pointer;
+    outline: none;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 1px;
+      height: 40px;
+
+      background-color: #C1CAD5;
+
+      top: 50%;
+      left: -25px;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__reset,
+  &__cancel {
+    @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dotted #828C98;
+
+    width: auto;
+
+    cursor: pointer;
+    outline: none;
+
+    padding: 0;
+    margin-bottom: 1.125rem;
+
+    align-self: flex-start;
+    margin-left: 1.25rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      border-color: $link-hover;
+      transition: 0.1s ease-in;
+    }
+  }
+
+  &__choice {
+    max-width: 90%;
+  }
+
+  &__cancel {
+    display: none;
+  }
+
+  &__footer {
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    @include flex-setting(column, center, center);
+
+    position: fixed;
+    background-color: #84AA32;
+
+    z-index: 3;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 100%;
+      height: 37px;
+
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.489583) 44.79%, rgba(255, 255, 255, 0) 100%);
+      transform: rotate(-180deg);
+
+      top: -37px;
+      left: 0;
+    }
+  }
+
+  &__submit {
+    @include flex-setting(row, center, center);
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      background-color: $btn-hover;
+    }
+  }
+
+  &__submit-empty,
+  &__submit-filtered {
+    @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+  }
+
+  &__submit-filtered {
+    width: 100%;
+    @include flex-setting(row, center, center);
+  }
+
+  &__submit-count {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 1px;
+      height: 40px;
+
+      background-color: #E4D9C6;
+
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__submit-text {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
 }
 
 @media only screen and (min-width: $tablet) {
   .filter-options {
     @include flex-setting(column, flex-start, flex-start);
+    background-color: transparent;
 
     width: 216px;
     border: 1px solid rgba(0, 119, 166, 1);
     border-radius: 5px;
 
     &__head {
-      width: 100%;
-      @include flex-setting(column, flex-start, flex-start);
-
-      padding-left: 1.125rem;
-      padding-top: 1.438rem;
-      padding-bottom: 1.25rem;
-    }
-
-    &__title {
-      @include font-setting($title-font, 1.25rem, 1.5rem, 500, $text-primary);
-      margin: 0;
-
-      margin-bottom: 1.063rem;
-    }
-
-    &__reset {
-      @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
-      letter-spacing: 0.01em;
-      border: none;
-      border-bottom: 1px dotted #828C98;
-
-      padding: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
 
       background-color: transparent;
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: $btn-color;
-        transition: 0.1s ease-in;
-      }
+      padding-left: 1.125rem;
+      padding-top: 1.438rem;
+      padding-bottom: 0;
+
+      margin-bottom: 0;
+    }
+
+    &__title {
+      margin-bottom: 1.063rem;
+    }
+
+    &__choice {
+      max-width: 100%;
+    }
+
+    &__close {
+      display: none;
     }
 
     &__footer {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      background-color: transparent;
+
       width: 100%;
       @include flex-setting(column, flex-start, center);
 
       padding-bottom: 1.875rem;
     }
 
+    &__cancel {
+      display: inline-flex;
+      align-self: center;
+
+      margin: 0;
+    }
+
     &__submit {
-      @include flex-setting(row, center, center);
       width: 175px;
-      height: 60px;
       background-color: $btn-color;
       border-radius: 5px;
-      text-decoration: none;
-
       margin-bottom: 1.625rem;
-
-      &:hover,
-      &:active {
-        background-color: $btn-hover;
-      }
-    }
-
-    &__submit-empty,
-    &__submit-filtered {
-      @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
-    }
-
-    &__submit-filtered {
-      width: 100%;
-      @include flex-setting(row, center, center);
-    }
-
-    &__submit-count {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-
-      position: relative;
-
-      &::after {
-        position: absolute;
-        content: '';
-
-        width: 1px;
-        height: 40px;
-
-        background-color: #E4D9C6;
-
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-
-    &__submit-text {
-      padding-left: 0.875rem;
-      padding-right: 0.875rem;
     }
   }
 }

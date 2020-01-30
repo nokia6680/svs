@@ -449,18 +449,16 @@
 		<section class="main__catalog catalog">
 			<div class="catalog__filter catalog-filter">
 				<div class="catalog-filter__heading">
-					<a class="catalog-filter__btn" href="#" target="_self" title="Настроить фильтр" id="btn">
-						<span class="catalog-filter__btn-text catalog-filter__btn-text-all hidden">Фильтр</span>
-						<span class="catalog-filter__btn-filtered">
-							<span class="catalog-filter__btn-text catalog-filter__btn-text-filtered">Фильтры</span>
-							<span class="catalog-filter__btn-count">2</span>
-							<button class="catalog-filter__btn-reset" type="reset">
-								<svg class="catalog-filter__reset-pic" width="18" height="18">
-									<use xlink:href="#icon-close-gray"></use>
-								</svg>
-							</button>
-						</span>
-					</a>
+					<button class="catalog-filter__btn" type="button">
+						<span class="catalog-filter__btn-text catalog-filter__btn-text--all active">Фильтр</span>
+						<span class="catalog-filter__btn-text catalog-filter__btn-text--filtered">Фильтры</span>
+						<span class="catalog-filter__btn-count">2</span>
+					</button>
+					<button class="catalog-filter__reset" type="reset">
+						<svg class="catalog-filter__reset-pic" width="18" height="18">
+							<use xlink:href="#icon-close-gray"></use>
+						</svg>
+					</button>
 					<!--Переключатель вида плиток списка каталога-->
 					<button class="catalog-filter__toggle" type="button">
 						<span class="catalog-filter__toggle-text visually-hidden">Изменить вид списка</span>
@@ -470,9 +468,14 @@
 				<div class="catalog-filter__options filter-options">
 					<div class="filter-options__head">
 						<h2 class="filter-options__title">Фильтры</h2>
-						<button class="filter-options__reset" type="reset">Сбросить</button>
+						<button class="filter-options__close" type="button" id="filter-close">
+							<svg class="filter-options__close-pic" width="18" height="18">
+								<use xlink:href="#icon-close-black"></use>
+							</svg>
+						</button>
 					</div>
-					<div class="choice__filter filter-choice filter-choice--desktop">
+					<button class="filter-options__reset" type="reset">Сбросить</button>
+					<div class="filter-options__choice filter-choice filter-choice--desktop">
 						<!--Single item-->
 						<div class="filter-choice__select">
 							<input class="filter-choice__checkbox" type="checkbox" id="base-block" name="checkbox-1" />
@@ -754,7 +757,7 @@
 								<span class="filter-options__submit-text">Показать</span>
 							</span>
 						</a>
-						<button class="filter-options__reset" type="reset">Сбросить</button>
+						<button class="filter-options__cancel" type="reset">Сбросить</button>
 					</div>
 				</div>
 			</div>
@@ -785,7 +788,11 @@
 						</a>
 						<div class="item__details">
 							<!--Описание-->
-							<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
+							<!--Артикул-->
+							<p itemprop="sku" class="item__articul">Артикул: нет</p>
+							<!--Артикул-->
+							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -820,12 +827,6 @@
 								</div>
 							</div>
 						</div>
-						<!--Hidden details block-->
-						<div class="item__overlay">
-							<p class="item__overlay-text">
-								Сплошное одинарное латексное покрытие всей ладони. Перчатки предназначены для выполнения работ со средними значениями механических нагрузок. Лучше подходит для выполнения работы с мелкими деталями. Наше легендарное первое на рынке сплошное латексное покрытие обеспечивает лучшую воздухопроницаемость и износостойкость, что повышает комфорт работников.
-							</p>
-						</div>
 					</article>
 					<!--Single item-->
 					<article itemscope itemtype="http://schema.org/Product" class="catalog-list__item item" id="catalog-item-2">
@@ -840,7 +841,12 @@
 						</a>
 						<div class="item__details">
 							<!--Описание-->
-							<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
+							<!--Артикул-->
+							<p itemprop="sku" class="item__articul empty">Артикул: нет</p>
+							<!--Артикул-->
+							<p itemprop="description" class="item__options empty">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
+
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -895,7 +901,12 @@
 						</a>
 						<div class="item__details">
 							<!--Описание-->
-							<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
+							<!--Артикул-->
+							<p itemprop="sku" class="item__articul">Артикул: нет</p>
+							<!--Артикул-->
+							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
+
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -950,7 +961,12 @@
 						</a>
 						<div class="item__details">
 							<!--Описание-->
-							<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
+							<!--Артикул-->
+							<p itemprop="sku" class="item__articul">Артикул: нет</p>
+							<!--Артикул-->
+							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
+
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -1005,7 +1021,12 @@
 						</a>
 						<div class="item__details">
 							<!--Описание-->
-							<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
+							<!--Артикул-->
+							<p itemprop="sku" class="item__articul">Артикул: нет</p>
+							<!--Артикул-->
+							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
+
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -1060,7 +1081,12 @@
 						</a>
 						<div class="item__details">
 							<!--Описание-->
-							<p itemprop="description" class="item__description">Перчатки нейлоновые с рельефным натуральным латексом</p>
+							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
+							<!--Артикул-->
+							<p itemprop="sku" class="item__articul">Артикул: нет</p>
+							<!--Артикул-->
+							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
+
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -1267,285 +1293,8 @@
 			</div>
 		</div>
 	</div>
-	<!--Filter popup-->
-	<div class="popup-filter" style="display: none;" id="popup-filter">
-		<div class="popup-filter__wrapper">
-			<!--Mobile filter popup header-->
-			<header class="popup-filter__header">
-				<h2 class="popup-filter__title">Фильтр</h2>
-				<button class="popup-filter__close" type="button" id="popup-filter-close" onclick="openfilter('popup-filter')">
-					<svg class="popup-filter__close-pic" width="18" height="18">
-						<use xlink:href="#icon-close-black"></use>
-					</svg>
-				</button>
-			</header>
-			<!--Mobile filter popup content part-->
-			<div class="popup-filter__main">
-				<button class="popup-filter__reset" type="reset">Сбросить</button>
-				<div class="choice__filter filter-choice">
-					<!--Single item-->
-					<div class="filter-choice__select">
-						<input class="filter-choice__checkbox" type="checkbox" id="base-block-1" name="checkbox-1" />
-						<label class="filter-choice__heading" for="base-block-1">
-							Основа
-							<svg class="filter-choice__heading-pic" width="18" height="10">
-								<use xlink:href="#icon-angle-down"></use>
-							</svg>
-						</label>
-						<div class="filter-choice__content">
-							<ul class="filter-choice__list choice-list" id="base-list-1">
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="cotton" id="base-1-2" disabled />
-									<label class="choice-list__label" for="base-1-2" >Натуральный хлопок</label>
-									<span class="choice-list__counter">3</span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="acril" id="base-2-2" />
-									<label class="choice-list__label" for="base-2-2">Акрил</label>
-									<span class="choice-list__counter">3</span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="mixed" id="base-3-2" />
-									<label class="choice-list__label" for="base-3-2">Смесовая</label>
-									<span class="choice-list__counter">2</span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="polyester" id="base-4-2" />
-									<label class="choice-list__label" for="base-4-2">Полиэфир</label>
-									<span class="choice-list__counter">2</span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="semiwool" id="base-5-2" />
-									<label class="choice-list__label" for="base-5-2">Полушерсть</label>
-									<span class="choice-list__counter">1</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<!--Single item-->
-					<div class="filter-choice__select">
-						<input class="filter-choice__checkbox" type="checkbox" id="cover-block-1" name="checkbox-2" />
-						<label class="filter-choice__heading" for="cover-block-1">
-							Материал покрытия
-							<svg class="filter-choice__heading-pic" width="18" height="10">
-								<use xlink:href="#icon-angle-down"></use>
-							</svg>
-						</label>
-						<div class="filter-choice__content">
-							<ul class="filter-choice__list choice-list" id="cover-list-1">
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="without" id="cover-1-2" />
-									<label class="choice-list__label" for="cover-1-2">Без покрытия</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="natural-latex" id="cover-2-2" />
-									<label class="choice-list__label" for="cover-2-2">Натуральный латекс</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="nitril-latex" id="cover-3-2" />
-									<label class="choice-list__label" for="cover-3-2">Нитрильный латекс</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="polyvinyl-chloride" id="cover-4-2" />
-									<label class="choice-list__label" for="cover-4-2">ПВХ</label>
-									<span class="choice-list__counter"></span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<!--Single item-->
-					<div class="filter-choice__select">
-						<input class="filter-choice__checkbox" type="checkbox" id="covertype-block-1" name="checkbox-3" />
-						<label class="filter-choice__heading" for="covertype-block-1">
-							Тип покрытия
-							<svg class="filter-choice__heading-pic" width="18" height="10">
-								<use xlink:href="#icon-angle-down"></use>
-							</svg>
-						</label>
-						<div class="filter-choice__content">
-							<ul class="filter-choice__list choice-list" id="covertype-list-1">
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="plain" id="covertype-1-2" />
-									<label class="choice-list__label" for="covertype-1-2">Ровный</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="relief" id="covertype-2-2" />
-									<label class="choice-list__label" for="covertype-2-2">Рельефный</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="foamed" id="covertype-3-2" />
-									<label class="choice-list__label" for="covertype-3-2">Вспененный</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="polyvinyl-chloride-cover" id="covertype-4-2" />
-									<label class="choice-list__label" for="covertype-4-2">ПВХ</label>
-									<span class="choice-list__counter"></span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<!--Single item-->
-					<div class="filter-choice__select">
-						<input class="filter-choice__checkbox" type="checkbox" id="class-block-1" name="checkbox-4" />
-						<label class="filter-choice__heading" for="class-block-1">
-							Класс вязки
-							<svg class="filter-choice__heading-pic" width="18" height="10">
-								<use xlink:href="#icon-angle-down"></use>
-							</svg>
-						</label>
-						<div class="filter-choice__content">
-							<ul class="filter-choice__list choice-list" id="class-list-1">
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="7 class" id="class-1-2" />
-									<label class="choice-list__label" for="class-1-2">7 класс</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="10 class" id="class-2-2" />
-									<label class="choice-list__label" for="class-2-2">10 класс</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="13 class" id="class-3-2" />
-									<label class="choice-list__label" for="class-3-2">13 класс</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="15 class" id="class-4-2" />
-									<label class="choice-list__label" for="class-4-2">15 класс</label>
-									<span class="choice-list__counter"></span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<!--Single item-->
-					<div class="filter-choice__select">
-						<input class="filter-choice__checkbox" type="checkbox" id="usage-block-1" name="checkbox-5" />
-						<label class="filter-choice__heading" for="usage-block-1">
-							Сферы применения
-							<svg class="filter-choice__heading-pic" width="18" height="10">
-								<use xlink:href="#icon-angle-down"></use>
-							</svg>
-						</label>
-						<div class="filter-choice__content">
-							<ul class="filter-choice__list choice-list" id="usage-list-1">
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="house-repair-work" id="usage-1-2" />
-									<label class="choice-list__label" for="usage-1-2">Ремонт дома</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="building-work" id="usage-2-2" />
-									<label class="choice-list__label" for="usage-2-2">Строительство</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="furniture-assembly" id="usage-3-2" />
-									<label class="choice-list__label" for="usage-3-2">Сборка мебели</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="color-work" id="usage-4-2" />
-									<label class="choice-list__label" for="usage-4-2">Малярные работы</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="wood-work" id="usage-5-2" />
-									<label class="choice-list__label" for="usage-5-2">Работа с деревом</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="glass-work" id="usage-6-2" />
-									<label class="choice-list__label" for="usage-6-2">Работа со стеклом</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="autoservice-work" id="usage-7-2" />
-									<label class="choice-list__label" for="usage-7-2">Автомобиль и сервис</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="loading-work" id="usage-8-2" />
-									<label class="choice-list__label" for="usage-8-2">Погрузка и разгрузка</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="agro-work" id="usage-9-2" />
-									<label class="choice-list__label" for="usage-9-2">Сельское хозяйство и сад</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="mounting-work" id="usage-10-2" />
-									<label class="choice-list__label" for="usage-10-2">Монтаж и наладка оборудования</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="lowtemp-work" id="usage-11-2" />
-									<label class="choice-list__label" for="usage-11-2">Работа при низких температурах</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="utility-work" id="usage-12-2" />
-									<label class="choice-list__label" for="usage-12-2">Жилищно-коммунальное хозяйство</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="precision-work" id="usage-13-2" />
-									<label class="choice-list__label" for="usage-13-2">Сборка и работа с мелкими деталями</label>
-									<span class="choice-list__counter"></span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<!--Single item-->
-					<div class="filter-choice__select">
-						<input class="filter-choice__checkbox" type="checkbox" id="feature-block-1" name="checkbox-6" />
-						<label class="filter-choice__heading" for="feature-block-1">
-							Защитные свойства
-							<svg class="filter-choice__heading-pic" width="18" height="10">
-								<use xlink:href="#icon-angle-down"></use>
-							</svg>
-						</label>
-						<div class="filter-choice__content">
-							<ul class="filter-choice__list choice-list" id="feature-list-1">
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-dust" id="feature-1-2" />
-									<label class="choice-list__label" for="feature-1-2">Стойкие к пыли и грязи</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-mech-load" id="feature-2-2" />
-									<label class="choice-list__label" for="feature-2-2">Стойкие к механическим нагрузкам</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-oil" id="feature-3-2" />
-									<label class="choice-list__label" for="feature-3-2">Стойкие к нефте-масло продуктам</label>
-									<span class="choice-list__counter"></span>
-								</li>
-								<li class="choice-list__item">
-									<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-lowtemp" id="feature-4-2" />
-									<label class="choice-list__label" for="feature-4-2">Стойкие к пониженным температурам</label>
-									<span class="choice-list__counter"></span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--Mobile filter popup footer-->
-			<footer class="popup-filter__footer">
-				<a class="popup-filter__link" href="#" target="_self" title="Показать предложения">Посмотреть&nbsp;<span class="popup-filter__link-count">4</span>&nbsp;предложения</a>
-			</footer>
-		</div>
-	</div>
 	<script src="js/script.js"></script>
+	<script src="js/filter.js"></script>
 </body>
 
 </html>

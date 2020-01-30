@@ -121,6 +121,10 @@
     @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
     margin: 0;
     margin-bottom: 0.625rem;
+
+    &.empty {
+      visibility: hidden;
+    }
   }
 
   &__options {
@@ -129,6 +133,12 @@
     margin-bottom: 1.25rem;
 
     max-height: 38px;
+
+    overflow-y: hidden;
+
+    &.empty {
+      visibility: hidden;
+    }
   }
 }
 

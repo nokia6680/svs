@@ -8,7 +8,7 @@
   border-radius: 5px;
 
   width: 100%;
-  margin-bottom: 1.875rem;
+  margin-bottom: 4.875rem;
   position: relative;
 
   &--first {
@@ -172,6 +172,8 @@
       border-top: 1px solid #00778B;
       border-bottom: 1px solid #00778B;
 
+      border-radius: 0;
+
       .filter-choice__heading {
         padding-left: 1rem;
         padding-right: 0.625rem;
@@ -228,6 +230,8 @@
     }
 
     &--desktop {
+      border-radius: 0;
+
       .filter-choice__heading {
         padding-left: 1.125rem;
         padding-right: 0.625rem;
@@ -285,6 +289,8 @@
     }
 
     &--desktop {
+      border-radius: 0;
+      
       .filter-choice__heading {
         font-size: 1.25rem;
         padding-left: 1rem;
