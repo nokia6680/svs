@@ -37,7 +37,7 @@
     }
 
     &-year {
-      @include font-setting($primary-font, 1.125rem, 1.188rem, 500, $text-primary);
+      @include font-setting($primary-font, 1.125rem, 1.188rem, 700, $text-primary);
       margin-bottom: 0.625rem;
     }
 

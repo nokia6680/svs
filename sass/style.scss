@@ -30,6 +30,7 @@
 @import "footer-legal.scss";
 @import "popup-callback.scss";
 @import "callback-form.scss";
+@import "popup-policy.scss";
 /*Index styles*/
 @import "sass/index/intro.scss";
 @import "sass/index/intro-slider.scss";
@@ -49,7 +50,6 @@
 @import "sass/catalog/catalog-list.scss";
 @import "sass/catalog/pagination.scss";
 @import "sass/catalog/seoblock.scss";
-@import "sass/catalog/popup-filter.scss";
 /*Item card styles*/
 @import "sass/card/return.scss";
 @import "sass/card/itemcard.scss";
@@ -102,3 +102,7 @@
 /*supply styles*/
 @import "sass/supply/supply.scss";
 @import "sass/vacancy/vacancy.scss";
+/*404 styles*/
+@import "sass/404/error.scss";
+/*thanks styles*/
+@import "sass/thanks/thanks.scss";

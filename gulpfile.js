@@ -48,7 +48,7 @@ gulp.task("serve", function() {
 gulp.task("images", function() {
   return gulp.src("img/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.optipng({optimizationLevel: 7}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
