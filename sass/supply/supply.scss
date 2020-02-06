@@ -36,6 +36,10 @@
     padding-left: 1.25rem;
 
     @include flex-setting(column, flex-start, flex-start);
+
+    &-text {
+      @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    }
   }
 }
 
@@ -47,7 +51,11 @@
     }
 
     &__description {
-    font-size: 1rem;
+      font-size: 1rem;
+    }
+
+    &__list-text {
+      font-size: 1rem;
     }
   }
 }

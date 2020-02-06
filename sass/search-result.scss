@@ -63,11 +63,44 @@
     border-radius: 5px;
 
     align-self: center;
+    margin-bottom: 0.625rem;
 
     &:hover,
     &:active {
       background-color: #754440;
       transition: 0.1s ease-in;
+    }
+  }
+
+  &__reset {
+    align-self: center;
+    @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+    letter-spacing: 0.01em;
+
+    background-color: transparent;
+    border: none;
+
+    border-bottom: 1px dashed #828C98;
+
+    padding: 0;
+
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      border-color: $link-hover;
+      transition: 0.1s ease-in-out;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .search-result {
+    &__reset {
+      align-self: flex-start;
     }
   }
 }

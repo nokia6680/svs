@@ -1,3 +1,12 @@
+arrowTop.onclick = function() {
+  window.scrollTo(pageXOffset, 0);
+  // после scrollTo возникнет событие "scroll", так что стрелка автоматически скроется
+};
+
+window.addEventListener('scroll', function() {
+  arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight);
+});
+
 /*Menu*/
 const SearchDeskOpen = document.querySelector('.nav-service__search');
 const SearchDeskField = document.querySelector('.nav-menu__search');
@@ -99,4 +108,4 @@ function openorder(id) {
 function toggleText(button_id)  {
    var text = document.getElementById('btn-expand').firstChild;
    text.data = text.data == "Развернуть все" ? "Свернуть все" : "Развернуть все";
-}
+};

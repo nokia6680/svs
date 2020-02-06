@@ -130,6 +130,20 @@
     outline: none;
   }
 
+  &__search-input-reset {
+    position: absolute;
+    right: 55px;
+
+    top: 17px;
+    z-index: 99;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+    outline: none;
+  }
+
   &__links {
     width: 100%;
     @include flex-setting(column, flex-start, center);
@@ -141,6 +155,10 @@
     &__wrap {
       max-width: 688px;
       transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    }
+
+    &__search-input-reset {
+      display: none;
     }
   }
 }
