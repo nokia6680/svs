@@ -43,6 +43,9 @@
       outline: none;
 
       transform: scale(1.5);
+
+      z-index: 12;
+      pointer-events: all;
     }
 
     .slide-next-0 {
@@ -61,6 +64,8 @@
 
       top: 50%;
       left: 10px;
+
+      z-index: 99;
     }
 
     &__expand {
@@ -127,7 +132,6 @@
       height: 100%;
       @include flex-setting(column, flex-end, center);
 
-      object-fit: cover;
 
       &--thumb {
         max-height: 95px;
@@ -136,12 +140,22 @@
 
     &__photo {
       width: 100%;
-      height: auto;
+      height: 100%;
+
+      object-fit: contain;
 
       &--thumb {
         width: auto;
         max-height: 95px;
       }
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .gallery {
+    &__photo {
+      height: auto;
     }
   }
 }

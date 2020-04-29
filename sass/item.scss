@@ -115,6 +115,8 @@
     max-height: 44px;
 
     margin-bottom: 1rem;
+
+    width: 100%;
   }
 
   &__articul {
@@ -135,6 +137,7 @@
     max-height: 38px;
 
     overflow-y: hidden;
+    width: 100%;
 
     &.empty {
       visibility: hidden;

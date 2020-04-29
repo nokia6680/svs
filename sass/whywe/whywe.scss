@@ -40,12 +40,16 @@
       @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-primary);
       margin: 0;
       margin-bottom: 1.25rem;
+
+      width: 100%;
     }
 
     &-description {
       @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-primary);
       margin: 0;
       margin-bottom: 0.625rem;
+
+      width: 100%;
     }
   }
 }

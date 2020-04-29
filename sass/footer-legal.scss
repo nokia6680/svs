@@ -3,18 +3,18 @@
   width: 100%;
 
   @include flex-setting(column, flex-start, flex-start);
-  padding: 0 0.625rem;
-  padding-bottom: 1.25rem;
+  padding: 1.25rem 1.25rem;
+
 
   &__wrap {
     width: 100%;
-    @include flex-setting(column, flex-start, flex-start);
+    margin-bottom: 1.25rem;
   }
 
   &__copyright,
   &__policy {
 
-    @include font-setting($primary-font, 0.75rem, 1rem, 600, #a0a0a0);
+    @include font-setting($primary-font, 0.875rem, 1rem, 700, #a0a0a0);
     text-align: left;
     text-decoration: none;
   }
@@ -40,12 +40,15 @@
     justify-content: space-between;
     align-items: flex-start;
     align-self: center;
+
     transition: 0.2s ease-in;
 
-    padding: 0;
+    padding-top: 1.25rem;
     max-width: 688px;
 
-    margin-bottom: 2.5rem;
+    &__wrap {
+      @include flex-setting(column, flex-start, flex-start);
+    }
 
     &__policy {
       margin-bottom: 0;
@@ -53,7 +56,7 @@
 
     &__development {
       text-align: right;
-      width: 100%;
+      width: 50%;
     }
   }
 }
@@ -61,6 +64,18 @@
 @media only screen and (min-width: $laptop) {
   .footer-legal {
     max-width: 944px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &__wrap {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__development {
+      width: 20%;
+    }
   }
 }
 

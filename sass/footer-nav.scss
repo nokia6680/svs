@@ -1,15 +1,42 @@
 .footer-nav {
   width: 100%;
   @include flex-setting(column, flex-start, center);
-  padding: 0 0.625rem;
 
-  &__wrap {
-    @include flex-setting(column, center, center);
+  &__links {
+    @include flex-setting(column, flex-start, center);
     width: 100%;
 
     background-color: #FAF9F7;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+
+    padding: 1.25rem 1.25rem;
+  }
+
+  &__origin {
+    @include font-setting($primary-font, 1rem, 1, 700, $text-primary);
+    align-self: flex-start;
+    padding-left: 2.375rem;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 28px;
+      height: 24px;
+
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2C0 .895431.895431 0 2 0h24c1.1046 0 2 .895431 2 2v6H0V2z' fill='%23fff'/%3E%3Cpath d='M0 22c0 1.1046.895431 2 2 2h24c1.1046 0 2-.8954 2-2v-6H0v6z' fill='%23EC0000'/%3E%3Cpath fill='%23004EB6' d='M0 8h28v8H0z'/%3E%3C/svg%3E");
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      top: 50%;
+      left: 0;
+
+      transform: translateY(-50%);
+
+      filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));
+    }
   }
 }
 
@@ -19,5 +46,46 @@
     padding: 0;
 
     border-radius: 0;
+
+    &__links {
+      @include flex-setting(row, flex-start, center);
+      width: 100%;
+      max-width: 688px;
+
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 2.5rem;
+      padding-top: 1.875rem;
+    }
+
+    &__origin {
+      align-self: center;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .footer-nav {
+    &__links {
+      max-width: 944px;
+      justify-content: space-between;
+      padding-bottom: 2.5rem;
+      padding-top: 2.5rem;
+    }
+
+    &__origin {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .footer-nav {
+    &__links {
+      max-width: 1200px;
+      justify-content: space-between;
+      padding-bottom: 3.75rem;
+      padding-top: 3.75rem;
+    }
   }
 }

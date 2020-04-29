@@ -17,7 +17,7 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 var swiper = new Swiper('.swiper-container-2', {
-  autoplay: true,
+  autoplay: false,
   loop: true,
 
   breakpoints: {

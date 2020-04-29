@@ -26,11 +26,6 @@
     padding-top: 20px;
   }
 
-  &__form {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-  }
-
   &__wrap {
     width: 100%;
   }
@@ -39,27 +34,9 @@
     width: 100%;
 
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.938rem;
 
     z-index: 9999;
-
-    &::before {
-      position: absolute;
-      content: '';
-
-      display: block;
-
-      width: 1px;
-      height: 28px;
-
-      top: 50%;
-      transform: translateY(-50%);
-      right: 51px;
-
-      background-color: #E4D9C6;
-
-      z-index: 5;
-    }
   }
 
   &__search-pic {
@@ -75,7 +52,7 @@
 
     width: 100%;
     height: 50px;
-    background: #FFFFFF;
+    background: #555555;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 
@@ -86,27 +63,29 @@
     -webkit-appearance:none;
     z-index: 4;
 
-    @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-primary);
+    @include font-setting($primary-font, 1rem, 1.125rem, 400, #B7B7B7);
 
     padding-top: 0.938rem;
     padding-bottom: 1rem;
-    padding-left: 1.25rem;
-    padding-right: 4.375rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     position: relative;
     box-sizing: border-box;
+    transition: 0.1s ease-in;
 
     /*При активном поиске*/
-
-
     &:active,
     &:focus,
     &:hover {
-      border: 1px solid #84AA32;
+      background-color: #F0EFED;
+      color: $text-primary;
+      transition: 0.1s ease-in;
     }
   }
 
   &__search-input-btn {
+    display: none;
     position: absolute;
 
     top: 50%;
@@ -131,6 +110,7 @@
   }
 
   &__search-input-reset {
+    display: none;
     position: absolute;
     right: 55px;
 
@@ -170,8 +150,7 @@
     height: auto;
     padding: 0;
 
-    background-color: #E8E3E0;
-    border-radius: 5px 5px 0px 0px;
+    background-color: $upper-bg;
 
     flex-direction: row;
     justify-content: center;
@@ -269,8 +248,8 @@
       width: 100%;
       transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
       max-width: 944px;
-      padding-top: 0.688rem;
-      padding-bottom: 0.688rem;
+      padding-top: 0.563rem;
+      padding-bottom: 0.563rem;
     }
 
     &__search.active {

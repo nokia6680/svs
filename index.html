@@ -26,8 +26,8 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 	<meta property="og:title" content="" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="" />
@@ -46,6 +46,21 @@
 <body class="body">
 	<!--SVG sprite-->
 	<svg width="0" height="0" class="hidden">
+		<!--Icon phone blue-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-phone-blue">
+			<path d="M15.406.784c.396.083.594.323.594.718 0 4-1.417 7.416-4.25 10.249S5.5 16 1.501 16c-.396 0-.635-.198-.719-.594l-.75-3.25c-.104-.395.042-.676.438-.843l3.5-1.5c.333-.145.625-.072.875.22l1.53 1.874a10.784 10.784 0 0 0 3.25-2.28 11.324 11.324 0 0 0 2.282-3.25l-1.875-1.563c-.292-.229-.365-.52-.219-.874l1.5-3.5c.167-.375.448-.51.844-.406l3.25.75z"
+				fill="#00778B"></path>
+		</symbol>
+		<!--Icon envelope blue-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-mail-blue">
+			<path d="M19.031 0H1.97C.86 0 0 .86 0 1.875v11.25C0 14.18.861 15 1.969 15H19.03c1.068 0 1.97-.82 1.97-1.875V1.875C21 .859 20.098 0 19.031 0zm0 2c-.943.742-2.42 1.836-5.537 4.18-.697.508-2.05 1.758-2.994 1.718-.984.04-2.338-1.21-3.035-1.718C4.348 3.836 2.87 2.742 1.969 2H19.03zM1.97 13V4.422c.902.703 2.256 1.719 4.265 3.242.903.664 2.502 2.148 4.266 2.11 1.723.038 3.281-1.446 4.225-2.11a702.416 702.416 0 0 1 4.306-3.242L19 13H1.969z"
+				fill="#00778B"></path>
+		</symbol>
+		<!--Icon pin blue-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-pin-blue">
+			<path d="M5.823 17.631a.775.775 0 0 0 1.32 0C12.086 10.256 13 9.483 13 6.743 13 3.02 10.088 0 6.5 0 2.878 0 0 3.02 0 6.743c0 2.74.88 3.513 5.823 10.888zM6.5 9.553c-1.523 0-2.708-1.23-2.708-2.81 0-1.545 1.185-2.81 2.708-2.81 1.49 0 2.708 1.265 2.708 2.81 0 1.58-1.218 2.81-2.708 2.81z"
+				fill="#00778B"></path>
+		</symbol>
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-angle">
 			<path d="M1 1L6 6.5L1 12" stroke="#84AA32" stroke-width="2" />
 		</symbol>
@@ -62,14 +77,6 @@
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-search-menu">
 			<path d="M21.48 19.787c.198.199.298.44.298.723 0 .284-.1.525-.298.723l-1.19 1.191a.985.985 0 0 1-.724.298.984.984 0 0 1-.723-.298l-4.254-4.253a.984.984 0 0 1-.297-.723v-.68c-1.588 1.247-3.403 1.87-5.445 1.87-2.438 0-4.523-.864-6.252-2.594C.865 14.314 0 12.23 0 9.792c0-2.439.865-4.523 2.595-6.253C4.325 1.81 6.409.944 8.847.944c2.439 0 4.523.865 6.253 2.595 1.73 1.73 2.594 3.814 2.594 6.253 0 2.041-.623 3.856-1.871 5.444h.68c.284 0 .525.1.724.298l4.253 4.253zM4.977 13.662c1.077 1.05 2.367 1.574 3.87 1.574 1.503 0 2.78-.525 3.828-1.574 1.078-1.077 1.617-2.367 1.617-3.87 0-1.503-.54-2.78-1.617-3.828-1.049-1.078-2.325-1.617-3.828-1.617-1.503 0-2.793.539-3.87 1.617-1.05 1.049-1.574 2.325-1.574 3.828 0 1.503.524 2.793 1.574 3.87z"
 				fill="#E4D9C6"></path>
-		</symbol>
-		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-globe-white">
-			<path d="M9.215 5.125h-4.84c.191-1.23.52-2.242.957-3.008C5.77 1.352 6.234.97 6.782.97c.519 0 1.011.383 1.448 1.148.438.766.766 1.778.985 3.008zM4.156 7.75c0-.574.028-1.148.082-1.75h5.086c.055.602.082 1.176.082 1.75 0 .602-.027 1.176-.082 1.75H4.238a18.307 18.307 0 0 1-.082-1.75zm8.887-2.625H10.09c-.274-1.668-.738-2.953-1.367-3.883a6.935 6.935 0 0 1 2.57 1.477 6.909 6.909 0 0 1 1.75 2.406zM4.84 1.242c-.656.93-1.121 2.215-1.367 3.883H.52a6.507 6.507 0 0 1 1.722-2.406A6.832 6.832 0 0 1 4.84 1.242zM13.316 6c.164.602.246 1.176.246 1.75a6.29 6.29 0 0 1-.246 1.75H10.2a19.18 19.18 0 0 0 .082-1.75c0-.547-.027-1.148-.082-1.75h3.117zM3.281 7.75c0 .547.028 1.148.082 1.75H.246A6.588 6.588 0 0 1 0 7.75C0 7.203.082 6.602.246 6h3.117a19.646 19.646 0 0 0-.082 1.75zm1.094 2.625h4.813c-.22 1.258-.52 2.242-.958 3.008-.437.765-.93 1.148-1.449 1.148-.547 0-1.011-.383-1.449-1.148-.437-.766-.766-1.75-.957-3.008zm4.348 3.883c.656-.902 1.093-2.188 1.367-3.883h2.953a7.01 7.01 0 0 1-1.75 2.434c-.766.683-1.613 1.175-2.57 1.449zM.52 10.375h2.953c.273 1.695.71 2.98 1.367 3.883-.985-.274-1.832-.766-2.598-1.45A6.603 6.603 0 0 1 .52 10.376z"
-				fill="#fff"></path>
-		</symbol>
-		<!--Black globe icon-->
-		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-globe-black">
-			<path d="M7.89844 4.25H3.75C3.91406 3.19531 4.19531 2.32812 4.57031 1.67188C4.94531 1.01562 5.34375 0.6875 5.8125 0.6875C6.25781 0.6875 6.67969 1.01562 7.05469 1.67188C7.42969 2.32812 7.71094 3.19531 7.89844 4.25ZM3.5625 6.5C3.5625 6.00781 3.58594 5.51562 3.63281 5H7.99219C8.03906 5.51562 8.0625 6.00781 8.0625 6.5C8.0625 7.01562 8.03906 7.50781 7.99219 8H3.63281C3.58594 7.50781 3.5625 7.01562 3.5625 6.5ZM11.1797 4.25H8.64844C8.41406 2.82031 8.01562 1.71875 7.47656 0.921875C8.29688 1.17969 9.02344 1.60156 9.67969 2.1875C10.3359 2.77344 10.8281 3.45312 11.1797 4.25ZM4.14844 0.921875C3.58594 1.71875 3.1875 2.82031 2.97656 4.25H0.445312C0.773438 3.45312 1.26562 2.77344 1.92188 2.1875C2.57812 1.60156 3.30469 1.17969 4.14844 0.921875ZM11.4141 5C11.5547 5.51562 11.625 6.00781 11.625 6.5C11.625 7.01562 11.5547 7.50781 11.4141 8H8.74219C8.78906 7.48438 8.8125 6.99219 8.8125 6.5C8.8125 6.03125 8.78906 5.51562 8.74219 5H11.4141ZM2.8125 6.5C2.8125 6.96875 2.83594 7.48438 2.88281 8H0.210938C0.0703125 7.48438 0 6.99219 0 6.5C0 6.03125 0.0703125 5.51562 0.210938 5H2.88281C2.83594 5.51562 2.8125 6.03125 2.8125 6.5ZM3.75 8.75H7.875C7.6875 9.82812 7.42969 10.6719 7.05469 11.3281C6.67969 11.9844 6.25781 12.3125 5.8125 12.3125C5.34375 12.3125 4.94531 11.9844 4.57031 11.3281C4.19531 10.6719 3.91406 9.82812 3.75 8.75ZM7.47656 12.0781C8.03906 11.3047 8.41406 10.2031 8.64844 8.75H11.1797C10.8281 9.54688 10.3359 10.25 9.67969 10.8359C9.02344 11.4219 8.29688 11.8438 7.47656 12.0781ZM0.445312 8.75H2.97656C3.21094 10.2031 3.58594 11.3047 4.14844 12.0781C3.30469 11.8438 2.57812 11.4219 1.92188 10.8359C1.26562 10.25 0.773438 9.54688 0.445312 8.75Z" fill="black"/>
 		</symbol>
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-phone-white">
 			<path d="M14.48 1.434a.673.673 0 0 1 .383.218.814.814 0 0 1 .137.41c0 2.297-.574 4.43-1.723 6.399-1.148 1.914-2.652 3.445-4.566 4.566a12.479 12.479 0 0 1-6.399 1.723c-.164 0-.3-.027-.41-.137a.437.437 0 0 1-.218-.383l-.657-2.843c-.054-.137-.027-.274.055-.438a.516.516 0 0 1 .328-.3l3.063-1.313c.109-.055.246-.055.41-.027.137.027.246.109.355.218l1.34 1.641a9.39 9.39 0 0 0 2.844-1.996 9.892 9.892 0 0 0 1.996-2.844l-1.64-1.367a.544.544 0 0 1-.22-.328c-.054-.137-.027-.274.028-.438l1.312-3.062A.636.636 0 0 1 11.2.832c.137-.055.274-.082.438-.055l2.843.657z"
@@ -249,14 +256,14 @@
 					</a>
 				</div>
 				<!--Menu description-->
-				<p class="header-nav__description">Производим средства защиты рук</p>
+				<p class="header-nav__description">Инновационные решения для защиты рук</p>
 				<!--Desktop menu-->
 				<ul class="header-nav__menu header-menu">
 					<li class="header-menu__item">
 						<a class="header-menu__link" href="catalog.html" target="_self" title="Продукция">Продукция</a>
 					</li>
 					<li class="header-menu__item">
-						<a class="header-menu__link" href="sales.html" target="_self" title="Акции">Акции</a>
+						<a class="header-menu__link disabled" href="sales.html" target="_self" title="Акции">Акции</a>
 					</li>
 					<li class="header-menu__item">
 						<a class="header-menu__link" href="whywe.html" target="_self" title="Почему мы">Почему мы</a>
@@ -264,19 +271,19 @@
 					<li class="header-menu__item">
 						<a class="header-menu__link" href="about.html" target="_self" title="О нас">О нас</a>
 					</li>
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="contacts.html" target="_self" title="Контакты">Контакты</a>
+					</li>
 				</ul>
 				<!--Mobile contacts-->
 				<div class="header-nav__contacts nav-contacts">
 					<a class="nav-contacts__link nav-contacts__link--tel" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
-					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
+					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:svs@svscompany.ru" target="_self">svs@svscompany.ru</a>
 				</div>
 				<!--Search button-->
 				<button class="header-nav__search" type="button">
 					<svg class="header-nav__search-pic header-nav__search-pic--closed" width="22" height="22">
 						<use xlink:href="#icon-search"></use>
-					</svg>
-					<svg class="header-nav__search-pic header-nav__search-pic--opened" width="22" height="22">
-						<use xlink:href="#icon-search-white"></use>
 					</svg>
 				</button>
 				<!--Menu button-->
@@ -284,21 +291,6 @@
 				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
 				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
 				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-				</div>
-				<!--Desktop contacts list-->
-				<div class="header-nav__service header-info">
-					<a class="header-info__title" href="contacts.html" target="_self" title="Контакты">Контакты</a>
-					<ul class="header-info__list">
-						<li class="header-info__item">
-							<a class="header-info__link" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
-						</li>
-						<li class="header-info__item">
-							<a class="header-info__link" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
-						</li>
-						<li class="header-info__item">
-							<button class="header-info__call" type="button">Заказать звонок</button>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</nav>
@@ -385,13 +377,24 @@
 					</div>
 				</div>
 				<div class="nav-menu__links">
+					<ul class="nav-menu__contacts nav-contacts nav-contacts--upper">
+						<li class="nav-contacts__item nav-contacts__item--mail">
+							<a class="nav-contacts__link" href="mailto:svs@svscompany.ru" target="_self">svs@svscompany.ru</a>
+						</li>
+						<li class="nav-contacts__item nav-contacts__item--tel">
+							<a class="nav-contacts__link" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
+						</li>
+						<li class="nav-contacts__item nav-contacts__item--call">
+							<button class="nav-contacts__call" type="button">Заказать звонок</button>
+						</li>
+					</ul>
 					<!--Mobile Menu list-->
 					<ul class="nav-menu__list nav-list">
 						<li class="nav-list__item nav-list__item--catalog">
 							<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
 						</li>
 						<li class="nav-list__item nav-list__item--sales">
-							<a class="nav-list__link" href="sales.html" target="_self">Акции</a>
+							<a class="nav-list__link disabled" href="sales.html" target="_self">Акции</a>
 						</li>
 						<li class="nav-list__item nav-list__item--about">
 							<a class="nav-list__link" href="about.html" target="_self">О нас</a>
@@ -411,38 +414,12 @@
 					</ul>
 					<!--Menu service block-->
 					<div class="nav-menu__service nav-service">
-							<!--Lang switcher-->
-						<div class="nav-service__lang service-lang">
-							<svg class="service-lang__pic service-lang__pic--white" width="14" height="16">
-								<use xlink:href="#icon-globe-white"></use>
-							</svg>
-							<svg class="service-lang__pic service-lang__pic--black" width="12" height="13">
-								<use xlink:href="#icon-globe-black"></use>
-							</svg>
-							<ul class="service-lang__list lang-list">
-								<li class="lang-list__item">
-									<label class="lang-list__label" for="eng">Eng</label>
-									<input class="lang-list__radio visually-hidden" id="eng" name="lang" value="eng" />
-								</li>
-								<li class="lang-list__item">
-									<label class="lang-list__label" for="rus">Rus</label>
-									<input class="lang-list__radio visually-hidden" id="rus" name="lang" value="rus" />
-								</li>
-							</ul>
-						</div>
 						<!--Callback link-->
 						<a class="nav-service__call callback" href="#" target="_self" onclick="openbox('popup-callback');return false;">
-							<svg class="nav-service__pic nav-service__pic--phone" width="15" height="15">
-								<use xlink:href="#icon-phone-white"></use>
-							</svg>
 							Заказать звонок
 						</a>
 						<!--Desktop search btn-->
-						<button class="nav-service__search" type="button">
-							<svg class="nav-service__search-pic" width="22" height="22">
-								<use xlink:href="#icon-search"></use>
-							</svg>
-						</button>
+						<button class="nav-service__search" type="button"></button>
 					</div>
 				</div>
 			</div>
@@ -1238,8 +1215,49 @@
 	<!--Footer-->
 	<footer class="footer">
 		<nav class="footer__nav footer-nav">
+			<!--Footer information-->
+			<div class="footer-nav__contacts footer-contacts">
+				<div class="footer-contacts__wrap">
+					<div class="footer-contacts__logo">
+						<img class="footer-contacts__logo-pic" src="img/logo-gray.svg" alt="СВС" />
+					</div>
+					<ul class="footer-contacts__list">
+						<li class="footer-contacts__list-item">
+							<!--Link to call-->
+							<a class="footer-contacts__info" href="tel:+74951321622" target="_self" title="Контактный номер телефона">
+								<svg class="footer-contacts__pic footer-contacts__pic--call" width="16" height="16">
+									<use xlink:href="#icon-phone-blue"></use>
+								</svg>
+								+7 (495) 132-16-22
+							</a>
+						</li>
+						<li class="footer-contacts__list-item">
+							<!--Link to call-->
+							<a class="footer-contacts__info" href="mailto:svs@svscompany.ru" target="_self" title="Контактный номер телефона">
+								<svg class="footer-contacts__pic footer-contacts__pic--mail" width="21" height="15">
+									<use xlink:href="#icon-mail-blue"></use>
+								</svg>
+								svs@svscompany.ru
+							</a>
+						</li>
+						<li class="footer-contacts__list-item">
+							<!--Schedule-->
+							<b class="footer-contacts__info footer-contacts__info--map">
+								<svg class="footer-contacts__pic footer-contacts__pic--pin" width="13" height="18">
+									<use xlink:href="#icon-pin-blue"></use>
+								</svg>
+								109431,&nbsp;г.&nbsp;Москва, ул.&nbsp;Привольная, д.&nbsp;70,&nbsp;корп.&nbsp;1
+							</b>
+						</li>
+					</ul>
+					<!--Callback button-link-->
+					<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
+						Заказать звонок
+					</a>
+				</div>
+			</div>
 			<!--Footer navi-->
-			<div class="footer-nav__wrap">
+			<div class="footer-nav__links">
 				<ul class="footer-nav__menu footer-menu">
 					<li class="footer-menu__item">
 						<a class="footer-menu__link" href="catalog.html" title="" target="_self">Продукция</a>
@@ -1266,43 +1284,13 @@
 						<a class="footer-menu__link" href="#" title="" target="_self">In English</a>
 					</li>
 				</ul>
-			</div>
-			<!--Footer information-->
-			<div class="footer-nav__contacts footer-contacts">
-				<div class="footer-contacts__wrap">
-					<div class="footer-contacts__info">
-						<ul class="footer-contacts__list">
-							<li class="footer-contacts__list-item">
-								<!--Link to call-->
-								<a class="footer-contacts__info-call" href="tel:+74959899605" target="_self" title="Контактный номер телефона">
-									<svg class="footer-contacts__pic footer-contacts__pic--call" width="15" height="15">
-										<use xlink:href="#icon-phone-green"></use>
-									</svg>
-									+7 (495) 989-96-05
-								</a>
-							</li>
-							<li class="footer-contacts__list-item">
-								<!--Schedule-->
-								<b class="footer-contacts__info-time">
-									<svg class="footer-contacts__pic footer-contacts__pic--time" width="14" height="15">
-										<use xlink:href="#icon-clock-green"></use>
-									</svg>
-									Пн&mdash;Пт&nbsp;с&nbsp;9&nbsp;до&nbsp;18
-								</b>
-							</li>
-						</ul>
-						<!--Callback button-link-->
-						<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
-							Заказать звонок
-						</a>
-					</div>
-				</div>
+				<b class="footer-nav__origin">Сделано&nbsp;в&nbsp;России</b>
 			</div>
 			<!--Footer legal information-->
 			<div class="footer-nav__legal footer-legal">
 				<div class="footer-legal__wrap">
-					<span class="footer-legal__copyright">&copy; ООО &laquo;СВС Ритейл&raquo;, 2019</span>
-					<a class="footer-legal__policy" href="#" target="_blank" title="Политика обработки персональных данных">Политика обработки персональных данных</a>
+					<span class="footer-legal__copyright">&copy; ООО &laquo;СВС&raquo;, 2020 &mdash; Все права защищены.&nbsp;</span>
+					<a class="footer-legal__policy" href="#" target="_blank" title="Политика обработки персональных данных"> Политика обработки персональных данных</a>
 				</div>
 				<span class="footer-legal__development">Разработка &mdash; <a class="footer-legal__development-link" href="https://mediaaid.ru/" target="_blank" title="Разработано в компании Mediaiad Design">mediaaid.ru</a></span>
 			</div>

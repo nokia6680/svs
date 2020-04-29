@@ -1,6 +1,5 @@
 .header {
   width: 100%;
-
   position: relative;
 
   margin-bottom: 0.625rem;
@@ -8,14 +7,12 @@
 
   @include extra-padding;
 
-  background-color: #FAF9F7;
+  background-color: #F0EFED;
 
   z-index: 3;
 
   &.active {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87e0fd+0,53cbf1+40,05abe0+100;Blue+3D+%23+16 */
     background-color: $menu-bg;
-
     backdrop-filter: blur(20px);
 
     z-index: 999;

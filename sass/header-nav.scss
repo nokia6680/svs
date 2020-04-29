@@ -50,12 +50,10 @@
     }
 
     &.active {
+      display: none;
+
       .header-nav__search-pic--closed {
         display: none;
-      }
-
-      .header-nav__search-pic--opened {
-        display: block;
       }
     }
   }
@@ -63,7 +61,7 @@
   /*Открывашка*/
   &__toggle {
     width: 24px;
-    height: 23px;
+    height: 24px;
     position: relative;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
@@ -76,7 +74,7 @@
       height: 4px;
       width: 100%;
       background: #000000;
-      border-radius: 4px;
+      border-radius: 10px;
       opacity: 1;
       left: 0;
       transform: rotate(0deg);
@@ -92,7 +90,7 @@
     }
 
     span:nth-child(2) {
-      top: 9.5px;
+      top: 10px;
       -webkit-transform-origin: left center;
       -moz-transform-origin: left center;
       -o-transform-origin: left center;
@@ -100,7 +98,7 @@
     }
 
     span:nth-child(3) {
-      top: 19px;
+      top: 20px;
       -webkit-transform-origin: left center;
       -moz-transform-origin: left center;
       -o-transform-origin: left center;
@@ -182,6 +180,8 @@
     &__wrap {
       width: 100%;
       max-width: 944px;
+      padding-top: 2.063rem;
+      padding-bottom: 2.063rem;
       @include flex-setting(row, space-between, center);
     }
 
@@ -190,6 +190,24 @@
       height: 60px;
 
       margin-right: 6.563rem;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: 'c 1997';
+
+        background-color: $upper-bg;
+        width: 68px;
+        height: 20px;
+
+        @include font-setting($title-font, 0.875rem, 1, 700, $text-secondary);
+        @include flex-setting(column, center, center);
+
+        clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+        top: -12px;
+        right: -70px;
+      }
     }
 
     &__search {
@@ -218,7 +236,7 @@
 
     &__description {
       @include flex-setting(column, center, center);
-      @include font-setting($title-font, 1rem, 1.375rem, 500, $text-primary);
+      @include font-setting($title-font, 1rem, 1.375rem, 700, $text-primary);
       text-align: left;
       text-transform: uppercase;
       letter-spacing: 0.02em;

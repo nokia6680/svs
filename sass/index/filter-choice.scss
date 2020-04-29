@@ -118,10 +118,19 @@
 
     .filter-choice__heading {
       font-weight: 300;
+
+      &--turned {
+        max-height: 60px;
+        min-height: 60px;
+      }
     }
 
     .filter-choice__heading-icon {
-      display: none;
+      &--turned {
+        transform: scale(0.9);
+        margin-left: -0.625rem;
+        margin-right: 0.25rem;
+      }
     }
   }
 }
@@ -164,6 +173,9 @@
       .filter-choice__heading-icon--turned {
         position: absolute;
         left: 0.625rem;
+
+        margin-left: 0;
+        transform: none;
       }
     }
 

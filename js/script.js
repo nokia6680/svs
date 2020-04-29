@@ -43,7 +43,6 @@ document.querySelector('.nav-menu__search-close').onclick = function () {
 
 document.querySelector('.header-nav__toggle').onclick = function(){
 	MenuButton.classList.toggle('open');
-	MobileMenu.classList.toggle('active');
 	MenuWrap.classList.toggle('active');
 	SearchBtn.classList.toggle('active');
 	Contacts.classList.toggle('active');
