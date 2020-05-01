@@ -92,7 +92,7 @@
 			<path d="M1 1l16 16m0-16L1 17" stroke="#A0A0A0" stroke-width="2"></path>
 		</symbol>
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-angle-down">
-			<path d="M1 1l8 8 8-8" stroke="#84AA32"></path>
+			<path d="M1 1l8 8 8-8" stroke="#84AA32" stroke-width="2"></path>
 		</symbol>
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-star-green">
 			<path d="M9.105.883c.141-.281.317-.457.598-.563.281-.07.527-.07.809 0 .281.106.492.282.633.563l2.285 4.64 5.133.739c.28.07.527.21.703.422.175.246.246.492.246.773s-.106.527-.317.738l-3.726 3.621.879 5.133c.035.281-.035.563-.176.809-.14.246-.352.387-.633.457s-.562.035-.809-.106l-4.605-2.39-4.605 2.39c-.282.141-.528.176-.81.106-.28-.07-.526-.211-.667-.457-.14-.246-.211-.527-.14-.809l.878-5.133-3.726-3.62c-.211-.212-.352-.458-.352-.739 0-.281.07-.527.246-.773.176-.211.422-.352.739-.422l5.132-.739L9.105.883z"
@@ -433,76 +433,89 @@
 			<div class="intro__slider intro-slider swiper-wrapper" id="intro-slider">
 				<div class="intro-slider__item swiper-slide intro-slider__item--1">
 					<div class="intro-slider__wrap">
-						<h1 class="intro-slider__title">Перчатка Strongshell</h1>
+						<picture class="intro-slider__frame">
+							<source media="(min-width: 768px)" srcset="img/slide-bg-1.webp">
+							<source media="(min-width: 768px)" srcset="img/slide-bg-1.jpg">
+							<source srcset="img/slide-bg-mob-1.webp" type="image/webp" />
+							<img class="intro-slider__photo" src="img/slide-bg-mob-1.png" alt="Перчатка Strongshell" />
+						</picture>
+						<h1 class="intro-slider__title">Strongshell</h1>
 						<p class="intro-slider__description">Классические нитрильные краги производства РФ</p>
+						<a class="intro-slider__link" href="itemcard.html" target="_self">Узнать больше</a>
 					</div>
 				</div>
 				<div class="intro-slider__item swiper-slide intro-slider__item--2">
 					<div class="intro-slider__wrap">
-						<h1 class="intro-slider__title">Перчатка Аква-Полимер</h1>
+						<picture class="intro-slider__frame">
+							<source media="(min-width: 768px)" srcset="img/slide-bg-2.webp">
+							<source media="(min-width: 768px)" srcset="img/slide-bg-2.jpg">
+							<source srcset="img/slide-bg-mob-2.webp" type="image/webp" />
+							<img class="intro-slider__photo" src="img/slide-bg-mob-2.png" alt="Перчатка Аква-Полимер" />
+						</picture>
+						<h1 class="intro-slider__title">Аква-Полимер</h1>
 						<p class="intro-slider__description">Перчатки с ультратонким полиуретановым покрытием, не содержат ДМФ</p>
+						<a class="intro-slider__link" href="itemcard.html" target="_self">Узнать больше</a>
 					</div>
 				</div>
 				<div class="intro-slider__item swiper-slide intro-slider__item--3">
 					<div class="intro-slider__wrap">
-						<h1 class="intro-slider__title">Перчатка RUBILITE</h1>
+						<picture class="intro-slider__frame">
+							<source media="(min-width: 768px)" srcset="img/slide-bg-3.webp">
+							<source media="(min-width: 768px)" srcset="img/slide-bg-3.jpg">
+							<source srcset="img/slide-bg-mob-3.webp" type="image/webp" />
+							<img class="intro-slider__photo" src="img/slide-bg-mob-3.png" alt="Перчатка RUBILITE" />
+						</picture>
+						<h1 class="intro-slider__title">RUBILITE</h1>
 						<p class="intro-slider__description">Универсальные перчатки с рельефным покрытием на каждый день </p>
+						<a class="intro-slider__link" href="itemcard.html" target="_self">Узнать больше</a>
 					</div>
 				</div>
 				<div class="intro-slider__item swiper-slide intro-slider__item--4">
 					<div class="intro-slider__wrap">
-						<h1 class="intro-slider__title">Перчатка GEKKO</h1>
-						<p class="intro-slider__description">Внутри хлопок, снаружи полиамид. Высокая износостойкость, без потери комфорта</p>
+						<picture class="intro-slider__frame">
+							<source media="(min-width: 768px)" srcset="img/slide-bg-4.webp">
+							<source media="(min-width: 768px)" srcset="img/slide-bg-4.jpg">
+							<source srcset="img/slide-bg-mob-4.webp" type="image/webp" />
+							<img class="intro-slider__photo" src="img/slide-bg-mob-4.png" alt="Перчатка GEKKO" />
+						</picture>
+						<h1 class="intro-slider__title">GEKKO</h1>
+						<p class="intro-slider__description">Внутри хлопок, снаружи полиамид. Высокая износостойкость.</p>
+						<a class="intro-slider__link" href="itemcard.html" target="_self">Узнать больше</a>
 					</div>
 				</div>
 			</div>
-			<div class="intro__btn">
-				<div class="button-prev"></div>
-				<div class="swiper-pagination"></div>
-				<div class="button-next"></div>
-			</div>
+			<div class="button-prev"></div>
+			<div class="swiper-pagination"></div>
+			<div class="button-next"></div>
 		</section>
 		<!--Activities section-->
-		<section class="main__activity activity">
-			<div class="activity__wrapper">
-				<h2 class="activity__title">Производим средства защиты&nbsp;рук</h2>
-				<ul class="activity__list act-list">
-					<!--Single item-->
-					<li class="act-list__item act-list__item--1">
-						<h3 class="act-list__item-title">
-							Инновационные решения
-							<svg class="act-list__pic act-list__pic--cup" width="32" height="26">
-								<use xlink:href="#icon-cup"></use>
-							</svg>
-						</h3>
-						<p class="act-list__item-description act-list__item-description--1">Многие разработки не имеют аналогов и впервые появились в РФ благодаря нам.</p>
-					</li>
-					<!--Single item-->
-					<li class="act-list__item act-list__item--2">
-						<h3 class="act-list__item-title">
-							Крупнейшее производство в РФ
-							<svg class="act-list__pic act-list__pic--scale" width="21" height="16">
-								<use xlink:href="#icon-scale-green"></use>
-							</svg>
-						</h3>
-						<p class="act-list__item-description act-list__item-description--2">Более 2500 импортных вязальных станков и 5 различных линий для нанесения защитного покрытия.</p>
-					</li>
-					<!--Single item-->
-					<li class="act-list__item act-list__item--3">
-						<h3 class="act-list__item-title">
-							Стабильно высокое качество
-							<svg class="act-list__pic act-list__pic--star" width="20" height="19">
-								<use xlink:href="#icon-star-green"></use>
-							</svg>
-						</h3>
-						<p class="act-list__item-description act-list__item-description--3">Мы стабильно производим качественные и надежные перчатки. При этом устанавливаем адекватные цены. Все это подкрепляется широким ассортиментом продукции.</p>
-					</li>
-				</ul>
+		<section class="main__options options">
+			<h2 class="options__title visually-hidden">Наши решения</h2>
+			<div class="options__visual">
+				<img class="options__visual-pic active" src="img/options-visual-1.png" alt="Инновационные решения" />
+				<img class="options__visual-pic" src="img/options-visual-1.png" alt="Инновационные решения" />
+				<img class="options__visual-pic" src="img/options-visual-1.png" alt="Инновационные решения" />
+			</div>
+			<div class="options__container swiper-options">
+				<div class="options__slider opt-slider swiper-wrapper" id="opt-slider">
+					<div class="opt-slider__item swiper-slide">
+						<h3 class="opt-slider__title blue pressed">Инновационные решения</h3>
+						<p class="opt-slider__description">Мы производим качественные и долговечные перчатки, при этом устанавливаем адекватные цены. Все  это подкрепляется широким ассортиментом продукции.</p>
+					</div>
+					<div class="opt-slider__item swiper-slide">
+						<h3 class="opt-slider__title green">Стабильно высокое качество</h3>
+						<p class="opt-slider__description">Постоянное совершенствование технологий, производственного процесса и материалов. Многие разработки не имеют аналогов и впервые появились в РФ благодаря нам.</p>
+					</div>
+					<div class="opt-slider__item swiper-slide">
+						<h3 class="opt-slider__title black">Крупнейшее производство в РФ</h3>
+						<p class="opt-slider__description">Более 2500 импортных вязальных станков и 5 различных линий для нанесения разных защитных покрытий. Такого парка станков в РФ больше ни у кого нет.</p>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!--Choice section-->
 		<section class="main__choice choice">
-			<h2 class="choice__title">Подберите защитные перчатки</h2>
+			<h2 class="choice__title">Подберите подходящее решение</h2>
 			<!--Expand all button-->
 			<button class="choice__expand" type="button">Развернуть все</button>
 			<div class="choice__wrap">
@@ -510,10 +523,7 @@
 					<!--Single item основа-->
 					<div class="filter-choice__select">
 						<input class="filter-choice__checkbox" type="checkbox" id="base-block" name="checkbox-1" />
-						<label class="filter-choice__heading" for="base-block">
-							<svg class="filter-choice__heading-icon" width="16" height="18">
-								<use xlink:href="#icon-filter-1"></use>
-							</svg>
+						<label class="filter-choice__heading filter-1" for="base-block">
 							Основа
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
@@ -552,10 +562,7 @@
 					<!--Single item материал покрытия-->
 					<div class="filter-choice__select">
 						<input class="filter-choice__checkbox" type="checkbox" id="cover-block" name="checkbox-2" />
-						<label class="filter-choice__heading" for="cover-block">
-							<svg class="filter-choice__heading-icon" width="16" height="18">
-								<use xlink:href="#icon-filter-2"></use>
-							</svg>
+						<label class="filter-choice__heading filter-2" for="cover-block">
 							Материал покрытия
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
@@ -589,10 +596,7 @@
 					<!--Single item тип покрытия-->
 					<div class="filter-choice__select">
 						<input class="filter-choice__checkbox" type="checkbox" id="covertype-block" name="checkbox-3" />
-						<label class="filter-choice__heading" for="covertype-block">
-							<svg class="filter-choice__heading-icon" width="18" height="18">
-								<use xlink:href="#icon-filter-6"></use>
-							</svg>
+						<label class="filter-choice__heading filter-3" for="covertype-block">
 							Тип покрытия
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
@@ -628,10 +632,7 @@
 					<!--Single item класс вязки-->
 					<div class="filter-choice__select">
 						<input class="filter-choice__checkbox" type="checkbox" id="class-block" name="checkbox-4" />
-						<label class="filter-choice__heading" for="class-block">
-							<svg class="filter-choice__heading-icon" width="18" height="18">
-								<use xlink:href="#icon-filter-5"></use>
-							</svg>
+						<label class="filter-choice__heading filter-4" for="class-block">
 							Класс вязки
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
@@ -665,10 +666,7 @@
 					<!--Single item сферы применения-->
 					<div class="filter-choice__select">
 						<input class="filter-choice__checkbox" type="checkbox" id="usage-block" name="checkbox-5" />
-						<label class="filter-choice__heading" for="usage-block">
-							<svg class="filter-choice__heading-icon" width="18" height="15">
-								<use xlink:href="#icon-filter-4"></use>
-							</svg>
+						<label class="filter-choice__heading filter-5" for="usage-block">
 							Сферы применения
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
@@ -752,10 +750,7 @@
 					<!--Single item защитные свойства-->
 					<div class="filter-choice__select">
 						<input class="filter-choice__checkbox" type="checkbox" id="feature-block" name="checkbox-6" />
-						<label class="filter-choice__heading" for="feature-block">
-							<svg class="filter-choice__heading-icon" width="17" height="18">
-								<use xlink:href="#icon-filter-3"></use>
-							</svg>
+						<label class="filter-choice__heading filter-6" for="feature-block">
 							Защитные свойства
 							<svg class="filter-choice__heading-pic" width="18" height="10">
 								<use xlink:href="#icon-angle-down"></use>
@@ -1358,6 +1353,19 @@
 	</a>
 	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+		var title = document.getElementsByClassName('opt-slider__title');
+		for (var i = 0; i< title.length; i++) {
+			title[i].addEventListener('click', function(){
+				if(!(this.classList.contains('pressed'))) {
+					for (var i = 0; i < title.length; i++) {
+						title[i].classList.remove('pressed');
+					}
+					this.classList.add('pressed');
+				}
+			})
+		}
+	</script>
 	<script src="js/slider.js"></script>
 </body>
 

@@ -4,10 +4,11 @@
   @include flex-setting(column, flex-start, flex-start);
 
   padding: 0 0.625rem;
+  padding-top: 1.875rem;
   margin-bottom: 1.688rem;
 
   &__title {
-    @include font-setting($title-font, 2rem, 2.375rem, 500, $text-primary);
+    @include font-setting($title-font, 1.75rem, 2rem, 700, $text-primary);
     margin: 0;
     margin-bottom: 1.875rem;
   }

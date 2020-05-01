@@ -8,6 +8,9 @@ $widebook-sm: 1440px;
 $widebook-hd: 1600px;
 $hd: 1920px;
 
+$blue: #00778B;
+$green: #84AA32;
+
 $text-primary: #000000;
 $placeholder-text: #a0a0a0;
 $text-secondary: #ffffff;
@@ -16,14 +19,14 @@ $text-error: #f44336;
 $red-sign: #FF1300;
 $yellow-sign: #FFE600;
 
-$link-hover: #84AA32;
+$link-hover: $green;
 
-$btn-color: #84AA32;
+$btn-color: $green;
 $btn-hover: #754440;
 
 $menu-bg: #292929;
-$recall-bg: #00778B;
-$upper-bg: #00778B;
+$recall-bg: $blue;
+$upper-bg: $blue;
 
 $title-font: "Montserrat", sans-serif;
 $primary-font: "Lato", sans-serif;

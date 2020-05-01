@@ -7,7 +7,7 @@
   padding: 0 0.625rem;
 
   &__title {
-    @include font-setting($title-font, 1.5rem, 1.75rem, 500, $text-primary);
+    @include font-setting($title-font, 1.5rem, 1.75rem, 700, $text-primary);
     margin: 0;
 
     margin-bottom: 1.25rem;
@@ -52,7 +52,7 @@
   }
 
   &__subtitle {
-    @include font-setting($title-font, 1rem, 1.25rem, 500, $text-primary);
+    @include font-setting($title-font, 1.5rem, 1.75rem, 700, $text-primary);
     margin: 0;
 
     margin-bottom: 1.25rem;
@@ -64,7 +64,7 @@
     margin-bottom: 0.625rem;
 
     &-head {
-      @include font-setting($primary-font, 1rem, 1.25rem, 600, $text-primary);
+      @include font-setting($primary-font, 1rem, 1.25rem, 700, $text-primary);
       margin: 0;
 
       margin-bottom: 1.25rem;
@@ -94,7 +94,7 @@
   }
 
   &__expand {
-    @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+    @include font-setting($title-font, 1.125rem, 1.563rem, 700, $text-secondary);
     @include flex-setting(column, center, center);
     text-decoration: none;
     text-align: center;

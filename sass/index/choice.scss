@@ -7,26 +7,43 @@
   margin-bottom: 3.75rem;
 
   &__title {
-    @include font-setting($title-font, 1.5rem, 1.75rem, 500, $text-primary);
+    @include font-setting($title-font, 1.5rem, 1.75rem, 600, $text-primary);
     margin: 0;
     margin-bottom: 2.25rem;
   }
 
   &__expand {
-    @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+    align-self: flex-start;
+    @include font-setting($primary-font, 1rem, 1rem, 700, #828C98);
     letter-spacing: 0.01em;
 
     background-color: transparent;
     border: none;
-
-    border-bottom: 1px dashed #828C98;
 
     padding: 0;
 
     cursor: pointer;
     outline: none;
 
-    margin-bottom: 1.875rem;
+    margin-bottom: 2.25rem;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 15px;
+      height: 9px;
+
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6.5 6L14 1' stroke='%23828C98' stroke-width='2'/%3E%3C/svg%3E");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      right: -1.25rem;
+      top: 5px;
+    }
 
     &:hover,
     &:active,
@@ -41,7 +58,7 @@
     width: 100%;
     @include flex-setting(column, flex-start, center);
 
-    margin-bottom: 1.875rem;
+    margin-bottom: 2.5rem;
   }
   /*Пустая кнопка*/
   &__submit {
@@ -53,8 +70,6 @@
     height: 60px;
 
     border-radius: 5px;
-
-    margin-bottom: 1.25rem;
 
     &:hover,
     &:active {
@@ -100,11 +115,11 @@
   &__submit-empty,
   &__submit-filtered,
   &__submit-count {
-    @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+    @include font-setting($title-font, 1.125rem, 1.563rem, 700, $text-secondary);
   }
   /*Кнопка сброса фильтра*/
   &__reset {
-    @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+    @include font-setting($primary-font, 1rem, 1rem, 700, #828C98);
     letter-spacing: 0.01em;
 
     background-color: transparent;
@@ -116,6 +131,8 @@
 
     cursor: pointer;
     outline: none;
+
+    display: none;
 
     &:hover,
     &:active,
@@ -134,15 +151,19 @@
     align-items: flex-start;
     padding: 0;
 
-    margin-bottom: 4.188rem;
+    margin-bottom: 7.5rem;
 
     transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
 
     &__title {
-      font-size: 1.75rem;
-      line-height: 2.063rem;
-      margin-bottom: 2.375rem;
+      font-size: 2rem;
+      line-height: 2.75rem;
+      margin-bottom: 2rem;
       align-self: flex-start;
+    }
+
+    &__expand {
+      font-size: 1.125rem;
     }
 
     &__wrap {
@@ -152,7 +173,7 @@
       justify-content: space-between;
       align-items: flex-start;
 
-      margin-bottom: 0.625rem;
+      margin-bottom: 2.5rem;
     }
   }
 }
@@ -162,22 +183,6 @@
     max-width: 944px;
 
     position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-
-      width: 396px;
-      height: 320px;
-
-      background-image: url('../img/choice-hand.png');
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
-
-      top: 76px;
-      right: -7%;
-    }
 
     &__title {
       font-size: 2rem;

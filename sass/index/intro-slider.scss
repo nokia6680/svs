@@ -1,21 +1,20 @@
 .intro-slider {
   width: 100%;
 
-  border-radius: 5px;
-
   &__item {
     @include flex-setting(column, flex-end, flex-start);
     display: flex !important;
+  }
 
-    background-color: #cacaca;
-    width: 100%;
-    padding-top: 100%;
-    background-image: url('../img/intro-slide.png');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  &__wrap {
+    @include flex-setting(column, flex-start, flex-start);
 
-    border-radius: 5px;
+    height: 100%;
+  }
+
+  &__frame {
+    @include flex-setting(column, center, center);
+    height: 360px;
 
     position: relative;
 
@@ -26,159 +25,189 @@
       width: 100%;
       height: 50%;
 
-      background: linear-gradient(180deg, #191814 29.69%, rgba(25, 24, 20, 0) 100%);
-      border-radius: 5px 5px 0px 0px;
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 34.38%, rgba(255, 255, 255, 0) 100%);
       transform: rotate(-180deg);
 
       z-index: 0;
+
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 
-  &__wrap {
-    @include flex-setting(column, flex-start, flex-start);
-
+  &__photo {
+    width: 100%;
     height: 100%;
-    min-height: 152px;
+
+    max-height: 360px;
+
+    object-fit: contain;
+    object-position: top center;
   }
 
   &__title {
-    @include font-setting($title-font, 1.625rem, 1, 500, $text-secondary);
-    margin: 0;
-    margin-bottom: 1.438rem;
+    @include font-setting($title-font, 2rem, 1, 700, $text-primary);
+    margin-top: -2.25rem;
+    margin-bottom: 0.625rem;
     padding-left: 0.625rem;
 
     z-index: 3;
   }
 
   &__description {
-    @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-secondary);
+    @include font-setting($primary-font, 1.125rem, 1.375rem, 400, $text-primary);
+    min-height: 66px;
     margin: 0;
     padding-left: 0.625rem;
-    margin-bottom: 1.25rem;
+    padding-right: 0.625rem;
+    margin-bottom: 1.875rem;
 
     z-index: 3;
+  }
+
+  &__link {
+    align-self: center;
+
+    @include flex-setting(column, center, center);
+    @include font-setting($title-font, 1.25rem, 1, 600, $text-secondary);
+
+    width: 237px;
+    height: 60px;
+
+    background-color: $btn-color;
+    border-radius: 5px;
+
+    text-decoration: none;
+    transition: 0.1s ease-in;
+
+    margin-bottom: 3.125rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $btn-hover;
+      transition: 0.1s ease-in;
+    }
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .intro-slider {
     width: 100%;
-
-    border-radius: 0px;
+    overflow: visible;
 
     &__item {
       width: 100%;
       justify-content: flex-start;
       background-color: #fff;
+      position: relative;
 
-      background-size: cover;
-      border-radius: 0;
+      min-height: 526px;
+      max-height: 526px;
 
-      padding-top: 2.063rem;
-
-      max-height: 446px;
-      min-height: 446px;
+      position: relative;
 
       &::before {
-        display: none;
-      }
+        position: absolute;
+        content: '';
 
-      &--1 {
-        background-image: url('../img/slide-bg-1.jpg');
-      }
+        width: 100%;
+        height: 189px;
 
-      &--2 {
-        background-image: url('../img/slide-bg-2.jpg');
-      }
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 34.38%, rgba(255, 255, 255, 0) 100%);
+        transform: rotate(-180deg);
 
-      &--3 {
-        background-image: url('../img/slide-bg-3.jpg');
-      }
+        z-index: 1;
 
-      &--4 {
-        background-image: url('../img/slide-bg-4.jpg');
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
     }
 
     &__wrap {
-      justify-content: flex-start;
-      align-self: center;
-      max-width: 688px;
+      justify-content: space-between;
+      height: 100%;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      padding-top: 2.5rem;
+      padding-bottom: 3rem;
       transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
       width: 100%;
     }
 
-    &__title {
-      font-size: 2rem;
-      color: $text-primary;
-      max-width: 265px;
-      text-align: left;
+    &__frame {
+      position: absolute;
+      width: 100%;
+      height: 526px;
 
-      margin-bottom: 7.25rem;
-      padding-left: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
 
-      position: relative;
-      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+      z-index: 0;
 
-      &::after {
-        position: absolute;
-        content: '';
-
-        width: 1px;
-        height: 50px;
-
-        background-color: #0269D7;
-
-        left: 0;
-        bottom: -80px;
-
+      &::before {
         display: none;
       }
     }
 
+    &__photo {
+      height: auto;
+      max-height: 526px;
+      min-height: 526px;
+      object-fit: cover;
+      object-position: top;
+      background-size: 100%;
+    }
+
+    &__title {
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 7.875rem;
+      font-size: 3rem;
+      text-align: left;
+
+      transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+
+      z-index: 10;
+    }
+
     &__description {
-      font-size: 1rem;
-      line-height: 1.375rem;
-      color: $text-primary;
+      font-size: 1.375rem;
+      line-height: 1.625rem;
       margin: 0;
       padding-left: 0;
-      margin-bottom: 0;
+      padding-right: 0;
+      margin-bottom: 7.875rem;
 
-      max-width: 240px;
+      max-width: 255px;
       text-align: left;
+      max-height: 78px;
+    }
+
+    &__link {
+      margin-bottom: 3rem;
+      align-self: flex-start;
+      z-index: 2;
     }
   }
 }
 
 @media only screen and (min-width: $laptop) {
   .intro-slider {
-    &__item {
-      padding-top: 2.063rem;
-      max-height: 590px;
-    }
-
     &__wrap {
       max-width: 944px;
     }
 
     &__title {
       font-size: 3rem;
-      max-width: 360px;
-
-      margin-bottom: 10.25rem;
-
-      &::after {
-        width: 2px;
-        height: 94px;
-
-        bottom: -120px;
-      }
+      max-width: 400px;
     }
 
     &__description {
-      font-size: 1.375rem;
-      line-height: 1.563rem;
-
       max-width: 280px;
     }
   }
@@ -186,14 +215,28 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .intro-slider {
-    &__item {
-      padding-top: 5rem;
+    width: 100%;
 
-      max-height: 640px;
+    &__item {
+      align-items: center;
     }
 
     &__wrap {
+      padding-top: 4.688rem;
       max-width: 1200px;
+    }
+
+    &__title {
+      font-size: 3.5rem;
+      max-width: 450px;
+      margin-bottom: 6.625rem;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      max-width: 300px;
+      margin-bottom: 6.625rem;
     }
   }
 }
@@ -201,9 +244,8 @@
 
 @media only screen and (min-width: 1920px) {
   .intro-slider {
-    &__item {
-      padding-top: 5rem;
-      min-height: 640px;
+    &__wrap {
+      max-width: 1200px;
     }
   }
 }

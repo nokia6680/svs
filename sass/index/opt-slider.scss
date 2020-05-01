@@ -1,0 +1,119 @@
+.opt-slider {
+  width: 100%;
+
+  &__item {
+    width: 100%;
+    @include flex-setting(column, flex-start, flex-start);
+  }
+
+  &__title {
+    @include font-setting($title-font, 1.5rem, 1.75rem, 700, $text-primary);
+    margin: 0;
+    margin-bottom: 0.688rem;
+
+    max-width: 97%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 11px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2l6 6-6 6' stroke='%23C9E2E6' stroke-width='3'/%3E%3C/svg%3E");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      top: 50%;
+      right: -1rem;
+
+      transform: translateY(-50%);
+    }
+
+    &.blue {
+      color: $blue;
+    }
+
+    &.green {
+      color: $green;
+    }
+  }
+
+  &__description {
+    @include font-setting($primary-font, 1rem, 1.25rem, 400, $text-primary);
+    margin: 0;
+
+    min-height: 120px;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .opt-slider {
+    width: 100%;
+    @include flex-setting(column, flex-start, flex-start);
+
+    &__item {
+      width: 100%;
+      @include flex-setting(column, flex-start, flex-start);
+      margin-bottom: 1.25rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &__description {
+      display: none;
+      min-height: 0;
+      animation: fade-out-frames 1s;
+    }
+
+    &__title {
+      color: $text-primary;
+      margin: 0;
+      margin-bottom: 0.688rem;
+
+      max-width: 97%;
+      position: relative;
+
+      cursor: pointer;
+
+      &::after {
+        display: none;
+      }
+
+      &.blue {
+        color: $text-primary;
+      }
+
+      &.green {
+        color: $text-primary;
+      }
+
+      &.pressed {
+        color: $blue;
+        transition: 0.3s ease-in;
+
+      &.pressed + .opt-slider__description {
+          display: block;
+          max-height: 300px;
+          animation: fade-in-frames 0.1s backwards 0.1s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in-frames {
+  0% {
+    transform: translate(0, 10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+    max-height: 300px;
+  }
+}

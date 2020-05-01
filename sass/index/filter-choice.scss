@@ -4,7 +4,7 @@
   padding: 0;
   list-style: none;
 
-  border: 1px solid #00778B;
+  border: 2px solid #00778B;
   border-radius: 5px;
 
   width: 100%;
@@ -29,7 +29,7 @@
   &__select {
     @include flex-setting(column, flex-start, flex-start);
     width: 100%;
-    border-bottom: 1px solid #00778B;
+    border-bottom: 2px solid #00778B;
 
     position: relative;
 
@@ -54,30 +54,80 @@
     }
 
     .filter-choice__heading {
-      @include font-setting($title-font, 0.875rem, 1.063rem, 300, $text-primary);
+      @include font-setting($primary-font, 1.125rem, 1.063rem, 600, $text-primary);
       @include flex-setting(row, flex-start, center);
       width: 100%;
 
       text-decoration: none;
       position: relative;
 
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-      padding-top: 1.063rem;
-      padding-bottom: 1.063rem;
+      padding-left: 3.188rem;
+      padding-right: 0.933rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
 
       z-index: 2;
 
       cursor: pointer;
 
+      &::after {
+        position: absolute;
+        content: '';
+
+        @include flex-setting(column, center, center);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        width: 51px;
+        height: 60px;
+
+        left: 0;
+      }
+
+      &.filter-1 {
+        &::after {
+          background-image: url('../img/filter-1.svg');
+          background-size: 21px 24px;
+        }
+      }
+
+      &.filter-2 {
+        &::after {
+          background-image: url('../img/filter-2.svg');
+          background-size: 21px 24px;
+        }
+      }
+
+      &.filter-3 {
+        &::after {
+          background-image: url('../img/filter-3.svg');
+          background-size: 22px 20px;
+        }
+      }
+
+      &.filter-4 {
+        &::after {
+          background-image: url('../img/filter-4.svg');
+          background-size: 22px 20px;
+        }
+      }
+
+      &.filter-5 {
+        &::after {
+          background-image: url('../img/filter-5.svg');
+          background-size: 24px 20px;
+        }
+      }
+
+      &.filter-6 {
+        &::after {
+          background-image: url('../img/filter-6.svg');
+          background-size: 23px 24px;
+        }
+      }
+
       /*Сдвиг стрелки для карточки товара*/
       &--card {
         padding-right: 0.688rem;
-      }
-
-      &-icon {
-        margin-right: 0.625rem;
-        min-width: 18px;
       }
 
       &-pic {
@@ -141,9 +191,17 @@
     transition: 0.2s ease-in;
 
     &--first {
-      border-bottom: 1px solid #00778B;
+      border-bottom: 2px solid $blue;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
+
+      margin-bottom: 0;
+    }
+
+    &--second {
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      margin-bottom: 0;
     }
 
     &--card {
@@ -193,7 +251,35 @@
     }
 
     &--index {
-      width: 324px;
+      width: 334px;
+
+      .filter-choice__checkbox {
+        & + label {
+          .filter-choice__heading-pic {
+            transform: scale(1.1) rotate(0);
+          }
+        }
+
+        &:checked + label {
+          .filter-choice__heading-pic {
+            transform: scale(1.1) rotate(180deg);
+          }
+        }
+      }
+
+      .filter-choice__heading {
+        font-size: 1.25rem;
+        font-weight: 400;
+        padding-left: 3.75rem;
+
+        &-pic {
+          transform: scale(1.1);
+        }
+
+        &::after {
+          width: 60px;
+        }
+      }
     }
   }
 }

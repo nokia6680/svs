@@ -238,7 +238,6 @@
       @include flex-setting(column, center, center);
       @include font-setting($title-font, 1rem, 1.375rem, 700, $text-primary);
       text-align: left;
-      text-transform: uppercase;
       letter-spacing: 0.02em;
 
       margin-right: 6.875rem;
