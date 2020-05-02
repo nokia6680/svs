@@ -20,8 +20,10 @@ const breakpointChecker = function() {
 const enableSwiper = function() {
    mySwiper = new Swiper ('.swiper-options', {
       loop: true,
-      slidesPerView: 1.2,
-      centeredSlides: true,
+      slidesPerView: 1.1,
+      spaceBetween: 15,
+      centeredSlides: false,
+      initialSlide: 0,
       a11y: true,
       keyboardControl: true,
       grabCursor: true

@@ -6,6 +6,8 @@
 
   margin-bottom: 2.5rem;
 
+  display: none;
+
   &__item {
     width: auto;
 
@@ -40,21 +42,9 @@
   }
 }
 
-@media only screen and (min-width: $tablet) {
+@media only screen and (min-width: $laptop) {
   .category {
-    position: absolute;
-    top: -65px;
-    right: 0;
-
-    width: auto;
-    &__item {
-      margin-right: 3.125rem;
-    }
-  }
-}
-
-@media only screen and (min-width: $laptop-wide) {
-  .category {
+    display: flex;
     justify-content: flex-end;
     position: absolute;
     top: -65px;
@@ -62,12 +52,8 @@
 
     width: auto;
     &__item {
-      justify-content: flex-end;
-      margin-right: 3.125rem;
-
-      &:last-child {
-        margin-right: 0;
-      }
+      margin-right: 0;
+      margin-left: 3.125rem;
     }
   }
 }

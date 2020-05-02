@@ -5,7 +5,7 @@
 
   padding: 0 0.625rem;
   padding-top: 1.875rem;
-  margin-bottom: 1.688rem;
+  margin-bottom: 0;
 
   &__title {
     @include font-setting($title-font, 1.75rem, 2rem, 700, $text-primary);
@@ -14,29 +14,19 @@
   }
 
   &__catalog {
-    @include font-setting($primary-font, 1rem, 1.375rem, 400, $text-primary);
-    @include flex-setting(row, flex-start, center);
-
-    text-decoration: none;
     display: none;
-  }
-
-  &__catalog-pic {
-    margin-left: 5px;
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .heading {
     padding: 0;
-    margin-bottom: 2.688rem;
+    margin-bottom: 0;
 
     &__title {
-      margin-bottom: 2.375rem;
-    }
-
-    &__catalog-pic {
-      margin-left: 5px;
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+      line-height: 2.375rem;
     }
   }
 }
@@ -45,10 +35,6 @@
   .heading {
     &__title {
       margin-bottom: 2.5rem;
-    }
-
-    &__catalog-pic {
-      margin-left: 0.875rem;
     }
   }
 }

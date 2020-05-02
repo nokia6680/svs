@@ -65,69 +65,46 @@
 
 @media only screen and (min-width: $tablet) {
   .choice-list {
-    @include flex-setting(column, flex-start, flex-start);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    width: 100%;
-    height: auto;
-
     padding-top: 5px;
-    padding-left: 20px;
+    padding-left: 1.25rem;
     padding-bottom: 17px;
-    padding-right: 20px;
-
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-
-    &::-webkit-scrollbar {
-      width: 0;
-    }
+    padding-right: 1.25rem;
 
     &__item {
-      @include flex-setting(row, flex-start, center);
-      width: 100%;
-      height: 100%;
       min-height: 21px;
-
       margin-bottom: 5px;
-
-      position: relative;
     }
 
     &__label {
-      @include font-setting($primary-font, 0.875rem, 1.063rem, 500, $text-primary);
-
+      font-weight: 400;
+      font-size: 1rem;
       margin-right: 10px;
     }
 
     &__counter {
-      @include font-setting($primary-font, 0.875rem, 1.063rem, 500, #cacaca);
+      font-size: 1rem;
     }
 
-    &__checkbox + label {
-      @include checkbox-default;
-    }
+    &--cat {
+      padding-left: 0.625rem;
 
-    &__checkbox + label::before {
-      @include custom-checkbox;
+      .choice-list__label {
+        font-size: 0.875rem;
+        padding-left: 1.875rem;
+      }
     }
+  }
+}
 
-    &__checkbox:hover + label::before {
-      @include hover-checkbox;
-    }
+@media only screen and (min-width: $laptop-wide) {
+  .choice-list {
+    &--cat {
+      padding-left: 0.813rem;
 
-    &__checkbox:disabled + label::after {
-      @include checkbox-disabled;
-    }
-
-    &__checkbox:checked + label::after {
-      @include checkbox-checked;
-    }
-
-    &__checkbox:disabled + label {
-      color: #D7D8DA;
+      .choice-list__label {
+        font-size: 1rem;
+        padding-left: 2.25rem;
+      }
     }
   }
 }

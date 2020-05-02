@@ -2,7 +2,7 @@
   @include flex-setting(row, space-between, center);
   width: 100%;
 
-  margin-bottom: 3.75rem;
+  margin-bottom: 5rem;
 
   &__control {
     @include flex-setting(column, center, center);
@@ -18,7 +18,7 @@
     &:hover,
     &:active,
     &:hover {
-      border: 1px solid #84AA32;
+      border: 2px solid #84AA32;
       border-radius: 4px;
       transition: 0.1s ease-in;
     }
@@ -71,12 +71,14 @@
 
 @media only screen and (min-width: $tablet) {
   .pagination {
-    margin-bottom: 4.563rem;
+    margin-bottom: 5rem;
     width: auto;
 
     &__list {
       justify-content: center;
       width: auto;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
     }
 
     &__item {

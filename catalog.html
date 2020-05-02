@@ -47,6 +47,21 @@
 <body class="body" id="body">
 	<!--SVG sprite-->
 	<svg width="0" height="0" class="hidden">
+		<!--Icon phone blue-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-phone-blue">
+			<path d="M15.406.784c.396.083.594.323.594.718 0 4-1.417 7.416-4.25 10.249S5.5 16 1.501 16c-.396 0-.635-.198-.719-.594l-.75-3.25c-.104-.395.042-.676.438-.843l3.5-1.5c.333-.145.625-.072.875.22l1.53 1.874a10.784 10.784 0 0 0 3.25-2.28 11.324 11.324 0 0 0 2.282-3.25l-1.875-1.563c-.292-.229-.365-.52-.219-.874l1.5-3.5c.167-.375.448-.51.844-.406l3.25.75z"
+				fill="#00778B"></path>
+		</symbol>
+		<!--Icon envelope blue-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-mail-blue">
+			<path d="M19.031 0H1.97C.86 0 0 .86 0 1.875v11.25C0 14.18.861 15 1.969 15H19.03c1.068 0 1.97-.82 1.97-1.875V1.875C21 .859 20.098 0 19.031 0zm0 2c-.943.742-2.42 1.836-5.537 4.18-.697.508-2.05 1.758-2.994 1.718-.984.04-2.338-1.21-3.035-1.718C4.348 3.836 2.87 2.742 1.969 2H19.03zM1.97 13V4.422c.902.703 2.256 1.719 4.265 3.242.903.664 2.502 2.148 4.266 2.11 1.723.038 3.281-1.446 4.225-2.11a702.416 702.416 0 0 1 4.306-3.242L19 13H1.969z"
+				fill="#00778B"></path>
+		</symbol>
+		<!--Icon pin blue-->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-pin-blue">
+			<path d="M5.823 17.631a.775.775 0 0 0 1.32 0C12.086 10.256 13 9.483 13 6.743 13 3.02 10.088 0 6.5 0 2.878 0 0 3.02 0 6.743c0 2.74.88 3.513 5.823 10.888zM6.5 9.553c-1.523 0-2.708-1.23-2.708-2.81 0-1.545 1.185-2.81 2.708-2.81 1.49 0 2.708 1.265 2.708 2.81 0 1.58-1.218 2.81-2.708 2.81z"
+				fill="#00778B"></path>
+		</symbol>
 		<!--Icon search-->
 	  <symbol viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-search">
 	    <path d="M21.48 18.843c.17.213.298.468.298.723 0 .298-.128.553-.298.723l-1.19 1.191a.996.996 0 0 1-.724.298c-.298 0-.553-.085-.723-.298l-4.254-4.253c-.212-.17-.297-.426-.297-.724v-.68c-1.617 1.276-3.403 1.871-5.445 1.871-1.616 0-3.105-.382-4.466-1.19a8.215 8.215 0 0 1-3.19-3.19C.383 11.951 0 10.463 0 8.846 0 7.23.383 5.784 1.191 4.423c.766-1.362 1.829-2.425 3.19-3.233C5.742.425 7.231 0 8.847 0c1.617 0 3.063.425 4.424 1.191a9.056 9.056 0 0 1 3.232 3.233c.766 1.36 1.191 2.807 1.191 4.423 0 2.042-.638 3.87-1.871 5.445h.68c.256 0 .51.127.724.297l4.253 4.254zM8.847 14.292c.979 0 1.872-.213 2.722-.723.851-.468 1.49-1.106 2-1.957.467-.85.723-1.744.723-2.765 0-.978-.255-1.871-.723-2.722a5.627 5.627 0 0 0-2-2c-.85-.467-1.743-.722-2.722-.722-1.02 0-1.914.255-2.765.723-.85.51-1.488 1.148-1.956 1.999-.51.85-.723 1.744-.723 2.722 0 1.021.212 1.914.723 2.765a4.816 4.816 0 0 0 1.956 1.957c.851.51 1.744.723 2.765.723z"
@@ -241,14 +256,14 @@
 					</a>
 				</div>
 				<!--Menu description-->
-				<p class="header-nav__description">Производим средства защиты рук</p>
+				<p class="header-nav__description">Инновационные решения для защиты рук</p>
 				<!--Desktop menu-->
 				<ul class="header-nav__menu header-menu">
 					<li class="header-menu__item">
 						<a class="header-menu__link" href="catalog.html" target="_self" title="Продукция">Продукция</a>
 					</li>
 					<li class="header-menu__item">
-						<a class="header-menu__link" href="promotions.html" target="_self" title="Акции">Акции</a>
+						<a class="header-menu__link disabled" href="sales.html" target="_self" title="Акции">Акции</a>
 					</li>
 					<li class="header-menu__item">
 						<a class="header-menu__link" href="whywe.html" target="_self" title="Почему мы">Почему мы</a>
@@ -256,19 +271,19 @@
 					<li class="header-menu__item">
 						<a class="header-menu__link" href="about.html" target="_self" title="О нас">О нас</a>
 					</li>
+					<li class="header-menu__item">
+						<a class="header-menu__link" href="contacts.html" target="_self" title="Контакты">Контакты</a>
+					</li>
 				</ul>
 				<!--Mobile contacts-->
 				<div class="header-nav__contacts nav-contacts">
 					<a class="nav-contacts__link nav-contacts__link--tel" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
-					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
+					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:svs@svscompany.ru" target="_self">svs@svscompany.ru</a>
 				</div>
 				<!--Search button-->
 				<button class="header-nav__search" type="button">
 					<svg class="header-nav__search-pic header-nav__search-pic--closed" width="22" height="22">
 						<use xlink:href="#icon-search"></use>
-					</svg>
-					<svg class="header-nav__search-pic header-nav__search-pic--opened" width="22" height="22">
-						<use xlink:href="#icon-search-white"></use>
 					</svg>
 				</button>
 				<!--Menu button-->
@@ -276,21 +291,6 @@
 				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
 				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
 				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-				</div>
-				<!--Desktop contacts list-->
-				<div class="header-nav__service header-info">
-					<a class="header-info__title" href="contacts.html" target="_self" title="Контакты">Контакты</a>
-					<ul class="header-info__list">
-						<li class="header-info__item">
-							<a class="header-info__link" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
-						</li>
-						<li class="header-info__item">
-							<a class="header-info__link" href="mailto:mail@svscompany.ru" target="_self">mail@svscompany.ru</a>
-						</li>
-						<li class="header-info__item">
-							<button class="header-info__call" type="button">Заказать звонок</button>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</nav>
@@ -305,6 +305,11 @@
 					<form class="nav-menu__form" action="#" method="post" autocomplete="on">
 						<input class="nav-menu__search-input" type="search" name="search" id="search-1" placeholder="Поиск по сайту" />
 						<label class="nav-menu__search-input-btn" for="search-1"></label>
+						<button class="nav-menu__search-input-reset" type="button">
+							<svg class="nav-menu__search-reset" width="14" height="14">
+								<use xlink:href="#icon-cross-green"></use>
+							</svg>
+						</button>
 					</form>
 					<svg class="nav-menu__search-close" width="14" height="14">
 						<use xlink:href="#icon-cross-black"></use>
@@ -341,6 +346,9 @@
 										</span>
 										<span class="result-preview__item-sign result-preview__item-sign--sale">Акция %</span>
 									</div>
+									<p class="result-preview__item-description">
+										Описание перчатки описание перчатки описание замечательной перчатки
+									</p>
 								</li>
 								<!--Single item-->
 								<li class="result-preview__item">
@@ -364,29 +372,41 @@
 								</li>
 							</ul>
 							<a class="search-result__link" href="search-result.html" target="_self">Результаты поиска</a>
+							<button class="search-result__reset" type="button">Сбросить</button>
 						</div>
 					</div>
 				</div>
 				<div class="nav-menu__links">
+					<ul class="nav-menu__contacts nav-contacts nav-contacts--upper">
+						<li class="nav-contacts__item nav-contacts__item--mail">
+							<a class="nav-contacts__link" href="mailto:svs@svscompany.ru" target="_self">svs@svscompany.ru</a>
+						</li>
+						<li class="nav-contacts__item nav-contacts__item--tel">
+							<a class="nav-contacts__link" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
+						</li>
+						<li class="nav-contacts__item nav-contacts__item--call">
+							<button class="nav-contacts__call" type="button">Заказать звонок</button>
+						</li>
+					</ul>
 					<!--Mobile Menu list-->
 					<ul class="nav-menu__list nav-list">
 						<li class="nav-list__item nav-list__item--catalog">
 							<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
 						</li>
 						<li class="nav-list__item nav-list__item--sales">
-							<a class="nav-list__link" href="#" target="_self">Акции</a>
+							<a class="nav-list__link disabled" href="sales.html" target="_self">Акции</a>
 						</li>
 						<li class="nav-list__item nav-list__item--about">
-							<a class="nav-list__link" href="#" target="_self">О нас</a>
+							<a class="nav-list__link" href="about.html" target="_self">О нас</a>
 						</li>
 						<li class="nav-list__item nav-list__item--whywe">
-							<a class="nav-list__link" href="#" target="_self">Почему мы</a>
+							<a class="nav-list__link" href="whywe.html" target="_self">Почему мы</a>
 						</li>
 						<li class="nav-list__item nav-list__item--supply">
-							<a class="nav-list__link" href="#" target="_self">Поставщикам</a>
+							<a class="nav-list__link" href="supply.html" target="_self">Поставщикам</a>
 						</li>
 						<li class="nav-list__item nav-list__item--job">
-							<a class="nav-list__link" href="#" target="_self">Вакансии</a>
+							<a class="nav-list__link" href="vacancy.html" target="_self">Вакансии</a>
 						</li>
 						<li class="nav-list__item nav-list__item--contacts">
 							<a class="nav-list__link" href="contacts.html" target="_self">Контакты</a>
@@ -394,38 +414,12 @@
 					</ul>
 					<!--Menu service block-->
 					<div class="nav-menu__service nav-service">
-							<!--Lang switcher-->
-						<div class="nav-service__lang service-lang">
-							<svg class="service-lang__pic service-lang__pic--white" width="14" height="16">
-								<use xlink:href="#icon-globe-white"></use>
-							</svg>
-							<svg class="service-lang__pic service-lang__pic--black" width="12" height="13">
-								<use xlink:href="#icon-globe-black"></use>
-							</svg>
-							<ul class="service-lang__list lang-list">
-								<li class="lang-list__item">
-									<label class="lang-list__label" for="eng">Eng</label>
-									<input class="lang-list__radio visually-hidden" id="eng" name="lang" value="eng" />
-								</li>
-								<li class="lang-list__item">
-									<label class="lang-list__label" for="rus">Rus</label>
-									<input class="lang-list__radio visually-hidden" id="rus" name="lang" value="rus" />
-								</li>
-							</ul>
-						</div>
 						<!--Callback link-->
 						<a class="nav-service__call callback" href="#" target="_self" onclick="openbox('popup-callback');return false;">
-							<svg class="nav-service__pic nav-service__pic--phone" width="15" height="15">
-								<use xlink:href="#icon-phone-white"></use>
-							</svg>
 							Заказать звонок
 						</a>
 						<!--Desktop search btn-->
-						<button class="nav-service__search" type="button">
-							<svg class="nav-service__search-pic" width="22" height="22">
-								<use xlink:href="#icon-search"></use>
-							</svg>
-						</button>
+						<button class="nav-service__search" type="button"></button>
 					</div>
 				</div>
 			</div>
@@ -434,7 +428,7 @@
 	<!---->
 	<main class="main main--catalog">
 		<!---->
-		<section class="main__heading heading">
+		<div class="main__heading heading">
 			<!--Heading title in catalog page-->
 			<h1 class="heading__title">Каталог средств защиты рук</h1>
 			<!--Heading link to download catalog-->
@@ -444,7 +438,7 @@
 					<use xlink:href="#icon-filter-book"></use>
 				</svg>
 			</a>
-		</section>
+		</div>
 		<!--Main content zone-->
 		<section class="main__catalog catalog">
 			<div class="catalog__filter catalog-filter">
@@ -474,22 +468,22 @@
 							</svg>
 						</button>
 					</div>
-					<button class="filter-options__reset" type="reset">Сбросить</button>
+					<div class="filter-options__controls">
+						<button class="filter-options__btn filter-options__btn-expand" type="button">Развернуть все</button>
+						<button class="filter-options__btn filter-options__btn-reset" type="reset">Сбросить</button>
+					</div>
 					<div class="filter-options__choice filter-choice filter-choice--desktop">
 						<!--Single item-->
 						<div class="filter-choice__select">
 							<input class="filter-choice__checkbox" type="checkbox" id="base-block" name="checkbox-1" />
-							<label class="filter-choice__heading" for="base-block">
-								<svg class="filter-choice__heading-icon" width="16" height="18">
-									<use xlink:href="#icon-filter-1"></use>
-								</svg>
+							<label class="filter-choice__heading filter-1" for="base-block">
 								Основа
 								<svg class="filter-choice__heading-pic" width="18" height="10">
 									<use xlink:href="#icon-angle-down"></use>
 								</svg>
 							</label>
 							<div class="filter-choice__content">
-								<ul class="filter-choice__list choice-list" id="base-list">
+								<ul class="filter-choice__list choice-list choice-list--cat" id="base-list">
 									<li class="choice-list__item">
 										<input class="choice-list__checkbox visually-hidden" type="checkbox" name="cotton" id="base-1-1" disabled />
 										<label class="choice-list__label" for="base-1-1" >Натуральный хлопок</label>
@@ -521,17 +515,14 @@
 						<!--Single item-->
 						<div class="filter-choice__select">
 							<input class="filter-choice__checkbox" type="checkbox" id="cover-block" name="checkbox-2" />
-							<label class="filter-choice__heading" for="cover-block">
-								<svg class="filter-choice__heading-icon" width="16" height="18">
-									<use xlink:href="#icon-filter-2"></use>
-								</svg>
-								Материал покрытия
+							<label class="filter-choice__heading filter-2" for="cover-block">
+								Материал&nbsp;покрытия
 								<svg class="filter-choice__heading-pic" width="18" height="10">
 									<use xlink:href="#icon-angle-down"></use>
 								</svg>
 							</label>
 							<div class="filter-choice__content">
-								<ul class="filter-choice__list choice-list" id="cover-list">
+								<ul class="filter-choice__list choice-list choice-list--cat" id="cover-list">
 									<li class="choice-list__item">
 										<input class="choice-list__checkbox visually-hidden" type="checkbox" name="without" id="cover-1-1" />
 										<label class="choice-list__label" for="cover-1-1">Без покрытия</label>
@@ -558,17 +549,14 @@
 						<!--Single item-->
 						<div class="filter-choice__select">
 							<input class="filter-choice__checkbox" type="checkbox" id="covertype-block" name="checkbox-3" />
-							<label class="filter-choice__heading" for="covertype-block">
-								<svg class="filter-choice__heading-icon" width="18" height="18">
-									<use xlink:href="#icon-filter-6"></use>
-								</svg>
+							<label class="filter-choice__heading filter-3" for="covertype-block">
 								Тип покрытия
 								<svg class="filter-choice__heading-pic" width="18" height="10">
 									<use xlink:href="#icon-angle-down"></use>
 								</svg>
 							</label>
 							<div class="filter-choice__content">
-								<ul class="filter-choice__list choice-list" id="covertype-list">
+								<ul class="filter-choice__list choice-list choice-list--cat" id="covertype-list">
 									<li class="choice-list__item">
 										<input class="choice-list__checkbox visually-hidden" type="checkbox" name="plain" id="covertype-1-1" />
 										<label class="choice-list__label" for="covertype-1-1">Ровный</label>
@@ -595,17 +583,14 @@
 						<!--Single item-->
 						<div class="filter-choice__select">
 							<input class="filter-choice__checkbox" type="checkbox" id="class-block" name="checkbox-4" />
-							<label class="filter-choice__heading" for="class-block">
-								<svg class="filter-choice__heading-icon" width="18" height="18">
-									<use xlink:href="#icon-filter-5"></use>
-								</svg>
+							<label class="filter-choice__heading filter-4" for="class-block">
 								Класс вязки
 								<svg class="filter-choice__heading-pic" width="18" height="10">
 									<use xlink:href="#icon-angle-down"></use>
 								</svg>
 							</label>
 							<div class="filter-choice__content">
-								<ul class="filter-choice__list choice-list" id="class-list">
+								<ul class="filter-choice__list choice-list choice-list--cat" id="class-list">
 									<li class="choice-list__item">
 										<input class="choice-list__checkbox visually-hidden" type="checkbox" name="7 class" id="class-1-1" />
 										<label class="choice-list__label" for="class-1-1">7 класс</label>
@@ -632,17 +617,14 @@
 						<!--Single item-->
 						<div class="filter-choice__select">
 							<input class="filter-choice__checkbox" type="checkbox" id="usage-block" name="checkbox-5" />
-							<label class="filter-choice__heading" for="usage-block">
-								<svg class="filter-choice__heading-icon" width="18" height="15">
-									<use xlink:href="#icon-filter-4"></use>
-								</svg>
+							<label class="filter-choice__heading filter-5" for="usage-block">
 								Сферы применения
 								<svg class="filter-choice__heading-pic" width="18" height="10">
 									<use xlink:href="#icon-angle-down"></use>
 								</svg>
 							</label>
 							<div class="filter-choice__content">
-								<ul class="filter-choice__list choice-list" id="usage-list">
+								<ul class="filter-choice__list choice-list choice-list--cat" id="usage-list">
 									<li class="choice-list__item">
 										<input class="choice-list__checkbox visually-hidden" type="checkbox" name="house-repair-work" id="usage-1-1" />
 										<label class="choice-list__label" for="usage-1-1">Ремонт дома</label>
@@ -714,17 +696,14 @@
 						<!--Single item-->
 						<div class="filter-choice__select">
 							<input class="filter-choice__checkbox" type="checkbox" id="feature-block" name="checkbox-6" />
-							<label class="filter-choice__heading" for="feature-block">
-								<svg class="filter-choice__heading-icon" width="17" height="18">
-									<use xlink:href="#icon-filter-3"></use>
-								</svg>
+							<label class="filter-choice__heading filter-6" for="feature-block">
 								Защитные свойства
 								<svg class="filter-choice__heading-pic" width="18" height="10">
 									<use xlink:href="#icon-angle-down"></use>
 								</svg>
 							</label>
 							<div class="filter-choice__content">
-								<ul class="filter-choice__list choice-list" id="feature-list">
+								<ul class="filter-choice__list choice-list choice-list--cat" id="feature-list">
 									<li class="choice-list__item">
 										<input class="choice-list__checkbox visually-hidden" type="checkbox" name="no-dust" id="feature-1-1" />
 										<label class="choice-list__label" for="feature-1-1">Стойкие к пыли и грязи</label>
@@ -753,12 +732,45 @@
 						<a class="filter-options__submit" target="_self" href="catalog.html">
 							<span class="filter-options__submit-empty hidden">Показать все</span>
 							<span class="filter-options__submit-filtered">
-								<b class="filter-options__submit-count">4</b>
+								<b class="filter-options__submit-count">44</b>
 								<span class="filter-options__submit-text">Показать</span>
 							</span>
 						</a>
-						<button class="filter-options__cancel" type="reset">Сбросить</button>
+						<button class="filter-options__cancel filter-options__btn" type="reset">Сбросить</button>
 					</div>
+				</div>
+				<!--Блок с размерностями-->
+				<div class="catalog-filter__sizes catalog-sizes">
+					<h3 class="catalog-sizes__title">Размерный ряд</h3>
+					<p class="catalog-sizes__description">Для вашего удобства, цвет оверлока соответствует определённому размеру</p>
+					<ul class="catalog-sizes__list">
+						<li class="catalog-sizes__item item-1">
+							<b class="catalog-sizes__item-title">7 размер</b>
+							<span class="catalog-sizes__item-text">красный оверлок</span>
+							<spam class="catalog-sizes__item-text">Длина 24 см</spam>
+						</li>
+						<li class="catalog-sizes__item item-2">
+							<b class="catalog-sizes__item-title">8 размер</b>
+							<span class="catalog-sizes__item-text">жёлтый оверлок</span>
+							<spam class="catalog-sizes__item-text">Длина 25 см</spam>
+						</li>
+						<li class="catalog-sizes__item item-3">
+							<b class="catalog-sizes__item-title">9 размер</b>
+							<span class="catalog-sizes__item-text">коричневый оверлок</span>
+							<spam class="catalog-sizes__item-text">Длина 26 см</spam>
+						</li>
+						<li class="catalog-sizes__item item-4">
+							<b class="catalog-sizes__item-title">10 размер</b>
+							<span class="catalog-sizes__item-text">черный оверлок</span>
+							<spam class="catalog-sizes__item-text">Длина 28 см</spam>
+						</li>
+						<li class="catalog-sizes__item item-5">
+							<b class="catalog-sizes__item-title">11 размер</b>
+							<span class="catalog-sizes__item-text">синий оверлок</span>
+							<spam class="catalog-sizes__item-text">Длина 24 см</spam>
+						</li>
+					</ul>
+					<button class="catalog-sizes__expand" type="button">Все размеры</button>
 				</div>
 			</div>
 			<!--Small category filter-->
@@ -791,8 +803,11 @@
 							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
 							<!--Артикул-->
 							<p itemprop="sku" class="item__articul">Артикул: нет</p>
-							<!--Артикул-->
-							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
+							<!--Описание-->
+							<div class="item__options item__options--cat">
+								<span itemprop="description" class="item__options-item">Защита от масла</span>
+								<span itemprop="description" class="item__options-item">Очень прочные и долговечные</span>
+							</div>
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -844,8 +859,11 @@
 							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
 							<!--Артикул-->
 							<p itemprop="sku" class="item__articul empty">Артикул: нет</p>
-							<!--Артикул-->
-							<p itemprop="description" class="item__options empty">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
+							<!--Описание-->
+							<div class="item__options item__options--cat">
+								<span itemprop="description" class="item__options-item">Защита от масла</span>
+								<span itemprop="description" class="item__options-item">Очень прочные и долговечные</span>
+							</div>
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -897,9 +915,11 @@
 							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
 							<!--Артикул-->
 							<p itemprop="sku" class="item__articul">Артикул: нет</p>
-							<!--Артикул-->
-							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
-
+							<!--Описание-->
+							<div class="item__options item__options--cat">
+								<span itemprop="description" class="item__options-item">Защита от масла</span>
+								<span itemprop="description" class="item__options-item">Очень прочные и долговечные</span>
+							</div>
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -957,9 +977,11 @@
 							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
 							<!--Артикул-->
 							<p itemprop="sku" class="item__articul">Артикул: нет</p>
-							<!--Артикул-->
-							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
-
+							<!--Описание-->
+							<div class="item__options item__options--cat">
+								<span itemprop="description" class="item__options-item">Защита от масла</span>
+								<span itemprop="description" class="item__options-item">Очень прочные и долговечные</span>
+							</div>
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -1017,9 +1039,11 @@
 							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
 							<!--Артикул-->
 							<p itemprop="sku" class="item__articul">Артикул: нет</p>
-							<!--Артикул-->
-							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
-
+							<!--Описание-->
+							<div class="item__options item__options--cat">
+								<span itemprop="description" class="item__options-item">Защита от масла</span>
+								<span itemprop="description" class="item__options-item">Очень прочные и долговечные</span>
+							</div>
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -1077,9 +1101,12 @@
 							<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
 							<!--Артикул-->
 							<p itemprop="sku" class="item__articul">Артикул: нет</p>
-							<!--Артикул-->
-							<p itemprop="description" class="item__options">Универсальные; Универсальные; очень долговеч очень долговечные; ПВХ гель; прочные.</p>
-
+							<!--Описание-->
+							<div class="item__options item__options--cat">
+								<span itemprop="description" class="item__options-item">Защита от масла</span>
+								<span itemprop="description" class="item__options-item">Очень прочные и долговечные</span>
+								<span itemprop="description" class="item__options-item">Защита от масла</span>
+							</div>
 							<!--Планки скидок, акций, выбора цвета-->
 							<div class="item__controls">
 								<!--Новинка-->
@@ -1157,18 +1184,53 @@
 				</div>
 			</div>
 		</section>
-		<!---->
-		<section class="main__seoblock seoblock">
-			<h2 class="seoblock__title">Какой то странный заголовок</h2>
-			<p class="seoblock__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-				ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</section>
 	</main>
 	<!--Footer-->
 	<footer class="footer">
 		<nav class="footer__nav footer-nav">
+			<!--Footer information-->
+			<div class="footer-nav__contacts footer-contacts">
+				<div class="footer-contacts__wrap">
+					<div class="footer-contacts__logo">
+						<img class="footer-contacts__logo-pic" src="img/logo-gray.svg" alt="СВС" />
+					</div>
+					<ul class="footer-contacts__list">
+						<li class="footer-contacts__list-item">
+							<!--Link to call-->
+							<a class="footer-contacts__info" href="tel:+74951321622" target="_self" title="Контактный номер телефона">
+								<svg class="footer-contacts__pic footer-contacts__pic--call" width="16" height="16">
+									<use xlink:href="#icon-phone-blue"></use>
+								</svg>
+								+7 (495) 132-16-22
+							</a>
+						</li>
+						<li class="footer-contacts__list-item">
+							<!--Link to call-->
+							<a class="footer-contacts__info" href="mailto:svs@svscompany.ru" target="_self" title="Контактный номер телефона">
+								<svg class="footer-contacts__pic footer-contacts__pic--mail" width="21" height="15">
+									<use xlink:href="#icon-mail-blue"></use>
+								</svg>
+								svs@svscompany.ru
+							</a>
+						</li>
+						<li class="footer-contacts__list-item">
+							<!--Schedule-->
+							<b class="footer-contacts__info footer-contacts__info--map">
+								<svg class="footer-contacts__pic footer-contacts__pic--pin" width="13" height="18">
+									<use xlink:href="#icon-pin-blue"></use>
+								</svg>
+								109431,&nbsp;г.&nbsp;Москва, ул.&nbsp;Привольная, д.&nbsp;70,&nbsp;корп.&nbsp;1
+							</b>
+						</li>
+					</ul>
+					<!--Callback button-link-->
+					<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
+						Заказать звонок
+					</a>
+				</div>
+			</div>
 			<!--Footer navi-->
-			<div class="footer-nav__wrap">
+			<div class="footer-nav__links">
 				<ul class="footer-nav__menu footer-menu">
 					<li class="footer-menu__item">
 						<a class="footer-menu__link" href="catalog.html" title="" target="_self">Продукция</a>
@@ -1195,43 +1257,13 @@
 						<a class="footer-menu__link" href="#" title="" target="_self">In English</a>
 					</li>
 				</ul>
-			</div>
-			<!--Footer information-->
-			<div class="footer-nav__contacts footer-contacts">
-				<div class="footer-contacts__wrap">
-					<div class="footer-contacts__info">
-						<ul class="footer-contacts__list">
-							<li class="footer-contacts__list-item">
-								<!--Link to call-->
-								<a class="footer-contacts__info-call" href="tel:+74959899605" target="_self" title="Контактный номер телефона">
-									<svg class="footer-contacts__pic footer-contacts__pic--call" width="15" height="15">
-										<use xlink:href="#icon-phone-green"></use>
-									</svg>
-									+7 (495) 989-96-05
-								</a>
-							</li>
-							<li class="footer-contacts__list-item">
-								<!--Schedule-->
-								<b class="footer-contacts__info-time">
-									<svg class="footer-contacts__pic footer-contacts__pic--time" width="14" height="15">
-										<use xlink:href="#icon-clock-green"></use>
-									</svg>
-									Пн&mdash;Пт&nbsp;с&nbsp;9&nbsp;до&nbsp;18
-								</b>
-							</li>
-						</ul>
-						<!--Callback button-link-->
-						<a class="footer-contacts__callback-link callback" href="#" target="_self" title="Заказать обратный звонок" onclick="openbox('popup-callback');return false;">
-							Заказать звонок
-						</a>
-					</div>
-				</div>
+				<b class="footer-nav__origin">Сделано&nbsp;в&nbsp;России</b>
 			</div>
 			<!--Footer legal information-->
 			<div class="footer-nav__legal footer-legal">
 				<div class="footer-legal__wrap">
-					<span class="footer-legal__copyright">&copy; ООО &laquo;СВС Ритейл&raquo;, 2019</span>
-					<a class="footer-legal__policy" href="#" target="_blank" title="Политика обработки персональных данных">Политика обработки персональных данных</a>
+					<span class="footer-legal__copyright">&copy; ООО &laquo;СВС&raquo;, 2020 &mdash; Все права защищены.&nbsp;</span>
+					<a class="footer-legal__policy" href="#" target="_blank" title="Политика обработки персональных данных"> Политика обработки персональных данных</a>
 				</div>
 				<span class="footer-legal__development">Разработка &mdash; <a class="footer-legal__development-link" href="https://mediaaid.ru/" target="_blank" title="Разработано в компании Mediaiad Design">mediaaid.ru</a></span>
 			</div>

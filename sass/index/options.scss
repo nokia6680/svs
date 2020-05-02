@@ -75,3 +75,41 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .options {
+    max-width: 944px;
+
+    margin-bottom: 8.313rem;
+    align-items: center;
+
+    &__visual {
+      max-width: 498px;
+      width: 498px;
+    }
+
+    &__container {
+      width: 460px;
+      max-width: 460px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .options {
+    max-width: 1200px;
+    margin-bottom: 13.125rem;
+
+    &__visual {
+      max-width: 728px;
+      width: 728px;
+    }
+
+    &__container {
+      margin-top: 4.125rem;
+      margin-right: 5rem;
+      width: 392px;
+      max-width: 392px;
+    }
+  }
+}

@@ -58,6 +58,11 @@
     margin-bottom: 1.25rem;
   }
 
+  &__subhead {
+    @include font-setting($title-font, 1.125rem, 1.25rem, 600, $text-primary);
+    margin-bottom: 0.625rem;
+  }
+
   &__description {
     @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
     margin: 0;
@@ -104,10 +109,15 @@
 
     align-self: center;
 
-    width: 200px;
+    width: 220px;
     height: 60px;
 
     border-radius: 5px;
+
+    cursor: pointer;
+    outline: none;
+
+    transition: 0.1s ease-in;
 
     &:hover,
     &:active {
@@ -118,38 +128,70 @@
 
 @media only screen and (min-width: $tablet) {
   .about {
-    margin-bottom: 1.875rem;
+    margin-bottom: 5rem;
     padding: 0;
 
     width: 100%;
     max-width: 688px;
 
     transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+
+    &__container {
+      max-height: 244px;
+      min-height: 244px;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+      line-height: 2.25rem;
+      max-width: 80%;
+      margin-bottom: 2.5rem;
+    }
+
+    &__subhead {
+      font-size: 1.375rem;
+    }
+
+    &__description {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      margin-bottom: 0.875rem;
+
+      &-head {
+        font-size: 1.25rem;
+      }
+    }
+
+    &__expand {
+      align-self: flex-start;
+    }
   }
 }
 
 @media only screen and (min-width: $laptop) {
   .about {
-    margin-bottom: 2.5rem;
+    margin-bottom: 8.125rem;
     max-width: 944px;
 
-    &__title {
-      font-size: 2rem;
-      line-height: 2.375rem;
-      margin-bottom: 2.5rem;
+    &__subtitle {
+      max-width: 50%;
     }
   }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .about {
-    margin-bottom: 2.688rem;
+    margin-bottom: 6.25rem;
     max-width: 1200px;
 
-    &__title {
+    &__subtitle {
       font-size: 2rem;
-      line-height: 2.375rem;
-      margin-bottom: 2.688rem;
+      line-height: 2.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &__expand {
+      font-size: 1.25rem;
     }
   }
 }

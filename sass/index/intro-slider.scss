@@ -86,7 +86,7 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: $btn-hover;
+      background-color: $more-hover;
       transition: 0.1s ease-in;
     }
   }
@@ -199,6 +199,7 @@
 @media only screen and (min-width: $laptop) {
   .intro-slider {
     &__wrap {
+      align-self: center;
       max-width: 944px;
     }
 
@@ -223,6 +224,7 @@
 
     &__wrap {
       padding-top: 4.688rem;
+      padding-bottom: 0;
       max-width: 1200px;
     }
 

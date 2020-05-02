@@ -1,0 +1,252 @@
+.catalog-sizes {
+  display: none;
+}
+
+@media only screen and (min-width: $tablet) {
+  .catalog-sizes {
+    width: 216px;
+
+    @include flex-setting(column, flex-start, center);
+
+    border: 2px solid #C1CAD5;
+    border-radius: 5px;
+
+    padding: 1.25rem 1.25rem;
+
+    margin-bottom: 2.5rem;
+
+    &__title {
+      width: 100%;
+      position: relative;
+
+      @include font-setting($primary-font, 1.125rem, 1.25rem, 700, $text-primary);
+
+      padding-left: 1.938rem;
+      margin: 0;
+      margin-bottom: 1.25rem;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 21px;
+        height: 20px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M0 0h21v20H0z'/%3E%3Cpath fill='none' d='M-62-934h768v2714H-62z'/%3E%3Cmask id='a' fill='%23fff'%3E%3Cpath d='M0 5.5c0-2.76142 2.23858-5 5-5h11c2.7614 0 5 2.23858 5 5v9c0 2.7614-2.2386 5-5 5H5c-2.76142 0-5-2.2386-5-5v-9z'/%3E%3C/mask%3E%3Cpath d='M5 10l-.75926-.65079L3.68292 10l.55782.6508L5 10zm11 0l.7593.6508.5578-.6508-.5578-.65079L16 10zm-7.24074 2.8492l-3-3.49999-1.51852 1.30159 3 3.5 1.51852-1.3016zm-3-2.1984l3-3.50001-1.51852-1.30158-3 3.5 1.51852 1.30159zm8.00004 3.5l3-3.5-1.5186-1.30159-3 3.49999 1.5186 1.3016zm3-4.80159l-3-3.5-1.5186 1.30158 3 3.50001 1.5186-1.30159zM5 2.5h11v-4H5v4zm14 3v9h4v-9h-4zm-3 12H5v4h11v-4zm-14-3v-9h-4v9h4zm3 3c-1.65685 0-3-1.3431-3-3h-4c0 3.866 3.13401 7 7 7v-4zm14-3c0 1.6569-1.3431 3-3 3v4c3.866 0 7-3.134 7-7h-4zm-3-12c1.6569 0 3 1.34315 3 3h4c0-3.86599-3.134-7-7-7v4zm-11-4c-3.86599 0-7 3.13401-7 7h4c0-1.65685 1.34315-3 3-3v-4z' fill='%2384AA32' mask='url(%23a)'/%3E%3Crect x='-21' y='-21' width='214' height='228' rx='4' stroke='%23C1CAD5' stroke-width='2'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+
+        top: -2px;
+        left: 0;
+      }
+    }
+
+    &__description {
+      @include font-setting($primary-font, 1rem, 1.25rem, 400, $text-primary);
+      margin: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    &__list {
+      width: 100%;
+
+      @include flex-setting(column, flex-start, flex-start);
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      margin-bottom: 1.875rem;
+    }
+
+    &__item {
+      width: 100%;
+
+      @include flex-setting(column, flex-start, flex-start);
+
+      padding-left: 2.5rem;
+      margin-bottom: 1.25rem;
+
+      position: relative;
+
+      &-title {
+        @include font-setting($primary-font, 0.875rem, 1rem, 700, $text-primary);
+      }
+
+      &-text {
+        @include font-setting($primary-font, 0.875rem, 1rem, 400, $text-primary);
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 30px;
+        height: 40px;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &.item-1 {
+        &::after {
+          background-image: url('../img/7.svg');
+        }
+      }
+
+      &.item-2 {
+        &::after {
+          background-image: url('../img/8.svg');
+        }
+      }
+
+      &.item-3 {
+        &::after {
+          background-image: url('../img/9.svg');
+        }
+      }
+
+      &.item-4 {
+        &::after {
+          background-image: url('../img/10.svg');
+        }
+      }
+
+      &.item-5 {
+        &::after {
+          background-image: url('../img/11.svg');
+        }
+      }
+    }
+
+    &__expand {
+      align-self: flex-start;
+      @include font-setting($primary-font, 1.125rem, 1rem, 700, #828C98);
+      letter-spacing: 0.01em;
+
+      background-color: transparent;
+      border: none;
+
+      padding: 0;
+
+      cursor: pointer;
+      outline: none;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 15px;
+        height: 9px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6.5 6L14 1' stroke='%23828C98' stroke-width='2'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        right: -1.25rem;
+        top: 5px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $link-hover;
+        border-color: $link-hover;
+        transition: 0.1s ease-in-out;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .catalog-sizes {
+    width: 280px;
+
+    padding-bottom: 2rem;
+
+    &__description {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      margin-bottom: 1.875rem;
+    }
+
+    &__item {
+      padding-left: 3.25rem;
+      margin-bottom: 1.875rem;
+
+      position: relative;
+
+      &-title {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+
+      &-text {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &::after {
+        width: 37px;
+        height: 49px;
+      }
+    }
+
+    &__expand {
+      align-self: flex-start;
+      @include font-setting($primary-font, 1.125rem, 1rem, 700, #828C98);
+      letter-spacing: 0.01em;
+
+      background-color: transparent;
+      border: none;
+
+      padding: 0;
+
+      cursor: pointer;
+      outline: none;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 15px;
+        height: 9px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6.5 6L14 1' stroke='%23828C98' stroke-width='2'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        right: -1.25rem;
+        top: 5px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $link-hover;
+        border-color: $link-hover;
+        transition: 0.1s ease-in-out;
+      }
+    }
+  }
+}

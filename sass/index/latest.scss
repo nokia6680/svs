@@ -31,7 +31,7 @@
 
     align-self: center;
 
-    width: 200px;
+    width: 220px;
     height: 60px;
 
     border-radius: 5px;
@@ -63,7 +63,7 @@
 
       width: 100%;
 
-      margin-bottom: 3.75rem;
+      margin-bottom: 1.25rem;
     }
 
     &__link {
@@ -74,21 +74,19 @@
 
 @media only screen and (min-width: $laptop) {
   .latest {
-    padding: 0;
-
-    margin-bottom: 4.625rem;
+    margin-bottom: 7.5rem;
     max-width: 944px;
 
     &__title {
-      margin-bottom: 2.188rem;
       font-size: 2rem;
-      line-height: 2.375rem;
+      line-height: 2.25rem;
+      margin-bottom: 2.5rem;
     }
 
     &__container {
       justify-content: flex-start;
 
-      margin-bottom: 4.75rem;
+      margin-bottom: 1.25rem;
     }
 
     &__item {
@@ -106,15 +104,20 @@
     max-width: 1200px;
 
     &__container {
-      margin-bottom: 3.75rem;
+      margin-bottom: 1.625rem;
     }
 
     &__item {
       margin-right: 1.25rem;
+      margin-bottom: 2.25rem;
     }
 
     &__item:nth-child(4n+4) {
       margin-right: 0;
+    }
+
+    &__link {
+      font-size: 1.25rem;
     }
   }
 }

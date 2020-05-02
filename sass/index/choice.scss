@@ -182,17 +182,18 @@
   .choice {
     max-width: 944px;
 
-    position: relative;
-
     &__title {
       font-size: 2rem;
-      line-height: 2.375rem;
-      margin-bottom: 2.375rem;
+      line-height: 2.75rem;
+      margin-bottom: 2rem;
+    }
+
+    &__expand {
+      margin-bottom: 2.188rem;
     }
 
     &__wrap {
-      max-width: 600px;
-
+      max-width: 100%;
       margin-bottom: 2.5rem;
     }
   }
@@ -201,35 +202,28 @@
 @media only screen and (min-width: $laptop-wide) {
   .choice {
     max-width: 1200px;
-    margin-bottom: 3.75rem;
+    margin-bottom: 11.25rem;
 
-    &::after {
-      position: absolute;
-      content: '';
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-      width: 886px;
-      height: 489px;
+    &__title {
+      width: 100%;
+    }
 
-      background-size: contain;
-
-      top: 0px;
-      right: -17%;
+    &__expand {
+      margin-left: 0;
+      margin-right: 10rem;
     }
 
     &__reset {
       margin-left: 5.25rem;
     }
 
-    &__title {
-      font-size: 2rem;
-      line-height: 2.375rem;
-      margin-bottom: 2.375rem;
-    }
-
     &__wrap {
-      max-width: 600px;
-
-      margin-bottom: 2.5rem;
+      max-width: 920px;
+      margin-bottom: 0;
     }
   }
 }

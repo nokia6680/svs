@@ -104,10 +104,8 @@
 
     &:hover,
     &:active {
-      @include btn-hover;
-      &::before {
-        @include btn-hover;
-      }
+      background-color: $btn-hover;
+      transition: 0.1s ease-in;
     }
   }
 }

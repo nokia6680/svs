@@ -3,7 +3,7 @@
 
   @include flex-setting(column, center, center);
 
-  margin-bottom: 2.063rem;
+  margin-bottom: 1.875rem;
 
   &__heading {
     @include flex-setting(row, space-between, center);
@@ -73,21 +73,6 @@
     margin-right: 0.625rem;
 
     padding: 0;
-
-    &::before {
-      position: absolute;
-      content: '';
-
-      width: 1px;
-      height: 28px;
-
-      background-color: #E4D9C6;
-
-      top: 50%;
-      left: -5px;
-
-      transform: translateY(-50%);
-    }
   }
   /*Кнопка переключения вида каталога*/
   &__toggle {

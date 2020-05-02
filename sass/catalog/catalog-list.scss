@@ -12,7 +12,7 @@
     .item {
       width: 46.4%;
 
-      min-height: 395px;
+      min-height: 330px;
 
       padding: 0.438rem 0.438rem;
       padding-bottom: 1rem;
@@ -51,27 +51,23 @@
       }
 
       &__description {
-        font-size: 0.688rem;
+        font-size: 0.625rem;
         line-height: 0.75rem;
         font-weight: 700;
-
-        max-height: 30px;
-        min-height: 30px;
 
         padding: 0;
         margin-bottom: 0.625rem;
       }
 
       &__articul {
-        font-size: 0.75rem;
+        font-size: 0.625rem;
       }
 
       &__options {
-        font-size: 0.75rem;
-        line-height: 0.875rem;
-
-        min-height: 70px;
-        max-height: 70px;
+        &-item {
+          font-size: 0.625rem;
+          line-height: 0.875rem;
+        }
       }
     }
   }

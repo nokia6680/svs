@@ -45,6 +45,7 @@ document.querySelector('.header-nav__toggle').onclick = function(){
 	MenuButton.classList.toggle('open');
 	MenuWrap.classList.toggle('active');
 	SearchBtn.classList.toggle('active');
+  NavMenu.classList.toggle('active');
 	Contacts.classList.toggle('active');
 };
 

@@ -1,5 +1,6 @@
 .catalog {
-  padding: 0 0.625rem;
+  padding: 0 1.25rem;
+  @include flex-setting(column, flex-start, center);
 
   &__wrapper {
     width: 100%;
@@ -10,7 +11,7 @@
     align-self: center;
 
     @include flex-setting(column, center, center);
-    @include font-setting($title-font, 1.125rem, 1.563rem, 700, $text-secondary);
+    @include font-setting($title-font, 1.25rem, 1.625rem, 600, $text-secondary);
 
     width: 280px;
     height: 60px;
@@ -20,7 +21,7 @@
 
     text-decoration: none;
 
-    margin-bottom: 1.875rem;
+    margin-bottom: 2.5rem;
 
     &:hover,
     &:active {
