@@ -7,29 +7,41 @@
   margin-bottom: 3.063rem;
 
   &__title {
-    @include font-setting($title-font, 1.125rem, 1.313rem, 500, $text-primary);
+    @include font-setting($title-font, 1.375rem, 1.5rem, 600, $text-primary);
 
     margin: 0;
-    margin-bottom: 1.313rem;
+    margin-bottom: 1.25rem;
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .advantages {
     padding: 0;
-    margin-bottom: 4.875rem;
+    margin-bottom: 3.75rem;
 
     &__title {
       font-size: 1.75rem;
-      line-height: 2.063rem;
-      margin-bottom: 1.875rem;
+      line-height: 2rem;
+      margin-bottom: 2.5rem;
     }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .advantages {
+    margin-bottom: 3.125rem;
   }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .advantages {
     padding: 0;
-    margin-bottom: 4.25rem;
+    margin-bottom: 4.063rem;
+
+    &__title {
+      font-size: 2rem;
+      line-height: 2.75rem;
+      margin-bottom: 1.875rem;
+    }
   }
 }

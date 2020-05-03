@@ -12,19 +12,56 @@
     @include flex-setting(column, flex-start, center);
   }
 
-  &__control {
-    display: none;
+  &__expand {
+    align-self: flex-start;
+    @include font-setting($primary-font, 1rem, 1rem, 700, #828C98);
+    letter-spacing: 0.01em;
+
+    background-color: transparent;
+    border: none;
+
+    padding: 0;
+
+    cursor: pointer;
+    outline: none;
+
+    margin-bottom: 1.25rem;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 15px;
+      height: 9px;
+
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6.5 6L14 1' stroke='%23828C98' stroke-width='2'/%3E%3C/svg%3E");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      right: -1.25rem;
+      top: 5px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-hover;
+      border-color: $link-hover;
+      transition: 0.1s ease-in-out;
+    }
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .details {
     width: 100%;
-
     padding: 0;
 
     &__description {
-      margin-bottom: 3rem;
+      margin-bottom: 3.75rem;
 
       @include flex-setting(row, space-between, flex-start);
 
@@ -38,52 +75,32 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     position: relative;
 
-    padding-top: 38px;
-    margin-bottom: 5rem;
-
-    &__control {
-      @include flex-setting(row, flex-start, center);
-
-      width: auto;
-      position: absolute;
-
-      top: 0;
-    }
+    margin-bottom: 6.25rem;
 
     &__expand {
-      border: none;
-      background-color: transparent;
-
-      cursor: pointer;
-      outline: none;
-
-      position: relative;
-
-      @include font-setting($primary-font, 0.875rem, 1.188rem, 600, #828C98);
-    }
-
-    &__expand-pic {
-      margin-top: 2px;
-      transform: rotate(180deg);
-      transition: 0.2s ease-in;
-
-      &.open {
-        transform: rotate(0);
-        transition: 0.2s ease-in;
-      }
+      width: auto;
+      margin-right: 50%;
     }
 
     &__description {
       width: auto;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0;
       justify-content: flex-start;
     }
 
     &__list {
       margin-right: 1.25rem;
+      margin-bottom: 0;
     }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .details {
+    margin-bottom: 8.75rem;
   }
 }

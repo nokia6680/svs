@@ -18,22 +18,19 @@
     max-width: 688px;
 
     &__item {
-      margin-bottom: 1.25rem;
+      margin-bottom: 2.5rem;
     }
   }
 }
 
 @media only screen and (min-width: $laptop) {
   .similar-list {
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
     max-width: 944px;
 
     &__item {
       margin-right: 1.125rem;
+      margin-bottom: 1.125rem;
 
       &:nth-child(4n+4) {
         margin-right: 0;

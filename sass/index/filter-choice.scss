@@ -61,7 +61,7 @@
       text-decoration: none;
       position: relative;
 
-      padding-left: 3.188rem;
+      padding-left: 3.125rem;
       padding-right: 0.933rem;
       padding-top: 1.25rem;
       padding-bottom: 1.25rem;
@@ -77,7 +77,7 @@
         @include flex-setting(column, center, center);
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        width: 51px;
+        width: 50px;
         height: 60px;
 
         left: 0;
@@ -167,19 +167,43 @@
     margin-bottom: 0;
 
     .filter-choice__heading {
-      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      padding-right: 0.433rem;
 
-      &--turned {
-        max-height: 60px;
-        min-height: 60px;
+      &.details-1 {
+        &::after {
+          background-image: url('../img/detail-1.svg');
+          background-size: 31px 26px;
+        }
       }
-    }
 
-    .filter-choice__heading-icon {
-      &--turned {
-        transform: scale(0.9);
-        margin-left: -0.625rem;
-        margin-right: 0.25rem;
+      &.details-2 {
+        &::after {
+          background-image: url('../img/detail-2.svg');
+          background-size: 26px 40px;
+        }
+      }
+
+      &.details-3 {
+        &::after {
+          background-image: url('../img/detail-3.svg');
+          background-size: 28px 28px;
+        }
+      }
+
+      &.details-4 {
+        &::after {
+          background-image: url('../img/detail-4.svg');
+          background-size: 27px 26px;
+        }
+      }
+
+      &.details-5 {
+        &::after {
+          background-image: url('../img/detail-5.svg');
+          background-size: 26px 30px;
+        }
       }
     }
   }
@@ -242,31 +266,7 @@
       margin-bottom: 0;
 
       .filter-choice__heading {
-        font-size: 1.05rem;
-        line-height: 1.188rem;
-        height: 55px;
-
-        padding-left: 1.25rem;
-        padding-right: 0.625rem;
-        padding-top: 1.063rem;
-        padding-bottom: 1.063rem;
-      }
-
-      .filter-choice__heading-icon {
-        display: block;
-        min-width: 22px;
-      }
-
-      .filter-choice__heading--turned {
-        padding-left: 3.375rem;
-      }
-
-      .filter-choice__heading-icon--turned {
-        position: absolute;
-        left: 0.625rem;
-
-        margin-left: 0;
-        transform: none;
+        padding-right: 0.938rem;
       }
     }
 
@@ -356,7 +356,11 @@
     }
 
     &--card {
-      width: 300px;
+      width: 345px;
+
+      .filter-choice__heading {
+        padding-right: 1.188rem;
+      }
     }
 
     &--desktop {
@@ -445,7 +449,7 @@
     }
 
     &--card {
-      width: 418px;
+      width: 463px;
     }
 
     &--desktop {

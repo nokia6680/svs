@@ -16,15 +16,31 @@
   &__link {
     width: 100%;
     height: 100%;
-
-    @include flex-setting(row, flex-start, center);
-    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    @include font-setting($primary-font, 1.125rem, 1.188rem, 400, $text-primary);
 
     text-decoration: none;
-  }
 
-  &__link-pic {
-    margin-right: 0.625rem;
+    padding-left: 2rem;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 18px;
+      height: 14px;
+
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1L2 8l7 7M4 8h16' stroke='%2384AA32' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      top: 40%;
+      left: 0;
+
+      transform: translateY(-50%);
+    }
   }
 }
 
@@ -33,15 +49,19 @@
     padding: 0;
 
     &--upper {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .return {
+    &--upper {
       margin-bottom: 2.25rem;
     }
 
     &--lower {
-      margin-bottom: 3.563rem;
-    }
-
-    &__link-pic {
-      margin-right: 1.25rem;
+      margin-bottom: 6.25rem;
     }
   }
 }
