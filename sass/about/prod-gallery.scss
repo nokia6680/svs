@@ -4,9 +4,13 @@
   @include flex-setting(column, flex-start, center);
 
   &__title {
-    @include font-setting($title-font, 1.375rem, 1.5rem, 500, $text-primary);
+    @include font-setting($title-font, 1.75rem, 2rem, 700, $text-primary);
     margin: 0;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.25rem;
+
+    align-self: flex-start;
+
+    padding-left: 0.625rem;
   }
 
   &__wrap {
@@ -37,7 +41,7 @@
     margin-bottom: 0.625rem;
 
     .prod-gallery__frame {
-      width: 45%;
+      width: 48%;
       height: 100px;
       background-color: #cacaca;
     }
@@ -63,10 +67,11 @@
 @media only screen and (min-width: $tablet) {
   .prod-gallery {
     &__title {
-      font-size: 1.75rem;
-      line-height: 2.063rem;
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 3.75rem;
 
-      align-self: flex-start;
+      padding-left: 0;
     }
 
     &__wrap {
@@ -113,6 +118,13 @@
 
 @media only screen and (min-width: $laptop) {
   .prod-gallery {
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 3.75rem;
+
+      padding-left: 0;
+    }
     &__left {
       width: 70%;
       height: 534px;

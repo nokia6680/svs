@@ -3,6 +3,9 @@
 
   @include flex-setting(column, flex-start, flex-start);
 
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+
   &__info {
     width: 100%;
 
@@ -25,7 +28,9 @@
 @media only screen and (min-width: $tablet) {
   .company-heading {
     width: 100%;
-
+    padding-left: 0;
+    padding-right: 0;
+    
     @include flex-setting(column, flex-start, flex-start);
 
     &__info {

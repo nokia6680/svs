@@ -7,20 +7,22 @@
   @include flex-setting(column, flex-start, flex-start);
 
   &__title {
-    @include font-setting($title-font, 1.125rem, 1.625rem, 500, $text-primary);
-
-    width: 100%;
+    @include font-setting($title-font, 1.75rem, 2rem, 700, $text-primary);
     margin: 0;
-    margin-bottom: 0.625rem;
+    margin-bottom: 2.25rem;
+
+    align-self: flex-start;
+
+    padding-left: 0.625rem;
   }
 
   &__description {
-    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
+    @include font-setting($primary-font, 1rem, 1.25rem, 400, $text-primary);
     text-align: left;
     align-self: flex-start;
 
     margin: 0;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.5rem;
 
     width: 100%;
   }
@@ -37,17 +39,21 @@
       width: 100%;
       @include flex-setting(column, flex-start, flex-start);
 
-      margin-bottom: 0.625rem;
+      margin-bottom: 2.5rem;
     }
 
     &-year {
-      @include font-setting($primary-font, 1.125rem, 1.188rem, 700, $text-primary);
-      margin-bottom: 0.625rem;
+      @include font-setting($title-font, 1.5rem, 1.188rem, 700, $text-primary);
+      text-align: center;
+      padding-bottom: 0.938rem;
+
+      border-bottom: 2px solid #C9E2E6;
+      margin-bottom: 2rem;
     }
 
     &-description {
-      @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
-      margin-bottom: 0.625rem;
+      @include font-setting($primary-font, 1rem, 1.25rem, 400, $text-primary);
+      margin-bottom: 0;
 
       width: 100%;
     }

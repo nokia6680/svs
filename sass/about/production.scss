@@ -1,4 +1,28 @@
 .production {
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.75rem;
+
+  @include flex-setting(column, flex-start, flex-start);
+
+  &__title {
+    @include font-setting($title-font, 1.75rem, 2rem, 700, $text-primary);
+    margin: 0;
+    margin-bottom: 2.25rem;
+
+    align-self: flex-start;
+
+    padding-left: 0.625rem;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .production {
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 3.75rem;
+
+      padding-left: 0;
+    }
+  }
 }
