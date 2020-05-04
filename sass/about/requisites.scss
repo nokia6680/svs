@@ -1,6 +1,13 @@
 .requisites {
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.75rem;
+
+  @include flex-setting(column, flex-start, center);
+
+  &__title {
+    align-self: flex-start;
+    @extend .production__title;
+  }
 }
 
 @media only screen and (min-width: $tablet) {

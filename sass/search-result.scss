@@ -8,58 +8,38 @@
 
   background-color: #ffffff;
 
-  width: 100%;
-  left: 0px;
+  width: auto;
+  left: -10px;
+  right: -10px;
   top: -10px;
 
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  border-radius: 5px;
 
-  padding-top: 5.5rem;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  padding-bottom: 1.875rem;
-
-  display: none;
-
-  /*Верхняя часть*/
-  &__upper {
-    @include flex-setting(column, flex-start, flex-start);
-    width: 100%;
-  }
+  padding-top: 4.5rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 1.75rem;
 
   &__title {
-    @include font-setting($primary-font, 1rem, 1.375rem, 700, $text-primary);
-    margin: 0;
-    margin-bottom: 0.625rem;
+    display: none;
   }
 
-  &__type {
-    @include flex-setting(row, flex-start, center);
-    @include font-setting($primary-font, 0.875rem, 1.188rem, 400, $text-primary);
-    margin-bottom: 1.25rem;
-
-    &-pic {
-      margin-right: 0.25rem;
-    }
-  }
-
-  /*Нижняя часть*/
-
+  /*Нижняя часть с результатами поиска*/
   &__lower {
     @include flex-setting(column, flex-start, flex-start);
     width: 100%;
   }
 
   &__link {
-    @include flex-setting(column, center, center);
-    @include font-setting($primary-font, 0.875rem, 1.188rem, 600, $text-secondary);
+    @include flex-setting(row, center, center);
+    @include font-setting($title-font, 1.125rem, 1.188rem, 700, $text-secondary);
 
     text-align: center;
     text-decoration: none;
 
-    width: 190px;
-    height: 40px;
+    width: 232px;
+    height: 50px;
 
     background-color: $btn-color;
     border-radius: 5px;
@@ -69,20 +49,19 @@
 
     &:hover,
     &:active {
-      background-color: #754440;
+      background-color: $blue;
       transition: 0.1s ease-in;
     }
   }
 
   &__reset {
     align-self: center;
-    @include font-setting($primary-font, 0.75rem, 1rem, 600, #828C98);
+    @include font-setting($primary-font, 0.875rem, 1rem, 600, #828C98);
     letter-spacing: 0.01em;
 
     background-color: transparent;
+    text-decoration: none;
     border: none;
-
-    border-bottom: 1px dashed #828C98;
 
     padding: 0;
 
@@ -102,7 +81,7 @@
 @media only screen and (min-width: $tablet) {
   .search-result {
     &__reset {
-      align-self: flex-start;
+      align-self: center;
     }
   }
 }
@@ -113,34 +92,38 @@
     align-items: center;
     width: 100%;
     top: 50px;
+    left: auto;
 
-    border-radius: 0px 0px 5px 5px;
     max-height: 0;
     overflow: hidden;
 
     padding: 0;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 20px 20px;
 
     &.active {
-      padding-top: 1.25rem;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      padding-top: 1.875rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
       padding-bottom: 2.5rem;
 
-      max-height: 700px;
+      max-height: 828px;
+      max-width: 800px;
+
+      top: 36px;
 
       transition: max-height 0.2s ease-in;
     }
-    /*Верхняя часть*/
-    &__upper {
-      @include flex-setting(column, flex-start, flex-start);
-      width: 490px;
-    }
-    /*Нижняя часть*/
-    &__lower {
-      width: 490px;
-    }
+
     &__link {
       align-self: flex-start;
+      margin-bottom: 1.25rem;
+    }
+
+    &__reset {
+      align-self: flex-start;
+      font-size: 1.125rem;
+      line-height: 1rem;
     }
   }
 }

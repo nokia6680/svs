@@ -14,13 +14,19 @@
 
 @media only screen and (min-width: $tablet) {
   .req-details {
-    width: 60%;
+    width: 418px;
     transition: 0.1s ease-in;
   }
 }
 
 @media only screen and (min-width: $laptop) {
   .req-details {
-    width: 65%;
+    width: 684px;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .req-details {
+    width: 800px;
   }
 }

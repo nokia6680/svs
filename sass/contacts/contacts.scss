@@ -6,11 +6,8 @@
   padding: 0 0.625rem;
 
   &__title {
-    @include font-setting($title-font, 2rem, 2.375rem, 500, $text-primary);
-    margin: 0;
-    margin-bottom: 2.5rem;
-
-    align-self: flex-start;
+    @extend .production__title;
+    padding-left: 0 !important;
   }
 
   &__wrap {
@@ -22,13 +19,14 @@
     width: 100%;
     @include flex-setting(column, flex-start, flex-start);
 
-    margin-bottom: 4.125rem;
+    margin-bottom: 2.5rem;
   }
 
   /*Кнопка заказа обратного звонка*/
-  &__recall {
+  &__recall,
+  &__route {
     @include flex-setting(column, center, center);
-    @include font-setting($primary-font, 1.125rem, 1.563rem, 600, $text-secondary);
+    @include font-setting($title-font, 1.125rem, 1.625rem, 700, $text-secondary);
     background-color: $btn-color;
     border-radius: 5px;
 
@@ -46,10 +44,9 @@
       @include btn-hover;
     }
   }
-  &__recall-note {
-    @include font-setting($primary-font, 0.75rem, 1rem, 700, #c4c4c4);
-    text-align: center;
-    align-self: center;
+
+  &__route {
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -59,32 +56,28 @@
 
     transition: 0.2s cubic-bezier(0.000, 0.795, 0.000, 1.000);
 
-    &__title {
-      margin-bottom: 3.375rem;
-    }
-
     &__wrap {
       @include flex-setting(row, space-between, flex-start);
 
-      margin-bottom: 5.625rem;
+      margin-bottom: 6.063rem;
     }
 
     &__info {
-      max-width: 280px;
+      max-width: 285px;
       margin-bottom: 0;
-      margin-right: 2.5rem;
+      margin-right: 2.313rem;
+    }
+
+    &__recall {
+      margin-bottom: 0;
     }
   }
 }
 
 @media only screen and (min-width: $laptop) {
   .contacts {
-    &__title {
-      margin-bottom: 2.5rem;
-    }
-
     &__wrap {
-      margin-bottom: 5.625rem;
+      margin-bottom: 6.25rem;
     }
   }
 }
@@ -97,7 +90,7 @@
     }
 
     &__wrap {
-      margin-bottom: 8.313rem;
+      margin-bottom: 8.125rem;
     }
 
     &__info {
@@ -107,9 +100,9 @@
       align-items: flex-start;
     }
 
-    &__recall {
+    &__recall,
+    &__route {
       align-self: flex-start;
-      margin-left: 1.5rem;
     }
   }
 }

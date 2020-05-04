@@ -21,18 +21,22 @@
 
   .tabItem--active {
     .contact-list__link {
-      opacity: 1;
+      opacity: 0.6;
+      border-bottom: none;
       transition: 0.1s ease-in;
-      border: none;
     }
   }
 
 
   &__link {
-    @include font-setting($primary-font, 1rem, 1.375rem, 700, $text-primary);
+    @include font-setting($title-font, 1.125rem, 1.5rem, 700, $text-primary);
     text-decoration: none;
-    opacity: 0.6;
-    border-bottom: 1px solid #84AA32;
+    opacity: 1;
+    pointer-events: none;
+
+    border-bottom: none;
+    transition: 0.1s ease-in;
+    border-bottom: 2px solid #84AA32;
   }
 }
 
@@ -40,33 +44,33 @@
   .contact-list {
     @include flex-setting(row, flex-start, center);
     flex-wrap: wrap;
-    margin-bottom: 4.313rem;
+    margin-bottom: 3.75rem;
 
     &__item {
-      margin-bottom: 1.375rem;
+      margin-bottom: 1.25rem;
       width: auto;
 
       margin-right: 3.75rem;
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
 
       &:last-child {
         margin-bottom: 0;
       }
     }
-  }
-}
-
-@media only screen and (min-width: $laptop) {
-  .contact-list {
-    margin-bottom: 4.625rem;
 
     &__link {
-      font-size: 1.188rem;
+      font-size: 1.125rem;
     }
   }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .contact-list {
+    margin-bottom: 4.75rem;
+    
     &__item {
       margin-bottom: 0;
     }

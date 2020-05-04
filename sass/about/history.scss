@@ -63,25 +63,82 @@
 @media only screen and (min-width: 768px) {
   .history {
     &__title {
-      font-size: 1.25rem;
+      font-size: 2rem;
+      line-height: 2.375rem;
+      padding-left: 0;
+      margin-bottom: 3.75rem;
     }
 
     &__description {
-      font-size: 1rem;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      margin-bottom: 3.75rem;
     }
 
     &__list {
       &-item {
-        margin-bottom: 1.25rem;
+        margin-bottom: 2.5rem;
       }
 
       &-year {
-        font-size: 1.25rem;
-        margin-bottom: 1.25rem;
+        font-size: 1.5rem;
+        line-height: 1.188rem;
+        margin-bottom: 1rem;
       }
 
       &-description {
-        font-size: 1rem;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .history {
+    &__description {
+      max-width: 600px;
+    }
+
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      &-item {
+        width: 452px;
+        height: 195px;
+        margin-bottom: 3.75rem;
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          height: 147px;
+        }
+
+        &.today {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .history {
+    &__list {
+      &-item {
+        width: 580px;
+        height: 171px;
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          height: 123px;
+        }
+
+        &.today {
+          width: 100%;
+        }
       }
     }
   }

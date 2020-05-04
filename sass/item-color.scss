@@ -76,7 +76,7 @@
     min-height: 13px;
     width: 13px;
     height: 13px;
-    
+
     margin-left: 0.25rem;
   }
 
@@ -85,5 +85,15 @@
     height: 100%;
 
     @include flex-setting(column, flex-end, center);
+
+    background-color: #fff;
+  }
+
+  &--search {
+    .item-color__list {
+      &--active {
+        top: 22px;
+      }
+    }
   }
 }

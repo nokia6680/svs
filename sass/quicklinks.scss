@@ -1,0 +1,65 @@
+.quicklinks {
+  @include flex-setting(column, flex-start, flex-start);
+  width: 100%;
+
+  padding-left: 1.438rem;
+  padding-right: 1.438rem;
+
+  &__title {
+    @include font-setting($title-font, 1.125rem, 1.375rem, 600, $text-primary);
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  &__list {
+    @include flex-setting(column, flex-start, flex-start);
+    @include ul-nostyle;
+  }
+
+  &__item {
+    margin-bottom: 1.25rem;
+    width: 100%;
+
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    @include font-setting($primary-font, 1rem, 1.375rem, 400, $text-primary);
+    text-decoration: none;
+    transition: 0.1s ease-in;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $green;
+      transition: 0.1s ease-in;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .quicklinks {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__title {
+      font-size: 1.375rem;
+      margin-bottom: 1.875rem;
+    }
+
+    &__item {
+      margin-bottom: 1.375rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__link {
+      font-size: 1.25rem;
+    }
+  }
+}

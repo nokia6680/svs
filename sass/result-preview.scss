@@ -9,8 +9,11 @@
 
   margin-bottom: 1.25rem;
 
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+
   &__item {
-    border: 1px solid #E4D9C6;
+    border: 2px solid #C9E2E6;
     border-radius: 5px;
 
     @include flex-setting(row, flex-start, center);
@@ -18,66 +21,57 @@
     width: 100%;
 
     margin-bottom: 0.625rem;
-    padding-right: 0.625rem;
+    padding-right: 1.25rem;
 
     overflow: hidden;
-    max-height: 94px;
+    height: 98px;
 
-    &:hover {
-      border-color: $link-hover;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-      transition: 0.1s ease-in;
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0px 0px 60px rgba(57, 134, 30, 0.18);
+      transition: 0.3s ease-in-out;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  &__item-info {
-    @include flex-setting(column, flex-start, flex-start);
-    padding-bottom: 0.625rem;
-    padding-top: 0.625rem;
+  &__link {
+    @include flex-setting(row, flex-start, center);
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
   }
 
-  &__item-title {
-    @include font-setting($primary-font, 0.688rem, 0.938rem, 600, $text-primary);
-    max-width: 153px;
-    margin-bottom: 0.625rem;
+  &__info {
+    @include flex-setting(column, center, flex-start);
   }
 
-  &__item-sign {
-    @include font-setting($primary-font, 0.688rem, 1, 600, $text-primary);
-    @include flex-setting(row, center, center);
-
-    text-align: center;
-
-    &--latest {
-      color: $text-secondary;
-      background-color: $red-sign;
-      border-radius: 3px;
-
-      width: 88px;
-      height: 22px;
-    }
-
-    &--sale {
-      background-color: $yellow-sign;
-      border-radius: 3px;
-
-      width: 72px;
-      height: 22px;
-
-      display: none;
-    }
+  &__title {
+    @include font-setting($title-font, 1rem, 1.125rem, 600, $text-primary);
+    margin: 0;
   }
 
-  &__item-description {
+  &__options {
+    display: none;
+  }
+
+  &__controls {
     display: none;
   }
 
   &__frame {
     margin-right: 0.25rem;
-    min-width: 91px;
-    max-width: 91px;
-    height: 96px;
-    max-height: 96px;
+    min-width: 79px;
+    max-width: 79px;
+    height: 87px;
+    max-height: 87px;
+
+    align-self: flex-end;
 
     overflow: hidden;
 
@@ -85,14 +79,10 @@
   }
 
   &__frame-pic {
-    height: 90px;
-    max-height: 90px;
+    height: 87px;
+    max-height: 87px;
     width: 100%;
     object-fit: contain;
-  }
-
-  &__pic {
-    margin-left: 0.625rem;
   }
 }
 
@@ -104,7 +94,13 @@
     flex-wrap: wrap;
 
     &__item {
-      width: 48%;
+      width: 49%;
+
+      margin-bottom: 0.625rem;
+
+      &:last-child {
+        margin-bottom: 0.625rem;
+      }
     }
   }
 }
@@ -114,22 +110,121 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-bottom: 2.5rem;
 
     &__item {
       width: 100%;
+      height: 180px;
       align-items: flex-start;
+
+      padding-top: 0.563rem;
+      padding-right: 0.625rem;
+      padding-left: 0.563rem;
+
+      position: relative;
+      overflow: visible;
+
+      margin-bottom: 1.25rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
-    &__item-info {
-      min-width: 40%;
+    &__frame {
+      min-width: 161px;
+      max-width: 161px;
+      height: 180px;
+      max-height: 180px;
+
+      &-pic {
+        height: 100%;
+        max-height: 167px;
+      }
     }
 
-    &__item-description {
-      margin: 0;
-      margin-top: 0.625rem;
-      display: inline-flex;
-      @include font-setting($primary-font, 0.688rem, 0.938rem, 400, $text-primary);
+    &__info {
+      height: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &__title {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+
+      max-width: 60%;
+      margin-bottom: 1.25rem;
+    }
+
+    &__options {
+      @include flex-setting(column, flex-start, flex-start);
+
+      &-item {
+        @include font-setting($primary-font, 1rem, 1.125rem, 400, $text-primary);
+        margin: 0;
+
+        position: relative;
+        padding-left: 1.063rem;
+
+        &::before {
+          position: absolute;
+          content: '';
+
+          width: 10px;
+          height: 10px;
+
+          background-image: url('../img/dot-3.svg');
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          left: 0;
+          top: 50%;
+
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &__controls {
+      @include flex-setting(row, flex-end, center);
+
+      position: absolute;
+      right: 0.625rem;
+    }
+
+    &__item-sign {
+      @include font-setting($primary-font, 0.75rem, 1, 700, $text-primary);
+      @include flex-setting(row, space-between, center);
+
+      text-align: center;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+
+      margin-left: 0.625rem;
+
+      &--latest {
+        color: $text-secondary;
+        background-color: $red-sign;
+        border-radius: 3px;
+
+        width: 88px;
+        height: 22px;
+      }
+
+      &--sale {
+        background-color: $yellow-sign;
+        border-radius: 3px;
+
+        width: 72px;
+        height: 22px;
+      }
     }
   }
 }

@@ -23,12 +23,13 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3a6e1b47-2a4a-499c-b8fb-09baac156118" type="text/javascript"></script>
+	<script src="js/maps.js"></script>
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<meta property="og:title" content="" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="" />
@@ -462,7 +463,7 @@
 		<!--Abput section-->
 		<section class="main__company company-heading">
 			<!--List of groups-->
-			<ul class="company-heading__controls company-controls">
+			<ul class="company-heading__controls company-controls" id="about_tabs">
 				<li class="company-controls__item tabItem">
 					<a class="company-controls__link" href="" target="_self">Производство</a>
 				</li>
@@ -484,7 +485,7 @@
 		<article class="main__contents company-contents">
 			<h2 class="company-contents__title visually-hidden">Содержание блоков</h2>
 			<!--Блок производства-->
-			<section class="company-contents__item contentItem contentItem--active production">
+			<section class="company-contents__item contentItem production">
 				<h3 class="production__title">Производство</h3>
 				<!--Список информации о производстве-->
 				<ul class="production__info prod-info">
@@ -585,7 +586,7 @@
 						<b class="history__list-year">2008</b>
 						<span class="history__list-description">Одними из первых в России начали производить обливные латексные перчатки. Благодаря превосходному качеству и доступной цене они и сегодня являются бесспорным хитом продаж.</span>
 					</li>
-					<li class="history__list-item">
+					<li class="history__list-item today">
 						<b class="history__list-year">Сегодня</b>
 						<span class="history__list-description">Производим перчатки из разных нитей (хлопковых, смесовых, акриловых, нейлоновых, полиэфирных) на станках 7, 10, 13 и 15 класса вязки. Используем различные покрытия: нитрильный, натуральный, рельефный, вспененный латекс и другие. Наша продукция представлена на всей территории Российской Федерации и за ее пределами. Мы сотрудничаем с крупнейшими компаниями, лидерами рынка средств индивидуальной защиты. Отслеживаем новые тренды в отрасли и стараемся каждый год предлагать новинки. Мы открыты для диалога и всегда ждем отзывов о наших продуктах.</span>
 					</li>
@@ -596,7 +597,7 @@
 				<span>В разработке</span>
 			</section>
 			<!--Контакты-->
-			<section class="company-contents__item contentItem contacts">
+			<section class="company-contents__item contentItem--active contacts">
 				<h1 class="contacts__title">Контакты</h1>
 				<!--Phone, mail-->
 				<ul class="contacts__list contact-list">
@@ -670,6 +671,7 @@
 								</a>
 							</div>
 						</div>
+						<a class="contacts__route" href="#" target="_self">Проложить маршрут</a>
 						<!--Callback btn-->
 						<a class="contacts__recall" href="#" target="_self" onclick="openbox('popup-callback');return false;">Заказать звонок</a>
 					</div>
@@ -681,14 +683,14 @@
 			</section>
 			<!--Блок с реквизитами-->
 			<section class="company-contents__item contentItem requisites">
-				<h3 class="requisites__title visually-hidden">Реквизиты</h3>
+				<h3 class="requisites__title">Реквизиты</h3>
 				<!--Company switcher-->
 				<ul class="requisites__team team">
 					<li class="team__item tabItem subtabItem--active">
 						<a class="team__link" href="" target="_self" title="SVS Retail">ООО &laquo;СВС-Ретейл&raquo;</a>
 					</li>
 					<li class="team__item subtabItem">
-						<a class="team__link" href="" target="_self" title="Other company">ООО &laquo;Название компании&raquo;</a>
+						<a class="team__link" href="" target="_self" title="Other company">ООО &laquo;СВС&raquo;</a>
 					</li>
 				</ul>
 				<div class="requisites__wrapper">
@@ -698,19 +700,17 @@
 						<div class="req-details__item req-item subcontentItem subcontentItem--active">
 							<!--General company requsites-->
 							<div class="req-item__info req-item__info--general">
-								<h3 class="req-item__title">Общество с ограниченной ответственностью &laquo;СВС-Ретейл&raquo;</h3>
 								<ul class="req-item__list">
+									<li class="req-item__header">
+										<h3 class="req-item__subtitle">ООО «СВС-Ретейл»</h3>
+									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">На англ. языке</b>
 										<span class="req-item__line-description">LLC &laquo;SVS-Retail&raquo;</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Юридический адрес</b>
-										<span class="req-item__line-description">111141, г. Москва, ул. Кусковская, 20А</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">Почтовый адрес</b>
-										<span class="req-item__line-description">111141, г. Москва, ул. Кусковская, 20А, офис А206</span>
+										<span class="req-item__line-description">109431, Москва, ул. Привольная, д.70, корп.1, эт/пом/ком. 4/XIV/100-104</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">ИНН</b>
@@ -734,7 +734,7 @@
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">ОКВЭД</b>
-										<span class="req-item__line-description">51.4</span>
+										<span class="req-item__line-description">46.4</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Ген.директор</b>
@@ -742,7 +742,7 @@
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Главный бухгалтер</b>
-										<span class="req-item__line-description">Земщук Анна Владимировна</span>
+										<span class="req-item__line-description">Дежина Ирина Анатольевна</span>
 									</li>
 								</ul>
 							</div>
@@ -750,43 +750,25 @@
 							<div class="req-item__info req-item__info--payment">
 								<h3 class="req-item__title">Платежные реквизиты</h3>
 								<!--One bank account-->
-								<b class="req-item__subtitle">АКБ &laquo;Ресурс-траст&raquo;</b>
 								<ul class="req-item__list">
+									<li class="req-item__header">
+										<h3 class="req-item__subtitle">&laquo;ПАО Росбанк&raquo;</h3>
+									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Расчётный счёт</b>
-										<span class="req-item__line-description">40702810400000000587</span>
+										<span class="req-item__line-description">40702810487200000152</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Банк</b>
-										<span class="req-item__line-description">АКБ «Ресурс-траст» (ЗАО)</span>
+										<span class="req-item__line-description">ПАО РОСБАНК гор. Москва</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Корр.счёт</b>
-										<span class="req-item__line-description">30101810800000000919</span>
+										<span class="req-item__line-description">30101810000000000256</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">БИК</b>
-										<span class="req-item__line-description">044583919</span>
-									</li>
-								</ul>
-								<!--One bank account-->
-								<b class="req-item__subtitle">АКБ &laquo;Металлинвестбанк&raquo;(ОАО)</b>
-								<ul class="req-item__list">
-									<li class="req-item__line">
-										<b class="req-item__line-title">Расчётный счёт</b>
-										<span class="req-item__line-description">40702810400000003245</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">Банк</b>
-										<span class="req-item__line-description">АКБ «Металлинвестбанк» (ОАО)</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">Корр.счёт</b>
-										<span class="req-item__line-description">30101810800000000176</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">БИК</b>
-										<span class="req-item__line-description">044583176</span>
+										<span class="req-item__line-description">044525256</span>
 									</li>
 								</ul>
 							</div>
@@ -795,51 +777,45 @@
 						<div class="req-details__item req-item subcontentItem">
 							<!--General company requsites-->
 							<div class="req-item__info req-item__info--general">
-								<h3 class="req-item__title">Общество с ограниченной ответственностью &laquo;СВС-Ретейл&raquo;2</h3>
 								<ul class="req-item__list">
+									<li class="req-item__header">
+										<h3 class="req-item__subtitle">ООО «СВС-Ретейл»</h3>
+									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">На англ. языке</b>
-										<span class="req-item__line-description">LLC &laquo;SVS-Retail&raquo;</span>
+										<span class="req-item__line-description">LLC &laquo;SVS&raquo;</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Юридический адрес</b>
-										<span class="req-item__line-description">111141, г. Москва, ул. Кусковская, 20А</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">Почтовый адрес</b>
-										<span class="req-item__line-description">111141, г. Москва, ул. Кусковская, 20А, офис А206</span>
+										<span class="req-item__line-description">142645, Московская область, Орехово-Зуевский район, д. Авсюнино, участок № 108В, строение 5</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">ИНН</b>
-										<span class="req-item__line-description">7718552265</span>
+										<span class="req-item__line-description">5073005994</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">КПП</b>
-										<span class="req-item__line-description">772001001</span>
+										<span class="req-item__line-description">503401001</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">ОГРН</b>
-										<span class="req-item__line-description">1057747361440</span>
+										<span class="req-item__line-description">1025007458651</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">ОКПО</b>
-										<span class="req-item__line-description">77982835</span>
+										<span class="req-item__line-description">51906831</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">ОКАТО</b>
-										<span class="req-item__line-description">45263576000</span>
+										<span class="req-item__line-description">46243825002</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">ОКВЭД</b>
-										<span class="req-item__line-description">51.4</span>
+										<span class="req-item__line-description">13.30, 13.30.4</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Ген.директор</b>
 										<span class="req-item__line-description">Ерицян Сурен Шамирович</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">Главный бухгалтер</b>
-										<span class="req-item__line-description">Земщук Анна Владимировна</span>
 									</li>
 								</ul>
 							</div>
@@ -847,43 +823,25 @@
 							<div class="req-item__info req-item__info--payment">
 								<h3 class="req-item__title">Платежные реквизиты</h3>
 								<!--One bank account-->
-								<b class="req-item__subtitle">АКБ &laquo;Ресурс-траст&raquo;</b>
 								<ul class="req-item__list">
+									<li class="req-item__header">
+										<h3 class="req-item__subtitle">&laquo;ПАО Росбанк&raquo;</h3>
+									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Расчётный счёт</b>
-										<span class="req-item__line-description">40702810400000000587</span>
+										<span class="req-item__line-description">40702810487200000152</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Банк</b>
-										<span class="req-item__line-description">АКБ «Ресурс-траст» (ЗАО)</span>
+										<span class="req-item__line-description">ПАО РОСБАНК гор. Москва</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">Корр.счёт</b>
-										<span class="req-item__line-description">30101810800000000919</span>
+										<span class="req-item__line-description">30101810000000000256</span>
 									</li>
 									<li class="req-item__line">
 										<b class="req-item__line-title">БИК</b>
-										<span class="req-item__line-description">044583919</span>
-									</li>
-								</ul>
-								<!--One bank account-->
-								<b class="req-item__subtitle">АКБ &laquo;Металлинвестбанк&raquo;(ОАО)</b>
-								<ul class="req-item__list">
-									<li class="req-item__line">
-										<b class="req-item__line-title">Расчётный счёт</b>
-										<span class="req-item__line-description">40702810400000003245</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">Банк</b>
-										<span class="req-item__line-description">АКБ «Металлинвестбанк» (ОАО)</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">Корр.счёт</b>
-										<span class="req-item__line-description">30101810800000000176</span>
-									</li>
-									<li class="req-item__line">
-										<b class="req-item__line-title">БИК</b>
-										<span class="req-item__line-description">044583176</span>
+										<span class="req-item__line-description">044525256</span>
 									</li>
 								</ul>
 							</div>
@@ -893,24 +851,11 @@
 					<div class="requisites__parnter req-partner">
 						<div class="req-partner__header">
 							<h3 class="req-partner__title">Карта партнера</h3>
-							<svg class="documents__pic" width="61" height="54">
-								<use xlink:href="#icon-partner-card"></use>
-							</svg>
 						</div>
-						<ul class="req-partner__list">
-							<li class="req-partner__item">
-								<a class="req-partner__link" href="#" target="_blank" title="Свидетельство ОГРН">Свидетельство ОГРН</a>
-								<span class="req-partner__info">PDF, 0.5 Мб</span>
-							</li>
-							<li class="req-partner__item">
-								<a class="req-partner__link" href="#" target="_blank" title="Свидетельства ИНН/КПП">Свидетельства ИНН/КПП</a>
-								<span class="req-partner__info">PDF, 0.5 Мб</span>
-							</li>
-							<li class="req-partner__item">
-								<a class="req-partner__link" href="#" target="_blank" title="Карточка компании">Карточка компании</a>
-								<span class="req-partner__info">PDF, 0.5 Мб</span>
-							</li>
-						</ul>
+						<a class="req-partner__link" href="#" target="_blank" title="Карта партнера">
+							<b class="req-partner__link-text">Скачать</b>
+							<span class="req-partner__link-info">1.0 Мб</span>
+						</a>
 					</div>
 				</div>
 			</section>

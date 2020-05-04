@@ -2,70 +2,31 @@
   width: 100%;
 
   @include flex-setting(column, flex-start, center);
-
-  &__header {
-    width: 100%;
-    @include flex-setting(column, flex-start, flex-start);
-  }
+  margin-bottom: 2.5rem;
 
   &__title {
-    @include font-setting($title-font, 2rem, 2.375rem, 500, $text-primary);
-    margin: 0;
-    margin-bottom: 1.25rem;
+    @extend .production__title;
+    padding-left: 0 !important;
   }
 
-  &__link {
-    @include flex-setting(row, flex-start, center);
-    @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-primary);
-
+  &__text {
+    @include font-setting($primary-font, 1.125rem, 1.5rem, 400, $text-primary);
     margin: 0;
-    margin-bottom: 1.875rem;
-
-    text-decoration: none;
-
-    display: none;
-
-    &-pic {
-      margin-right: 0.25rem;
-    }
-  }
-
-  &__info {
     width: 100%;
-    @include flex-setting(column, flex-start, flex-start);
-
-    margin-bottom: 2.5rem;
-
-    &-text {
-      @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-primary);
-      margin: 0;
-      margin-bottom: 1.25rem;
-
-      width: 100%;
-    }
-
-    &-description {
-      @include font-setting($primary-font, 1rem, 1.188rem, 400, $text-primary);
-      margin: 0;
-      margin-bottom: 0.625rem;
-
-      width: 100%;
-    }
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .whywe {
-    &__header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+    margin-bottom: 3.75rem;
 
-      margin-bottom: 1.875rem;
+    &__title {
+      margin-bottom: 2.5rem;
     }
 
-    &__link {
-      margin-bottom: 0;
+    &__text {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
     }
   }
 }
@@ -73,47 +34,59 @@
 @media only screen and (min-width: $laptop) {
   .whywe {
     position: relative;
+    margin-bottom: 3.75rem;
 
-    &__header {
+    &__title {
+      font-size: 2rem;
       margin-bottom: 2.5rem;
     }
 
-    &__title {
-      font-size: 2.5rem;
-      line-height: 2.75rem;
-      margin-bottom: 0;
-    }
-
-    &__link {
-      font-size: 0.75rem;
-      line-height: 1rem;
-
-      z-index: 9;
-
-      &-pic {
-        transform: scale(0.6);
-      }
-    }
-
-    &__info {
+    &__text {
       align-self: flex-start;
-      width: 700px;
-      margin-bottom: 8.75rem;
-      z-index: 5;
-      background-color: rgba(255, 255, 255, 0.5);
+      font-size: 1.25rem;
+      line-height: 1.75rem;
 
-      &-text {
-        font-size: 1.5rem;
-        line-height: 2.063rem;
-        margin: 0;
-        margin-bottom: 3.75rem;
-      }
+      max-width: 472px;
+    }
 
-      &-description {
-        font-size: 1.5rem;
-        line-height: 2.063rem;
-        margin-bottom: 0.25rem;
-      }
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 432px;
+      height: 496px;
+
+      background-image: url('../img/whywe.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .whywe {
+    margin-bottom: 10.25rem;
+
+    &__title {
+      font-size: 3.5rem;
+      line-height: 3.375rem;
+      margin-bottom: 5rem;
+    }
+
+    &__text {
+      max-width: 600px;
+    }
+
+    &::after {
+      width: 560px;
+      height: 642px;
+
+      top: -3.75rem;
+      right: 0;
     }
   }
 }
