@@ -1,29 +1,53 @@
 .nav-menu {
-  @include flex-setting(column, flex-start, center);
-
+  display: block;
   position: absolute;
-
+  z-index: 10;
   background-color: $menu-bg;
   backdrop-filter: blur(20px);
 
-  width: 100%;
-  min-width: 320px;
-  height: 100vh;
+  max-width: 688px;
+  max-height: 0;
 
   left: 0;
-  top: -100vh;
+  right: 0;
+  top: 64px;
 
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-bottom: 1.063rem;
+  padding-top: 20px;
+
+  transition: all 0.3s ease-in, background 0.5s ease-in;
+  transition-delay: 0.25s;
+
+  display: none;
 
   &.active {
-    top: 59px;
-    transition: 0.1s ease-in;
+    position: absolute;
+    max-height: 1000px;
+    background-color: $menu-bg;
 
-    z-index: 999;
+    transition: all 0.3s ease-in, background 0.5s ease-in;
+    transition-delay: 0.25s;
 
-    padding-top: 20px;
+    z-index: 10;
+
+    .nav-menu__wrap {
+      transition: scale(1) translateY(0px);
+      opacity: 1;
+
+      transition-delay: 1.29s;
+    }
+
+    .nav-list__item {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+      @for $i from 1 through $menuItems {
+        &:nth-child(#{$i}) {
+          transition-delay: #{0.07 * $i + 0.2}s;
+        }
+      }
+    }
   }
 
   &__wrap {

@@ -3,17 +3,21 @@
   position: relative;
   padding: 0;
 
-  @include extra-padding;
+  @include flex-setting(column, center, center);
 
   background-color: #F0EFED;
+  height: 60px;
 
-  z-index: 3;
+  z-index: 999;
+
+  transition: all 0.5s ease-out, background 1s ease-out;
+  transition-delay: 0.2s;
 
   &.active {
     background-color: $menu-bg;
     backdrop-filter: blur(20px);
-
     z-index: 999;
+    overflow: visible;
   }
 
   /*Header on catalog page*/
