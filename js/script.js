@@ -8,18 +8,16 @@ window.addEventListener('scroll', function() {
 });
 
 /*Menu*/
-const SearchDeskOpen = document.querySelector('.nav-service__search');
-const SearchDeskField = document.querySelector('.nav-menu__search');
-const SearchDeskClose = document.querySelector('.nav-menu__search-close');
-const SiteMenu = document.querySelector('.nav-menu__links');
-const NavMenu = document.querySelector('.nav-menu');
-const SearchRes = document.querySelector('.search-result');
+const NavMenu = document.querySelector('.header-nav');
+const Search = document.querySelector('.nav-search');
+const SRes = document.querySelector('.search-result');
+const QLinks = document.querySelector('.quicklinks');
+const SInput = document.querySelector('.nav-search__input');
 
-const MenuButton = document.querySelector('.header-nav__toggle');
-const MobileMenu = document.querySelector('.nav-menu');
+const MenuButton = document.querySelector('.nav-controls__toggle');
 const MenuWrap = document.querySelector('.header');
-const SearchBtn = document.querySelector('.header-nav__search');
-const Contacts = document.querySelector('.nav-contacts');
+const SearchBtn = document.querySelector('.header-menu__search');
+const SearchClose = document.querySelector('.nav-search__close');
 /*Variables for grid catalog view*/
 const CatView = document.querySelector('.catalog-filter__toggle');
 const CatList = document.querySelector('.catalog-list');
@@ -27,44 +25,22 @@ const CatList = document.querySelector('.catalog-list');
 const SeoList = document.querySelector('.about__container');
 const SeoListBtn = document.querySelector('.about__expand');
 
-document.querySelector('.nav-service__search').onclick = function () {
-  SearchDeskField.classList.add('active');
-	SiteMenu.classList.add('active');
-	NavMenu.classList.add('active');
-	SearchRes.classList.add('active');
-};
-
-document.querySelector('.nav-menu__search-close').onclick = function () {
-  SearchDeskField.classList.remove('active');
-	SiteMenu.classList.remove('active');
-	NavMenu.classList.remove('active');
-	SearchRes.classList.remove('active');
-};
-
-document.querySelector('.header-nav__toggle').onclick = function(){
+document.querySelector('.nav-controls__toggle').onclick = function(){
 	MenuButton.classList.toggle('open');
-	MenuWrap.classList.toggle('active');
-	SearchBtn.classList.toggle('active');
   NavMenu.classList.toggle('active');
-	Contacts.classList.toggle('active');
 };
 
-document.querySelector('.header-nav__search').onclick = function(){
-	MenuButton.classList.toggle('open');
-	MobileMenu.classList.toggle('active');
-	MenuWrap.classList.toggle('active');
-	SearchBtn.classList.toggle('active');
-	Contacts.classList.toggle('active');
-	document.getElementById("search-1").focus();
+document.querySelector('.header-menu__search').onclick = function(){
+	Search.classList.add('active');
+  SRes.classList.add('active');
 };
 
-document.querySelector('.about__expand').onclick = function () {
-  SeoList.classList.toggle('active');
+document.querySelector('.nav-search__close').onclick = function(){
+  Search.classList.remove('active');
 };
 
-document.querySelector('.catalog-filter__toggle').onclick = function(){
-	CatView.classList.toggle('active');
-	CatList.classList.toggle('grid');
+document.querySelector('.nav-search__input').onclick = function(){
+  Search.classList.add('asked');
 };
 
 /*Открытие попапа перезвонить*/
@@ -108,4 +84,12 @@ function openorder(id) {
 function toggleText(button_id)  {
    var text = document.getElementById('btn-expand').firstChild;
    text.data = text.data == "Развернуть все" ? "Свернуть все" : "Развернуть все";
+};
+
+var expSizeBtn = document.querySelector('.catalog-sizes__expand');
+var sizeList = document.querySelector('.catalog-sizes__list');
+
+document.querySelector('.catalog-sizes__expand').onclick = function(){
+	sizeList.classList.toggle('active');
+  expSizeBtn.classList.toggle('active');
 };

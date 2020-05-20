@@ -145,18 +145,10 @@
   .prod-gallery {
     &__left {
       width: 66%;
-
-      margin-bottom: 1.25rem;
     }
 
     &__side {
       width: 32%;
-    }
-
-    &__bottom {
-      .prod-gallery__frame {
-        margin-bottom: 1.25rem;
-      }
     }
   }
 }

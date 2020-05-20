@@ -44,6 +44,14 @@
 <body class="body body-sales body-th">
 	<!--SVG sprite-->
 	<svg width="0" height="0" class="hidden">
+		<!---->
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-cross-black">
+			<path d="M1 1L13 13" stroke="#fff" stroke-width="2"  stroke-opacity=".3"  />
+			<path d="M13 1L0.999999 13" stroke="#fff" stroke-opacity=".3" stroke-width="2"/>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-search-gray">
+			<path d="M13 14l6 6M16 8.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0z" stroke="#fff" stroke-opacity=".3" stroke-width="2"></path>
+		</symbol>
 		<!--Icon phone blue-->
 		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-phone-blue">
 			<path d="M15.406.784c.396.083.594.323.594.718 0 4-1.417 7.416-4.25 10.249S5.5 16 1.501 16c-.396 0-.635-.198-.719-.594l-.75-3.25c-.104-.395.042-.676.438-.843l3.5-1.5c.333-.145.625-.072.875.22l1.53 1.874a10.784 10.784 0 0 0 3.25-2.28 11.324 11.324 0 0 0 2.282-3.25l-1.875-1.563c-.292-.229-.365-.52-.219-.874l1.5-3.5c.167-.375.448-.51.844-.406l3.25.75z"
@@ -273,180 +281,215 @@
 	<!--Page header-->
 	<header class="header header--whywe">
 		<nav class="header__nav header-nav">
-			<div class="header-nav__wrap">
-				<!--Logo-->
-				<div class="header-nav__logo">
-					<a class="header-nav__link" href="index.html" target="_self">
-						<img class="header-nav__logo-image" src="img/logo.svg" alt="СВС - перчатки на каждый день" title="СВС - перчатки на каждый день" />
-					</a>
-				</div>
-				<!--Menu description-->
-				<p class="header-nav__description">Инновационные решения для защиты рук</p>
-				<!--Desktop menu-->
-				<ul class="header-nav__menu header-menu">
-					<li class="header-menu__item">
-						<a class="header-menu__link" href="catalog.html" target="_self" title="Продукция">Продукция</a>
-					</li>
-					<li class="header-menu__item">
-						<a class="header-menu__link disabled" href="sales.html" target="_self" title="Акции">Акции</a>
-					</li>
-					<li class="header-menu__item">
-						<a class="header-menu__link" href="whywe.html" target="_self" title="Почему мы">Почему мы</a>
-					</li>
-					<li class="header-menu__item">
-						<a class="header-menu__link" href="about.html" target="_self" title="О нас">О нас</a>
-					</li>
-					<li class="header-menu__item">
-						<a class="header-menu__link" href="contacts.html" target="_self" title="Контакты">Контакты</a>
-					</li>
-				</ul>
-				<!--Mobile contacts-->
-				<div class="header-nav__contacts nav-contacts">
+			<!--Logo-->
+			<div class="header-nav__logo">
+				<a class="header-nav__link" href="index.html" target="_self">
+					<img class="header-nav__logo-image" src="img/logo.svg" alt="СВС - перчатки на каждый день" title="СВС - перчатки на каждый день" />
+				</a>
+			</div>
+			<!--Menu description-->
+			<p class="header-nav__description">Инновационные решения для защиты рук</p>
+			<!--Mobile contacts-->
+			<div class="header-nav__contacts nav-contacts">
 					<a class="nav-contacts__link nav-contacts__link--tel" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
 					<a class="nav-contacts__link nav-contacts__link--mail" href="mailto:svs@svscompany.ru" target="_self">svs@svscompany.ru</a>
 				</div>
-				<!--Search button-->
-				<button class="header-nav__search" type="button">
-					<svg class="header-nav__search-pic header-nav__search-pic--closed" width="22" height="22">
+			<!--Search button-->
+			<div class="header-nav__controls nav-controls">
+				<!--search button-->
+				<button class="nav-controls__search" type="button">
+					<svg class="nav-controls__search-pic nav-controls__search-pic--closed" width="22" height="22">
 						<use xlink:href="#icon-search"></use>
 					</svg>
 				</button>
 				<!--Menu button-->
-				<div class="header-nav__toggle" id="nav-icon4">
-				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
-				  <span class="header-nav__toggle-span header-nav__toggle-span--1"></span>
+				<div class="nav-controls__toggle" id="nav-icon4">
+				  <span class="nav-controls__toggle-span nav-controls__toggle-span--1"></span>
+				  <span class="nav-controls__toggle-span nav-controls__toggle-span--1"></span>
+				  <span class="nav-controls__toggle-span nav-controls__toggle-span--1"></span>
 				</div>
 			</div>
-		</nav>
-		<!--Menu-->
-		<div class="header__menu nav-menu">
-			<div class="nav-menu__wrap">
-				<!--Search div-->
-				<div class="nav-menu__search">
-					<svg class="nav-menu__search-pic" width="22" height="22">
-						<use xlink:href="#icon-search"></use>
-					</svg>
-					<form class="nav-menu__form" action="#" method="post" autocomplete="on">
-						<input class="nav-menu__search-input" type="search" name="search" id="search-1" placeholder="Поиск по сайту" />
-						<label class="nav-menu__search-input-btn" for="search-1"></label>
-						<button class="nav-menu__search-input-reset" type="button">
-							<svg class="nav-menu__search-reset" width="14" height="14">
-								<use xlink:href="#icon-cross-green"></use>
-							</svg>
-						</button>
-					</form>
-					<svg class="nav-menu__search-close" width="14" height="14">
-						<use xlink:href="#icon-cross-black"></use>
-					</svg>
+			<!--Мобильное меню-->
+			<div class="header-nav__menu nav-menu">
+				<div class="nav-menu__search nav-search">
+					<div class="nav-search__wrap">
+						<svg class="nav-search__pic" width="22" height="22">
+							<use xlink:href="#icon-search-gray"></use>
+						</svg>
+						<form class="nav-search__form" action="#" method="post" autocomplete="on">
+							<input class="nav-search__input" type="search" name="search" id="search-1" placeholder="Поиск по сайту" />
+							<label class="nav-search__label" for="search-1"></label>
+						</form>
+						<svg class="nav-search__close" width="18" height="18">
+							<use xlink:href="#icon-cross-black"></use>
+						</svg>
+					</div>
 					<!--Search results-->
-					<div class="nav-menu__search-result search-result" id="search-result-1">
-						<div class="search-result__upper">
-							<h3 class="search-result__title">Сферы</h3>
-							<b class="search-result__type">
-								<svg class="search-result__type-pic" width="7" height="12">
-									<use xlink:href="#icon-angle"></use>
-								</svg>
-								Автомобильные работы</b>
+					<div class="nav-search__result search-result" id="search-result-1">
+						<h2 class="search-result__title">Средства защиты</h2>
+						<div class="search-result__quick quicklinks">
+							<h3 class="quicklinks__title">Быстрые ссылки</h3>
+							<ul class="quicklinks__list">
+								<li class="quicklinks__item">
+									<a class="quicklinks__link" href="#" target="_self">Продукция</a>
+								</li>
+								<li class="quicklinks__item">
+									<a class="quicklinks__link" href="#" target="_self">Контакты</a>
+								</li>
+								<li class="quicklinks__item">
+									<a class="quicklinks__link" href="#" target="_self">Реквизиты</a>
+								</li>
+							</ul>
 						</div>
 						<div class="search-result__lower">
-							<h3 class="search-result__title">Средства защиты</h3>
 							<ul class="search-result__preview result-preview">
 								<!--Single item-->
 								<li class="result-preview__item">
-									<picture class="result-preview__frame">
-										<source media="(min-width: 1200px)" srcset="img/search-result-2.webp" type="image/webp" />
-										<source media="(min-width: 1200px)" srcset="img/search-result-2.png" />
-										<source media="(min-width: 768px)" srcset="img/search-result-2.webp" type="image/webp" />
-										<source media="(min-width: 768px)" srcset="img/search-result-2.png" />
-										<source srcset="img/search-result-2.webp" type="image/webp" />
-										<img class="result-preview__frame-pic" src="img/search-result-2.png" />
-									</picture>
-									<div class="result-preview__item-info">
-										<b class="result-preview__item-title">Перчатки утепленные с ПВХ покрытием (осень эконом)</b>
-										<span class="result-preview__item-sign result-preview__item-sign--latest" style="display: none;">Новинка
-											<svg class="result-preview__pic" width="12" height="12">
-												<use xlink:href="#icon-star-white"></use>
-											</svg>
-										</span>
-										<span class="result-preview__item-sign result-preview__item-sign--sale">Акция %</span>
-									</div>
-									<p class="result-preview__item-description">
-										Описание перчатки описание перчатки описание замечательной перчатки
-									</p>
+									<a class="result-preview__link" href="#" target="_self">
+										<!--Изображения-->
+										<picture class="result-preview__frame">
+											<source media="(min-width: 1200px)" srcset="img/search-result-2.webp" type="image/webp" />
+											<source media="(min-width: 1200px)" srcset="img/search-result-2.png" />
+											<source media="(min-width: 768px)" srcset="img/search-result-2.webp" type="image/webp" />
+											<source media="(min-width: 768px)" srcset="img/search-result-2.png" />
+											<source srcset="img/search-result-2.webp" type="image/webp" />
+											<img class="result-preview__frame-pic" src="img/search-result-2.png" />
+										</picture>
+										<div class="result-preview__info">
+											<b class="result-preview__title">Стронгшелл Вязаная Манжета</b>
+											<!--Свойства товара для десктопа-->
+											<div class="result-preview__options">
+												<p class="result-preview__options-item">Свойство 1</p>
+												<p class="result-preview__options-item">Свойство 1</p>
+												<p class="result-preview__options-item">Свойство 1</p>
+												<p class="result-preview__options-item">Свойство 1</p>
+											</div>
+											<!--Акции, новинки для десктопа-->
+											<div class="result-preview__controls">
+												<div class="controls__color item-color item-color--search">
+													<button class="item-color__toggle item-color__toggle--active" type="button">
+														<span class="item-color__toggle-count">2</span>&nbsp;цвета
+														<svg class="item-color__icon" width="13" height="13">
+															<use xlink:href="#icon-color"></use>
+														</svg>
+													</button>
+													<ul class="item-color__list item-color__list--active">
+														<li class="item-color__item">
+															<picture class="item-color__frame">
+																<source srcset="img/color-1.webp" type="image/webp" />
+																<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
+															</picture>
+														</li>
+														<li class="item-color__item">
+															<picture class="item-color__frame">
+																<source srcset="img/color-2.webp" type="image/webp" />
+																<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
+															</picture>
+														</li>
+													</ul>
+												</div>
+												<span class="result-preview__item-sign result-preview__item-sign--latest">Новинка
+													<svg class="result-preview__pic" width="12" height="12">
+														<use xlink:href="#icon-star-white"></use>
+													</svg>
+												</span>
+												<span class="result-preview__item-sign result-preview__item-sign--sale">Акция %</span>
+											</div>
+										</div>
+									</a>
 								</li>
 								<!--Single item-->
 								<li class="result-preview__item">
-									<picture class="result-preview__frame">
-										<source media="(min-width: 1200px)" srcset="img/search-result-1.webp" type="image/webp" />
-										<source media="(min-width: 1200px)" srcset="img/search-result-1.png" />
-										<source media="(min-width: 768px)" srcset="img/search-result-1.webp" type="image/webp" />
-										<source media="(min-width: 768px)" srcset="img/search-result-1.png" />
-										<source srcset="img/search-result-1.webp" type="image/webp" />
-										<img class="result-preview__frame-pic" src="img/search-result-1.png" />
-									</picture>
-									<div class="result-preview__item-info">
-										<b class="result-preview__item-title">Перчатки нейлоновые с рельефным натуральным латексом</b>
-										<span class="result-preview__item-sign result-preview__item-sign--latest">Новинка
-											<svg class="result-preview__pic" width="12" height="12">
-												<use xlink:href="#icon-star-white"></use>
-											</svg>
-										</span>
-										<span class="result-preview__item-sign result-preview__item-sign--sale" style="display: none;">Акция %</span>
-									</div>
+									<a class="result-preview__link" href="#" target="_self">
+										<picture class="result-preview__frame">
+											<source media="(min-width: 1200px)" srcset="img/search-result-1.webp" type="image/webp" />
+											<source media="(min-width: 1200px)" srcset="img/search-result-1.png" />
+											<source media="(min-width: 768px)" srcset="img/search-result-1.webp" type="image/webp" />
+											<source media="(min-width: 768px)" srcset="img/search-result-1.png" />
+											<source srcset="img/search-result-1.webp" type="image/webp" />
+											<img class="result-preview__frame-pic" src="img/search-result-1.png" />
+										</picture>
+										<div class="result-preview__info">
+											<b class="result-preview__title">Стронгшелл Вязаная Манжета</b>
+											<!--Свойства товара для десктопа-->
+											<div class="result-preview__options">
+												<p class="result-preview__options-item">Свойство 1</p>
+												<p class="result-preview__options-item">Свойство 1</p>
+												<p class="result-preview__options-item">Свойство 1</p>
+												<p class="result-preview__options-item">Свойство 1</p>
+											</div>
+											<!--Акции, новинки для десктопа-->
+											<div class="result-preview__controls">
+												<span class="result-preview__item-sign result-preview__item-sign--latest" style="display: none;">Новинка
+													<svg class="result-preview__pic" width="12" height="12">
+														<use xlink:href="#icon-star-white"></use>
+													</svg>
+												</span>
+												<span class="result-preview__item-sign result-preview__item-sign--sale">Акция %</span>
+											</div>
+										</div>
+									</a>
 								</li>
 							</ul>
-							<a class="search-result__link" href="search-result.html" target="_self">Результаты поиска</a>
-							<button class="search-result__reset" type="button">Сбросить</button>
+							<a class="search-result__link" href="search-result.html" target="_self">Найдено товаров:&nbsp;<b class="search-result__link-count">2</b></a>
+							<a class="search-result__reset" href="#" target="_self">Сбросить</a>
 						</div>
 					</div>
 				</div>
-				<div class="nav-menu__links">
-					<ul class="nav-menu__contacts nav-contacts nav-contacts--upper">
-						<li class="nav-contacts__item nav-contacts__item--mail">
-							<a class="nav-contacts__link" href="mailto:svs@svscompany.ru" target="_self">svs@svscompany.ru</a>
-						</li>
-						<li class="nav-contacts__item nav-contacts__item--tel">
-							<a class="nav-contacts__link" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
-						</li>
-						<li class="nav-contacts__item nav-contacts__item--call">
-							<button class="nav-contacts__call" type="button">Заказать звонок</button>
-						</li>
-					</ul>
-					<!--Mobile Menu list-->
-					<ul class="nav-menu__list nav-list">
-						<li class="nav-list__item nav-list__item--catalog">
-							<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
-						</li>
-						<li class="nav-list__item nav-list__item--sales">
-							<a class="nav-list__link disabled" href="sales.html" target="_self">Акции</a>
-						</li>
-						<li class="nav-list__item nav-list__item--about">
-							<a class="nav-list__link" href="about.html" target="_self">О нас</a>
-						</li>
-						<li class="nav-list__item nav-list__item--whywe">
-							<a class="nav-list__link" href="whywe.html" target="_self">Почему мы</a>
-						</li>
-						<li class="nav-list__item nav-list__item--supply">
-							<a class="nav-list__link" href="supply.html" target="_self">Поставщикам</a>
-						</li>
-						<li class="nav-list__item nav-list__item--job">
-							<a class="nav-list__link" href="vacancy.html" target="_self">Вакансии</a>
-						</li>
-						<li class="nav-list__item nav-list__item--contacts">
-							<a class="nav-list__link" href="contacts.html" target="_self">Контакты</a>
-						</li>
-					</ul>
-					<!--Menu service block-->
-					<div class="nav-menu__service nav-service">
-						<!--Callback link-->
-						<a class="nav-service__call callback" href="#" target="_self" onclick="openbox('popup-callback');return false;">
-							Заказать звонок
-						</a>
-						<!--Desktop search btn-->
-						<button class="nav-service__search" type="button"></button>
-					</div>
-				</div>
+				<ul class="header-nav__list nav-list">
+					<li class="nav-list__item nav-list__item--catalog">
+						<a class="nav-list__link" href="catalog.html" target="_self">Продукция</a>
+					</li>
+					<li class="nav-list__item nav-list__item--sales">
+						<a class="nav-list__link disabled" href="sales.html" target="_self">Акции</a>
+					</li>
+					<li class="nav-list__item nav-list__item--about">
+						<a class="nav-list__link" href="about.html" target="_self">О нас</a>
+					</li>
+					<li class="nav-list__item nav-list__item--whywe">
+						<a class="nav-list__link" href="whywe.html" target="_self">Почему мы</a>
+					</li>
+					<li class="nav-list__item nav-list__item--supply">
+						<a class="nav-list__link" href="supply.html" target="_self">Поставщикам</a>
+					</li>
+					<li class="nav-list__item nav-list__item--job">
+						<a class="nav-list__link" href="vacancy.html" target="_self">Вакансии</a>
+					</li>
+					<li class="nav-list__item nav-list__item--contacts">
+						<a class="nav-list__link" href="contacts.html" target="_self">Контакты</a>
+					</li>
+					<li class="nav-list__item nav-list__call">
+						<button class="nav-list__btn" type="button">Заказать звонок</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--Menu-->
+		<div class="header__menu header-menu">
+			<div class="header-menu__wrap">
+				<!--Контакты десктоп-->
+				<ul class="header-menu__contacts menu-contacts">
+					<li class=" menu-contacts__item  menu-contacts__item--mail">
+						<a class=" menu-contacts__link" href="mailto:svs@svscompany.ru" target="_self">svs@svscompany.ru</a>
+					</li>
+					<li class=" menu-contacts__item  menu-contacts__item--tel">
+						<a class=" menu-contacts__link" href="tel:+74959899605" target="_self">+7 (495) 989-96-05</a>
+					</li>
+					<li class=" menu-contacts__item  menu-contacts__item--call">
+						<button class=" menu-contacts__call" type="button">Заказать звонок</button>
+					</li>
+				</ul>
+				<!--Микро-меню верхнее десктоп-->
+				<ul class="header-menu__list menu-list">
+					<li class="menu-list__item menu-list__item--supply">
+						<a class="menu-list__link" href="supply.html" target="_self">Поставщикам</a>
+					</li>
+					<li class="menu-list__item menu-list__item--job">
+						<a class="menu-list__link" href="vacancy.html" target="_self">Вакансии</a>
+					</li>
+				</ul>
+				<!--Кнопка поиска-->
+				<button class="header-menu__search btn-search" type="button"></button>
 			</div>
 		</div>
 	</header>
@@ -506,33 +549,35 @@
 			</div>
 			<!--Footer navi-->
 			<div class="footer-nav__links">
-				<ul class="footer-nav__menu footer-menu">
-					<li class="footer-menu__item">
-						<a class="footer-menu__link" href="catalog.html" title="" target="_self">Продукция</a>
-					</li>
-					<li class="footer-menu__item">
-						<a class="footer-menu__link" href="#" title="" target="_self">Акции</a>
-					</li>
-					<li class="footer-menu__item">
-						<a class="footer-menu__link" href="about.html" title="" target="_self">О нас</a>
-					</li>
-					<li class="footer-menu__item">
-						<a class="footer-menu__link" href="#" title="" target="_self">Почему мы</a>
-					</li>
-					<li class="footer-menu__item">
-						<a class="footer-menu__link" href="#" title="" target="_self">Вакансии</a>
-					</li>
-					<li class="footer-menu__item">
-						<a class="footer-menu__link" href="#" title="" target="_self">Поставщики</a>
-					</li>
-					<li class="footer-menu__item">
-						<a class="footer-menu__link" href="contacts.html" title="" target="_self">Контакты</a>
-					</li>
-					<li class="footer-menu__item">
-						<a class="footer-menu__link" href="#" title="" target="_self">In English</a>
-					</li>
-				</ul>
-				<b class="footer-nav__origin">Сделано&nbsp;в&nbsp;России</b>
+				<div class="footer-nav__wrap">
+					<ul class="footer-nav__menu footer-menu">
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="catalog.html" title="" target="_self">Продукция</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="#" title="" target="_self">Акции</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="about.html" title="" target="_self">О нас</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="#" title="" target="_self">Почему мы</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="#" title="" target="_self">Вакансии</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="#" title="" target="_self">Поставщики</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="contacts.html" title="" target="_self">Контакты</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="#" title="" target="_self">In English</a>
+						</li>
+					</ul>
+					<b class="footer-nav__origin">Сделано&nbsp;в&nbsp;России</b>
+				</div>
 			</div>
 			<!--Footer legal information-->
 			<div class="footer-nav__legal footer-legal">

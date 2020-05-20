@@ -1,24 +1,14 @@
 .header {
   width: 100%;
+  height: 100%;
   position: relative;
   padding: 0;
 
   @include flex-setting(column, center, center);
 
   background-color: #F0EFED;
-  height: 60px;
 
-  z-index: 999;
-
-  transition: all 0.5s ease-out, background 1s ease-out;
-  transition-delay: 0.2s;
-
-  &.active {
-    background-color: $menu-bg;
-    backdrop-filter: blur(20px);
-    z-index: 999;
-    overflow: visible;
-  }
+  z-index: 99;
 
   /*Header on catalog page*/
 
@@ -27,7 +17,7 @@
   }
 
   &--whywe {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.375rem;
   }
 
   &--card {
@@ -48,6 +38,7 @@
 
 @media only screen and (min-width: $tablet) {
   .header {
+    justify-content: flex-start;
     margin-bottom: 0;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -89,7 +80,7 @@
 
     border-radius: 0;
 
-    background-color: transparent;
+    background-color: #F0EFED;
 
     &__nav {
       order: 2;
@@ -102,10 +93,6 @@
     /*Header on catalog page*/
     &--catalog {
       margin-bottom: 3.125rem;
-    }
-
-    &--whywe {
-      margin-bottom: 3.75rem;
     }
 
     &--card {

@@ -1,7 +1,8 @@
 .nav-controls {
   width: auto;
 
-  @include flex-setting(row, flex-end, center);
+  @include flex-setting(row, flex-end, flex-end);
+  padding-right: 0.625rem;
 
   &__search {
     width: 22px;
@@ -20,21 +21,9 @@
     cursor: pointer;
     outline: none;
 
-    .header-nav__search-pic--closed {
-      display: block;
-    }
-
-    .header-nav__search-pic--opened {
-      display: none;
-    }
-
-    &.active {
-      display: none;
-
-      .header-nav__search-pic--closed {
-        display: none;
-      }
-    }
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.2s;
   }
 
   /*Открывашка*/
@@ -43,7 +32,7 @@
     height: 24px;
     position: relative;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
+    transition: 1s ease-in-out;
     cursor: pointer;
     display: block;
 
@@ -57,11 +46,11 @@
       opacity: 1;
       left: 0;
       transform: rotate(0deg);
-      transition: .25s ease-in-out;
+      transition: .5s ease-in-out;
     }
 
     span:nth-child(1) {
-      top: 0px;
+      top: 2px;
       -webkit-transform-origin: left center;
       -moz-transform-origin: left center;
       -o-transform-origin: left center;
@@ -69,7 +58,7 @@
     }
 
     span:nth-child(2) {
-      top: 10px;
+      top: 12px;
       -webkit-transform-origin: left center;
       -moz-transform-origin: left center;
       -o-transform-origin: left center;
@@ -77,7 +66,7 @@
     }
 
     span:nth-child(3) {
-      top: 20px;
+      top: 22px;
       -webkit-transform-origin: left center;
       -moz-transform-origin: left center;
       -o-transform-origin: left center;
@@ -98,7 +87,7 @@
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    top: -1px;
+    top: 5px;
     left: 4px;
     width: 25px;
   }
@@ -113,8 +102,20 @@
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    top: 16px;
+    top: 22px;
     left: 4px;
     width: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-controls {
+    margin-right: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav-controls {
+    display: none;
   }
 }

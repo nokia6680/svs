@@ -70,9 +70,13 @@
 @media only screen and (min-width: $laptop-wide) {
   .contact-list {
     margin-bottom: 4.75rem;
-    
+
     &__item {
       margin-bottom: 0;
+
+      &:nth-child(3) {
+        margin-right: 3.75rem;
+      }
     }
   }
 }

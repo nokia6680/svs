@@ -1,10 +1,14 @@
 .main {
   @include flex-setting(column, flex-start, center);
   @include container;
+
+  padding-top: 3.75rem;
 }
 
 @media only screen and (min-width: 414px) {
   .main {
+    padding-top: 3.75rem;
+
     &--about,
     &--whywe {
       max-width: 380px;
@@ -14,6 +18,8 @@
 
 @media only screen and (min-width: $tablet) {
   .main {
+    padding-top: 3.75rem;
+
     &--catalog,
     &--card,
     &--contacts,
@@ -21,7 +27,6 @@
     &--about,
     &--whywe {
       max-width: 688px;
-      padding: 0;
       transition: 0.1s ease-in;
     }
   }
@@ -29,6 +34,8 @@
 
 @media only screen and (min-width: $laptop) {
   .main {
+    padding-top: 0;
+
     &--catalog,
     &--card,
     &--contacts,

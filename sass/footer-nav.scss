@@ -3,11 +3,15 @@
   @include flex-setting(column, flex-start, center);
 
   &__links {
-    @include flex-setting(column, flex-start, center);
+    @include flex-setting(column, center, center);
     width: 100%;
 
     background-color: #FAF9F7;
+  }
 
+  &__wrap {
+    @include flex-setting(column, flex-start, center);
+    width: 100%;
     padding: 1.25rem 1.25rem;
   }
 
@@ -47,15 +51,15 @@
 
     border-radius: 0;
 
-    &__links {
-      @include flex-setting(row, flex-start, center);
-      width: 100%;
-      max-width: 688px;
-
+    &__wrap {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 2.5rem;
       padding-top: 1.875rem;
+      max-width: 688px;
     }
 
     &__origin {
@@ -66,7 +70,7 @@
 
 @media only screen and (min-width: $laptop) {
   .footer-nav {
-    &__links {
+    &__wrap {
       max-width: 944px;
       justify-content: space-between;
       padding-bottom: 2.5rem;
@@ -81,9 +85,8 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .footer-nav {
-    &__links {
+    &__wrap {
       max-width: 1200px;
-      justify-content: space-between;
       padding-bottom: 3.75rem;
       padding-top: 3.75rem;
     }
