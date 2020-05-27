@@ -64,17 +64,18 @@
 
       order: 2;
 
+      position: relative;
+
       &-pic {
-        opacity: 1;
-        
         &.hidden {
-          transition: all 0.5s ease;
-          animation: fade-out 0.5s backwards 0.5s;
+          visibility: hidden;
+          position: absolute;
+          display: block;
+          animation: fade-out 0.5s;
         }
 
         &.active {
-          transition: all 0.5s ease;
-          animation: fade-in 0.5s backwards 0.5s;
+          animation: fade-in 0.5s;
         }
       }
     }
@@ -144,10 +145,14 @@
   0% {
     transform: translate(0, 0);
     opacity: 1;
+    z-index: 2;
+    visibility: visible;
   }
 
   100% {
-    transform: translate(20px, 0);
+    transform: translate(-20px, 0);
     opacity: 0;
+    z-index: -2;
+    visibility: hidden;
   }
 }
