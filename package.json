@@ -55,7 +55,7 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "body-scroll-lock": "^2.6.4",
-    "gulp-cli": "^2.2.0",
+    "gulp-cli": "^2.3.0",
     "gulp-sequence": "^1.0.0"
   },
   "main": "gulpfile.js",

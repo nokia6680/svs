@@ -142,7 +142,7 @@
     margin-bottom: 1.25rem;
 
     &-item {
-      @include flex-setting(row, flex-start, center);
+      @include flex-setting(row, flex-start, flex-start);
       @include font-setting($primary-font, 0.938rem, 1.188rem, 400, $text-primary);
       margin: 0;
       width: 100%;
@@ -150,6 +150,7 @@
     }
 
     &-icon {
+      margin-top: 3px;
       min-width: 9px;
       width: 9px;
       height: 10px;

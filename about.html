@@ -375,7 +375,7 @@
 		<article class="main__contents company-contents">
 			<h2 class="company-contents__title visually-hidden">Содержание блоков</h2>
 			<!--Блок производства-->
-			<section class="company-contents__item contentItem--active production">
+			<section class="company-contents__item production">
 				<h3 class="production__title">Производство</h3>
 				<!--Список информации о производстве-->
 				<ul class="production__info prod-info">
@@ -487,8 +487,27 @@
 				</ul>
 			</section>
 			<!--Блок индивидуального заказа-->
-			<section class="company-contents__item contentItem individual">
-				<span>В разработке</span>
+			<section class="company-contents__item contentItem contentItem--active individual">
+				<h2 class="individual__title">Перчатки с индивидуальным дизайном</h2>
+        <picture class="individual__frame">
+          <source srcset="img/individual.webp" type="image/webp" />
+          <img class="individual__pic" src="img/individual.png" alt="Индивидуальный заказ" />
+        </picture>
+        <ul class="individual__list">
+          <li class="individual__item">
+            <img class="individual__icon" src="img/ind-1.svg" alt="Необходимые материалы" />
+            <span class="individual__text">Из материалов, которые&nbsp;нужны именно&nbsp;вам</span>
+          </li>
+          <li class="individual__item">
+            <img class="individual__icon" src="img/ind-2.png" alt="Индивидуальная айдентика" />
+            <span class="individual__text">С вашими фирменными цветами, логотипом, маркировкой</span>
+          </li>
+          <li class="individual__item">
+            <img class="individual__icon" src="img/ind-3.svg" alt="Стабильные отгрузки" />
+            <span class="individual__text">Стабильные отгрузки&nbsp;даже при&nbsp;крупных&nbsp;заказах</span>
+          </li>
+        </ul>
+        <p class="individual__description">Чтобы выделиться на фоне конкурентов и преуспеть, очень важно иметь индивидуальность. Кроме «СВС», такие широкие возможности индивидуализации перчаток не может предложить ни один производитель в России, тем более при крупном заказе. Все детали обговариваются и согласовываются с клиентом на этапе подготовки. Именно вы решаете, какими будут ваши перчатки.</p>
 			</section>
 			<!--Контакты-->
 			<section class="company-contents__item contentItem contacts">

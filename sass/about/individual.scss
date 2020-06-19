@@ -1,0 +1,194 @@
+.individual {
+  width: 100%;
+  margin-bottom: 3.75rem;
+
+  @include flex-setting(column, flex-start, flex-start);
+
+  &__title {
+    @include font-setting($title-font, 1.75rem, 2rem, 700, $text-primary);
+    margin: 0;
+    margin-bottom: 2.25rem;
+
+    align-self: flex-start;
+
+    padding-left: 0.625rem;
+  }
+
+  &__frame {
+    @include flex-setting(column, center, center);
+
+    width: 100%;
+
+    margin-bottom: 1.625rem;
+  }
+
+  &__list {
+    @include ul-nostyle;
+    @include flex-setting(column, flex-start, flex-start);
+
+    width: 100%;
+    margin-bottom: 1.25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+
+  &__item {
+    width: 100%;
+    @include flex-setting(row, flex-start, center);
+    margin-bottom: 0.865rem;
+  }
+
+  &__icon {
+    width: 76px;
+    margin-right: 0.875rem;
+  }
+
+  &__text {
+    @include font-setting($primary-font, 1rem, 1.25rem, 400, $text-primary);
+    max-width: 65%;
+  }
+
+  &__description {
+    @include font-setting($primary-font, 1rem, 1.4, 400, $text-primary);
+    margin: 0;
+    margin-bottom: 2.5rem;
+
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .individual {
+    &__title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 3.75rem;
+
+      padding-left: 0;
+      max-width: 80%;
+    }
+
+    &__frame {
+      max-width: 688px;
+    }
+
+    &__list {
+      padding: 0;
+      max-width: 688px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      margin-bottom: 5.5rem;
+    }
+
+    &__item {
+      align-items: center;
+      width: 50%;
+      margin-bottom: 3.25rem;
+
+      &:last-of-type {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &__icon {
+      width: 96px;
+      min-width: 80px;
+      margin-right: 1.125rem;
+    }
+
+    &__text {
+      font-size: 1.313rem;
+      max-width: 100%;
+    }
+
+    &__description {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .individual {
+    &__title {
+      max-width: 70%;
+    }
+
+    &__frame {
+      max-width: 944px;
+    }
+
+    &__list {
+      max-width: 944px;
+      margin-bottom: 7.5rem;
+      align-items: flex-start;
+    }
+
+    &__item {
+      width: 50%;
+    }
+
+    &__icon {
+      width: 107px;
+      min-width: 96px;
+      margin-right: 1.25rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      max-width: 60%;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .individual {
+    &__title {
+      max-width: 70%;
+    }
+
+    &__frame {
+      max-width: 100%;
+    }
+
+    &__list {
+      max-width: 1200px;
+      margin-bottom: 7.5rem;
+      align-items: space-between;
+      flex-wrap: nowrap;
+    }
+
+    &__item {
+      width: auto;
+    }
+
+    &__icon {
+      width: 107px;
+      min-width: 86px;
+      margin-right: 1.125rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      max-width: 80%;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+    }
+  }
+}

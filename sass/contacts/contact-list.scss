@@ -21,9 +21,9 @@
 
   .tabItem--active {
     .contact-list__link {
-      opacity: 0.6;
-      border-bottom: none;
       transition: 0.1s ease-in;
+      border-bottom: 2px solid #84AA32;
+      opacity: 1;
     }
   }
 
@@ -31,12 +31,11 @@
   &__link {
     @include font-setting($title-font, 1.125rem, 1.5rem, 700, $text-primary);
     text-decoration: none;
-    opacity: 1;
+    opacity: 0.6;
     pointer-events: none;
 
     border-bottom: none;
     transition: 0.1s ease-in;
-    border-bottom: 2px solid #84AA32;
   }
 }
 

@@ -18,6 +18,7 @@ const MenuButton = document.querySelector('.nav-controls__toggle');
 const MenuWrap = document.querySelector('.header');
 const SearchBtn = document.querySelector('.header-menu__search');
 const SearchClose = document.querySelector('.nav-search__close');
+const SearchBg = document.querySelector('.nav-search__bg');
 /*Variables for grid catalog view*/
 const CatView = document.querySelector('.catalog-filter__toggle');
 const CatList = document.querySelector('.catalog-list');
@@ -30,12 +31,22 @@ document.querySelector('.nav-controls__toggle').onclick = function(){
   NavMenu.classList.toggle('active');
 };
 
+document.querySelector('.nav-controls__search').onclick = function(){
+	MenuButton.classList.toggle('open');
+	NavMenu.classList.toggle('active');
+	document.getElementById("search-1").focus();
+};
+
 document.querySelector('.header-menu__search').onclick = function(){
 	Search.classList.add('active');
   SRes.classList.add('active');
 };
 
 document.querySelector('.nav-search__close').onclick = function(){
+  Search.classList.remove('active');
+};
+
+document.querySelector('.nav-search__bg').onclick = function() {
   Search.classList.remove('active');
 };
 

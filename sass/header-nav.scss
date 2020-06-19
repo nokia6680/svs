@@ -14,24 +14,25 @@
   padding-bottom: 1rem;
 
   height: 60px;
-  background: #F0EFED;;
+  background: #F0EFED;
 
   z-index: 1;
 
   &.active {
+    transform: translate3d(0,0,0);
+    -webkit-overflow-scrolling:touch;
+
     align-items: flex-start;
     height: 100%;
     background: $menu-bg;
     transition: all 0.3s ease-in, background 0.2s ease-in;
     transition-delay: 0.05s;
-
-    .nav-list {
-      transition: all 0.3s ease-in, background 0.5s ease-in;
-    }
+    overflow: visible;
 
     .nav-list__item {
       pointer-events: auto;
       transform: scale(1) translateY(0px);
+      will-change: transform;
 
       opacity: 1;
       @for $i from 1 through $menuItems {
@@ -59,19 +60,7 @@
       transition-delay: 0.12s;
       pointer-events: all;
 
-      .quicklinks {
-        display: none;
-      }
-
-      .search-result {
-        display: none;
-      }
-
-      &.clicked {
-        .quicklinks {
-          display: flex;
-        }
-
+      &.inactive {
         .search-result {
           display: none;
         }
@@ -83,6 +72,10 @@
         }
 
         .search-result {
+          display: flex;
+        }
+
+        .search-result__lower {
           display: flex;
         }
       }

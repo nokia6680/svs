@@ -19,19 +19,19 @@
   &__link {
     @include font-setting($title-font, 1.125rem, 1.5rem, 700, $text-primary);
     text-decoration: none;
-    opacity: 1;
     pointer-events: none;
 
+    opacity: 0.6;
     border-bottom: none;
-    transition: 0.1s ease-in;
-    border-bottom: 2px solid #84AA32;
   }
 
   &__item.subtabItem--active {
     .team__link {
-      opacity: 0.6;
+      transition: 0.1s ease-in;
+      opacity: 1;
       border-bottom: none;
       transition: 0.1s ease-in;
+      border-bottom: 2px solid #84AA32;
     }
   }
 }

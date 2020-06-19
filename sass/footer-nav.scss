@@ -42,6 +42,18 @@
       filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));
     }
   }
+
+  &__tech {
+    width: 100%;
+    @include flex-setting(column, flex-start, flex-start);
+  }
+
+  &__schedule {
+    @include font-setting($primary-font, 1.125rem, 1.188rem, 700, #84AA32);
+    animation: blink 2s linear infinite;
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+  }
 }
 
 
@@ -62,8 +74,16 @@
       max-width: 688px;
     }
 
+    &__tech {
+      width: auto;
+    }
+
     &__origin {
       align-self: center;
+    }
+
+    &__schedule {
+      align-self: flex-end;
     }
   }
 }
@@ -86,6 +106,7 @@
 @media only screen and (min-width: $laptop-wide) {
   .footer-nav {
     &__wrap {
+      align-items: flex-start;
       max-width: 1200px;
       padding-bottom: 3.75rem;
       padding-top: 3.75rem;

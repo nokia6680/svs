@@ -4,11 +4,11 @@
   position: relative;
   padding: 0;
 
-  @include flex-setting(column, center, center);
+  display: block;
 
   background-color: #F0EFED;
 
-  z-index: 99;
+  z-index: 10;
 
   /*Header on catalog page*/
 
@@ -79,6 +79,7 @@
     width: 100%;
 
     border-radius: 0;
+    overflow: visible;
 
     background-color: #F0EFED;
 

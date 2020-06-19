@@ -4,9 +4,8 @@
   margin-top: 1.25rem;
   margin-bottom: 0.938rem;
 
-  transform: scale(1.15) translateY(-30px);
   opacity: 0;
-  transition: transform 0.5s $cubic, opacity 0.6s $cubic;
+  transition: all 0.5s  ease-in, opacity 0.5s  ease-in;
   transition-delay: 0.55s;
   pointer-events: none;
 
@@ -17,22 +16,22 @@
 
   z-index: 2;
 
-  .search-result {
-    display: none;
-  }
-
-  &.asked {
-    .quicklinks {
-      display: none;
-    }
-
+  &.search {
     .search-result {
       display: flex;
     }
 
-    .search-result__lower {
+    .quicklinks {
       display: flex;
     }
+
+    .search-result__lower {
+      display: none;
+    }
+  }
+
+  &__bg {
+    display: none;
   }
 
   &__wrap {
@@ -49,7 +48,7 @@
     width: 100%;
     height: 50px;
     background: #555555;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 
     border: none;
@@ -78,10 +77,39 @@
       color: $text-primary;
       transition: 0.1s ease-in;
     }
+
+    &:focus {
+      .search-result {
+        display: flex;
+      }
+
+      .quicklinks {
+        display: flex;
+      }
+
+      .search-result__lower {
+        display: none;
+      }
+    }
   }
 
-  &__close,
-  &__pic {
+  &__reset{
+    @include flex-setting(column, center, center);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.625rem;
+    z-index: 10;
+
+    outline: none;
+  }
+
+  &__pic,
+  &__close {
     display: none;
   }
 }
@@ -114,12 +142,32 @@
       pointer-events: all;
       transition: all 0.5s $cubic;
 
+      .header-nav {
+        max-width: 100%;
+      }
+
       .search-result {
         display: flex;
       }
 
       .search-result__lower {
         display: none;
+      }
+
+      .nav-search__bg {
+        display: flex;
+        position: absolute;
+
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #666666;
+        top: 39px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: -2;
       }
     }
 
@@ -130,6 +178,8 @@
 
       .search-result__lower {
         display: flex;
+        max-height: 580px;
+        overflow: visible;
       }
 
       .search-result__title {
@@ -138,21 +188,6 @@
       }
     }
 
-    &::before {
-      position: absolute;
-      content: '';
-
-      width: 100vw;
-      height: 100vh;
-
-      background-color: #666666;
-      top: 39px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      z-index: -2;
-    }
 
     &__wrap {
       @include flex-setting(row, space-between, center);
@@ -194,6 +229,10 @@
         color: $text-secondary;
         transition: 0.1s ease-in;
       }
+    }
+
+    &__reset {
+      display: none;
     }
 
     &__close,
