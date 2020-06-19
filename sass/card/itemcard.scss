@@ -653,6 +653,10 @@
       width: 50%;
     }
 
+    &__sizes-text {
+      max-width: 80%;
+    }
+
     &__sizes-description {
       margin-bottom: 2.25rem;
 
@@ -832,6 +836,10 @@
       padding-right: 1.25rem;
     }
 
+    &__sizes-text {
+      max-width: 80%;
+    }
+
     &__sizes-close {
       right: -1.125rem;
       padding: 0;
@@ -915,6 +923,10 @@
     /*Размеры перчаток*/
     &__sizes-head {
       padding-left: 2.75rem;
+    }
+
+    &__sizes-text {
+      max-width: 80%;
     }
   }
 }
