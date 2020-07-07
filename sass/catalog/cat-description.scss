@@ -6,7 +6,7 @@
   margin-bottom: 5.188rem;
   padding: 0 0.625rem;
 
-  &__container {
+  &__wrapper {
     @include flex-setting(column, flex-start, flex-start);
 
     width: 100%;
@@ -44,11 +44,44 @@
     }
   }
 
-  &__subtitle {
-    @include font-setting($title-font, 1.5rem, 1.75rem, 700, $text-primary);
+  &__head {
+    @include flex-setting(column, flex-start, flex-start);
+    width: 100%;
+    margin-bottom: 1.25rem;
+
+    p {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include font-setting($title-font, 1.25rem, 1.5rem, 700, $text-primary);
     margin: 0;
 
     margin-bottom: 1.25rem;
+  }
+
+  &__subtitle {
+    width: 100%;
+    @include font-setting($title-font, 1rem, 1.375rem, 700, $text-primary);
+    margin: 0;
+
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.625rem;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 100%;
+      height: 2px;
+      background-color: #C9E2E6;
+
+      bottom: 0;
+      left: 0;
+    }
   }
 
   &__text {
@@ -56,24 +89,127 @@
     margin: 0;
     margin-bottom: 0.625rem;
 
-    &-head {
-      @include font-setting($primary-font, 1rem, 1.25rem, 700, $text-primary);
-      margin: 0;
+    width: 100%;
+  }
 
+  &__app {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, flex-start);
+    margin-bottom: 1.875rem;
+  }
+
+  &__list {
+    @include ul-nostyle;
+    @include flex-setting(column, flex-start, flex-start);
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+
+    padding-left: 1.25rem;
+    margin-bottom: 0.25rem;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 10px;
+      height: 10px;
+
+      background-image: url('../img/dot.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 0;
+      top: 5px;
+    }
+  }
+
+  &__subtext {
+    @include font-setting($primary-font, 0.75rem, 1.313rem, 400, $text-primary);
+  }
+
+  &__about {
+    width: 100%;
+    @include flex-setting(column, flex-start, flex-start);
+
+    margin-bottom: 2rem;
+  }
+
+  &__options {
+    @include flex-setting(column, flex-start, center);
+    width: 100%;
+
+    &-list {
+      @include ul-nostyle;
+      width: 100%;
+
+      margin-top: 1.25rem;
       margin-bottom: 1.25rem;
     }
 
-    &-link {
-      text-decoration: none;
-      color: $text-primary;
+    &-item {
+      width: 100%;
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: $link-hover;
-        transition: 0.1s ease-in;
+      margin-bottom: 0.875rem;
+      padding-top: 0.875rem;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 100%;
+        height: 2px;
+        background-color: #C9E2E6;
+
+        left: 0;
+        top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
+
+    &-text {
+      @include font-setting($primary-font, 0.75rem, 1.313rem, 500, $text-primary);
+      width: 100%;
+    }
+  }
+
+  &__frame {
+    width: 100%;
+    min-height: 360px;
+    max-height: 360px;
+    @include flex-setting(column, flex-end, center);
+
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 100%;
+      height: 2px;
+      background-color: #C9E2E6;
+
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
   }
 
   &__expand {
@@ -102,43 +238,251 @@
       @include btn-hover;
     }
   }
+
+  &__faq {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, flex-start);
+  }
+
+  &__note {
+    @extend .cat-description__text;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: $tablet) {
   .cat-description {
     padding: 0;
+
+    &.ie {
+      .cat-description__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+      }
+
+      .cat-description__head {
+        width: 60%;
+        margin-right: 2rem;
+      }
+
+      .cat-description__app {
+        width: 30%;
+      }
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-areas:
+        'head head app'
+        'about about about'
+        'faq faq faq'
+      ;
+
+      grid-column-gap: 2.5rem;
+
+      width: 100%;
+      max-height: 110px;
+      min-height: 110px;
+
+      overflow-y: hidden;
+
+      margin-bottom: 2.5rem;
+
+      transition: max-height 400ms ease-in-out;
+
+      position: relative;
+
+      &::after {
+        height: 50px;
+        bottom: 0;
+      }
+
+      &.active {
+        max-height: 4000px;
+        transition: max-height 400ms ease-in-out;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__head {
+      grid-area: head;
+      margin-bottom: 6.5rem;
+    }
+
+    &__title {
+      font-size: 1.625rem;
+      line-height: 2.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.375rem;
+      line-height: 1;
+      padding-bottom: 0.75rem;
+    }
+
+    &__text {
+      font-size: 1rem;
+      line-height: 1.313rem;
+      margin-bottom: 0.625rem;
+    }
+
+    &__app {
+      margin-top: 62px;
+      grid-area: app;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      width: 100%;
+      position: relative;
+
+      padding-left: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    &__subtext {
+      font-size: 1rem;
+    }
+
+    &__about {
+      grid-area: about;
+      margin-bottom: 6.5rem;
+    }
+
+    &__options {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      &-list {
+        margin-top: 4em;
+        margin-bottom: 0;
+      }
+
+      &-item {
+        max-width: 280px;
+      }
+
+      &-text {
+        font-size: 1rem;
+      }
+    }
+
+    &__frame {
+      min-height: 500px;
+      max-height: 500px;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &__faq {
+      grid-area: faq;
+    }
   }
 }
 
+
 @media only screen and (min-width: $laptop) {
   .cat-description {
-    &__container {
-      &::after {
-        bottom: 20px;
+    &__wrapper {
+      min-height: 200px;
+      max-height: 200px;
+    }
+    &__title {
+      font-size: 2rem;
+      line-height: 3rem;
+      margin-bottom: 3.375rem;
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+      padding-bottom: 0.875rem;
+      margin-bottom: 1.125rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    &__app {
+      margin-top: 106px;
+    }
+
+    &__subtext {
+      font-size: 1.125rem;
+    }
+
+    &__options {
+      &-list {
+        margin-top: 4rem;
+        margin-bottom: 0;
       }
+
+      &-item {
+        max-width: 324px;
+      }
+
+      &-text {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    &__frame {
+      min-height: 500px;
+      max-height: 750px;
+    }
+
+    &__image {
+      object-position: top;
+      object-fit: contain;
+      max-height: 750px;
+    }
+
+    &__note {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
     }
   }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .cat-description {
-    margin-bottom: 5.188rem;
-    padding: 0;
+    &__wrapper {
+      grid-template-areas:
+        'head head head app'
+        'about about about about'
+        'faq faq faq faq'
+      ;
+    }
 
-    &__container {
-      &::after {
-        bottom: 20px;
+    &__head {
+      max-width: 600px;
+    }
+
+    &__options {
+      &-item {
+        margin-bottom: 2.5rem;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
-    }
-
-    &__subtitle {
-      font-size: 2rem;
-      line-height: 2.25rem;
-      margin-bottom: 2.5rem;
-    }
-
-    &__expand {
-      font-size: 1.25rem;
     }
   }
 }

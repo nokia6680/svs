@@ -40,6 +40,14 @@
   }
 }
 
+@media only screen and (min-width: $tablet) {
+  .category {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+  }
+}
+
 @media only screen and (min-width: $laptop) {
   .category {
     display: flex;
