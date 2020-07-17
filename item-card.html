@@ -349,10 +349,29 @@
 	</header>
 	<!---->
 	<main class="main main--card">
-		<!--Link to similar-->
-		<div class="main__return return return--upper">
-			<a class="return__link" href="catalog.html" target="_self" title="Назад в каталог">Вернуться в каталог</a>
-		</div>
+    <!--Breadcrumbs-->
+    <div class="main-wrapper__breadcrumbs breadcrumbs breadcrumbs--item">
+      <ul itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs__list">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs__item">
+          <a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs__link" href="index.html" id="index.html">
+            <span itemprop="name" class="breadcrumbs__text">Главная</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs__item breadcrumbs__item--last">
+          <a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs__link" href="catalog.html" id="catalog.html">
+            <span itemprop="name" class="breadcrumbs__text">Продукция</span>
+          </a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs__item breadcrumbs__item--last">
+          <span itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs__last" href="#" id="#">
+            <span itemprop="name" class="breadcrumbs__text">Перчатки с покрытием</span>
+          </span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ul>
+    </div>
 		<!--Item card-->
 		<section itemscope itemtype="http://schema.org/Product" class="main__itemcard itemcard">
 			<!--Desktop gallery-->
@@ -1244,6 +1263,39 @@
 				</article>
 			</div>
 		</section>
+    <!--Tag cloud-->
+    <div class="main__cloud cloud cloud--card">
+      <h2 class="cloud__title">Подборки перчаток</h2>
+      <ul class="cloud__list">
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">От порезов и проколов</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Рабочие акриловые</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">С защитой от холода</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Слесарные перчатки</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Перчатки ХБ</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">С латексным покрытием</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Слесарные перчатки</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Перчатки ХБ</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">От порезов и проколов</a>
+        </li>
+      </ul>
+    </div>
 		<!--Link to similar-->
 		<div class="main__return return return--lower">
 			<a class="return__link" href="catalog.html" target="_self" title="Назад в каталог">Вернуться в каталог</a>

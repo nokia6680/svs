@@ -1,0 +1,117 @@
+.breadcrumbs {
+  width: 100%;
+
+  @include ul-nostyle;
+  @include flex-setting(row, flex-start, center);
+
+  padding-top: 1.25rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+
+  &--item {
+    margin-bottom: 1.25rem;
+  }
+
+  &__list {
+    width: 100%;
+
+    @include ul-nostyle;
+    @include flex-setting(row, flex-start, center);
+  }
+
+  &__item {
+    width: auto;
+    position: relative;
+    margin-right: 1.875rem;
+
+    &:last-of-type {
+      margin-right: 0;
+      padding-left: 1.25rem;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 16l7-7.5L1 1' stroke='%2384AA32' stroke-width='2'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        transform: rotate(180deg);
+
+        width: 7px;
+        height: 15px;
+
+        top: 1px;
+        left: 0rem;
+      }
+    }
+
+    &:not(:last-of-type) {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include font-setting($primary-font, 1rem, 1, 400, $text-primary);
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #84AA32;
+      transition: all 0.2s ease-in;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .breadcrumbs {
+    padding: 0;
+    margin-bottom: 1.25rem;
+
+    &__item {
+      margin-right: 4.188rem;
+
+      &:last-of-type {
+        margin-right: 0;
+        padding-left: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:not(:last-of-type) {
+        display: block;
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          background-image: url("data:image/svg+xml,%3Csvg width='10' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 16l7-7.5L1 1' stroke='%2384AA32' stroke-width='2'/%3E%3C/svg%3E");
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          width: 7px;
+          height: 15px;
+
+          top: 0;
+          right: -2.625rem;
+        }
+      }
+    }
+
+    &__link {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .breadcrumbs {
+    margin-bottom: 3.125rem;
+  }
+}

@@ -342,6 +342,23 @@
 	</header>
 	<!---->
 	<main class="main main--catalog">
+    <!--Breadcrumbs-->
+    <div class="main-wrapper__breadcrumbs breadcrumbs">
+      <ul itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs__list">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs__item">
+          <a itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs__link" href="index.html" id="index.html">
+            <span itemprop="name" class="breadcrumbs__text">Главная</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" typeof="Breadcrumb" class="breadcrumbs__item breadcrumbs__item--last">
+          <span itemprop="item" itemscope itemtype="https://schema.org/Thing" class="breadcrumbs__last" href="#" id="#">
+            <span itemprop="name" class="breadcrumbs__text">Продукция</span>
+          </span>
+          <meta itemprop="position" content="2">
+        </li>
+      </ul>
+    </div>
 		<!---->
 		<div class="main__heading heading">
 			<!--Heading title in catalog page-->
@@ -354,6 +371,38 @@
 				</svg>
 			</a>
 		</div>
+    <!--Tag cloud-->
+    <div class="main__cloud cloud">
+      <ul class="cloud__list">
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">От порезов и проколов</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Рабочие акриловые</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">С защитой от холода</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Слесарные перчатки</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Перчатки ХБ</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">С латексным покрытием</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Слесарные перчатки</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">Перчатки ХБ</a>
+        </li>
+        <li class="cloud__item">
+          <a class="cloud__link" href="#" target="_self">От порезов и проколов</a>
+        </li>
+      </ul>
+    </div>
 		<!--Main content zone-->
 		<section class="main__catalog catalog">
 			<div class="catalog__filter catalog-filter">
@@ -1101,7 +1150,7 @@
 		</section>
     <!--category text-->
     <div class="catalog__description cat-description">
-      <div class="cat-description__wrapper active">
+      <div class="cat-description__wrapper">
         <!--Area head-->
         <div class="cat-description__head">
           <h3 class="cat-description__title">Перчатки из акрила</h3>
@@ -1191,7 +1240,7 @@
         </div>
       </div>
       <!---->
-      <button class="cat-description__expand" type="button">Читать далее</button>
+      <button class="cat-description__expand" id="read-more" type="button" onClick="toggleText(this.id);">Читать далее</button>
     </div>
 	</main>
 	<!--Footer-->
@@ -1335,6 +1384,24 @@
 			<use xlink:href="#icon-angle-down"></use>
 		</svg>
 	</a>
+  <script>
+    // Смена текста кнопки развернуть-свернуть
+    function toggleText(button_id)  {
+       var text = document.getElementById('read-more').firstChild;
+       text.data = text.data == "Читать далее" ? "Свернуть" : "Читать далее";
+    };
+  </script>
+  <script>
+    var moreOpener = document.querySelector('.cat-description__expand');
+    var moreWrapper = document.querySelector('.cat-description__wrapper');
+
+    moreOpener.addEventListener('click', function () {
+      moreWrapper.classList.toggle('active');
+      moreOpener.classList.toggle('open');
+
+      return false;
+    });
+  </script>
   <script>
     //Проверка на ИЕшность
     var ua = window.navigator.userAgent;

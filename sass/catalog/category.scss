@@ -53,7 +53,7 @@
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    top: -65px;
+    top: -10.125rem;
     right: 0;
 
     width: auto;
@@ -61,5 +61,11 @@
       margin-right: 0;
       margin-left: 3.125rem;
     }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .category {
+    top: -15.75rem;
   }
 }
