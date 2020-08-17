@@ -3,8 +3,46 @@
 
   width: 100%;
 
-  margin-bottom: 5.188rem;
   padding: 0 0.625rem;
+  padding-bottom: 12rem;
+  margin-bottom: 5.188rem;
+
+  position: relative;
+  max-height: 300px;
+  transform-origin: top;
+
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: '';
+
+    width: 100%;
+    height: 100px;
+
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    bottom: 75px;
+    left: 0;
+    right: 0;
+  }
+
+  &.active {
+    transform-origin: top;
+    max-height: 4000px;
+    transition: max-height 200ms ease-in-out;
+    overflow: visible;
+    padding-bottom: 4rem;
+
+    &::after {
+      display: none;
+    }
+
+    .cat-description__wrapper {
+      position: relative;
+      max-height: 100%;
+      transition: all 0.2s ease-in;
+    }
+  }
 
   &__wrapper {
     display: block;
@@ -17,31 +55,9 @@
 
     margin-bottom: 2.5rem;
 
-    transition: max-height 400ms ease-in-out;
+    transition: max-height 200ms ease-in-out;
 
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-
-      width: 100%;
-      height: 50px;
-
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-
-    &.active {
-      max-height: 4000px;
-      transition: max-height 400ms ease-in-out;
-
-      &::after {
-        display: none;
-      }
-    }
+    position: absolute;
   }
 
   &__head {
@@ -234,6 +250,10 @@
 
     transition: 0.1s ease-in;
 
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+
     &:hover,
     &:active {
       @include btn-hover;
@@ -259,6 +279,7 @@
 @media only screen and (min-width: $tablet) {
   .cat-description {
     padding: 0;
+    padding-bottom: 16rem;
 
     &.ie {
       .cat-description__wrapper {
@@ -290,8 +311,8 @@
 
       grid-column-gap: 2.5rem;
 
-      max-height: 300px;
-      min-height: 300px;
+      min-height: 170px;
+      max-height: 170px;
     }
 
     &__head {
@@ -376,9 +397,12 @@
 
 @media only screen and (min-width: $laptop) {
   .cat-description {
+    max-height: 600px;
+    padding-bottom: 23rem;
+
     &__wrapper {
-      min-height: 400px;
-      max-height: 400px;
+      min-height: 280px;
+      max-height: 280px;
     }
     &__title {
       font-size: 2rem;

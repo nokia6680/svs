@@ -373,35 +373,17 @@
 		</div>
     <!--Tag cloud-->
     <div class="main__cloud cloud">
-      <ul class="cloud__list">
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">От порезов и проколов</a>
-        </li>
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">Рабочие акриловые</a>
-        </li>
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">С защитой от холода</a>
-        </li>
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">Слесарные перчатки</a>
-        </li>
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">Перчатки ХБ</a>
-        </li>
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">С латексным покрытием</a>
-        </li>
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">Слесарные перчатки</a>
-        </li>
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">Перчатки ХБ</a>
-        </li>
-        <li class="cloud__item">
-          <a class="cloud__link" href="#" target="_self">От порезов и проколов</a>
-        </li>
-      </ul>
+      <div class="cloud__wrapper">
+        <a class="cloud__link" href="#" target="_self">От порезов и проколов</a>
+        <a class="cloud__link" href="#" target="_self">Рабочие акриловые</a>
+        <a class="cloud__link" href="#" target="_self">С защитой от холода</a>
+        <a class="cloud__link" href="#" target="_self">Слесарные перчатки</a>
+        <a class="cloud__link" href="#" target="_self">Перчатки ХБ</a>
+        <a class="cloud__link" href="#" target="_self">С латексным покрытием</a>
+        <a class="cloud__link" href="#" target="_self">Слесарные перчатки</a>
+        <a class="cloud__link" href="#" target="_self">Перчатки ХБ</a>
+        <a class="cloud__link" href="#" target="_self">От порезов и проколов</a>
+      </div>
     </div>
 		<!--Main content zone-->
 		<section class="main__catalog catalog">
@@ -1393,7 +1375,7 @@
   </script>
   <script>
     var moreOpener = document.querySelector('.cat-description__expand');
-    var moreWrapper = document.querySelector('.cat-description__wrapper');
+    var moreWrapper = document.querySelector('.cat-description');
 
     moreOpener.addEventListener('click', function () {
       moreWrapper.classList.toggle('active');

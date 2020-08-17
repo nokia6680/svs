@@ -53,11 +53,11 @@
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    top: -10.125rem;
+    top: -11.125rem;
     right: 0;
 
     width: auto;
-    &__item {
+    &__link {
       margin-right: 0;
       margin-left: 3.125rem;
     }
@@ -66,6 +66,6 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .category {
-    top: -15.75rem;
+    top: -14.25rem;
   }
 }
