@@ -86,7 +86,7 @@
     }
 
     &--cat {
-      padding-left: 0.625rem;
+      padding-left: 0;
 
       .choice-list__label {
         font-size: 0.875rem;
@@ -99,11 +99,11 @@
 @media only screen and (min-width: $laptop-wide) {
   .choice-list {
     &--cat {
-      padding-left: 0.813rem;
+      padding-left: 0;
 
       .choice-list__label {
         font-size: 1rem;
-        padding-left: 2.25rem;
+        padding-left: 1.875rem;
       }
     }
   }

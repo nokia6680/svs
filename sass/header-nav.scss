@@ -42,12 +42,6 @@
       }
     }
 
-    .nav-contacts {
-      display: flex;
-      transition: all 0.3s ease-in;
-      transition-delay: 0.2s;
-    }
-
     .nav-controls__search {
       display: none;
       transition: all 0.3s ease-in;
@@ -67,6 +61,18 @@
       }
 
       &.asked {
+        .nav-search__form {
+          margin-right: 0.625rem;
+        }
+
+        .nav-search__close {
+          display: flex;
+        }
+
+        .nav-search__reset {
+          display: flex;
+        }
+
         .quicklinks {
           display: none;
         }
@@ -118,8 +124,6 @@
 
 @media only screen and (min-width: $tablet) {
   .header-nav {
-    justify-content: center;
-
     &__logo {
       margin-left: 2.5rem;
       padding-left: 0;

@@ -103,7 +103,11 @@
   }
 
   @media only screen and (min-width: $laptop) {
-
+      width: 18px;
+      height: 18px;
+      border: 2px solid #C1CAD4;
+      background-color: transparent;
+      top: -1px;
   }
 
   @media only screen and (min-width: $widebook-hd) {
@@ -132,7 +136,11 @@
   }
 
   @media only screen and (min-width: $laptop) {
-
+      width: 18px;
+      height: 18px;
+      border: 2px solid #84AA32;
+      background-color: transparent;
+      top: -1px;
   }
 
   @media only screen and (min-width: $widebook-hd) {
@@ -164,7 +172,11 @@
   }
 
   @media only screen and (min-width: $laptop) {
+      width: 18px;
+      height: 18px;
 
+      border-radius: 2px;
+      top: -1px;
   }
 
   @media only screen and (min-width: $widebook-hd) {

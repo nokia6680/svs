@@ -273,34 +273,35 @@
     &--desktop {
       margin-bottom: 2.5rem;
       border: none;
-      border-top: 2px solid #00778B;
-      border-bottom: 2px solid #00778B;
-
       border-radius: 0;
+
+      .filter-choice__select {
+        border: none;
+      }
 
       .filter-choice__checkbox {
         & + label {
           .filter-choice__heading-pic {
-            transform: scale(0.9) rotate(0);
+            display: none;
           }
         }
 
         &:checked + label {
           .filter-choice__heading-pic {
-            transform: scale(0.9) rotate(180deg);
+            display: none;
           }
         }
       }
 
       .filter-choice__heading {
-        padding-left: 2.438rem;
-        padding-right: 0.625rem;
+        padding-left: 2.125rem;
+        padding-right: 0;
 
         font-size: 0.938rem;
 
         &::after {
-          width: 39px;
-          height: 57px;
+          width: 20px;
+          height: 22px;
         }
 
         &.filter-1 {
@@ -366,71 +367,10 @@
     &--desktop {
       margin-bottom: 2.5rem;
       border: none;
-      border-top: 2px solid #00778B;
-      border-bottom: 2px solid #00778B;
-
       border-radius: 0;
 
-      .filter-choice__checkbox {
-        & + label {
-          .filter-choice__heading-pic {
-            transform: scale(0.9) rotate(0);
-          }
-        }
-
-        &:checked + label {
-          .filter-choice__heading-pic {
-            transform: scale(0.9) rotate(180deg);
-          }
-        }
-      }
-
       .filter-choice__heading {
-        padding-left: 2.438rem;
-        padding-right: 0.625rem;
-
         font-size: 0.938rem;
-
-        &::after {
-          width: 39px;
-          height: 57px;
-        }
-
-        &.filter-1 {
-          &::after {
-            background-size: 19px 22px;
-          }
-        }
-
-        &.filter-2 {
-          &::after {
-            background-size: 19px 22px;
-          }
-        }
-
-        &.filter-3 {
-          &::after {
-            background-size: 19px 18px;
-          }
-        }
-
-        &.filter-4 {
-          &::after {
-            background-size: 19px 18px;
-          }
-        }
-
-        &.filter-5 {
-          &::after {
-            background-size: 20px 16px;
-          }
-        }
-
-        &.filter-6 {
-          &::after {
-            background-size: 19px 20px;
-          }
-        }
       }
     }
 
@@ -453,17 +393,17 @@
     }
 
     &--desktop {
-      margin-bottom: 3.75rem;
+      margin-bottom: 1.5rem;
 
       .filter-choice__heading {
-        padding-left: 3.125rem;
+        padding-left: 2.125rem;
         font-size: 1.125rem;
 
         &::after {
-          width: 50px;
-          height: 60px;
-
-          background-position: top 16px center;
+          width: 24px;
+          height: 24px;
+          top: 50%;
+          transform: translateY(-65%);
         }
 
         &.filter-1 {

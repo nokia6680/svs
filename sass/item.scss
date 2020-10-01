@@ -37,6 +37,10 @@
     cursor: pointer;
   }
 
+  &__hover {
+      display: none;
+  }
+
   &__details {
     width: 100%;
     height: 100%;
@@ -133,7 +137,8 @@
     margin-bottom: 0.625rem;
 
     &.empty {
-      display: none;
+      opacity: 0;
+      min-height: 19px;
     }
   }
 
@@ -170,10 +175,12 @@
 @media only screen and (min-width: $tablet) {
   .item {
     width: 216px;
-    min-height: 470px;
-    max-height: 470px;
+    min-height: 462px;
+    max-height: 462px;
     margin-bottom: 2.5rem;
-    padding: 0.813rem 0.625rem 2.188rem 0.625rem;
+    padding: 0.813rem 0.625rem 0.813rem 0.625rem;
+
+    position: relative;
 
     &__frame {
       height: 242px;
@@ -187,7 +194,8 @@
     }
 
     &__controls {
-      bottom: 0.813rem;
+    position: relative;
+      bottom: auto;
     }
 
     &__description {
@@ -195,33 +203,97 @@
       line-height: 1.188rem;
 
       margin-bottom: 1.25rem;
+      min-height: 38px;
     }
 
     &__articul {
       font-size: 0.875rem;
-      margin-bottom: 0.625rem;
+      margin-bottom: 1.25rem;
     }
 
+    &__hover {
+        @include flex-setting(column, center, center);
+        @include font-setting($primary-font, 0.875rem, 1, 400, #000);
+
+        background-color: #e4f1f3;
+        border-radius: 5px;
+        border: none;
+
+        cursor: pointer;
+        outline: none;
+
+        width: 100%;
+        height: 32px;
+
+        margin-bottom: 1.25rem;
+
+        transition: all 0.1s ease-in;
+
+        &.active {
+            background-color: #02778a;
+            color: #fff;
+
+            transition: all 0.1s ease-in;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: #02778a;
+            color: #fff;
+
+            transition: all 0.1s ease-in;
+        }
+    }
+
+
     &__options {
-      width: 100%;
-      display: inline-block;
+      width: 192px;
+      height: 243px;
+
+      position: absolute;
+
+      background-color: #fff;
+      border-radius: 0;
+
+      top: 0.625rem;
+
+      padding: 0.625rem 0.625rem;
+
+      opacity: 0;
+      pointer-events: none;
+
+      overflow: hidden;
+      transition: all 0.2s ease-in;
+
+      &.active {
+          opacity: 1;
+          transition: all 0.2s ease-in;
+      }
+
 
       &-item {
         align-items: flex-start;
         display: inline;
         line-height: 1;
         width: auto;
-        margin-right: 0.625rem;
+        margin-right: 0;
         position: relative;
         padding-left: 0.75rem;
+
+        margin-bottom: 0.625rem;
+
+        color: #000;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 600;
       }
 
       &-icon {
+        background-image: url('../img/dot-2.svg');
         position: absolute;
         left: 0;
-        top: 2px;
+        top: 0px;
       }
-
 
       &--cat {
         .item__options-item {
@@ -235,13 +307,13 @@
 @media only screen and (min-width: $laptop) {
   .item {
     width: 222px;
-    min-height: 458px;
-    max-height: 458px;
     margin-bottom: 1.25rem;
     padding: 0.625rem 0.625rem;
 
-    &__controls {
-      bottom: 0.625rem;
+    &__options {
+        width: 198px;
+        height: 240px;
+        max-height: 240px;
     }
   }
 }
@@ -249,10 +321,10 @@
 @media only screen and (min-width: $laptop-wide) {
   .item {
     width: 285px;
-    min-height: 560px;
-    max-height: 560px;
+    min-height: 557px;
+    max-height: 557px;
     margin-bottom: 1.25rem;
-    padding: 1.125rem 1.125rem;
+    padding: 1.25rem 1.25rem;
 
     &:last-child {
       margin-bottom: 1.25rem;
@@ -268,19 +340,28 @@
       max-height: 312px;
     }
 
-    &__controls {
-      bottom: 1.125rem;
-    }
-
     &__description {
       font-size: 1.125rem;
       line-height: 1.375rem;
       margin-bottom: 1.25rem;
     }
 
-    &__options {
-      &-item {
+    &__hover {
         font-size: 1rem;
+        height: 36px;
+    }
+
+    &__options {
+        width: 241px;
+        height: 310px;
+        max-height: 310px;
+
+        top: 1.25rem;
+
+        padding: 1.25rem 0.625rem;
+
+      &-item {
+        font-size: 1.125rem;
         line-height: 1.375rem;
       }
 

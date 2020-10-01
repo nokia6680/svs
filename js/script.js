@@ -26,6 +26,14 @@ const CatList = document.querySelector('.catalog-list');
 const SeoList = document.querySelector('.about__container');
 const SeoListBtn = document.querySelector('.about__expand');
 
+var details = document.querySelector('.item__options');
+var detailsOpener = document.querySelector('.item__hover');
+
+document.querySelector('.item__hover').onclick = function(){
+	details.classList.toggle('active');
+    detailsOpener.classList.toggle('active');
+};
+
 document.querySelector('.nav-controls__toggle').onclick = function(){
 	MenuButton.classList.toggle('open');
   NavMenu.classList.toggle('active');
