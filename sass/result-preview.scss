@@ -12,8 +12,15 @@
 
   display: block;
 
-  max-height: 300px;
+  max-height: 210px;
   overflow-y: scroll;
+
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
   &__item {
     border: 2px solid #C9E2E6;
@@ -24,16 +31,16 @@
     width: 100%;
 
     margin-bottom: 0.625rem;
-    padding-right: 1.25rem;
+    padding-right: 0.25rem;
 
-    overflow: hidden;
     height: 98px;
+    max-height: 98px;
 
     &:hover,
     &:active,
     &:focus {
       border-color: transparent;
-      box-shadow: 0px 0px 20px rgba(57, 134, 30, 0.18);
+      box-shadow: 0px 0px 8px 0 rgba(57, 134, 30, 0.18);
       transition: 0.3s ease-in-out;
     }
 
@@ -64,7 +71,46 @@
   }
 
   &__controls {
-    display: none;
+      @include flex-setting(row, flex-start, flex-start);
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+  }
+
+  &__color {
+      margin-right: 0.25rem;
+  }
+
+  &__item-sign {
+    @include font-setting($primary-font, 0.75rem, 1, 700, $text-primary);
+    @include flex-setting(row, space-between, center);
+
+    text-align: center;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+
+    margin-left: 0;
+    margin-bottom: 0.25rem;
+
+    &:first-of-type {
+        margin-right: 0.25rem;
+    }
+
+    &--latest {
+      color: $text-secondary;
+      background-color: $red-sign;
+      border-radius: 3px;
+
+      width: 88px;
+      height: 22px;
+    }
+
+    &--sale {
+      background-color: $yellow-sign;
+      border-radius: 3px;
+
+      width: 72px;
+      height: 22px;
+    }
   }
 
   &__frame {
@@ -111,7 +157,7 @@
     padding-right: 0.625rem;
 
     margin-bottom: 2.5rem;
-    max-height: 440px;
+    max-height: 390px;
     overflow-y: scroll;
 
     -ms-overflow-style: none;
@@ -204,6 +250,10 @@
       right: 0.625rem;
     }
 
+    &__color {
+        margin-right: 0;
+    }
+
     &__item-sign {
       @include font-setting($primary-font, 0.75rem, 1, 700, $text-primary);
       @include flex-setting(row, space-between, center);
@@ -213,7 +263,10 @@
       padding-right: 0.625rem;
 
       margin-left: 0;
-      margin-top: 0.625rem;
+
+      &:first-of-type {
+          margin-right: 0;
+      }
 
       &--latest {
         color: $text-secondary;
@@ -233,4 +286,10 @@
       }
     }
   }
+}
+
+@media only screen and (min-width: 1920px) {
+    .result-preview {
+        max-height: 586px;
+    }
 }

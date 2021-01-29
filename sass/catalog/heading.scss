@@ -4,7 +4,7 @@
   @include flex-setting(column, flex-start, flex-start);
 
   padding: 0 0.625rem;
-  padding-top: 1.875rem;
+  padding-top: 0;
   margin-bottom: 0;
 
   &__title {
@@ -25,16 +25,22 @@
 
     &__title {
       margin-bottom: 1.5rem;
-      font-size: 2rem;
-      line-height: 2.375rem;
+      font-size: 1.5rem;
+      line-height: 1.875rem;
     }
   }
 }
 
-@media only screen and (min-width: $laptop-wide) {
+@media only screen and (min-width: $laptop) {
   .heading {
-    &__title {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
       margin-bottom: 3.875rem;
-    }
+
+      &__title {
+          margin-bottom: 0;
+      }
   }
 }

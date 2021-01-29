@@ -2,14 +2,27 @@
   width: 100%;
 
   @include flex-setting(column, center, center);
-
-  margin-bottom: 1.875rem;
+  margin-bottom: 0.625rem;
 
   &__heading {
     @include flex-setting(row, space-between, center);
 
     width: 100%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.125rem;
+
+    order: 1;
+  }
+
+  &__category {
+      order: 2;
+  }
+
+  &__cloud {
+      order: 3;
+  }
+
+  &__selected {
+      order: 4;
   }
 
   &__btn {
@@ -27,6 +40,24 @@
 
     text-decoration: none;
     color: $text-primary;
+
+    outline: none;
+    cursor: pointer;
+
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+
+        width: 1px;
+        height: 70%;
+
+        background-color: #C1CAD5;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
   }
 
   &__btn-text {

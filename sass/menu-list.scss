@@ -38,6 +38,27 @@
   }
 }
 
+@media only screen and (min-width: $laptop) {
+    .menu-list {
+        transition: 0.6s $cubic;
+        opacity: 1;
+        transform: scale(1);
+        transition-delay: 1.4s;
+        pointer-events: all;
+
+        z-index: 99;
+
+        &.inactive {
+          opacity: 0;
+          transform: scale(0.8);
+          transition: 0.6s $cubic;
+          pointer-events: none;
+
+          z-index: 99;
+        }
+    }
+}
+
 @media only screen and (min-width: $laptop-wide) {
   .menu-list {
     &__item {

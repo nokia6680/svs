@@ -1,35 +1,21 @@
-@font-face {
-    font-family: 'Lato';
-    src: url('../fonts/Lato-Bold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/Lato-Bold.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/Lato-Bold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 700;
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src:
+      url(#{$path}.woff) format("woff"),
+      url(#{$path}.woff2) format("woff2"),
+      url(#{$path}.ttf) format("truetype");
+    font-weight: $weight;
+    font-style: $style;
     text-rendering: optimizeLegibility;
     font-display: swap;
+  }
 }
 
-@font-face {
-    font-family: 'Lato';
-    src: url('../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/Lato-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../fonts/Lato-Semibold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/Lato-Semibold.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/Lato-Semibold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 600;
-    text-rendering: optimizeLegibility;
-    font-display: swap;
-}
+@include font-face('Lato', '../fonts/Lato/Lato-Regular', 400, 'normal');
+@include font-face('Lato', '../fonts/Lato/Lato-Semibold', 600, 'normal');
+@include font-face('Lato', '../fonts/Lato/Lato-Bold', 700, 'normal');
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-Regular', 400, 'normal');
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-Medium', 500, 'normal');
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-SemiBold', 600, 'normal');
+@include font-face('Montserrat', '../fonts/Montserrat/Montserrat-Bold', 700, 'normal');

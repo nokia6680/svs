@@ -1,7 +1,7 @@
 .documents {
   width: 100%;
 
-  padding: 1.25rem 1.063rem 0.25rem 1.25rem;
+  padding: 1.25rem 1.063rem 1.063rem 1.25rem;
 
   margin-bottom: 3.75rem;
 
@@ -18,7 +18,6 @@
   }
 
   &__pic {
-    transform: scale(0.74);
     object-fit: contain;
   }
 

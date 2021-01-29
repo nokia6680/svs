@@ -3,6 +3,8 @@
 
   @include flex-setting(column, flex-start, center);
 
+  display: none;
+
   &__title {
     @include font-setting($title-font, 1.75rem, 2rem, 700, $text-primary);
     margin: 0;

@@ -1,6 +1,5 @@
 .itemcard {
   @include flex-setting(column, flex-start, flex-start);
-
   width: 100%;
   margin-bottom: 3.75rem;
 
@@ -8,63 +7,56 @@
     width: 100%;
     @include flex-setting(column, flex-start, flex-start);
   }
-
   /*Информация - название и тип*/
   &__info {
     @include flex-setting(column, flex-start, flex-start);
     width: 100%;
-
     padding: 0 0.625rem;
     margin-bottom: 1.563rem;
-
     order: 1;
   }
   /*Название*/
   &__title {
     @include font-setting($title-font, 1.5rem, 1.75rem, 700, $text-primary);
     margin: 0;
-    margin-bottom: 0.625rem;
+    padding-bottom: 0.625rem;
     width: 100%;
+    border-bottom: 2px solid rgba(193, 202, 213, 0.59);
   }
   /*Перевод*/
   &__translation {
-    @include font-setting($title-font, 1rem, 1.188rem, 700, $text-primary);
+    @include font-setting($title-font, 1.5rem, 1.75rem, 700, $text-primary);
     margin: 0;
+    padding-top: 0.625rem;
     margin-bottom: 1.25rem;
   }
   /*Артикул*/
   &__articul {
     @include font-setting($primary-font, 1rem, 1.375rem, 400, $text-primary);
     margin: 0;
-    margin-bottom: 0.938rem;
-
     width: 100%;
   }
   /*Свойства*/
   &__options {
     width: 100%;
     @include flex-setting(column, flex-start, flex-start);
+    margin-top: 0.938rem;
 
     &-item {
       @include font-setting($primary-font, 1.125rem, 1.375rem, 400, $text-primary);
       margin: 0;
-
       position: relative;
-
       padding-left: 1.375rem;
 
       &::before {
         position: absolute;
         content: '';
-
         width: 14px;
         height: 12px;
-
-        background-image: url('../img/dot-2.svg');
+        background-image: url("../img/dot-2.svg");
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-
         left: 0;
         top: 0.188rem;
       }
@@ -80,7 +72,6 @@
     width: 100%;
     @include flex-setting(column, flex-start, center);
     margin-bottom: 2.5rem;
-
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
@@ -92,7 +83,6 @@
     border: 2px solid #C1CAD5;
     border-radius: 5px;
     position: relative;
-
     margin: 0;
     padding: 0;
     list-style: none;
@@ -104,12 +94,9 @@
 
     &-item {
       width: 100%;
-
       @include flex-setting(row, flex-start, center);
-
       border-bottom: 2px solid #C1CAD5;
       padding-left: 2.563rem;
-
       position: relative;
 
       &:last-of-type {
@@ -119,13 +106,11 @@
       &::after {
         position: absolute;
         content: '';
-
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: contain;
-
         left: 0.813rem;
-        top: 45%;
+        top: 48%;
         transform: translateY(-50%);
       }
 
@@ -133,8 +118,11 @@
         &::after {
           width: 21px;
           height: 19px;
-
           background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M0 0h21v20H0z'/%3E%3Cpath fill='none' d='M-62-934h768v2714H-62z'/%3E%3Cmask id='a' fill='%23fff'%3E%3Cpath d='M0 5.5c0-2.76142 2.23858-5 5-5h11c2.7614 0 5 2.23858 5 5v9c0 2.7614-2.2386 5-5 5H5c-2.76142 0-5-2.2386-5-5v-9z'/%3E%3C/mask%3E%3Cpath d='M5 10l-.75926-.65079L3.68292 10l.55782.6508L5 10zm11 0l.7593.6508.5578-.6508-.5578-.65079L16 10zm-7.24074 2.8492l-3-3.49999-1.51852 1.30159 3 3.5 1.51852-1.3016zm-3-2.1984l3-3.50001-1.51852-1.30158-3 3.5 1.51852 1.30159zm8.00004 3.5l3-3.5-1.5186-1.30159-3 3.49999 1.5186 1.3016zm3-4.80159l-3-3.5-1.5186 1.30158 3 3.50001 1.5186-1.30159zM5 2.5h11v-4H5v4zm14 3v9h4v-9h-4zm-3 12H5v4h11v-4zm-14-3v-9h-4v9h4zm3 3c-1.65685 0-3-1.3431-3-3h-4c0 3.866 3.13401 7 7 7v-4zm14-3c0 1.6569-1.3431 3-3 3v4c3.866 0 7-3.134 7-7h-4zm-3-12c1.6569 0 3 1.34315 3 3h4c0-3.86599-3.134-7-7-7v4zm-11-4c-3.86599 0-7 3.13401-7 7h4c0-1.65685 1.34315-3 3-3v-4z' fill='%2384AA32' mask='url(%23a)'/%3E%3Crect x='-21' y='-21' width='214' height='228' rx='4' stroke='%23C1CAD5' stroke-width='2'/%3E%3C/svg%3E%0A");
+        }
+
+        &.opened {
+            pointer-events: none;
         }
       }
 
@@ -142,7 +130,6 @@
         &::after {
           width: 13px;
           height: 17px;
-
           background-image: url("data:image/svg+xml,%3Csvg width='15' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 10.5h2m1.00003 0H12m-9-4h2m-2 8h2m1.00003 0H12M9 2v4.5h5m-1.3684 12H2.36842C1.61266 18.5 1 17.8911 1 17.14V2.86c0-.75111.61266-1.36 1.36842-1.36h8.45988c.3658 0 .7164.14555.9735.40416l1.8032 1.81391c.2531.25456.395.59799.395.95584V17.14c0 .7511-.6127 1.36-1.3684 1.36z' stroke='%2384AA32' stroke-width='2'/%3E%3C/svg%3E%0A");
           left: 1.063rem;
         }
@@ -151,10 +138,8 @@
 
     &-link {
       @include font-setting($primary-font, 1.125rem, 1.25rem, 400, $text-primary);
-
       padding-top: 0.813rem;
       padding-bottom: 0.813rem;
-
       text-decoration: none;
       cursor: pointer;
       outline: none;
@@ -169,76 +154,73 @@
       width: 102%;
       position: absolute;
       min-width: 280px;
-      max-height: 0;
       opacity: 0;
-
+      transform: scaleY(0);
+      transform-origin: top;
       top: -2px;
       left: -2px;
       right: 0;
       background-color: #fff;
-
-      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
-
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
       @include flex-setting(column, flex-start, flex-start);
-
       margin: 0;
       padding: 0;
       list-style: none;
-      max-height: 0;
 
       padding-bottom: 1.25rem;
-
       border: 2px solid #fff;
       border-radius: 5px;
-
-      overflow-y: hidden;
-      visibility: hidden;
-      transition: max-height 200ms ease-in-out;
-
       -ms-overflow-style: none;
       overflow: -moz-scrollbars-none;
+      transition: 0.25s linear;
 
       &::-webkit-scrollbar {
         width: 0;
       }
 
       &.active {
-        max-height: 1000px;
-        transition: max-height 200ms ease-in-out;
-        visibility: visible;
-        opacity: 1;
-        background-color: #fff;
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-
-        z-index: 10;
+          transform: scaleY(1);
+          transform-origin: top;
+          transition: 0.25s linear;
+          opacity: 1;
+          background-color: #fff;
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+          z-index: 10;
       }
     }
   }
 
   &__sizes-head {
     width: 100%;
-
     @include flex-setting(row, flex-start, center);
-
     position: relative;
     padding-left: 2.563rem;
     margin-bottom: 1.688rem;
 
+    opacity: 0;
+    transition: 0.5s linear;
+
     &::after {
       position: absolute;
       content: '';
-
       width: 21px;
       height: 19px;
-
       background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M0 0h21v20H0z'/%3E%3Cpath fill='none' d='M-62-934h768v2714H-62z'/%3E%3Cmask id='a' fill='%23fff'%3E%3Cpath d='M0 5.5c0-2.76142 2.23858-5 5-5h11c2.7614 0 5 2.23858 5 5v9c0 2.7614-2.2386 5-5 5H5c-2.76142 0-5-2.2386-5-5v-9z'/%3E%3C/mask%3E%3Cpath d='M5 10l-.75926-.65079L3.68292 10l.55782.6508L5 10zm11 0l.7593.6508.5578-.6508-.5578-.65079L16 10zm-7.24074 2.8492l-3-3.49999-1.51852 1.30159 3 3.5 1.51852-1.3016zm-3-2.1984l3-3.50001-1.51852-1.30158-3 3.5 1.51852 1.30159zm8.00004 3.5l3-3.5-1.5186-1.30159-3 3.49999 1.5186 1.3016zm3-4.80159l-3-3.5-1.5186 1.30158 3 3.50001 1.5186-1.30159zM5 2.5h11v-4H5v4zm14 3v9h4v-9h-4zm-3 12H5v4h11v-4zm-14-3v-9h-4v9h4zm3 3c-1.65685 0-3-1.3431-3-3h-4c0 3.866 3.13401 7 7 7v-4zm14-3c0 1.6569-1.3431 3-3 3v4c3.866 0 7-3.134 7-7h-4zm-3-12c1.6569 0 3 1.34315 3 3h4c0-3.86599-3.134-7-7-7v4zm-11-4c-3.86599 0-7 3.13401-7 7h4c0-1.65685 1.34315-3 3-3v-4z' fill='%2384AA32' mask='url(%23a)'/%3E%3Crect x='-21' y='-21' width='214' height='228' rx='4' stroke='%23C1CAD5' stroke-width='2'/%3E%3C/svg%3E%0A");
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: contain;
-
       left: 0.813rem;
       top: 45%;
       transform: translateY(-50%);
+    }
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+    &.active {
+        opacity: 1;
+        transition: 0.5s linear;
     }
   }
 
@@ -246,18 +228,26 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
     padding-left: 0.813rem;
     padding-right: 0.813rem;
-
     @include flex-setting(column, flex-start, flex-start);
+    opacity: 0;
+    transition: 0.5s linear;
+
+    &.active {
+        opacity: 1;
+        transition: 0.5s linear;
+    }
+
+    &.hidden {
+        visibility: hidden;
+    }
   }
 
   &__sizes-item {
     @include flex-setting(column, flex-start, flex-start);
     padding-left: 3.25rem;
     position: relative;
-
     margin-bottom: 1.25rem;
 
     &:last-of-type {
@@ -267,47 +257,43 @@
     &::after {
       position: absolute;
       content: '';
-
       width: 37px;
       height: 49px;
-
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: contain;
-
       left: 0;
       top: 50%;
-
       transform: translateY(-50%);
     }
 
     &--1 {
       &::after {
-        background-image: url('../img/11.svg');
+        background-image: url("../img/11.svg");
       }
     }
 
     &--2 {
       &::after {
-        background-image: url('../img/10.svg');
+        background-image: url("../img/10.svg");
       }
     }
 
     &--3 {
       &::after {
-        background-image: url('../img/9.svg');
+        background-image: url("../img/9.svg");
       }
     }
 
     &--4 {
       &::after {
-        background-image: url('../img/8.svg');
+        background-image: url("../img/8.svg");
       }
     }
 
     &--5 {
       &::after {
-        background-image: url('../img/7.svg');
+        background-image: url("../img/7.svg");
       }
     }
   }
@@ -322,27 +308,31 @@
   }
 
   &__sizes-description {
-    margin: 0;
-    margin-bottom: 1.688rem;
-
+      opacity: 0;
+    margin: 0 0 1.688rem;
     padding-left: 0.813rem;
     padding-right: 0.813rem;
-
     @include font-setting($primary-font, 1.125rem, 1.25rem, 600, $text-primary);
+    transition: 0.5s linear;
+
+    &.active {
+        opacity: 1;
+        transition: 0.5s linear;
+    }
+
+    &.hidden {
+        visibility: hidden;
+    }
   }
 
   &__sizes-close {
     background-color: transparent;
     border: none;
-
     position: absolute;
-
     right: 0;
-
     cursor: pointer;
     outline: none;
   }
-
   /*Features*/
   &__features {
     @include flex-setting(column, flex-start, flex-start);
@@ -353,18 +343,15 @@
 
     &-text {
       @include font-setting($primary-font, 1.125rem, 1rem, 700, $text-primary);
-
       position: relative;
       padding-left: 2.375rem;
 
       &::after {
         position: absolute;
         content: '';
-
         background-position: 50% 50%;
         background-size: contain;
         background-repeat: no-repeat;
-
         filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));
       }
 
@@ -374,7 +361,6 @@
         &::after {
           width: 28px;
           height: 21px;
-
           background-image: url("data:image/svg+xml,%3Csvg width='28' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2C0 .895431.895431 0 2 0h24c1.1046 0 2 .895431 2 2v6H0V2z' fill='%23fff'/%3E%3Cpath d='M0 22c0 1.1046.895431 2 2 2h24c1.1046 0 2-.8954 2-2v-6H0v6z' fill='%23EC0000'/%3E%3Cpath fill='%23004EB6' d='M0 8h28v8H0z'/%3E%3C/svg%3E");
           top: -4px;
           left: 0;
@@ -385,11 +371,9 @@
         &::after {
           width: 28px;
           height: 24px;
-
           background-image: url("data:image/svg+xml,%3Csvg width='28' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.543.445989c-.2913-.562431-1.0684-.6093-1.4083-.046869-1.5055 2.53094-4.1766 4.07763-7.2362 4.07763h-3.8852c-5.1479 0-9.32449 4.03075-9.32449 8.99885 0 .3281 0 .6562.04856.9843 3.10816-2.156 7.57613-3.9839 13.93813-3.9839.3885 0 .7771.375.7771.7499 0 .4218-.3886.7499-.7771.7499-12.23835 0-17.38624 7.2648-18.5518 9.9363-.339955.7968.048565 1.6404.825604 1.9685.825606.3281 1.699776-.0468 2.039726-.7968.09713-.1874 1.01987-2.2497 3.49668-4.2651 1.60265 2.0623 4.56509 4.0308 8.49889 3.609C22.6093 21.9121 28 15.3035 28 7.24203c0-2.34346-.5342-4.78066-1.457-6.796041z' fill='%2384AA32'/%3E%3C/svg%3E");
           top: 50%;
           left: 0;
-
           transform: translateY(-50%);
         }
       }
@@ -398,9 +382,7 @@
   /*Описание продукта*/
   &__description {
     order: 4;
-
     @include font-setting($primary-font, 1rem, 1.375rem, 400, $text-primary);
-
     padding: 0 0.625rem;
     margin-top: 0;
     margin-bottom: 2.5rem;
@@ -410,42 +392,33 @@
   &__color {
     order: 3;
     @include flex-setting(column, flex-start, flex-start);
-
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-
     margin-bottom: 2.5rem;
 
     &-title {
       @include font-setting($primary-font, 1.125rem, 1rem, 700, $text-primary);
-      margin: 0;
-      margin-bottom: 1.25rem;
+      margin: 0 0 1.25rem;
     }
 
     &-list {
       @include flex-setting(row, flex-start, flex-start);
-
       width: auto;
-
       margin: 0;
       padding: 0;
       list-style: none;
+      flex-wrap: wrap;
     }
 
     &-item {
       @include flex-setting(column, flex-end, center);
-
       border: 2px solid #C1CAD5;
       border-radius: 5px;
-
       padding-left: 0.625rem;
       padding-right: 0.625rem;
-
       margin-right: 0.625rem;
-
       height: 72px;
       width: 69px;
-
       cursor: pointer;
       outline: none;
       transition: 0.1s ease-in;
@@ -455,8 +428,8 @@
       }
 
       &:active,
-      &:hover,
-      &:focus {
+      &:focus,
+      &:hover {
         border-color: $blue;
         transition: 0.1s ease-in;
       }
@@ -474,33 +447,26 @@
   /*Кнопка предзаказа*/
   &__preorder {
     order: 6;
-
     align-self: center;
-
     @include flex-setting(column, center, center);
     @include font-setting($title-font, 1.25rem, 1.625rem, 600, $text-secondary);
-
     text-align: center;
     text-decoration: none;
-
     width: 280px;
     height: 60px;
-
     background-color: $btn-color;
     border-radius: 5px;
 
-    &:hover,
-    &:active {
+    &:active,
+    &:hover {
       @include btn-hover;
     }
   }
 }
-
 @media only screen and (min-width: $tablet) {
   .itemcard {
     padding-left: 0;
     padding-right: 0;
-
     margin-bottom: 3.75rem;
     /*Информация - название и тип*/
     &__info {
@@ -511,28 +477,26 @@
     &__title {
       font-size: 2rem;
       line-height: 2.375rem;
-      margin-bottom: 1.875rem;
+      margin-bottom: 1.25rem;
     }
 
     &__translation {
-      font-size: 1.25rem;
-      line-height: 1.625rem;
+      font-size: 2rem;
+      line-height: 2.375rem;
       margin-bottom: 1.875rem;
+      padding-top: 0;
     }
     /*Артикул*/
-    &__articul {
-      margin-bottom: 0.625rem;
+    &__options {
+      margin-top: 0.625rem;
     }
-
     /*Объединение файлов и страны производства*/
     &__utils {
       width: 100%;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-
       margin-bottom: 2.5rem;
-
       padding: 0;
     }
     /*Features*/
@@ -553,7 +517,6 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-
       width: auto;
       max-width: 476px;
       padding: 0;
@@ -562,35 +525,29 @@
       &-item {
         border-bottom: none;
         padding-left: 2.75rem;
-
         position: relative;
 
         &::after {
           position: absolute;
           content: '';
-
           background-position: 50% 50%;
           background-repeat: no-repeat;
           background-size: contain;
-
           left: 0.813rem;
-          top: 46%;
+          top: 47%;
           transform: translateY(-50%);
         }
 
         &--1 {
           margin-right: 3.563rem;
+
           &::before {
             position: absolute;
             content: '';
-
             width: 2px;
             height: 26px;
-
             background-color: #C1CAD5;
-
             top: 50%;
-
             transform: translateY(-50%);
             right: -1.875rem;
           }
@@ -612,24 +569,11 @@
       }
 
       &-sizes {
-        min-height: 50px;
-
         @include flex-setting(column, flex-start, flex-start);
-
         padding-right: 2.25rem;
 
-        overflow-y: hidden;
-        opacity: 0;
-
-        transition: min-height 400ms ease-in-out, min-width 200ms ease-in-out 400ms, opacity 200ms ease-in-out 600ms;
-
         &.active {
-          opacity: 1;
           min-width: 476px;
-          max-height: 500px;
-          transition: opacity 200ms ease-in, min-width 200ms ease-in-out, max-height 400ms ease-in-out 400ms;
-          visibility: visible;
-          background-color: #fff;
         }
       }
     }
@@ -642,7 +586,6 @@
     &__sizes-list {
       padding-left: 1.25rem;
       padding-right: 1.25rem;
-
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
@@ -659,7 +602,6 @@
 
     &__sizes-description {
       margin-bottom: 2.25rem;
-
       padding-left: 1.25rem;
       padding-right: 1.25rem;
     }
@@ -691,18 +633,15 @@
     }
   }
 }
-
 @media only screen and (min-width: $laptop) {
   .itemcard {
     width: 100%;
-
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: nowrap;
     margin-bottom: 1.25rem;
     padding-bottom: 3.75rem;
-
     border-bottom: 4px solid rgba(193, 202, 213, 0.59);
 
     &__wrapper {
@@ -715,14 +654,13 @@
     }
 
     &__title {
-      width: 80%;
-      margin-bottom: 1.25rem;
+      width: 100%;
+      margin-bottom: 0.625rem;
     }
 
     &__translation {
       margin-bottom: 1.25rem;
     }
-
     /*Объединение файлов и страны производства*/
     &__utils {
       order: 2;
@@ -731,6 +669,7 @@
 
     &__features {
       margin-bottom: 0;
+
       &-text {
         &.origin {
           margin-right: 1.875rem;
@@ -740,7 +679,6 @@
     /*Блок ссылок на скачиваемые документы*/
     &__files {
       order: 1;
-
       max-width: 450px;
       padding: 0;
       margin-bottom: 1.875rem;
@@ -748,25 +686,23 @@
       &-item {
         border-bottom: none;
         padding-left: 2.563rem;
-
         position: relative;
 
         &::after {
           position: absolute;
           content: '';
-
           background-position: 50% 50%;
           background-repeat: no-repeat;
           background-size: contain;
-
           left: 0.813rem;
-          top: 46%;
+          top: 47%;
           transform: translateY(-50%);
         }
 
         &--1 {
           padding-left: 2.563rem;
           margin-right: 3.188rem;
+
           &::before {
             right: -1.75rem;
           }
@@ -788,24 +724,8 @@
       }
 
       &-sizes {
-        min-height: 50px;
-
-        @include flex-setting(column, flex-start, flex-start);
-
-        padding-right: 2.25rem;
-
-        overflow-y: hidden;
-        opacity: 0;
-
-        transition: min-height 400ms ease-in-out, min-width 200ms ease-in-out 400ms, opacity 200ms ease-in-out 600ms;
-
         &.active {
-          opacity: 1;
           min-width: 476px;
-          max-height: 500px;
-          transition: opacity 200ms ease-in, min-width 200ms ease-in-out, max-height 400ms ease-in-out 400ms;
-          visibility: visible;
-          background-color: #fff;
         }
       }
     }
@@ -818,7 +738,6 @@
     &__sizes-list {
       padding-left: 1.25rem;
       padding-right: 1.25rem;
-
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
@@ -831,7 +750,6 @@
 
     &__sizes-description {
       margin-bottom: 2.25rem;
-
       padding-left: 1.25rem;
       padding-right: 1.25rem;
     }
@@ -849,12 +767,9 @@
       order: 3;
     }
     /*Блок выбора цвета*/
-    &__color {
-
-    }
+    &__color {}
   }
 }
-
 @media only screen and (min-width: $laptop-wide) {
   .itemcard {
     padding-bottom: 3.125rem;
@@ -867,15 +782,9 @@
       margin-bottom: 2.5rem;
     }
 
-    &__title {
-      width: 80%;
-      margin-bottom: 1.875rem;
-    }
-
     &__translation {
       margin-bottom: 1.875rem;
     }
-
     /*Объединение файлов и страны производства*/
     &__utils {
       margin-bottom: 2.625rem;

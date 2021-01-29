@@ -2,6 +2,11 @@
   width: 100%;
 
   @include flex-setting(row, center, center);
+  margin-bottom: 1rem;
+
+  &--nofilter {
+      display: none;
+  }
 
   &__list {
     @include ul-nostyle;
@@ -24,8 +29,22 @@
     background-color: #C9E2E6;
 
     &--close {
-      background-color: #00778B;
+        box-sizing: border-box;
+        border: 1px solid #84AA32;
+      background-color: #84AA32;
       padding: 0;
+
+      &:hover,
+      &:active,
+      &:focus {
+          background-color: #fff;
+          transition: 0.1s ease-in;
+
+          .selected__reset {
+              color: #84AA32;
+              transition: 0.1s ease-in;
+          }
+      }
     }
   }
 
@@ -51,7 +70,7 @@
   }
 
   &__reset {
-    @include font-setting($primary-font, 1rem, 1.125rem, 400, #000);
+    @include font-setting($primary-font, 1rem, 1.125rem, 400, #fff);
     @include flex-setting(column, center, center);
 
     border: none;
@@ -65,4 +84,11 @@
     width: 100%;
     height: 100%;
   }
+}
+
+@media only screen and (min-width: $tablet) {
+    .selected {
+        display: flex;
+        margin-bottom: 2.5rem;
+    }
 }

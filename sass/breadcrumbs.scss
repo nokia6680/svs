@@ -8,6 +8,8 @@
   padding-left: 0.625rem;
   padding-right: 0.625rem;
 
+  display: none;
+
   &--item {
     margin-bottom: 1.25rem;
   }
@@ -70,6 +72,7 @@
   .breadcrumbs {
     padding: 0;
     margin-bottom: 1.25rem;
+    display: flex;
 
     &__item {
       margin-right: 4.188rem;

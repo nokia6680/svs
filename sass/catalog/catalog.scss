@@ -1,5 +1,6 @@
 .catalog {
-  padding: 0 1.25rem;
+    width: 100%;
+  padding: 0 0.625rem;
   @include flex-setting(column, flex-start, center);
 
   &__wrapper {
@@ -28,6 +29,12 @@
       @include btn-hover;
     }
   }
+
+  &__counter {
+      @include font-setting($primary-font, 1.125rem, 1, 500, #000);
+      align-self: flex-start;
+      margin-bottom: 0.625rem;
+  }
 }
 
 @media only screen and (min-width: $tablet) {
@@ -36,7 +43,6 @@
     padding: 0;
 
     position: relative;
-    padding-top: 1rem;
 
     @include flex-setting(row, space-between, flex-start);
 
@@ -47,6 +53,12 @@
 
     &__more {
       margin-bottom: 2.5rem;
+    }
+
+    &__counter {
+        font-size: 1.5rem;
+        align-self: flex-start;
+        margin-bottom: 2.5rem;
     }
   }
 }

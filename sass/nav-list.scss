@@ -1,10 +1,18 @@
 .nav-list {
-  @include flex-setting(column, flex-start, flex-start);
+  display: block;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
-  padding-top: 6rem;
+  height: 100%;
+  padding-top: 1.875rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 7rem;
+  background: $menu-bg;
+  position: absolute;
+  overflow-y: scroll;
+  top: 60px;
 
   &__item {
     pointer-events: none;
@@ -33,6 +41,52 @@
     &--contacts {
       margin-bottom: 1.875rem;
     }
+
+    &--search {
+        width: 100%;
+        height: 50px;
+        background: #555555;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+
+        border: none;
+        cursor: text;
+        outline: none;
+
+        -webkit-appearance:none;
+        z-index: 4;
+
+        @include font-setting($primary-font, 1rem, 1.125rem, 400, #B7B7B7);
+
+        padding-top: 0.938rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        margin-bottom: 1.25rem;
+
+        position: relative;
+        box-sizing: border-box;
+        transition: 0.1s ease-in;
+
+        pointer-events: none;
+
+        /*При активном поиске*/
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: #F0EFED;
+          color: $text-primary;
+          transition: 0.1s ease-in;
+        }
+
+        /*Скрыт при активном поиске*/
+
+        &.hidden {
+            visibility: hidden;
+            pointer-events: none;
+        }
+    }
   }
 
   &__link {
@@ -45,13 +99,6 @@
 
     padding-top: 0.938rem;
     padding-bottom: 0.938rem;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $link-hover;
-      transition: 0.1s ease-in;
-    }
 
     &.disabled {
       color: rgba(255, 255, 255, 0.2);
@@ -102,7 +149,6 @@
     margin-bottom: 0.625rem;
 
     &:hover,
-    &:active,
     &:focus {
       .nav-list__link {
         color: $link-hover;
@@ -173,6 +219,8 @@
 @media only screen and (min-width: $tablet) {
   .nav-list {
     margin-bottom: 0;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 
     &__link {
       font-size: 1.125rem;
@@ -182,9 +230,11 @@
 
 @media only screen and (min-width: $laptop) {
   .nav-list {
+      display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    overflow-y: auto;
 
     width: auto;
     border: none;
@@ -194,6 +244,12 @@
     opacity: 1;
 
     transition: none;
+    background: transparent;
+
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
 
     &__item {
       transition: none;
@@ -215,6 +271,10 @@
       &--contacts {
         margin-bottom: 0;
       }
+
+      &--search {
+          display: none;
+      }
     }
 
     &__link {
@@ -231,7 +291,9 @@
       }
 
       &:hover,
-      &.selected {
+      &.active {
+        color: $green;
+        transition: 0.2s linear;
         border-color: $green;
       }
     }

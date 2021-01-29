@@ -5,12 +5,14 @@ const createPopupControlButtons = (openPopupButtons, popup) => {
   // Теперь мы предполагаем, что кнопок может быть больше одной, но попап открываемый один и тот же.
   const openButtons = document.querySelectorAll(openPopupButtons);
   const popupElement = document.querySelector(popup);
+  const bodyScroll = document.querySelector('.body');
+
   console.log(openButtons);
   // Вот тут внимание, сейчас я сделал с твоим классом, чтобы каждый раз не менять тут код, предлагаю для закрывающей кнопки сделать свой класс например: js-close-btn
-  // Это нужно для того, чтобы не менять код функции, а пользоваться готовым. Сам хотел упрощения. Тем более, я ищу ее в элементе попапа, 
+  // Это нужно для того, чтобы не менять код функции, а пользоваться готовым. Сам хотел упрощения. Тем более, я ищу ее в элементе попапа,
   // т.е. левой кнопки он не найдет, не волнуйся.
 
-  const closeButton = popupElement.querySelector(`.filter-options__close-pic`); 
+  const closeButton = popupElement.querySelector(`.filter-options__close-pic`);
 
   if (!popupElement || !openButtons) {
     throw new Error(`Missing popup or opening button`);
@@ -30,6 +32,7 @@ const onDocumentKeyPress = (evt) => {
   const onOpenButtonClick = (evt) => {
   evt.preventDefault();
   popupElement.classList.add("active");
+  bodyScroll.classList.add('no-scroll');
 
   // Я не понял, зачем ты добавляешь слушатель на ESC у мобильного устройства? :)
   document.addEventListener("keydown", onDocumentKeyPress);
@@ -37,6 +40,7 @@ const onDocumentKeyPress = (evt) => {
 
 const onCloseButtonClick = () => {
   popupElement.classList.remove("active");
+  bodyScroll.classList.remove('no-scroll');
   // Тут при закрытии попапа и удаляем ненужный более слушатель ESC.
   document.removeEventListener("keydown", onDocumentKeyPress);
 };

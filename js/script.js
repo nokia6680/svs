@@ -13,6 +13,7 @@ const Search = document.querySelector('.nav-search');
 const SRes = document.querySelector('.search-result');
 const QLinks = document.querySelector('.quicklinks');
 const SInput = document.querySelector('.nav-search__input');
+const BodyWrap = document.querySelector('.body');
 
 const MenuButton = document.querySelector('.nav-controls__toggle');
 const MenuWrap = document.querySelector('.header');
@@ -36,12 +37,14 @@ document.querySelector('.item__hover').onclick = function(){
 
 document.querySelector('.nav-controls__toggle').onclick = function(){
 	MenuButton.classList.toggle('open');
-  NavMenu.classList.toggle('active');
+    NavMenu.classList.toggle('active');
+    BodyWrap.classList.toggle('no-scroll');
 };
 
 document.querySelector('.nav-controls__search').onclick = function(){
 	MenuButton.classList.toggle('open');
 	NavMenu.classList.toggle('active');
+    BodyWrap.classList.toggle('no-scroll');
 	document.getElementById("search-1").focus();
 };
 

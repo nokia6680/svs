@@ -282,13 +282,13 @@
       .filter-choice__checkbox {
         & + label {
           .filter-choice__heading-pic {
-            display: none;
+              transform: scale(0.8) rotate(0);
           }
         }
 
         &:checked + label {
           .filter-choice__heading-pic {
-            display: none;
+              transform: scale(0.8) rotate(180deg);
           }
         }
       }

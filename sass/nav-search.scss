@@ -1,5 +1,6 @@
 .nav-search {
-  width: 88%;
+  width: 100%;
+
   @include flex-setting(column, flex-start, center);
   margin-top: 1.25rem;
   margin-bottom: 0.938rem;
@@ -10,28 +11,71 @@
   pointer-events: none;
 
   position: fixed;
-  top: 60px;
-  left: auto;
-  right: auto;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
 
   z-index: 2;
 
-  &.search {
-    .search-result {
-      display: flex;
-    }
+  &.active {
+      opacity: 1;
+      transform: scale(1) translateY(0px) translateX(-50%);
+      transition-delay: 0.12s;
+      pointer-events: all;
 
-    .quicklinks {
-      display: flex;
-    }
+      &.asked {
+        .search-result {
+            display: flex;
+        }
 
-    .search-result__lower {
-      display: none;
-    }
+        .search-result__lower {
+            display: none;
+        }
+
+        .nav-search__input {
+            margin-right: 1rem;
+        }
+
+        .nav-search__close {
+          display: inline-flex;
+        }
+
+        .nav-search__reset {
+          display: flex;
+        }
+      }
+
+      &.search {
+        .search-result {
+            display: flex;
+        }
+
+        .search-result__lower {
+          display: flex;
+        }
+
+        .quicklinks {
+            display: none;
+        }
+
+        .nav-search__input {
+            margin-right: 1rem;
+        }
+
+        .nav-search__close {
+          display: inline-flex;
+        }
+
+        .nav-search__reset {
+          display: flex;
+        }
+      }
   }
 
   &__bg {
-    display: none;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -999;
   }
 
   &__wrap {
@@ -40,7 +84,10 @@
   }
 
   &__form {
-    width: 100%;
+      @include flex-setting(row, space-between, center);
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      width: 100%;
   }
 
   &__input {
@@ -48,7 +95,7 @@
 
     width: 100%;
     height: 50px;
-    background: #555555;
+    background: #F0EFED;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 
@@ -65,6 +112,8 @@
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+
+    margin-right: 0;
 
     position: relative;
     box-sizing: border-box;
@@ -96,21 +145,31 @@
 
   &__reset{
     @include flex-setting(column, center, center);
-    width: 13px;
-    height: 13px;
+    width: 17px;
+    min-width: 17px;
+    max-width: 17px;
+    max-height: 17px;
+    height: 17px;
+    min-height: 17px;
     background-color: #908F94;
     border-radius: 50%;
+    border-radius: 8.5px;
     border: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 5.25rem;
+    right: 6.25rem;
     z-index: 10;
 
     outline: none;
     cursor: pointer;
 
     display: none;
+    padding: 0;
+
+    &-icon {
+        transform: scale(1.4);
+    }
   }
 
   &__pic {
@@ -131,49 +190,142 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+    .nav-search {
+        &__form {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+
+        &__reset {
+            right: 8.25rem;
+        }
+    }
+}
+
 @media only screen and (min-width: 1024px) {
   .nav-search {
     margin-top: 1.25rem;
     margin-bottom: 0.938rem;
+
     position: fixed;
-    transform: none;
-    opacity: 1;
-    transition: none;
-    pointer-events: all;
+
     width: 100vw;
-    height: 60px;
-    left: 0;
+    height: 40px;
+    left: 50%;
     top: -20px;
+
+    transform: none;
+    transform: translateX(-50%);
 
     background: #000000;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
-
-    z-index: 4;
+    z-index: 12;
 
     opacity: 0;
     pointer-events: none;
-    transition: all 0.5s $cubic;
+    transition: all 0.6s linear;
+    transform-origin: bottom;
+    transition-delay: 1s;
 
     &.active {
       opacity: 1;
+      height: 60px;
       pointer-events: all;
-      transition: all 0.5s $cubic;
+      transition: none;
+      transform: translateX(-50%);
+
+      .nav-search__wrap {
+          opacity: 1;
+          pointer-events: all;
+          position: absolute;
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: all 0.6s linear;
+          transition-delay: 0;
+      }
+
+      .nav-search__pic {
+          left: 0;
+          opacity: 1;
+
+          transition: 0.4s $cubic;
+          transition-delay: 0.5s;
+      }
+
+      .nav-search__input {
+          left: 2.375rem;
+          opacity: 1;
+          transition: 0.6s $cubic;
+          transition-delay: 0.5s;
+      }
+
+      .nav-search__close {
+          opacity: 1;
+          transition: 0.6s $cubic;
+          transition-delay: 0.5s;
+      }
+
+      .search-result {
+          top: 60px;
+          transition-delay: 0.6s;
+          transform: scaleY(1) translateX(-50%);
+          transform-origin: top;
+
+          max-height: 820px;
+          opacity: 1;
+          overflow: visible;
+          visibility: visible;
+
+          z-index: 2;
+          transition: all 0.5s linear;
+
+          padding-top: 1.875rem;
+      }
+
+      .quicklinks {
+          opacity: 1;
+          pointer-events: all;
+          transition: all 0.4s linear;
+          transition-delay: 0.6s;
+          transform: translateX(0px);
+          transform-origin: right;
+      }
+
+      .search-result__lower {
+          display: none;
+      }
+
+      &.asked {
+        .search-result__lower {
+            max-height: 580px;
+        }
+
+        .nav-search__reset {
+          display: none;
+        }
+      }
+
+      &.search {
+          .search-result__title {
+            display: flex;
+            align-self: flex-start;
+          }
+
+          .nav-search__reset {
+            display: none;
+          }
+      }
 
       .header-nav {
         max-width: 100%;
       }
 
-      .search-result {
-        display: flex;
-      }
-
-      .search-result__lower {
-        display: none;
-      }
-
       .nav-search__bg {
-        display: flex;
         position: absolute;
+        opacity: 1;
+        pointer-events: all;
 
         width: 100vw;
         height: 100vh;
@@ -185,42 +337,41 @@
         bottom: 0;
 
         z-index: -2;
+
+        transition: 0.2s $cubic;
+        transition-delay: 0.1s;
       }
     }
 
-    &.asked {
-      .quicklinks {
-        display: none;
-      }
-
-      .search-result__lower {
-        display: flex;
-        max-height: 580px;
-        overflow: visible;
-      }
-
-      .search-result__title {
-        display: flex;
-        align-self: flex-start;
-      }
+    &__bg {
+        opacity: 0;
+        transition: 0.2s $cubic;
+        transition-delay: 0.1s;
     }
-
 
     &__wrap {
       @include flex-setting(row, space-between, center);
       height: 60px;
       max-width: 800px;
 
-      position: relative;
+      position: absolute;
+
+      top: 0;
+      opacity: 0;
+      pointer-events: none;
+
+      transition: opacity 0.4s linear;
+      transition-delay: 1.2s;
     }
 
     &__form {
       width: 100%;
       max-width: 800px;
 
+      padding-right: 0;
       padding-left: 2.375rem;
 
-      @include flex-setting(row, flex-start, center);
+      justify-content: space-between;
     }
 
     &__input {
@@ -240,7 +391,12 @@
       padding-left: 0;
       padding-right: 0;
 
-      transition: 0.1s ease-in;
+      position: absolute;
+      opacity: 0;
+      left: 4.5rem;
+
+      transition: all 0.3s $cubic;
+      transition-delay: 0.6s;
 
       /*При активном поиске*/
       &:active,
@@ -248,30 +404,11 @@
       &:hover {
         background-color: transparent;
         color: $text-secondary;
-        transition: 0.1s ease-in;
       }
     }
 
     &__reset {
-      width: auto;
-      position: relative;
-      right: auto;
-      top: auto;
-      transform: none;
-
-      margin-left: auto;
-      margin-right: 0;
-
-      padding: 0;
-
-      &-icon {
         display: none;
-      }
-
-      &-text {
-        display: inline-flex;
-        @include font-setting($primary-font, 1rem, 1.125rem, 700, rgba(255, 255, 255, 0.4));
-      }
     }
 
     &__close,
@@ -289,12 +426,16 @@
       width: auto;
       font-size: 1rem;
       color: rgba(255, 255, 255, 0.4);
+      opacity: 0;
     }
 
     &__pic {
       position: absolute;
-      left: 0;
+      left: 1.25rem;
+      opacity: 0;
       margin-right: 1.25rem;
+      transition: all 0.3s $cubic;
+      transition-delay: 0.6s;
     }
   }
 }

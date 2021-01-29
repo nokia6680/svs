@@ -125,7 +125,7 @@
 @media only screen and (min-width: $laptop) {
   .opt-slider {
     &__item {
-      margin-bottom: 1.125rem;
+      margin-bottom: 2rem;
 
       &:last-of-type {
         margin-bottom: 0;
@@ -140,9 +140,7 @@
     &__title {
       font-size: 2rem;
       line-height: 2.25rem;
-      margin-bottom: 1.875rem;
-
-      max-width: 76%;
+      margin-bottom: 1.25rem;
     }
   }
 }
@@ -156,7 +154,6 @@
 
     &__title {
       font-size: 2rem;
-      max-width: 78%;
     }
   }
 }

@@ -1,17 +1,36 @@
 .main {
   @include flex-setting(column, flex-start, center);
-  @include container;
 
   padding-top: 3.75rem;
+  width: 100%;
 
-  &--card {
-    padding-top: 3.75rem;
+  &--contacts,
+  &--search,
+  &--about,
+  &--whywe {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      margin: 0 auto;
+      width: 100%;
+      padding-top: 3.75rem;
+  }
+
+  &--about {
+      padding-top: 5rem;
+  }
+
+  &--card,
+  &--catalog {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      margin: 0 auto;
+      width: 100%;
+    padding-top: 5rem;
   }
 }
 
 @media only screen and (min-width: 414px) {
   .main {
-    padding-top: 3.75rem;
 
     &--about,
     &--whywe {
@@ -22,8 +41,6 @@
 
 @media only screen and (min-width: $tablet) {
   .main {
-    padding-top: 3.75rem;
-
     &--catalog,
     &--card,
     &--contacts,
@@ -32,8 +49,10 @@
     &--whywe {
       max-width: 688px;
       transition: 0.1s ease-in;
+      padding-left: 0;
+      padding-right: 0;
 
-      padding-top: 2.5rem;
+      padding-top: 5rem;
     }
   }
 }
@@ -49,6 +68,8 @@
     &--about,
     &--whywe {
       max-width: 944px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
 
-    @include flex-setting(column, flex-start, center);
+    display: block;
 
     background-color: #fff;
 
@@ -121,6 +121,8 @@
 
   &__choice {
     max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
   }
 
   &__cancel {
@@ -173,6 +175,7 @@
       display: none;
     }
   }
+
   &__submit-empty,
   &__submit-filtered {
     @include font-setting($title-font, 1.125rem, 1.563rem, 700, $text-secondary);
@@ -251,12 +254,10 @@
     }
 
     &__controls {
-      padding-left: 0.625rem;
-      padding-right: 0.625rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
 
-      margin-bottom: 1.625rem;
-
-      display: none;
+      margin-bottom: 1.25rem;
     }
 
     &__selected {
@@ -268,7 +269,7 @@
 
       &-expand {
         &::after {
-          display: none;
+          transform: scale(0.8) rotate(0);
         }
       }
     }
@@ -290,7 +291,7 @@
       width: 100%;
       @include flex-setting(column, flex-start, center);
 
-      padding-bottom: 2.375rem;
+      padding-bottom: 0;
 
       &::before {
         display: none;
@@ -298,16 +299,33 @@
     }
 
     &__cancel {
-      display: inline-flex;
+        @include font-setting($title-font, 1.25rem, 1, 600, #fff);
+        @include flex-setting(column, center, center);
+
       align-self: center;
+      width: 100%;
+      height: 60px;
+      background-color: #EC0000;
+      border-radius: 5px;
+      border: 1px solid #ec0000;
 
       margin: 0;
+      transition: 0.1s ease-in-out;
+
+      &:hover,
+      &:active,
+      &:focus {
+          background-color: #fff;
+          border-color: #ec0000;
+          color: #ec0000;
+          transition: 0.1s ease-in-out;
+      }
     }
 
     &__selected {
       padding-left: 0;
       padding-right: 0;
-      margin-bottom: 1.875rem;
+      margin-bottom: 1.25rem;
     }
 
     &__submit {
@@ -334,10 +352,6 @@
         font-size: 1.25rem;
         font-weight: 600;
       }
-
-      &.submit-first {
-        display: flex;
-      }
     }
   }
 }
@@ -353,9 +367,8 @@
       padding-left: 0;
     }
 
-    &__controls {
-      padding-left: 1.063rem;
-      padding-right: 1.063rem;
+    &__btn {
+        font-size: 1rem;
     }
   }
 }

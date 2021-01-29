@@ -2,20 +2,31 @@
   @include flex-setting(row, flex-start, center);
   @include ul-nostyle;
 
+  flex-wrap: wrap;
+
   width: 100%;
 
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.188rem;
+
+  &--desktop {
+      display: none;
+  }
 
   &__item {
     width: auto;
 
     @include flex-setting(row, flex-start, center);
 
-    margin-right: 3.125rem;
+    margin-right: 1rem;
+    margin-bottom: 0.75rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
   }
 
   &__label {
-    @include font-setting($primary-font, 1.125rem, 1, 400, $text-primary);
+    @include font-setting($primary-font, 1rem, 1, 400, $text-primary);
   }
 
   &__checkbox + label {
@@ -40,32 +51,51 @@
   }
 }
 
+@media only screen and (min-width: 472px) {
+    .category {
+        &__item {
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media only screen and (min-width: $tablet) {
   .category {
-    position: absolute;
-    top: -2rem;
-    right: 0;
+      &--mobile {
+          display: none;
+      }
+
+      &--desktop {
+         display: flex;
+      }
   }
 }
 
 @media only screen and (min-width: $laptop) {
   .category {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: -11.125rem;
-    right: 0;
+      width: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      margin-bottom: 0;
 
-    width: auto;
-    &__link {
-      margin-right: 0;
-      margin-left: 3.125rem;
+    &__checkbox + label {
+        padding-left: 1.375rem;
+    }
+
+    &__label {
+        font-size: 1rem;
     }
   }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .category {
-    top: -14.25rem;
+      &__checkbox + label {
+          padding-left: 1.875rem;
+      }
+
+      &__label {
+          font-size: 1.125rem;
+      }
   }
 }

@@ -13,7 +13,7 @@
     text-align: center;
 
     height: 22px;
-    width: 82px;
+    width: 76px;
 
     cursor: pointer;
     outline: none;
@@ -93,6 +93,8 @@
   }
 
   &--search {
+      margin-bottom: 0.25rem;
+
     .item-color__list {
       &--active {
         top: 22px;

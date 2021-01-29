@@ -60,6 +60,7 @@
     &__visual {
       width: 50%;
       max-width: 327px;
+      max-height: 340px;
       margin-bottom: 0;
 
       order: 2;
@@ -67,15 +68,18 @@
       position: relative;
 
       &-pic {
+          object-fit: contain;
         &.hidden {
           visibility: hidden;
           position: absolute;
           display: block;
           animation: fade-out 0.5s;
+          object-fit: contain;
         }
 
         &.active {
           animation: fade-in 0.5s;
+          object-fit: contain;
         }
       }
     }
@@ -97,10 +101,16 @@
 
     margin-bottom: 8.313rem;
     align-items: center;
+    justify-content: space-between;
 
     &__visual {
       max-width: 498px;
       width: 498px;
+      max-height: 508px;
+
+      &-pic {
+          max-height: 508px;
+      }
     }
 
     &__container {
@@ -113,11 +123,16 @@
 @media only screen and (min-width: $laptop-wide) {
   .options {
     max-width: 1200px;
-    margin-bottom: 13.125rem;
+    margin-bottom: 10.125rem;
 
     &__visual {
       max-width: 700px;
       width: 700px;
+      max-height: 724px;
+
+      &-pic {
+          max-height: 724px;
+      }
     }
 
     &__container {

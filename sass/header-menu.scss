@@ -15,8 +15,11 @@
     list-style: none;
 
     &__wrap {
-      max-width: 944px;
+      max-width: 100%;
       width: 100%;
+
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
 
       @include flex-setting(row, flex-start, center);
     }
@@ -50,6 +53,8 @@
   .header-menu {
     &__wrap {
       max-width: 1200px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

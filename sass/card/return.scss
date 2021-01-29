@@ -36,7 +36,7 @@
       background-repeat: no-repeat;
       background-size: contain;
 
-      top: 40%;
+      top: 45%;
       left: 0;
 
       transform: translateY(-50%);
@@ -49,7 +49,7 @@
     padding: 0;
 
     &--upper {
-      margin-bottom: 2.5rem;
+      display: none;
     }
   }
 }
