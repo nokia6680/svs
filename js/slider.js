@@ -19,7 +19,7 @@ const breakpointChecker = function() {
 
 const enableSwiper = function() {
    mySwiper = new Swiper ('.swiper-options', {
-      loop: true,
+      loop: false,
       slidesPerView: 1.1,
       spaceBetween: 15,
       centeredSlides: false,
@@ -84,11 +84,15 @@ var swiper = new Swiper('.swiper-container-2', {
 
 var galleryThumbs = new Swiper('.gallery-thumbs', {
   spaceBetween: 20,
-  slidesPerView: 2,
+  slidesPerView: 4,
   freeMode: false,
   autoplay: false,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.slide-next-th',
+    prevEl: '.slide-prev-th',
+  }
 });
 var galleryTop = new Swiper('.gallery-top', {
   spaceBetween: 0,

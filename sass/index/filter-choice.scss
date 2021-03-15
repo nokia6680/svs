@@ -4,7 +4,7 @@
   padding: 0;
   list-style: none;
 
-  border: 2px solid #00778B;
+  border: 2px solid #F0EFED;
   border-radius: 5px;
 
   width: 100%;
@@ -29,7 +29,7 @@
   &__select {
     @include flex-setting(column, flex-start, flex-start);
     width: 100%;
-    border-bottom: 2px solid #00778B;
+    border-bottom: 2px solid #F0EFED;
 
     position: relative;
 
@@ -248,7 +248,7 @@
     }
 
     &--first {
-      border-bottom: 2px solid $blue;
+      border-bottom: 2px solid #F0EFED;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
 

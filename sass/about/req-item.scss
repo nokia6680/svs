@@ -47,7 +47,6 @@
     padding-left: 0.625rem;
     padding-right: 0.625rem;
 
-    border: 1px solid #00778B;
     border-radius: 5px;
   }
 
@@ -104,8 +103,8 @@
     }
 
     &__list {
-      padding-left: 1.188rem;
-      padding-right: 1.188rem;
+      padding-left: 0;
+      padding-right: 0;
       margin-bottom: 0;
     }
   }

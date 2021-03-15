@@ -83,6 +83,8 @@
         margin: 0;
         transition: 0.1s ease-in-out;
 
+        display: none;
+
         &:hover,
         &:active,
         &:focus {
@@ -155,6 +157,10 @@
     &__lower {
         display: none;
         max-height: 500px;
+    }
+
+    &__reset {
+        display: none;
     }
   }
 }

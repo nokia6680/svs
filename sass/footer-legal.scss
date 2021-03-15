@@ -24,13 +24,28 @@
   }
 
   &__development {
-    @include font-setting($primary-font, 0.75rem, 1rem, 600, $text-primary);
-    text-align: left;
-    text-decoration: none;
+    @include flex-setting(row, flex-start, center);
+
+    &-text {
+        display: inline-flex;
+        @include font-setting($primary-font, 0.75rem, 1rem, 600, $text-primary);
+        text-align: left;
+        text-decoration: none;
+
+        margin-right: 0.625rem;
+        white-space: nowrap;
+    }
   }
 
   &__development-link {
-    @extend .footer-legal__development;
+    @include flex-setting(column, center, center);
+    max-height: 27px;
+  }
+
+  &__development-logo {
+      width: 100%;
+      max-height: 27px;
+      object-fit: contain;
   }
 }
 
@@ -66,15 +81,21 @@
     max-width: 944px;
     padding-left: 0;
     padding-right: 0;
+    align-items: center;
+    justify-content: space-between;
 
     &__wrap {
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
+      margin-bottom: 0;
     }
 
     &__development {
-      width: 20%;
+        justify-content: flex-end;
+        &-text {
+            @include font-setting($primary-font, 0.875rem, 1rem, 700, #A0A0A0);
+        }
     }
   }
 }
@@ -82,5 +103,7 @@
 @media only screen and (min-width: $laptop-wide) {
   .footer-legal {
     max-width: 1200px;
+    padding-top: 2.15625rem;
+    padding-bottom: 2.21875rem;
   }
 }

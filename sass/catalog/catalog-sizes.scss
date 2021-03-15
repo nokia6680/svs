@@ -8,11 +8,11 @@
 
     @include flex-setting(column, flex-start, center);
 
-    border: 2px solid #C1CAD5;
     border-radius: 5px;
 
-    padding: 1.25rem 1.25rem;
+    padding: 1.375rem 1.125rem 2rem 1.375rem;
 
+    background-color: #FAF9F7;
     margin-bottom: 2.5rem;
 
     &__title {
@@ -203,8 +203,6 @@
 @media only screen and (min-width: $laptop-wide) {
   .catalog-sizes {
     width: 280px;
-
-    padding-bottom: 2rem;
 
     &__description {
       font-size: 1.125rem;

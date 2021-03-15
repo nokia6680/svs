@@ -5,6 +5,7 @@
 @media only screen and (min-width: $laptop) {
   .gallery {
     width: 472px;
+    position: relative;
 
     @include flex-setting(column, flex-start, center);
 
@@ -104,7 +105,7 @@
       margin-bottom: 1.25rem;
       position: relative;
 
-      border: 2px solid #C1CAD5;
+      border: 2px solid #F0EFED;
       border-radius: 5px;
     }
 
@@ -115,13 +116,50 @@
       width: 100%;
 
       .swiper-slide {
-        opacity: 0.4;
+        opacity: 1;
       }
 
       .swiper-slide-thumb-active {
         opacity: 1;
         transition: 0.2s ease-in;
+        border-color: #00778B;
       }
+    }
+
+    .gallery__controls {
+        width: 496px;
+        @include flex-setting(row, space-between, center);
+
+        position: absolute;
+
+        bottom: 36px;
+    }
+
+    .slide-prev-th,
+    .slide-next-th {
+        width: 26px;
+        height: 26px;
+        border-radius: 13px;
+
+        background-color: #fff;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+        z-index: 10;
+
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 7px 14px;
+
+        cursor: pointer;
+        outline: none;
+    }
+
+    .slide-prev-th {
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 15L2 8L9 1' stroke='%2300778B' stroke-width='2'/%3E%3C/svg%3E");
+    }
+
+    .slide-next-th {
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 15L8 8L1 1' stroke='%2300778B' stroke-width='2'/%3E%3C/svg%3E%0A");
     }
 
     &__item {
@@ -138,7 +176,7 @@
 
         mix-blend-mode: multiply;
         border-radius: 5px;
-        border: 2px solid #C1CAD5;
+        border: 2px solid #F0EFED;
       }
     }
 
@@ -180,8 +218,12 @@
     width: 680px;
 
     &__slider.gallery-top {
-      height: 614px;
-      max-height: 614px;
+      height: 680px;
+      max-height: 680px;
+    }
+
+    .gallery__controls {
+        width: 700px;
     }
   }
 }

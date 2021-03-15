@@ -56,22 +56,39 @@
 
           z-index: 99;
         }
+
+        &__item {
+          &--supply {
+            padding-left: 0;
+            padding-right: 0;
+            margin-right: 2.625rem;
+            border-right: none;
+          }
+
+          &--job {
+            padding-left: 0;
+            padding-right: 0;
+            margin-right: 2.625rem;
+            border-right: none;
+          }
+        }
+
+        &__link {
+          color: #000;
+        }
     }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .menu-list {
     &__item {
-      &--supply {
-        padding-right: 2.563rem;
-        padding-left: 2.563rem;
-      }
+        &--supply {
+          margin-right: 3.75rem;
+        }
 
-      &--job {
-        padding-left: 2.563rem;
-        padding-right: 2.563rem;
-        margin-right: 2.25rem;
-      }
+        &--job {
+          margin-right: 3.75rem;
+        }
     }
   }
 }

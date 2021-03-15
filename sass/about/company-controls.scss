@@ -8,8 +8,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
-  border: 2px solid #00778B;
+  background-color: #FAF9F7;
   border-radius: 5px;
 
   margin-bottom: 1.875rem;
@@ -26,7 +25,7 @@
     &:nth-child(2),
     &:nth-child(3),
     &:nth-child(4) {
-      border-bottom: 2px solid #00778B;
+      border-bottom: 2px solid #F0EFED;
     }
 
     &:nth-child(1) {
@@ -72,6 +71,9 @@
     align-items: center;
     flex-wrap: nowrap;
 
+    padding-top: 0.1875rem;
+    padding-bottom: 0.1875rem;
+
     margin-bottom: 2.5rem;
 
     &__item {
@@ -79,7 +81,7 @@
       transition: 0.1s ease-in;
       padding: 0.563rem 0.688rem;
 
-      border-right: 2px solid #00778B;
+      border-right: 2px solid #F0EFED;
 
       &:last-child {
         border-right: none;
@@ -90,7 +92,7 @@
       &:nth-child(3),
       &:nth-child(4) {
         @include flex-setting(column, center, center);
-        border-right: 2px solid #00778B;
+        border-right: 2px solid #F0EFED;
       }
 
       &:nth-child(2),
@@ -135,11 +137,11 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .company-controls {
-    margin-bottom: 3.75rem;
+    margin-bottom: 4.375rem;
 
     &__item {
       width: auto;
-      padding: 1.063rem 1.75rem;
+      padding: 0.5625rem 1.5625rem;
     }
 
     &__link {

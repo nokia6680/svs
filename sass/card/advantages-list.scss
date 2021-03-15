@@ -78,7 +78,7 @@
   }
 
   &__description {
-    @include font-setting($primary-font, 1.125rem, 1.375rem, 700, $text-primary);
+    @include font-setting($primary-font, 1.125rem, 1.375rem, 500, $text-primary);
     margin: 0;
   }
 }

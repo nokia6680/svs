@@ -440,32 +440,36 @@
 			<div class="button-next"></div>
 		</section>
 		<!--Activities section-->
-		<section class="main__options options" id="options">
+		<section class="main__options options">
 			<h2 class="options__title visually-hidden">Наши решения</h2>
-			<div class="options__visual">
-				<img class="options__visual-pic active" src="img/options-1.png" id="img_1" alt="Инновационные решения" />
-				<img class="options__visual-pic" src="img/options-2.png" id="img_2" alt="Стабильно высокое качество" />
-				<img class="options__visual-pic" src="img/options-3.png" id="img_3" alt="Крупнейшее производство в РФ" />
-			</div>
-			<div class="options__container swiper-options">
-				<div class="options__slider opt-slider swiper-wrapper" id="opt-slider">
-					<div class="opt-slider__item swiper-slide" rel="#img_1">
-						<h3 class="opt-slider__title blue pressed">Инновационные решения</h3>
-						<div class="opt-slider__text">
-							<p class="opt-slider__description">Мы производим качественные и долговечные перчатки, при этом устанавливаем адекватные цены. Все  это подкрепляется широким ассортиментом продукции.</p>
-						</div>
+			<div class="options__visual swiper-options">
+				<div class="options__slider swiper-wrapper">
+					<!---->
+					<div class="options__slide swiper-slide">
+						<picture class="options__frame">
+							<source srcset="img/options-1.webp" type="image/webp" />
+							<img class="options__pic" src="img/options-1.png" id="img_1" alt="Инновационные решения" />
+						</picture>
+						<h3 class="options__subtitle">Инновационные решения</h3>
+						<p class="options__description">Мы производим качественные и долговечные перчатки, при этом устанавливаем адекватные цены. Все  это подкрепляется широким ассортиментом продукции.</p>
 					</div>
-					<div class="opt-slider__item swiper-slide" rel="#img_2">
-						<h3 class="opt-slider__title green">Стабильно высокое качество</h3>
-						<div class="opt-slider__text">
-							<p class="opt-slider__description">Постоянное совершенствование технологий, производственного процесса и материалов. Многие разработки не имеют аналогов и впервые появились в РФ благодаря нам.</p>
-						</div>
+					<!---->
+					<div class="options__slide swiper-slide">
+						<picture class="options__frame">
+							<source srcset="img/options-2.webp" type="image/webp" />
+							<img class="options__pic" src="img/options-2.png" id="img_2" alt="Стабильно высокое качество" />
+						</picture>
+						<h3 class="options__subtitle">Стабильно высокое качество</h3>
+						<p class="options__description">Постоянное совершенствование технологий, производственного процесса и материалов. Многие разработки не имеют аналогов и впервые появились в РФ благодаря нам.</p>
 					</div>
-					<div class="opt-slider__item swiper-slide" rel="#img_3">
-						<h3 class="opt-slider__title black">Крупнейшее производство в РФ</h3>
-						<div class="opt-slider__text">
-							<p class="opt-slider__description">Более 2500 импортных вязальных станков и 5 различных линий для нанесения разных защитных покрытий. Такого парка станков в РФ больше ни у кого нет.</p>
-						</div>
+					<!---->
+					<div class="options__slide swiper-slide">
+						<picture class="options__frame">
+							<source srcset="img/options-3.webp" type="image/webp" />
+							<img class="options__pic" src="img/options-3.png" id="img_3" alt="Крупнейшее производство в РФ" />
+						</picture>
+						<h3 class="options__subtitle">Крупнейшее производство в РФ</h3>
+						<p class="options__description">Более 2500 импортных вязальных станков и 5 различных линий для нанесения разных защитных покрытий. Такого парка станков в РФ больше ни у кого нет.</p>
 					</div>
 				</div>
 			</div>
@@ -756,7 +760,7 @@
 			<h2 class="latest__title">Новинки</h2>
 			<div class="latest__container">
 				<!--Single item-->
-				<article itemscope itemtype="http://schema.org/Product" class="latest__item item" id="latest-1">
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item item">
 					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
 						<picture class="item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
@@ -768,7 +772,7 @@
 					</a>
 					<div class="item__details">
 						<!--Описание-->
-						<p itemprop="name" class="item__description">STRONGSHELL Крага Манжета</p>
+						<p itemprop="name" class="item__description">STRONGSHELL</p>
 						<!--Артикул-->
 						<p itemprop="sku" class="item__articul">Артикул: 28-401</p>
 						<!--Кнопка включения ховера-->
@@ -780,6 +784,29 @@
 						</div>
 						<!--Планки скидок, акций, выбора цвета-->
 						<div class="item__controls">
+							<!--Выбор цвета-->
+							<div class="item__color item-color">
+								<button class="item-color__toggle" type="button">
+									<span class="item-color__toggle-count">2</span>&nbsp;цвета
+									<svg class="item-color__icon" width="13" height="13">
+										<use xlink:href="#icon-color"></use>
+									</svg>
+								</button>
+								<ul class="item-color__list">
+									<li class="item-color__item">
+										<picture class="item-color__frame">
+											<source srcset="img/color-1.webp" type="image/webp" />
+											<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
+										</picture>
+									</li>
+									<li class="item-color__item">
+										<picture class="item-color__frame">
+											<source srcset="img/color-2.webp" type="image/webp" />
+											<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
+										</picture>
+									</li>
+								</ul>
+							</div>
 							<!--Новинка-->
 							<span class="item__sign item__sign--latest hidden">Новинка
 								<svg class="latest-item__pic" width="13" height="12">
@@ -794,6 +821,35 @@
 							</span>
 							<!--Распродажа-->
 							<span class="item__sign item__sign--sale hidden">Акция %</span>
+						</div>
+					</div>
+				</article>
+				<!--Single item-->
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item item">
+					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
+						<picture class="item__frame">
+							<source srcset="img/latest-1.webp" type="image/webp">
+							<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
+						</picture>
+						<!--Item description-->
+						<meta itemprop="brand" content="СВС" />
+						<meta itemprop="name" content="Перчатки СВС" />
+					</a>
+					<div class="item__details">
+						<!--Описание-->
+						<p itemprop="name" class="item__description">STRONGSHELL</p>
+						<!--Артикул-->
+						<p itemprop="sku" class="item__articul">Артикул: 28-401</p>
+						<!--Кнопка включения ховера-->
+						<button class="item__hover" type="button">Особенности</button>
+						<!--Описание-->
+						<div class="item__options">
+							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Защита масла</span>
+							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Очень прочные и долговечные</span>
+						</div>
+						<!--Планки скидок, акций, выбора цвета-->
+						<div class="item__controls">
+							<!--Выбор цвета-->
 							<div class="item__color item-color">
 								<button class="item-color__toggle" type="button">
 									<span class="item-color__toggle-count">2</span>&nbsp;цвета
@@ -816,73 +872,25 @@
 									</li>
 								</ul>
 							</div>
-						</div>
-					</div>
-				</article>
-				<!--Single item-->
-				<article itemscope itemtype="http://schema.org/Product" class="latest__item item" id="latest-2">
-					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
-						<picture class="item__frame">
-							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
-						</picture>
-						<!--Item description-->
-						<meta itemprop="brand" content="СВС" />
-						<meta itemprop="name" content="Перчатки СВС" />
-					</a>
-					<div class="item__details">
-						<!--Описание-->
-						<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
-						<!--Артикул-->
-						<p itemprop="sku" class="item__articul">Артикул: нет</p>
-						<!--Описание-->
-						<div class="item__options">
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Защита масла</span>
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Очень прочные и долговечные</span>
-						</div>
-						<!--Планки скидок, акций, выбора цвета-->
-						<div class="item__controls">
 							<!--Новинка-->
 							<span class="item__sign item__sign--latest hidden">Новинка
-								<svg class="latest-item__pic" width="12" height="12">
+								<svg class="latest-item__pic" width="13" height="12">
 									<use xlink:href="#icon-star-white"></use>
 								</svg>
 							</span>
 							<!--Хит продаж-->
 							<span class="item__sign item__sign--hot">Хит продаж
-								<svg class="item__pic" width="12" height="12">
+								<svg class="item__pic" width="12" height="10">
 									<use xlink:href="#icon-hot"></use>
 								</svg>
 							</span>
 							<!--Распродажа-->
 							<span class="item__sign item__sign--sale hidden">Акция %</span>
-							<div class="item__color item-color">
-								<button class="item-color__toggle" type="button">
-									<span class="item-color__toggle-count">2</span>&nbsp;цвета
-									<svg class="item-color__icon" width="13" height="13">
-										<use xlink:href="#icon-color"></use>
-									</svg>
-								</button>
-								<ul class="item-color__list">
-									<li class="item-color__item">
-										<picture class="item-color__frame">
-											<source srcset="img/color-1.webp" type="image/webp" />
-											<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
-										</picture>
-									</li>
-									<li class="item-color__item">
-										<picture class="item-color__frame">
-											<source srcset="img/color-2.webp" type="image/webp" />
-											<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
-										</picture>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</article>
 				<!--Single item-->
-				<article itemscope itemtype="http://schema.org/Product" class="latest__item item" id="latest-3">
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item item">
 					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
 						<picture class="item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
@@ -894,9 +902,11 @@
 					</a>
 					<div class="item__details">
 						<!--Описание-->
-						<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
+						<p itemprop="name" class="item__description">STRONGSHELL</p>
 						<!--Артикул-->
-						<p itemprop="sku" class="item__articul">Артикул 123</p>
+						<p itemprop="sku" class="item__articul">Артикул: --</p>
+						<!--Кнопка включения ховера-->
+						<button class="item__hover" type="button">Особенности</button>
 						<!--Описание-->
 						<div class="item__options">
 							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Защита масла</span>
@@ -904,14 +914,7 @@
 						</div>
 						<!--Планки скидок, акций, выбора цвета-->
 						<div class="item__controls">
-							<!--Новинка-->
-							<span class="item__sign item__sign--latest hidden">Новинка
-								<svg class="latest-item__pic" width="12" height="12">
-									<use xlink:href="#icon-star-white"></use>
-								</svg>
-							</span>
-							<!--Распродажа-->
-							<span class="item__sign item__sign--sale">Акция %</span>
+							<!--Выбор цвета-->
 							<div class="item__color item-color">
 								<button class="item-color__toggle" type="button">
 									<span class="item-color__toggle-count">2</span>&nbsp;цвета
@@ -934,11 +937,25 @@
 									</li>
 								</ul>
 							</div>
+							<!--Новинка-->
+							<span class="item__sign item__sign--latest hidden">Новинка
+								<svg class="latest-item__pic" width="13" height="12">
+									<use xlink:href="#icon-star-white"></use>
+								</svg>
+							</span>
+							<!--Хит продаж-->
+							<span class="item__sign item__sign--hot">Хит продаж
+								<svg class="item__pic" width="12" height="10">
+									<use xlink:href="#icon-hot"></use>
+								</svg>
+							</span>
+							<!--Распродажа-->
+							<span class="item__sign item__sign--sale hidden">Акция %</span>
 						</div>
 					</div>
 				</article>
 				<!--Single item-->
-				<article itemscope itemtype="http://schema.org/Product" class="latest__item item" id="latest-4">
+				<article itemscope itemtype="http://schema.org/Product" class="latest__item item">
 					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
 						<picture class="item__frame">
 							<source srcset="img/latest-1.webp" type="image/webp">
@@ -950,26 +967,19 @@
 					</a>
 					<div class="item__details">
 						<!--Описание-->
-						<p itemprop="name" class="item__description">Название перчатки Название перчатки</p>
+						<p itemprop="name" class="item__description">STRONGSHELL</p>
 						<!--Артикул-->
-						<p itemprop="sku" class="item__articul">Артикул 123</p>
+						<p itemprop="sku" class="item__articul">Артикул: 28-401</p>
+						<!--Кнопка включения ховера-->
+						<button class="item__hover" type="button">Особенности</button>
 						<!--Описание-->
 						<div class="item__options">
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Защита масла</span>
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Очень прочные и долговечные</span>
 							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Защита масла</span>
 							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Очень прочные и долговечные</span>
 						</div>
 						<!--Планки скидок, акций, выбора цвета-->
 						<div class="item__controls">
-							<!--Новинка-->
-							<span class="item__sign item__sign--latest hidden">Новинка
-								<svg class="latest-item__pic" width="12" height="12">
-									<use xlink:href="#icon-star-white"></use>
-								</svg>
-							</span>
-							<!--Распродажа-->
-							<span class="item__sign item__sign--sale">Акция %</span>
+							<!--Выбор цвета-->
 							<div class="item__color item-color">
 								<button class="item-color__toggle" type="button">
 									<span class="item-color__toggle-count">2</span>&nbsp;цвета
@@ -992,120 +1002,20 @@
 									</li>
 								</ul>
 							</div>
-						</div>
-					</div>
-				</article>
-				<!--Single item-->
-				<article itemscope itemtype="http://schema.org/Product" class="latest__item item" id="latest-5">
-					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
-						<picture class="item__frame">
-							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
-						</picture>
-						<!--Item description-->
-						<meta itemprop="brand" content="СВС" />
-						<meta itemprop="name" content="Перчатки СВС" />
-					</a>
-					<div class="item__details">
-						<!--Описание-->
-						<p itemprop="name" class="item__description">Название перчатки</p>
-						<!--Артикул-->
-						<p itemprop="sku" class="item__articul">Артикул 123</p>
-						<!--Описание-->
-						<div class="item__options">
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Защита масла</span>
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Очень прочные и долговечные</span>
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Защита масла</span>
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Очень прочные и долговечные</span>
-						</div>
-						<!--Планки скидок, акций, выбора цвета-->
-						<div class="item__controls">
 							<!--Новинка-->
 							<span class="item__sign item__sign--latest hidden">Новинка
-								<svg class="latest-item__pic" width="12" height="12">
+								<svg class="latest-item__pic" width="13" height="12">
 									<use xlink:href="#icon-star-white"></use>
 								</svg>
 							</span>
-							<!--Распродажа-->
-							<span class="item__sign item__sign--sale">Акция %</span>
-							<div class="item__color item-color">
-								<button class="item-color__toggle" type="button">
-									<span class="item-color__toggle-count">2</span>&nbsp;цвета
-									<svg class="item-color__icon" width="13" height="13">
-										<use xlink:href="#icon-color"></use>
-									</svg>
-								</button>
-								<ul class="item-color__list">
-									<li class="item-color__item">
-										<picture class="item-color__frame">
-											<source srcset="img/color-1.webp" type="image/webp" />
-											<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
-										</picture>
-									</li>
-									<li class="item-color__item">
-										<picture class="item-color__frame">
-											<source srcset="img/color-2.webp" type="image/webp" />
-											<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
-										</picture>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</article>
-				<!--Single item-->
-				<article itemscope itemtype="http://schema.org/Product" class="latest__item item" id="latest-6">
-					<a class="item__link" href="#" target="_self" title="Название перчатки, модель">
-						<picture class="item__frame">
-							<source srcset="img/latest-1.webp" type="image/webp">
-							<img itemprop="image" class="item__image" src="img/latest-1.png" alt="Название перчатки, модель" title="Название перчатки, модель">
-						</picture>
-						<!--Item description-->
-						<meta itemprop="brand" content="СВС" />
-						<meta itemprop="name" content="Перчатки СВС" />
-					</a>
-					<div class="item__details">
-						<!--Описание-->
-						<p itemprop="name" class="item__description">Название перчатки</p>
-						<!--Артикул-->
-						<p itemprop="sku" class="item__articul empty"></p>
-						<!--Описание-->
-						<div class="item__options">
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Защита масла</span>
-							<span itemprop="description" class="item__options-item"><span class="item__options-icon"></span>&nbsp;Очень прочные и долговечные</span>
-						</div>
-						<!--Планки скидок, акций, выбора цвета-->
-						<div class="item__controls">
-							<!--Новинка-->
-							<span class="item__sign item__sign--latest hidden">Новинка
-								<svg class="latest-item__pic" width="12" height="12">
-									<use xlink:href="#icon-star-white"></use>
+							<!--Хит продаж-->
+							<span class="item__sign item__sign--hot">Хит продаж
+								<svg class="item__pic" width="12" height="10">
+									<use xlink:href="#icon-hot"></use>
 								</svg>
 							</span>
 							<!--Распродажа-->
-							<span class="item__sign item__sign--sale">Акция %</span>
-							<div class="item__color item-color">
-								<button class="item-color__toggle" type="button">
-									<span class="item-color__toggle-count">2</span>&nbsp;цвета
-									<svg class="item-color__icon" width="13" height="13">
-										<use xlink:href="#icon-color"></use>
-									</svg>
-								</button>
-								<ul class="item-color__list">
-									<li class="item-color__item">
-										<picture class="item-color__frame">
-											<source srcset="img/color-1.webp" type="image/webp" />
-											<img class="item-color__pic" src="img/color-1.png" alt="Цвет-1" />
-										</picture>
-									</li>
-									<li class="item-color__item">
-										<picture class="item-color__frame">
-											<source srcset="img/color-2.webp" type="image/webp" />
-											<img class="item-color__pic" src="img/color-2.png" alt="Цвет-2" />
-										</picture>
-									</li>
-								</ul>
-							</div>
+							<span class="item__sign item__sign--sale hidden">Акция %</span>
 						</div>
 					</div>
 				</article>
@@ -1254,9 +1164,9 @@
 			<!--Footer information-->
 			<div class="footer-nav__contacts footer-contacts">
 				<div class="footer-contacts__wrap">
-					<div class="footer-contacts__logo">
-						<img class="footer-contacts__logo-pic" src="img/logo-gray.svg" alt="СВС" />
-					</div>
+					<p class="footer-contacts__description">
+						Инновационные решения для защиты рук
+					</p>
 					<ul class="footer-contacts__list">
 						<li class="footer-contacts__list-item">
 							<!--Link to call-->
@@ -1333,7 +1243,12 @@
 					<span class="footer-legal__copyright">&copy; ООО &laquo;СВС&raquo;, 2020 &mdash; Все права защищены.&nbsp;</span>
 					<a class="footer-legal__policy" href="#" target="_blank" title="Политика обработки персональных данных"> Политика обработки персональных данных</a>
 				</div>
-				<span class="footer-legal__development">Разработка &mdash; <a class="footer-legal__development-link" href="https://mediaaid.ru/" target="_blank" title="Разработано в компании Mediaiad Design">mediaaid.ru</a></span>
+				<div class="footer-legal__development">
+					<span class="footer-legal__development-text">Сделано в </span>
+					<a class="footer-legal__development-link" href="https://mediaaid.ru/" target="_blank" title="Разработано в компании Mediaiad Design">
+						<img class="footer-legal__development-logo" src="img/mad-logo.svg" alt="Media Aid Design" />
+					</a>
+				</div>
 			</div>
 		</nav>
 	</footer>
@@ -1403,50 +1318,9 @@
 	</a>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/script2.js"></script>
+	<script src="js/sizes.js"></script>
 	<script src="js/slider.js"></script>
 
-	<script>
-		(function() {
-			var accordeon = document.querySelector('.opt-slider');
-			var accordeonTitles = accordeon.querySelectorAll('.opt-slider__title');
-
-			var firstDescr = accordeonTitles[0].parentElement.querySelector('.opt-slider__text');
-			accordeonTitles[0].classList.add('pressed');
-			firstDescr.classList.add('opt-slider__text--visible');
-			firstDescr.style.maxHeight = firstDescr.scrollHeight + "px";
-
-			[].forEach.call(accordeonTitles, function(accordeonTitle) {
-				accordeonTitle.addEventListener('click', function() {
-					var activeTitle = accordeon.querySelector('.pressed');
-					var activeDescr = accordeon.querySelector('.opt-slider__text--visible');
-					var clickedDescr = accordeonTitle.parentElement.querySelector('.opt-slider__text');
-
-					if (activeTitle) {
-						activeTitle.classList.remove('pressed');
-					}
-
-					accordeonTitle.classList.toggle('pressed');
-
-					if (activeDescr) {
-						activeDescr.classList.remove('opt-slider__text--visible');
-						activeDescr.style.maxHeight = null;
-					}
-
-					clickedDescr.classList.toggle('opt-slider__text--visible');
-					clickedDescr.style.maxHeight = clickedDescr.scrollHeight + "px";
-
-					var currItem = accordeonTitle.parentNode;
-					var relId = currItem.getAttribute('rel');
-
-					$('.options__visual-pic').removeClass('active');
-					$('.options__visual-pic').addClass('hidden');
-					$(relId).addClass('active');
-					$(relId).removeClass('hidden');
-				});
-			});
-
-		})();
-	</script>
 	<script>
 		var upperLvl = document.getElementsByClassName('faq-list__item');
 		var elNodes = document.querySelectorAll(".faq-list__item");

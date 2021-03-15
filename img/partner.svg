@@ -1,12 +1,12 @@
-<svg width="82" height="109" viewBox="0 0 82 109" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="9" y="8.64709" width="70.9412" height="98.1176" rx="2" stroke="#00778B" stroke-width="4" stroke-linejoin="round"/>
-<path d="M2.41211 4.05884C2.41211 2.95427 3.30754 2.05884 4.41211 2.05884H60.4273C60.9572 2.05884 61.4655 2.26916 61.8405 2.64362L72.7665 13.5541C73.1422 13.9292 73.3533 14.4383 73.3533 14.9693V98.1765C73.3533 99.2811 72.4579 100.176 71.3533 100.176H4.41211C3.30754 100.176 2.41211 99.2811 2.41211 98.1765V4.05884Z" fill="#E4D9C6" stroke="#00778B" stroke-width="4" stroke-linejoin="round"/>
-<path d="M61.3535 2.52942L61.3535 12.0588C61.3535 13.1634 62.2489 14.0588 63.3535 14.0588H72.8829" stroke="#00778B" stroke-width="4"/>
-<path d="M15.2363 47.8235H26.7657M32.5304 47.8235H60.5304" stroke="#00778B" stroke-width="4"/>
-<path d="M15.2363 57.7059H26.7657M32.5304 57.7059H60.5304" stroke="#00778B" stroke-width="4"/>
-<path d="M15.2363 67.5883H26.7657M32.5304 67.5883H60.5304" stroke="#00778B" stroke-width="4"/>
-<path d="M49 80.7646H60.5294" stroke="#00778B" stroke-width="4"/>
-<path d="M32.5293 15.7059H44.1764" stroke="#00778B" stroke-width="4"/>
-<path d="M32.5293 20.6471H44.1764" stroke="#00778B" stroke-width="4"/>
-<circle cx="21.001" cy="18.1764" r="5.76471" fill="#00778B"/>
+<svg width="99" height="132" viewBox="0 0 99 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="9.5" y="9.5" width="88" height="121" rx="2.5" stroke="#00778B" stroke-width="3" stroke-linejoin="round"/>
+<path d="M87 122.5H4C2.61929 122.5 1.5 121.381 1.5 120V4C1.5 2.61929 2.61929 1.5 4 1.5H73.2302C73.8927 1.5 74.528 1.7629 74.9967 2.23097L88.7665 15.9811C89.2361 16.45 89.5 17.0865 89.5 17.7501V120C89.5 121.381 88.3807 122.5 87 122.5Z" fill="#E4D9C6" stroke="#00778B" stroke-width="3" stroke-linejoin="round"/>
+<path d="M74 3L74 15C74 16.1046 74.8954 17 76 17H88" stroke="#00778B" stroke-width="3"/>
+<path d="M18 57.5H25H32M39 57.5H73" stroke="#00778B" stroke-width="3"/>
+<path d="M18 69.5H32M39 69.5H73" stroke="#00778B" stroke-width="3"/>
+<path d="M18 81.5H32M39 81.5H73" stroke="#00778B" stroke-width="3"/>
+<path d="M59 97.5H73" stroke="#00778B" stroke-width="3"/>
+<path d="M39 19H53.1429" stroke="#00778B" stroke-width="3"/>
+<path d="M39 25H53.1429" stroke="#00778B" stroke-width="3"/>
+<circle cx="25" cy="22" r="5" fill="#00778B"/>
 </svg>

@@ -22,7 +22,7 @@
 
   &__item {
     @include flex-setting(column, flex-start, flex-start);
-    border: 2px solid #C9E2E6;
+    border: none;
     border-radius: 5px;
 
     width: 100%;
@@ -31,6 +31,8 @@
     margin-bottom: 1.25rem;
 
     position: relative;
+
+    background-color: #FAF9F7;
 
     &:last-child {
       margin-bottom: 0;

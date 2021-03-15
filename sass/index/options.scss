@@ -1,12 +1,21 @@
 .options {
   width: 100%;
   overflow: hidden;
-
   padding-left: 0.625rem;
-
   @include flex-setting(column, flex-start, center);
-
   margin-bottom: 3.75rem;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    width: 50px;
+    height: 100%;
+    z-index: 1;
+    right: 0;
+    top: 0;
+  }
 
   &__visual {
     @include flex-setting(column, center, center);
@@ -25,124 +34,169 @@
     }
   }
 
-  &__container {
-    width: 100%;
-    @include flex-setting(column, flex-start, center);
-
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-
-      background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%);
-      width: 30px;
-      height: 200px;
-      z-index: 2;
-
-      right: 0;
-      top: 0;
+  .swiper-slide-active {
+    .options__frame {
+      animation: fade-in 0.2s forwards;
     }
   }
-}
 
+  .swiper-slide-next,
+  .swiper-slide-prev {
+      .options__frame {
+          animation: fade-out 0.2s forwards;
+      }
+  }
+
+  &__frame {
+      @include flex-setting(column, center, center);
+      animation: fade-out 0.2s forwards;
+  }
+
+  &__subtitle {
+      @include font-setting($title-font, 1.5rem, 1.75rem, 700, $text-primary);
+      margin: 0;
+      margin-bottom: 0.688rem;
+
+      position: relative;
+  }
+
+  &__description {
+      @include font-setting($primary-font, 1rem, 1.25rem, 400, $text-primary);
+      margin: 0;
+
+      min-height: 120px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .options {
     padding: 0;
     max-width: 688px;
-
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-
+    align-items: flex-start;
     margin-bottom: 3.75rem;
 
+    &::after {
+      display: none;
+    }
+
     &__visual {
-      width: 50%;
-      max-width: 327px;
-      max-height: 340px;
+      width: 100%;
+      max-width: 100%;
       margin-bottom: 0;
-
-      order: 2;
-
       position: relative;
+    }
 
-      &-pic {
-          object-fit: contain;
-        &.hidden {
-          visibility: hidden;
-          position: absolute;
-          display: block;
-          animation: fade-out 0.5s;
-          object-fit: contain;
-        }
+    &__slider {
+      width: 100%;
+      @include flex-setting(row, space-between, flex-start);
+    }
 
-        &.active {
-          animation: fade-in 0.5s;
-          object-fit: contain;
-        }
+    &__slide {
+        @include flex-setting(column, flex-start, flex-start);
+      width: 30% !important;
+      margin-right: 1rem;
+      max-width: 327px;
+
+      &:last-child {
+        margin-right: 0;
       }
     }
 
-    &__container {
-      width: 50%;
-      order: 1;
+    &__frame {
+      @include flex-setting(column, center, center);
+      width: 100%;
+      height: 100%;
+      min-height: 222px;
+      margin-bottom: 1.875rem;
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
 
-      &::after {
-        display: none;
-      }
+    &__subtitle {
+        font-size: 1.25rem;
+        line-height: 1.4375rem;
+        color: $text-primary;
+        font-weight: 600;
+
+        &::after {
+          display: none;
+        }
     }
   }
 }
-
 @media only screen and (min-width: $laptop) {
   .options {
     max-width: 944px;
-
     margin-bottom: 8.313rem;
-    align-items: center;
-    justify-content: space-between;
 
-    &__visual {
-      max-width: 498px;
-      width: 498px;
-      max-height: 508px;
-
-      &-pic {
-          max-height: 508px;
-      }
+    &__slide {
+        align-items: center;
     }
 
-    &__container {
-      width: 460px;
-      max-width: 460px;
+    &__frame {
+        min-height: 305px;
+        max-height: 353px;
+
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    &__subtitle {
+        display: inline-flex;
+        max-width: 280px;
+
+        font-size: 1.625rem;
+        line-height: 1.875rem;
+        font-weight: 700;
+        text-align: left;
+
+        margin-bottom: 0.75rem;
+
+        align-self: center;
+    }
+
+    &__description {
+        display: inline-flex;
+        align-self: center;
+
+        max-width: 280px;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        margin: 0;
     }
   }
 }
-
 @media only screen and (min-width: $laptop-wide) {
   .options {
     max-width: 1200px;
-    margin-bottom: 10.125rem;
+    margin-bottom: 6.75rem;
 
-    &__visual {
-      max-width: 700px;
-      width: 700px;
-      max-height: 724px;
-
-      &-pic {
-          max-height: 724px;
-      }
+    &__frame {
+        min-height: 353px;
     }
 
-    &__container {
-      margin-top: 4.125rem;
-      margin-right: 5rem;
-      width: 392px;
-      max-width: 392px;
+    &__subtitle {
+        max-width: 280px;
+
+        font-size: 1.625rem;
+        line-height: 1.875rem;
+        font-weight: 700;
+        text-align: left;
+
+        margin-bottom: 0.75rem;
+    }
+
+    &__description {
+        max-width: 280px;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        margin: 0;
     }
   }
 }
+
 
 @keyframes fade-in {
   0% {
@@ -155,7 +209,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fade-out {
   0% {
     transform: translate(0, 0);

@@ -12,7 +12,7 @@
     @include flex-setting(column, center, center);
   }
 
-  &__logo {
+  &__description {
     display: none;
   }
 
@@ -145,6 +145,9 @@
 
 @media only screen and (min-width: $laptop) {
   .footer-contacts {
+      padding-top: 1.1875rem;
+      padding-bottom: 1.1875rem;
+
     &__wrap {
       max-width: 944px;
       justify-content: space-between;
@@ -159,6 +162,10 @@
       }
     }
 
+    &__info {
+        padding-left: 0;
+    }
+
     &__info--map {
       line-height: 1.5rem;
     }
@@ -166,17 +173,25 @@
     &__callback-link {
       padding-right: 2.5rem;
     }
+
+    &__pic {
+        display: none;
+    }
   }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .footer-contacts {
-    &__logo {
-      @include flex-setting(column, center, center);
-      width: 147px;
-      height: 55px;
+    &__description {
+        display: inline-flex;
 
-      margin-right: 9.688rem;
+        @include font-setting($primary-font, 1rem, 1.1875rem, 700, #000);
+        text-align: left;
+
+        max-width: 160px;
+
+        margin: 0;
+        margin-right: 7.1875rem;
     }
 
     &__list {

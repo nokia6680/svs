@@ -1,23 +1,23 @@
 .item {
   @include flex-setting(column, flex-start, center);
   width: 100%;
-  border: 2px solid #C9E2E6;
+  border: none;
   border-radius: 5px;
 
   margin-bottom: 2.625rem;
 
-  padding: 1.188rem 0.75rem 2.563rem 0.75rem;
+  padding: 0.625rem 0.625rem 0.625rem 0.625rem;
 
   position: relative;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 
   &:hover,
   &:active,
   &:focus {
     border-color: transparent;
-    box-shadow: 0px 0px 60px rgba(57, 134, 30, 0.18);
-    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+    transition: 0.2s ease-in-out;
   }
 
   &:last-child {
@@ -49,14 +49,11 @@
   }
 
   &__controls {
-    position: absolute;
     width: auto;
     @include flex-setting(row, flex-start, center);
 
     margin-bottom: 0;
     margin-top: auto;
-
-    bottom: 1.188rem;
   }
 
   &__sign {
@@ -97,6 +94,10 @@
         color: $text-secondary;
         padding-right: 0.625rem;
     }
+  }
+
+  &__color {
+      margin-right: 0.625rem;
   }
 
   &__pic {
@@ -185,10 +186,7 @@
 @media only screen and (min-width: $tablet) {
   .item {
     width: 216px;
-    min-height: 462px;
-    max-height: 462px;
     margin-bottom: 2.5rem;
-    padding: 0.813rem 0.625rem 0.813rem 0.625rem;
 
     position: relative;
 
@@ -201,11 +199,6 @@
 
     &__image {
       max-height: 242px;
-    }
-
-    &__controls {
-    position: relative;
-      bottom: auto;
     }
 
     &__description {
@@ -317,27 +310,37 @@
 @media only screen and (min-width: $laptop) {
   .item {
     width: 222px;
-    margin-bottom: 1.25rem;
-    padding: 0.625rem 0.625rem;
+    margin-bottom: 0.625rem;
 
     &__options {
         width: 198px;
         height: 240px;
         max-height: 240px;
     }
+
+    &__description {
+        margin-bottom: 1.25rem;
+        min-height: 0;
+        font-weight: 600;
+    }
+
+    &__articul {
+        margin-bottom: 1.25rem;
+    }
+
+    &__hover {
+        margin-bottom: 1.6875rem;
+    }
   }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .item {
-    width: 285px;
-    min-height: 557px;
-    max-height: 557px;
-    margin-bottom: 1.25rem;
-    padding: 1.25rem 1.25rem;
+    width: 265px;
+    margin-bottom: 2.5rem;
 
     &:last-child {
-      margin-bottom: 1.25rem;
+      margin-bottom: 2.5rem;
     }
 
     &__frame {
@@ -352,13 +355,18 @@
 
     &__description {
       font-size: 1.125rem;
-      line-height: 1.375rem;
+      line-height: 1.125rem;
       margin-bottom: 1.25rem;
+    }
+
+    &__articul {
+        font-size: 1rem;
+        line-height: 1.375rem;
     }
 
     &__hover {
         font-size: 1rem;
-        height: 36px;
+        height: 32px;
     }
 
     &__options {
@@ -366,7 +374,7 @@
         height: 310px;
         max-height: 310px;
 
-        top: 1.25rem;
+        top: 0.625rem;
 
         padding: 1.25rem 0.625rem;
 
@@ -377,13 +385,26 @@
 
       &--cat {
         .item__options-item {
-          font-size: 1rem;
+            font-size: 1rem;
         }
       }
     }
 
-    &__articul {
-      font-size: 1rem;
+    &__sign {
+        height: 24px;
+
+        font-size: 0.875rem;
+        line-height: 0.875rem;
+
+        white-space: nowrap;
+
+        &--hot {
+            width: 118px;
+        }
+
+        &--latest {
+            width: 100px;
+        }
     }
   }
 }

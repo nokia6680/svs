@@ -18,50 +18,64 @@
     cursor: pointer;
     outline: none;
 
-    &--active {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+    &.active {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        & ~ .item-color__list {
+            transform: scaleY(1);
+            transform-origin: bottom;
+            transition: 0.2s linear;
+            z-index: 10;
+
+            .item-color__item {
+                opacity: 1;
+                transition-delay: 0.4s;
+                transition-duration: 0.2s;
+                transition-property: all;
+                transition-timing-function: linear;
+            }
+        }
     }
   }
 
   &__list {
     @include flex-setting(column, flex-start, center);
     width: 100%;
+    max-width: 69px;
 
     margin: 0;
     padding: 0;
     list-style: none;
 
     position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
 
     left: 0;
     bottom: 22px;
 
     padding: 0.625rem 0;
 
-    display: none;
-
-    &--active {
-      display: flex;
-      z-index: 10;
-    }
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: 0.2s linear;
   }
 
   &__item {
     margin-bottom: 0.625rem;
     @include flex-setting(column, flex-end, center);
 
-    border: 1px solid #E4D9C6;
-    border-radius: 3px;
+    opacity: 0;
 
     width: 100%;
+    max-height: 69px;
+
     cursor: pointer;
 
     padding-left: 0.313rem;
     padding-right: 0.313rem;
-
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(190, 181, 167, 0.5);
 
     &:last-of-type {
       margin-bottom: 0;
@@ -92,6 +106,10 @@
     background-color: #fff;
   }
 
+  &__pic {
+      max-height: 69px;
+  }
+
   &--search {
       margin-bottom: 0.25rem;
 
@@ -101,4 +119,30 @@
       }
     }
   }
+}
+
+@media only screen and (min-width: 1366px) {
+    .item-color {
+      &__toggle {
+        font-size: 0.875rem;
+
+        height: 24px;
+        width: 102px;
+      }
+
+      &__list {
+        bottom: 34px;
+
+        padding: 0.625rem 0 0 0;
+      }
+
+      &__icon {
+        min-width: 14px;
+        min-height: 14px;
+        width: 14px;
+        height: 14px;
+
+        margin-left: 0.625rem;
+      }
+    }
 }

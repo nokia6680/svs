@@ -7,25 +7,20 @@
   transition: all 0.3s ease-out, background 1s ease-out;
   transition-delay: 0.7s;
   width: 100%;
-
   @include flex-setting(row, space-between, flex-start);
-
   padding-top: 1rem;
   padding-bottom: 1rem;
-
   height: 60px;
   background: #F0EFED;
-
   z-index: 1;
 
   &.menu-fixed {
-      position: fixed;
+    position: fixed;
   }
 
   &.active {
     transform: translate3d(0,0,0);
     -webkit-overflow-scrolling: touch;
-
     align-items: flex-start;
     height: 100%;
     background: $menu-bg;
@@ -38,9 +33,7 @@
       pointer-events: auto;
       transform: scale(1) translateY(0px);
       will-change: transform;
-
       opacity: 1;
-
       @for $i from 1 through $menuItems {
         &:nth-child(#{$i}) {
           transition-delay: #{0.06 * $i+0.2}s;
@@ -48,7 +41,7 @@
       }
 
       &--search {
-          pointer-events: all;
+        pointer-events: all;
       }
     }
 
@@ -62,7 +55,6 @@
   &__logo {
     width: 84px;
     height: 28px;
-
     padding-left: 1.25rem;
 
     &-image {
@@ -80,7 +72,6 @@
     display: none;
   }
 }
-
 @media only screen and (min-width: $mobile) {
   .header-nav {
     &.active {
@@ -92,7 +83,6 @@
     }
   }
 }
-
 @media only screen and (min-width: $tablet) {
   .header-nav {
     &__logo {
@@ -101,63 +91,47 @@
     }
   }
 }
-
-
 @media only screen and (min-width: $laptop) {
   .header-nav {
     width: 100%;
     height: 100%;
     overflow: visible;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 2.5rem;
     @include flex-setting(row, space-between, center);
     position: relative;
     top: auto;
     left: auto;
     right: auto;
-
     border-radius: 0;
     background-color: transparent;
-
     transition: none;
-
     flex-direction: row;
     flex-wrap: nowrap;
-
     z-index: 12;
 
     &__logo {
       min-width: 161px;
       height: 60px;
-
       margin-left: 0;
       margin-right: 6.563rem;
-
       position: relative;
       padding-left: 0;
 
       &::after {
         position: absolute;
         content: 'c 1997';
-
         background-color: $upper-bg;
-        width: 68px;
-        height: 20px;
-
-        @include font-setting($title-font, 0.875rem, 1, 700, $text-secondary);
+        width: 59px;
+        height: 18px;
+        @include font-setting($title-font, 0.75rem, 1, 700, $text-secondary);
         @include flex-setting(column, center, center);
-
         clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
         top: -12px;
-        right: -70px;
+        right: -60px;
       }
     }
   }
 }
-
-
 @media only screen and (min-width: $laptop-wide) {
   .header-nav {
     max-width: 1200px;
@@ -165,18 +139,9 @@
     padding-right: 0;
 
     &__logo {
+      width: 188px;
+      height: 70px;
       margin-right: 10rem;
-    }
-
-    &__description {
-      @include flex-setting(column, center, center);
-      @include font-setting($title-font, 1rem, 1.375rem, 700, $text-primary);
-      text-align: left;
-      letter-spacing: 0.02em;
-
-      margin-right: 2.875rem;
-
-      max-width: 180px;
     }
   }
 }
