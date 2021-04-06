@@ -227,7 +227,7 @@
     width: 216px;
     border: none;
 
-    margin-bottom: 3.75rem;
+    margin-bottom: 3.375rem;
 
     &__head {
       flex-direction: column;
@@ -276,6 +276,7 @@
 
     &__choice {
       max-width: 100%;
+      margin-bottom: 0;
     }
 
     &__close {
@@ -296,6 +297,8 @@
       &::before {
         display: none;
       }
+
+      display: none;
     }
 
     &__cancel {

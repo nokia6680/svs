@@ -47,7 +47,12 @@
     border-radius: 0;
     overflow: visible;
 
-    background-color: #F0EFED;
+    background-color: #fff;
+
+    &--index {
+        background-color: #F0EFED;
+    }
+
     z-index: auto;
 
     &__nav {

@@ -5,9 +5,15 @@
 @media only screen and (min-width: $laptop) {
   .gallery {
     width: 472px;
-    position: relative;
-
     @include flex-setting(column, flex-start, center);
+
+    &__content{
+        width: 100%;
+        @include flex-setting(column, flex-start, center);
+        position: relative;
+
+        margin-bottom: 1.875rem;
+    }
 
     &__slider {
       width: 100%;
@@ -115,6 +121,19 @@
       max-height: 99px;
       width: 100%;
 
+      &::after {
+          position: absolute;
+          content: '';
+          width: 100px;
+          height: 100%;
+
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+          right: 0;
+          top: 0;
+
+          z-index: 10;
+      }
+
       .swiper-slide {
         opacity: 1;
       }
@@ -201,6 +220,13 @@
         width: auto;
         max-height: 99px;
       }
+    }
+
+    &__features {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
     }
   }
 }

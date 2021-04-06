@@ -38,6 +38,11 @@
     .options__frame {
       animation: fade-in 0.2s forwards;
     }
+
+    .options__subtitle,
+    .options__description {
+        animation: fade-in 0.2s forwards;
+    }
   }
 
   .swiper-slide-next,
@@ -47,9 +52,17 @@
       }
   }
 
+  .swiper-slide-prev {
+      .options__subtitle,
+      .options__description {
+          animation: fade-out 0.2s forwards;
+      }
+  }
+
   &__frame {
       @include flex-setting(column, center, center);
       animation: fade-out 0.2s forwards;
+      min-height: 273px;
   }
 
   &__subtitle {
