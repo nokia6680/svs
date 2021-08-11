@@ -17,12 +17,16 @@
       order: 2;
   }
 
-  &__cloud {
+  &__sizes {
       order: 3;
   }
 
-  &__selected {
+  &__cloud {
       order: 4;
+  }
+
+  &__selected {
+      order: 5;
   }
 
   &__btn {

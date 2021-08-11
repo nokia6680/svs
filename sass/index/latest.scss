@@ -87,13 +87,10 @@
       justify-content: flex-start;
 
       margin-bottom: 1.25rem;
+      gap: 1.125rem;
     }
 
     &__item {
-      margin-right: 1.125rem;
-    }
-
-    &__item:nth-child(4n+4) {
       margin-right: 0;
     }
   }
@@ -105,19 +102,11 @@
 
     &__container {
       margin-bottom: 1.625rem;
+      gap: 1.25rem;
     }
 
     &__item {
-      margin-right: 1.25rem;
-      margin-bottom: 2.25rem;
-    }
-
-    &__item:nth-child(4n+4) {
-      margin-right: 0;
-    }
-
-    &__link {
-      font-size: 1.25rem;
+      margin-bottom: 1rem;
     }
   }
 }

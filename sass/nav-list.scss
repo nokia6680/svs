@@ -223,6 +223,7 @@
     padding-right: 2.5rem;
 
     &__link {
+        white-space: nowrap;
       font-size: 1.125rem;
     }
   }
@@ -235,6 +236,8 @@
     align-items: center;
     justify-content: flex-end;
     overflow-y: auto;
+
+    gap: 2.5rem;
 
     width: auto;
     border: none;
@@ -261,7 +264,7 @@
       border: none;
 
       padding: 0;
-      margin-left: 2.5rem;
+      margin-left: 0;
 
       &--supply,
       &--job {
@@ -305,4 +308,10 @@
         display: none;
     }
   }
+}
+
+@media only screen and (min-width: 1366px) {
+    .nav-list {
+        gap: 5rem;
+    }
 }
